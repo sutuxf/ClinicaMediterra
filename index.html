@@ -259,6 +259,33 @@
       { name: "Google Sheets", cost: "Gratis", use: "Seguimiento de pacientes" },
     ];
 
+    const DIAGNOSTICO_CRITICAS = [
+      { id: "dc1", text: "¿Usan algún software de agenda o gestión clínica?", hint: "Medilink, Medigital, Doctoralia, Excel, papel..." },
+      { id: "dc2", text: "¿Quién tiene acceso al WhatsApp Business (+56 9 3933 7727)?", hint: "¿Una persona exclusiva? ¿Varios?" },
+      { id: "dc3", text: "¿Tienen cuenta Google asociada a la clínica?", hint: "Gmail, Google Workspace — necesaria para crear Google My Business" },
+      { id: "dc4", text: "¿Cuántos mensajes reciben aproximadamente por día o semana en WhatsApp?", hint: "Esto define el volumen real del problema" },
+      { id: "dc5", text: "¿De dónde vienen la mayoría de los pacientes nuevos hoy?", hint: "¿Instagram, derivación médica, boca a boca? ¿Lo saben con certeza?" },
+      { id: "dc6", text: "¿Han postulado antes a algún fondo SERCOTEC o CORFO?", hint: "Si ya fueron beneficiarios pueden estar excluidos del Crece Multisectorial" },
+      { id: "dc7", text: "¿El RUT de la empresa tiene ventas declaradas entre 200 y 25.000 UF anuales?", hint: "Requisito clave para Crece Multisectorial ($5M)" },
+    ];
+
+    const DIAGNOSTICO_GENERALES = [
+      { id: "dg1", text: "¿Tienen ficha clínica electrónica por paciente o es en papel?", hint: "" },
+      { id: "dg2", text: "¿Quién administra Instagram y Facebook? ¿Tienen las claves de acceso?", hint: "" },
+      { id: "dg3", text: "¿Por qué se dejó de publicar en Facebook en 2022?", hint: "¿Hubo alguien a cargo que se fue?" },
+      { id: "dg4", text: "¿La cuenta @clinicamediterra.ls está activa o es una cuenta antigua?", hint: "El sitio web la menciona pero el handle activo es @mediterraclinica" },
+      { id: "dg5", text: "¿Cuántas atenciones promedio hacen por mes?", hint: "Número aproximado para establecer el baseline" },
+      { id: "dg6", text: "¿Saben cuál es su tasa de no-show? ¿Lo miden de alguna forma?", hint: "Cuántos pacientes agendan y no asisten" },
+      { id: "dg7", text: "¿El agendamiento es solo por WhatsApp y teléfono o tienen algo online?", hint: "" },
+      { id: "dg8", text: "¿Tienen convenios activos con isapres o Fonasa?", hint: "" },
+      { id: "dg9", text: "¿Quién es la persona de agenda? ¿Es exclusiva o también atiende pacientes?", hint: "" },
+      { id: "dg10", text: "¿Hay alguien encargado de redes sociales hoy o quedó sin responsable?", hint: "" },
+      { id: "dg11", text: "¿Tienen creadora de contenido actualmente?", hint: "¿O esa relación terminó?" },
+      { id: "dg12", text: "¿Saben quién creó el sitio web Wix y tienen las credenciales?", hint: "Necesario para editar el sitio o instalar el chatbot real" },
+      { id: "dg13", text: "¿Saben quién instaló el chatbot del sitio web?", hint: "La botonera que redirige a WhatsApp" },
+      { id: "dg14", text: "¿Tienen deudas previsionales o laborales pendientes?", hint: "Requisito para postular a fondos SERCOTEC" },
+    ];
+
     const FONDOS = [
       {
         id: "kit-digital",
@@ -354,6 +381,7 @@
     };
 
     const STORAGE_KEY = "mediterra-plan-v3";
+    const DIAG_KEY = "mediterra-diagnostico-v1";
 
     function loadState() {
       try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}"); }
@@ -362,12 +390,20 @@
     function saveState(data) {
       try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch {}
     }
+    function loadDiag() {
+      try { return JSON.parse(localStorage.getItem(DIAG_KEY) || "{}"); }
+      catch { return {}; }
+    }
+    function saveDiag(data) {
+      try { localStorage.setItem(DIAG_KEY, JSON.stringify(data)); } catch {}
+    }
 
     function MediterraPlan() {
       const [done, setDone] = useState({});
       const [activeMonth, setActiveMonth] = useState(0);
       const [expanded, setExpanded] = useState({ w1: true });
       const [tab, setTab] = useState("focos");
+      const [answers, setAnswers] = useState({});
 
       useEffect(() => {
         const link = document.createElement("link");
@@ -377,7 +413,15 @@
         const saved = loadState();
         if (saved.done) setDone(saved.done);
         if (saved.expanded) setExpanded(saved.expanded);
+        const diag = loadDiag();
+        if (diag) setAnswers(diag);
       }, []);
+
+      const updateAnswer = (id, value) => {
+        const next = { ...answers, [id]: value };
+        setAnswers(next);
+        saveDiag(next);
+      };
 
       const persist = (newDone, newExpanded) => saveState({ done: newDone, expanded: newExpanded });
 
@@ -420,7 +464,7 @@
               <div style={{ background: "linear-gradient(90deg, #38BDF8, #818CF8)", height: "5px", borderRadius: "6px", width: `${totalPct}%`, transition: "width 0.6s ease" }} />
             </div>
             <div style={{ display: "flex", gap: "6px", paddingBottom: "1px" }}>
-              {[["focos", "🎯 Focos"], ["plan", "📅 Plan"], ["kpis", "📊 Metas"], ["tools", "🛠 Arranque"], ["fondos", "💰 Fondos"]].map(([id, label]) => (
+              {[["focos", "🎯 Focos"], ["plan", "📅 Plan"], ["kpis", "📊 Metas"], ["tools", "🛠 Arranque"], ["fondos", "💰 Fondos"], ["camila", "📋 Diagnóstico"]].map(([id, label]) => (
                 <button key={id} onClick={() => setTab(id)} style={{ background: tab === id ? "white" : "transparent", color: tab === id ? "#1C3A5F" : "rgba(255,255,255,0.6)", border: "none", borderRadius: "8px 8px 0 0", padding: "8px 14px", fontSize: "12px", fontWeight: 600, cursor: "pointer", transition: "all 0.2s", whiteSpace: "nowrap" }}>
                   {label}
                 </button>
@@ -630,6 +674,105 @@
                 </div>
               </div>
             )}
+
+          {/* ─── DIAGNÓSTICO TAB ─── */}
+          {tab === "camila" && (
+            <div>
+              <div style={{ marginBottom: "16px" }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", color: "#1C3A5F", marginBottom: "4px" }}>Diagnóstico con Camila</div>
+                <div style={{ fontSize: "13px", color: "#64748B" }}>Confirmar este fin de semana — las respuestas definen cómo implementar el plan</div>
+              </div>
+
+              {/* Progreso */}
+              {(() => {
+                const all = [...DIAGNOSTICO_CRITICAS, ...DIAGNOSTICO_GENERALES];
+                const answered = all.filter(q => answers[q.id] && answers[q.id].trim().length > 0).length;
+                const pct = Math.round(answered / all.length * 100);
+                return (
+                  <div style={{ background: "#1C3A5F", borderRadius: "14px", padding: "14px 16px", marginBottom: "20px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                      <div style={{ color: "#93C5FD", fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>Preguntas respondidas</div>
+                      <div style={{ color: "white", fontSize: "16px", fontWeight: 700 }}>{answered}/{all.length}</div>
+                    </div>
+                    <div style={{ background: "rgba(255,255,255,0.15)", borderRadius: "4px", height: "6px" }}>
+                      <div style={{ background: "linear-gradient(90deg, #38BDF8, #6EE7B7)", height: "6px", borderRadius: "4px", width: `${pct}%`, transition: "width 0.5s" }} />
+                    </div>
+                  </div>
+                );
+              })()}
+
+              {/* CRÍTICAS */}
+              <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
+                <div style={{ background: "#DC2626", borderRadius: "20px", padding: "3px 12px" }}>
+                  <span style={{ color: "white", fontSize: "11px", fontWeight: 700 }}>🔴 CRÍTICAS — Definen el arranque</span>
+                </div>
+              </div>
+
+              {DIAGNOSTICO_CRITICAS.map((q, i) => {
+                const answered = answers[q.id] && answers[q.id].trim().length > 0;
+                return (
+                  <div key={q.id} style={{ background: "white", borderRadius: "14px", marginBottom: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", borderLeft: `4px solid ${answered ? "#059669" : "#DC2626"}` }}>
+                    <div style={{ padding: "12px 14px 6px" }}>
+                      <div style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "6px" }}>
+                        <div style={{ width: "22px", height: "22px", borderRadius: "50%", background: answered ? "#ECFDF5" : "#FEF2F2", border: `2px solid ${answered ? "#059669" : "#DC2626"}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: "11px", fontWeight: 700, color: answered ? "#059669" : "#DC2626" }}>
+                          {answered ? "✓" : i + 1}
+                        </div>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ fontSize: "13px", fontWeight: 600, color: "#1E293B", lineHeight: "1.4", marginBottom: q.hint ? "3px" : "0" }}>{q.text}</div>
+                          {q.hint && <div style={{ fontSize: "11px", color: "#94A3B8", fontStyle: "italic" }}>{q.hint}</div>}
+                        </div>
+                      </div>
+                      <textarea
+                        placeholder="Escribe la respuesta de Camila aquí..."
+                        value={answers[q.id] || ""}
+                        onChange={e => updateAnswer(q.id, e.target.value)}
+                        style={{ width: "100%", border: "1px solid #E2E8F0", borderRadius: "8px", padding: "8px 10px", fontSize: "13px", color: "#334155", resize: "vertical", minHeight: "56px", fontFamily: "inherit", outline: "none", background: answered ? "#F0FDF4" : "#FAFAFA", boxSizing: "border-box", marginBottom: "6px" }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* GENERALES */}
+              <div style={{ display: "flex", alignItems: "center", gap: "8px", margin: "20px 0 10px" }}>
+                <div style={{ background: "#1D4ED8", borderRadius: "20px", padding: "3px 12px" }}>
+                  <span style={{ color: "white", fontSize: "11px", fontWeight: 700 }}>🔵 GENERALES — Importantes para el plan completo</span>
+                </div>
+              </div>
+
+              {DIAGNOSTICO_GENERALES.map((q, i) => {
+                const answered = answers[q.id] && answers[q.id].trim().length > 0;
+                return (
+                  <div key={q.id} style={{ background: "white", borderRadius: "14px", marginBottom: "10px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.05)", borderLeft: `4px solid ${answered ? "#059669" : "#1D4ED8"}` }}>
+                    <div style={{ padding: "12px 14px 6px" }}>
+                      <div style={{ display: "flex", alignItems: "flex-start", gap: "10px", marginBottom: "6px" }}>
+                        <div style={{ width: "22px", height: "22px", borderRadius: "50%", background: answered ? "#ECFDF5" : "#EFF6FF", border: `2px solid ${answered ? "#059669" : "#1D4ED8"}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontSize: "11px", fontWeight: 700, color: answered ? "#059669" : "#1D4ED8" }}>
+                          {answered ? "✓" : i + 1}
+                        </div>
+                        <div style={{ flex: 1 }}>
+                          <div style={{ fontSize: "13px", fontWeight: 600, color: "#1E293B", lineHeight: "1.4", marginBottom: q.hint ? "3px" : "0" }}>{q.text}</div>
+                          {q.hint && <div style={{ fontSize: "11px", color: "#94A3B8", fontStyle: "italic" }}>{q.hint}</div>}
+                        </div>
+                      </div>
+                      <textarea
+                        placeholder="Escribe la respuesta de Camila aquí..."
+                        value={answers[q.id] || ""}
+                        onChange={e => updateAnswer(q.id, e.target.value)}
+                        style={{ width: "100%", border: "1px solid #E2E8F0", borderRadius: "8px", padding: "8px 10px", fontSize: "13px", color: "#334155", resize: "vertical", minHeight: "56px", fontFamily: "inherit", outline: "none", background: answered ? "#F0FDF4" : "#FAFAFA", boxSizing: "border-box", marginBottom: "6px" }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* Nota */}
+              <div style={{ background: "#FFFBEB", border: "1px solid #FDE68A", borderRadius: "12px", padding: "12px 14px", marginTop: "8px" }}>
+                <div style={{ fontSize: "12px", color: "#78350F", lineHeight: "1.6" }}>
+                  💡 Las respuestas se guardan automáticamente en este dispositivo. No son públicas.
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* ─── FONDOS TAB ─── */}
           {tab === "fondos" && (
