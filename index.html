@@ -249,6 +249,92 @@
       { name: "Google Sheets", cost: "Gratis", use: "Seguimiento de pacientes" },
     ];
 
+    const FONDOS = [
+      {
+        id: "kit-digital",
+        nombre: "Kit Digital — Ruta Digital",
+        institucion: "SERCOTEC",
+        monto: "$1.200.000",
+        color: "#059669",
+        urgencia: "🟢 Inmediato",
+        aporte: "Sin aporte propio",
+        descripcion: "Financia CRM, sistema de recordatorios y mejora del sitio web. Prerequisito: completar 9 cursos gratuitos en rutadigital.cl (~19 horas).",
+        url: "https://www.rutadigital.cl/kit-digital/",
+        tasks: [
+          { id: "kd_1", text: "Crear cuenta en www.rutadigital.cl" },
+          { id: "kd_2", text: "Curso 1 — Identidad digital (~2h)" },
+          { id: "kd_3", text: "Curso 2 — Redes sociales para tu negocio (~2h)" },
+          { id: "kd_4", text: "Curso 3 — Comercio electrónico (~2h)" },
+          { id: "kd_5", text: "Curso 4 — Marketing digital (~2h)" },
+          { id: "kd_6", text: "Curso 5 — Ventas online (~2h)" },
+          { id: "kd_7", text: "Curso 6 — Gestión de clientes / CRM (~2h)" },
+          { id: "kd_8", text: "Curso 7 — Seguridad digital (~1h)" },
+          { id: "kd_9", text: "Curso 8 — Facturación electrónica (~2h)" },
+          { id: "kd_10", text: "Curso 9 — Análisis de datos básico (~2h)" },
+          { id: "kd_11", text: "Verificar fecha apertura convocatoria Kit Digital en sercotec.cl" },
+          { id: "kd_12", text: "Obtener ficha tributaria electrónica (SII)" },
+          { id: "kd_13", text: "Definir presupuesto: CRM + recordatorios + mejora web ($1.200.000)" },
+          { id: "kd_14", text: "Completar formulario de postulación online" },
+          { id: "kd_15", text: "Enviar postulación ✅" },
+        ]
+      },
+      {
+        id: "crece",
+        nombre: "Crece Multisectorial Coquimbo",
+        institucion: "SERCOTEC",
+        monto: "$5.000.000",
+        color: "#1D4ED8",
+        urgencia: "🔴 Principal",
+        aporte: "Aporte propio 30% ($1.500.000)",
+        descripcion: "El fondo más grande. Financia desarrollo web, CRM, agendamiento online, telemedicina y producción de contenido. 42 cupos para la Región de Coquimbo.",
+        url: "https://www.sercotec.cl/crece-multisectorial-region-de-coquimbo/",
+        tasks: [
+          { id: "cr_1", text: "Verificar fecha de apertura convocatoria 2026 en sercotec.cl" },
+          { id: "cr_2", text: "Registrar o actualizar perfil en www.sercotec.cl" },
+          { id: "cr_3", text: "Descargar y leer bases oficiales de la convocatoria" },
+          { id: "cr_4", text: "Verificar ventas anuales netas (rango 200 UF – 25.000 UF)" },
+          { id: "cr_5", text: "Confirmar sin deudas laborales ni previsionales (Previred / AFC)" },
+          { id: "cr_6", text: "Confirmar disponibilidad del aporte propio ($1.500.000)" },
+          { id: "cr_7", text: "Obtener ficha tributaria electrónica (SII)" },
+          { id: "cr_8", text: "Completar test de preselección online en sercotec.cl" },
+          { id: "cr_9", text: "Grabar video pitch de 90 segundos (guión listo en wiki)" },
+          { id: "cr_10", text: "Preparar esquema de presupuesto detallado ($5.000.000)" },
+          { id: "cr_11", text: "Completar formulario del plan de negocio" },
+          { id: "cr_12", text: "Enviar postulación antes del cierre ✅" },
+        ]
+      },
+      {
+        id: "santander",
+        nombre: "Fondos Concursables Santander",
+        institucion: "Banco Santander",
+        monto: "Por definir",
+        color: "#DC2626",
+        urgencia: "🟠 Revisar bases",
+        aporte: "Verificar en bases",
+        descripcion: "Fondo privado con menos competencia. Ángulo: impacto social en salud regional — llevar especialistas a Ovalle, Vicuña y Vallenar. Posibilidad de incluir honorarios del fundador.",
+        url: "https://banco.santander.cl/nuestro-banco/sostenibilidad/fondos-concursables",
+        tasks: [
+          { id: "sa_1", text: "Revisar bases 3ª edición 2026 en banco.santander.cl/sostenibilidad/fondos-concursables" },
+          { id: "sa_2", text: "Verificar categorías disponibles (salud, impacto social, pyme)" },
+          { id: "sa_3", text: "Confirmar fecha de cierre de postulación" },
+          { id: "sa_4", text: "Preparar descripción del proyecto (500-1000 palabras, ángulo impacto social)" },
+          { id: "sa_5", text: "Preparar presupuesto detallado del proyecto" },
+          { id: "sa_6", text: "Reunir documentación: RUT empresa + últimos 3 meses de movimientos bancarios" },
+          { id: "sa_7", text: "Preparar carta de presentación del equipo médico" },
+          { id: "sa_8", text: "Completar formulario de postulación online" },
+          { id: "sa_9", text: "Enviar postulación ✅" },
+        ]
+      },
+    ];
+
+    const DOCS_COMUNES = [
+      { id: "dc_1", text: "Ficha tributaria electrónica — SII (www.sii.cl → Mi SII → Situación Tributaria)" },
+      { id: "dc_2", text: "Certificado de deudas previsionales — Previred o AFC Chile" },
+      { id: "dc_3", text: "Últimos 3 meses de declaraciones F29 — SII online" },
+      { id: "dc_4", text: "Últimos 3 meses de movimientos bancarios — Banco online" },
+      { id: "dc_5", text: "RUT empresa y datos de constitución" },
+    ];
+
     const PRIORITY_CONFIG = {
       red:    { color: "#DC2626", bg: "#FEF2F2", light: "#FECACA", label: "Urgente" },
       orange: { color: "#EA580C", bg: "#FFF7ED", light: "#FED7AA", label: "Alto" },
@@ -324,7 +410,7 @@
               <div style={{ background: "linear-gradient(90deg, #38BDF8, #818CF8)", height: "5px", borderRadius: "6px", width: `${totalPct}%`, transition: "width 0.6s ease" }} />
             </div>
             <div style={{ display: "flex", gap: "6px", paddingBottom: "1px" }}>
-              {[["focos", "🎯 Focos"], ["plan", "📅 Plan"], ["kpis", "📊 Metas"], ["tools", "🛠 Arranque"]].map(([id, label]) => (
+              {[["focos", "🎯 Focos"], ["plan", "📅 Plan"], ["kpis", "📊 Metas"], ["tools", "🛠 Arranque"], ["fondos", "💰 Fondos"]].map(([id, label]) => (
                 <button key={id} onClick={() => setTab(id)} style={{ background: tab === id ? "white" : "transparent", color: tab === id ? "#1C3A5F" : "rgba(255,255,255,0.6)", border: "none", borderRadius: "8px 8px 0 0", padding: "8px 14px", fontSize: "12px", fontWeight: 600, cursor: "pointer", transition: "all 0.2s", whiteSpace: "nowrap" }}>
                   {label}
                 </button>
@@ -534,6 +620,117 @@
                 </div>
               </div>
             )}
+
+          {/* ─── FONDOS TAB ─── */}
+          {tab === "fondos" && (
+            <div>
+              <div style={{ marginBottom: "16px" }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", color: "#1C3A5F", marginBottom: "4px" }}>Fondos concursables</div>
+                <div style={{ fontSize: "13px", color: "#64748B" }}>Postula en paralelo — total potencial $6.200.000+ CLP</div>
+              </div>
+
+              {/* Resumen fondos */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "8px", marginBottom: "20px" }}>
+                {FONDOS.map(f => {
+                  const total = f.tasks.length;
+                  const doneCount = f.tasks.filter(t => done[t.id]).length;
+                  const pct = Math.round(doneCount / total * 100);
+                  return (
+                    <div key={f.id} style={{ background: "white", borderRadius: "12px", padding: "12px", boxShadow: "0 2px 8px rgba(0,0,0,0.06)", borderTop: `3px solid ${f.color}` }}>
+                      <div style={{ fontSize: "10px", fontWeight: 700, color: f.color, marginBottom: "4px", textTransform: "uppercase", letterSpacing: "0.06em" }}>{f.institucion}</div>
+                      <div style={{ fontSize: "13px", fontWeight: 700, color: "#1E293B", lineHeight: 1.3, marginBottom: "6px" }}>{f.monto}</div>
+                      <div style={{ background: "#F1F5F9", borderRadius: "4px", height: "4px", marginBottom: "4px" }}>
+                        <div style={{ background: f.color, height: "4px", borderRadius: "4px", width: `${pct}%`, transition: "width 0.4s" }} />
+                      </div>
+                      <div style={{ fontSize: "10px", color: "#94A3B8" }}>{doneCount}/{total} tareas</div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Documentos comunes */}
+              <div style={{ background: "#1C3A5F", borderRadius: "14px", padding: "14px 16px", marginBottom: "16px" }}>
+                <div style={{ color: "#93C5FD", fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "10px" }}>Documentos comunes — preparar esta semana</div>
+                {DOCS_COMUNES.map((doc, i) => {
+                  const isDone = done[doc.id];
+                  return (
+                    <div key={doc.id} onClick={() => toggleTask(doc.id)} style={{ display: "flex", alignItems: "flex-start", gap: "10px", padding: "8px 0", borderTop: i > 0 ? "1px solid rgba(255,255,255,0.08)" : "none", cursor: "pointer" }}>
+                      <div style={{ width: "18px", height: "18px", borderRadius: "5px", border: `2px solid ${isDone ? "#6EE7B7" : "rgba(255,255,255,0.3)"}`, background: isDone ? "#059669" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "1px" }}>
+                        {isDone && <span style={{ color: "white", fontSize: "10px", fontWeight: 700 }}>✓</span>}
+                      </div>
+                      <div style={{ fontSize: "12px", color: isDone ? "rgba(255,255,255,0.4)" : "rgba(255,255,255,0.85)", lineHeight: "1.45", textDecoration: isDone ? "line-through" : "none" }}>{doc.text}</div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Fondos individuales */}
+              {FONDOS.map(fondo => {
+                const fondoDone = fondo.tasks.filter(t => done[t.id]).length;
+                const fondoPct = Math.round(fondoDone / fondo.tasks.length * 100);
+                const isOpen = expanded[fondo.id];
+                return (
+                  <div key={fondo.id} style={{ background: "white", borderRadius: "14px", marginBottom: "12px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)", border: `1px solid ${isOpen ? fondo.color + "44" : "transparent"}` }}>
+                    {/* Header del fondo */}
+                    <button onClick={() => toggleWeek(fondo.id)} style={{ width: "100%", background: "none", border: "none", padding: "0", cursor: "pointer", textAlign: "left" }}>
+                      <div style={{ background: `linear-gradient(135deg, ${fondo.color}15, ${fondo.color}08)`, borderLeft: `4px solid ${fondo.color}`, padding: "14px 16px" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
+                          <div style={{ flex: 1 }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "3px", flexWrap: "wrap" }}>
+                              <span style={{ fontSize: "10px", fontWeight: 700, color: fondo.color, textTransform: "uppercase", letterSpacing: "0.06em" }}>{fondo.institucion}</span>
+                              <span style={{ background: fondo.color + "18", color: fondo.color, fontSize: "10px", fontWeight: 600, padding: "2px 8px", borderRadius: "20px" }}>{fondo.urgencia}</span>
+                            </div>
+                            <div style={{ fontSize: "15px", fontWeight: 700, color: "#1E293B", marginBottom: "3px" }}>{fondo.nombre}</div>
+                            <div style={{ fontSize: "13px", fontWeight: 700, color: fondo.color }}>{fondo.monto}</div>
+                          </div>
+                          <div style={{ textAlign: "right", flexShrink: 0, marginLeft: "12px" }}>
+                            <div style={{ fontSize: "18px", fontWeight: 700, color: fondo.color, lineHeight: 1 }}>{fondoPct}%</div>
+                            <div style={{ fontSize: "10px", color: "#94A3B8", marginTop: "2px" }}>{fondoDone}/{fondo.tasks.length}</div>
+                          </div>
+                        </div>
+                        <div style={{ fontSize: "12px", color: "#475569", lineHeight: "1.5", marginBottom: "10px" }}>{fondo.descripcion}</div>
+                        <div style={{ background: "rgba(0,0,0,0.08)", borderRadius: "4px", height: "4px" }}>
+                          <div style={{ background: fondo.color, height: "4px", borderRadius: "4px", width: `${fondoPct}%`, transition: "width 0.5s" }} />
+                        </div>
+                      </div>
+                      <div style={{ padding: "8px 16px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <div style={{ fontSize: "11px", color: "#94A3B8" }}>⚠️ {fondo.aporte}</div>
+                        <div style={{ color: "#CBD5E1", fontSize: "14px", transform: isOpen ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.25s" }}>▾</div>
+                      </div>
+                    </button>
+
+                    {/* Checklist del fondo */}
+                    {isOpen && (
+                      <div style={{ borderTop: "1px solid #F1F5F9" }}>
+                        {fondo.tasks.map((task, ti) => {
+                          const isDone = done[task.id];
+                          return (
+                            <div key={task.id} onClick={() => toggleTask(task.id)} style={{ display: "flex", alignItems: "flex-start", gap: "12px", padding: "10px 16px", borderBottom: ti < fondo.tasks.length - 1 ? "1px solid #F8FAFC" : "none", cursor: "pointer", background: isDone ? `${fondo.color}08` : "white", transition: "background 0.15s" }}>
+                              <div style={{ width: "20px", height: "20px", borderRadius: "6px", border: `2px solid ${isDone ? fondo.color : "#CBD5E1"}`, background: isDone ? fondo.color : "white", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "1px", transition: "all 0.15s" }}>
+                                {isDone && <span style={{ color: "white", fontSize: "11px", fontWeight: 700, lineHeight: 1 }}>✓</span>}
+                              </div>
+                              <div style={{ fontSize: "13px", color: isDone ? "#94A3B8" : "#334155", lineHeight: "1.5", textDecoration: isDone ? "line-through" : "none", flex: 1 }}>{task.text}</div>
+                            </div>
+                          );
+                        })}
+                        <a href={fondo.url} target="_blank" rel="noopener noreferrer" style={{ display: "block", padding: "10px 16px", background: fondo.color, color: "white", textAlign: "center", fontSize: "12px", fontWeight: 700, textDecoration: "none", letterSpacing: "0.04em" }}>
+                          Ir al sitio oficial →
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+
+              {/* Info sueldo */}
+              <div style={{ background: "#FFFBEB", border: "1px solid #FDE68A", borderRadius: "14px", padding: "16px" }}>
+                <div style={{ fontSize: "13px", fontWeight: 700, color: "#B45309", marginBottom: "8px" }}>💡 Sobre el sueldo del fundador</div>
+                <div style={{ fontSize: "12px", color: "#78350F", lineHeight: "1.6" }}>
+                  Los fondos SERCOTEC no financian sueldos del dueño directamente. La ruta: <strong>fondos → herramientas → recuperar $5M/mes → +35% atenciones → sueldo formal desde mes 4 (~$1.5-2M CLP/mes como Gerente de Marketing).</strong> En Santander (fondo privado) verificar si permite incluir honorarios del equipo fundador.
+                </div>
+              </div>
+            </div>
+          )}
 
           </div>
         </div>
