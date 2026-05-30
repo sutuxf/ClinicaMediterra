@@ -31,15 +31,17 @@
 **Subtítulo:** Resolver lo urgente  
 **Meta:** Detener la sangría de $18M y poner la casa en orden digital
 
-### Semana 1 · Activar WhatsApp Business
-*Responsable: Persona de agenda · Tiempo: 4 horas*
+### Semana 1 · Activar automatización en WhatsApp Business
+*Responsable: Persona de agenda · Tiempo: 1 hora*
 
-- Descargar e instalar WhatsApp Business en el celular de atención al paciente
-- Configurar perfil completo: logo, descripción, dirección, horario y sitio web
-- Crear mensaje de bienvenida automático (responde en menos de 2 horas)
-- Crear mensaje de ausencia automático (fuera de horario)
-- Crear respuestas rápidas: Horarios, Convenios, Cómo agendar, Dirección
-- Crear etiquetas: Nuevo paciente / Confirmó / No confirmó / Cancelado
+> ✅ **Hallazgo confirmado (30 mayo 2026):** Ya tienen WhatsApp Business instalado con perfil completo — logo, categoría Medical & Health, horario, sitio web y RRSS configurados. Lo que falta es **solo la automatización**.
+
+- ~~Descargar e instalar WhatsApp Business~~ — ya existe (+56 9 3933 7727)
+- ~~Configurar perfil: logo, categoría, horario, web~~ — ya está hecho
+- **Activar mensaje de ausencia** (URGENTE — confirmado: no responde fuera de horario)
+- **Activar mensaje de bienvenida** automático para nuevos contactos
+- Crear respuestas rápidas: Horarios · Convenios · Cómo agendar · Dirección · Especialidades
+- Crear etiquetas: Nuevo paciente / Confirmó / No confirmó / Cancelado / Reagendar
 
 ### Semana 2 · Protocolo de recordatorios
 *Responsable: Persona de agenda · Tiempo: 2h setup + 15 min/día*
@@ -51,14 +53,18 @@
 - Asignar responsable del envío diario de recordatorios (15 min/día)
 - Crear planilla Google Sheets de seguimiento de pacientes agendados
 
-### Semana 3 · Optimizar Google My Business
-*Responsable: Creadora de contenido + 1 médico · Tiempo: 6 horas*
+### Semana 3 · Crear Google My Business desde cero
+*Responsable: Creadora de contenido + 1 médico · Tiempo: 4-6 horas*
 
-- Ingresar a business.google.com y reclamar/verificar la ficha
+> ⚠️ **Hallazgo confirmado (30 mayo 2026):** Clínica Mediterra no aparece en búsquedas de Google. No tienen ficha de Google My Business activa o reclamada. Esto es una brecha crítica — cualquier paciente que busca "ginecólogo La Serena" o "urólogo La Serena" no los encuentra.
+
+- Buscar en Google Maps si existe ficha sin reclamar ("Clínica Mediterra La Serena")
+- Si existe ficha → reclamarla en business.google.com
+- Si no existe → crear ficha nueva desde cero en business.google.com/create
 - Completar categorías: Clínica médica + Ginecólogo, Urólogo, Kinesiólogo, Traumatólogo, Nutricionista
 - Subir 20+ fotos: fachada, recepción, boxes, equipo (con autorización), equipamiento
-- Activar mensajería directa desde la ficha de Google
-- Enviar link de reseña a 10 pacientes habituales por WhatsApp para las primeras reseñas
+- Activar mensajería directa desde la ficha
+- Enviar link de reseña a 10 pacientes habituales para las primeras reseñas
 - Publicar primera novedad: "Conoce a nuestro equipo de urólogos"
 
 ### Semana 4 · Reactivar Facebook y ordenar Instagram

@@ -19,15 +19,19 @@ tags: [marketing, canales, digital]
 
 ## WhatsApp Business (+56 9 3933 7727)
 
-**Estado:** Número activo pero sin WhatsApp Business configurado  
-**Problema:** Los recordatorios se hacen manualmente (15 min/día). Se pierden $9M/mes en no-shows.  
-**Acción:** Configurar en Semana 1
+**Estado verificado (30 mayo 2026):** ✅ WhatsApp Business instalado y con perfil completo.
+- ✅ Logo, categoría "Medical & Health", horario, sitio web y RRSS configurados
+- 🚨 **Sin mensajes automáticos** — confirmado: no responde fuera de horario
+- 🚨 Sin respuestas rápidas ni etiquetas de pacientes
 
-Mensajes a crear:
-- Bienvenida automática (responde en <2 horas)
-- Ausencia fuera de horario
-- Respuestas rápidas: Horarios · Convenios · Cómo agendar · Dirección
-- Etiquetas: Nuevo paciente / Confirmó / No confirmó / Cancelado
+**Problema:** Los recordatorios se hacen manualmente. Se pierden $9M/mes en no-shows.  
+**Acción Semana 1:** Solo activar automatización (~1 hora, no 4)
+
+Pendiente de configurar:
+- Mensaje de ausencia fuera de horario (URGENTE)
+- Mensaje de bienvenida automático
+- Respuestas rápidas: Horarios · Convenios · Cómo agendar · Dirección · Especialidades
+- Etiquetas: Nuevo / Confirmó / No confirmó / Cancelado / Reagendar
 
 **[[../ia/agente-faq-whatsapp|→ Ver agente FAQ WhatsApp]]**
 
@@ -35,15 +39,15 @@ Mensajes a crear:
 
 ## Google My Business
 
-**Estado:** Ficha existente, sin optimizar  
-**Oportunidad:** Canal 100% gratuito — captura a quien busca "ginecólogo La Serena" o "urólogo La Serena"
+**Estado verificado (30 mayo 2026):** 🚨 **No aparece en Google.**
+Clínica Mediterra no tiene ficha activa o reclamada en Google My Business. Búsquedas de "Clínica Mediterra La Serena" no devuelven panel de negocio. Lo que aparece en Google es "Centro Clínico Mediterráneo" — una clínica distinta.
 
-Acciones Semana 3:
-- Completar categorías (Clínica médica + todas las especialidades)
-- Subir 20+ fotos
-- Activar mensajería directa
-- Conseguir primeras 10 reseñas de pacientes habituales
-- Publicar novedades: lanzamiento línea masculina, horarios, etc.
+**Impacto:** Cualquier paciente que busca "ginecólogo La Serena", "urólogo La Serena" o "piso pélvico La Serena" no los encuentra. Es la brecha digital más crítica.
+
+**Acción Semana 3:** Crear ficha desde cero (no optimizar — crear)
+- Buscar si existe ficha sin reclamar en Google Maps
+- Si existe → reclamar. Si no → crear en business.google.com/create
+- Completar categorías, fotos, mensajería, primeras reseñas
 
 ---
 
