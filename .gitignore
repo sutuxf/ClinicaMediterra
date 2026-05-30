@@ -1,0 +1,14 @@
+# Personal config (sensible, no committear)
+_bmad/**/*.user.toml
+_bmad/custom/config.user.toml
+
+# Progreso de sesión (machine-local)
+_progress/
+progress/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Node
+node_modules/
