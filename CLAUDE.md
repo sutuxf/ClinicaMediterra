@@ -56,6 +56,7 @@ The project follows an 8-phase process with three specialized agents:
 
 Strategic documents that inform all WDS agents. Currently:
 
+- **`docs/perfil-clinica-mediterra.md`** — Datos reales de la clínica: 15 profesionales en 6 especialidades, contacto, horarios, testimonios y observaciones estratégicas. Fuente: web oficial + Instagram. Usar como base para cualquier contenido, agente FAQ o comunicación.
 - **`docs/PANORAMA ACTUAL Y CANVAS MEDITERRA.md`** — Situación actual, visión estratégica, Business Model Canvas y Value Proposition Canvas. Define el punto de partida: 68% pacientes mujeres, base local (La Serena/Coquimbo), y la dirección estratégica hacia centro de referencia pélvico regional con segmento masculino activo.
 - **`docs/plan-de-marketing-digital.md`** — Plan de marketing digital a 6 meses ($200.000 CLP/mes). Incluye cronograma semana a semana, prioridades por impacto, KPIs con metas a M3 y M6, checklist de arranque y herramientas. Contexto clave: recuperar $18M en pacientes no convertidos, desarrollar línea masculina (32% → 40%), expansión geográfica a Ovalle/Vicuña/Vallenar.
 

@@ -1,0 +1,75 @@
+# Perfil Clínica Mediterra — Datos reales
+
+## Propuesta de valor oficial
+> "Atención en Salud de primer nivel, sin que tengas que salir de tu Región, con un toque humano y profesionales excepcionales, a tu servicio siempre."
+
+**Palabras clave de marca:** humano · empático · primer nivel · regional · excelencia
+
+---
+
+## Especialidades y equipo (15 profesionales)
+
+### Ginecología y Obstetricia
+- Dr. Ángel Uribe
+- Dr. Luis Simoneti
+- Dra. Carla Carvajal
+- Dra. Catalina Radic
+
+### Urología
+- Dr. Alexander Andrusco
+- Dr. Rodrigo Valenzuela
+- Dr. Álvaro Vera
+
+### Traumatología
+- Dr. Jorge Ferreira
+
+### Psicología - Sexología
+- Andrei Andrusco
+
+### Kinesioterapia Pélvica
+- Camila Tohá
+- Alejandra Budinich
+- Paola Fernández
+
+### Nutrición
+- Carolina Villegas
+
+---
+
+## Datos operativos
+
+| Campo | Dato |
+|-------|------|
+| Dirección | Av. Juan Cisternas 2497, Local 007, La Serena (Edificio Boulevard San Joaquín) |
+| WhatsApp | +56 9 3933 7727 |
+| Teléfono | +56 2 33422515 |
+| Horario L-V | 9:00 AM – 8:00 PM |
+| Horario Sáb | 9:00 AM – 1:00 PM |
+| Web | www.clinicamediterra.cl (Wix, 2022) |
+| Instagram | @mediterraclinica / @clinicamediterra.ls |
+| Facebook | clinicamediterra |
+
+---
+
+## Testimonios reales de pacientes
+
+> **Pia Kuhnow:** "Muy buena atención. Las secretarias me han atendido muy bien. Muy buenos profesionales, sobre todo, empáticos. Tuve el agrado de atenderme con la kinesióloga Budinich que me ayudó de gran manera a mejorar mis síntomas así como también el Dr Andrusco que explica con gran detalle cada inquietud que el paciente tiene. Muy agradecida!"
+
+> **Rocío Cortés:** "Fui con la Dra Carvajal, excelente profesional, la consulta muy completa y explica todo muy bien, además la recepcionista Paola muy simpática y con muy buena disponibilidad siempre."
+
+> **Carolayn Barraza:** "Un servicio realmente bueno. Atención respetuosa, cálida y muy profesional. Se agradece. Llegar aquí fue un alivio, te hacen sentir escuchado, contenido y acompañado en todo el proceso. Recomendable."
+
+**Patrón en testimonios:** Los pacientes destacan consistentemente la empatía, la explicación detallada y sentirse acompañados — no solo el diagnóstico técnico.
+
+---
+
+## Observaciones estratégicas
+
+- El sitio web usa **Wix (copyright 2022)** — SEO limitado, difícil de optimizar
+- **No hay precios publicados** en ninguna especialidad
+- El menú incluye "Procedimientos" y "Temas de Salud" pero sin contenido accesible
+- Tienen un formulario de contacto específico para cirugías/procedimientos
+- **Inconsistencia de IG:** el sitio menciona @clinicamediterra.ls pero el handle real activo es @mediterraclinica
+- **Traumatología** tiene solo 1 médico (Dr. Ferreira) — especialidad menos desarrollada
+- **Psicología-Sexología** (Andrei Andrusco) es clave para la línea masculina
+- 3 kinesiólogas pélvicas — mayor dotación relativa, core del negocio femenino
