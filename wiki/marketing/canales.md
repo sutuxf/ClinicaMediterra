@@ -53,13 +53,22 @@ Clínica Mediterra no tiene ficha activa o reclamada en Google My Business. Bús
 
 ## Instagram (@mediterraclinica)
 
-**Nota:** El sitio web menciona @clinicamediterra.ls — verificar si hay dos cuentas activas y consolidar.
+**Estado verificado (30 mayo 2026):** ✅ Canal más sano de todos — el único realmente activo.
 
-Configuración pendiente:
-- Bio optimizada: especialidades + ubicación + link agendamiento
-- 6 Destacados: Ginecología | Urología | Kinesiología | Traumatología | Psicología | Nutrición
-- Plantilla visual unificada (colores y tipografía Mediterra)
-- Ritmo: 3 posts/semana + 1 reel/semana
+| Dato | Valor |
+|------|-------|
+| Seguidores | 1.196 |
+| Posts totales | 64 |
+| Último post | 15 mayo 2026 |
+| Historias guardadas | Sí |
+| Link en bio | Reserva directa ✅ — sitio web ❌ |
+
+**Lo que falta:**
+- Agregar link al sitio web (usar múltiples links de IG o Linktree)
+- Verificar y completar los 6 destacados por especialidad
+- Aumentar frecuencia: de ~1 post/semana a 3 posts/semana
+
+**Nota sobre segunda cuenta:** El sitio web menciona @clinicamediterra.ls — puede ser una cuenta antigua o de otra sucursal. Verificar y consolidar en @mediterraclinica.
 
 **[[../ia/agente-contenido-rrss|→ Ver agente generador de contenido]]**
 

@@ -78,9 +78,11 @@
 - Verificar y actualizar botón de acción: "Enviar mensaje a WhatsApp"
 - Publicar post de reapertura: "Volvemos con todo — conoce al equipo de Mediterra en 2026"
 - Publicar presentación del equipo completo (foto + especialidad de cada profesional)
-- Optimizar bio de Instagram: especialidades + ubicación + link de agendamiento
-- Crear 6 destacados en Instagram: Ginecología | Urología | Kinesiología | Traumatología | Psicología | Nutrición
-- Definir plantilla visual para todos los posts (colores y tipografía Mediterra)
+- ~~Optimizar bio de Instagram~~ — ya tiene link de reserva y está activo (último post: 15 mayo 2026)
+- Agregar link al sitio web en bio (usar los múltiples links de Instagram o Linktree)
+- Verificar si los 6 destacados por especialidad ya existen — completar los que falten
+- Aumentar frecuencia de publicación: de ~1 post/semana a 3 posts/semana
+- Definir plantilla visual unificada para todos los posts si aún no existe
 
 ---
 
