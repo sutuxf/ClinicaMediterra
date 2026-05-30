@@ -67,13 +67,17 @@
 - Enviar link de reseña a 10 pacientes habituales para las primeras reseñas
 - Publicar primera novedad: "Conoce a nuestro equipo de urólogos"
 
-### Semana 4 · Reactivar Facebook y ordenar Instagram
+### Semana 4 · Resucitar Facebook y ordenar Instagram
 *Responsable: Creadora de contenido · Tiempo: 8 horas*
 
-- Actualizar página de Facebook: horarios, dirección, web y WhatsApp
-- Subir foto de portada actualizada con identidad visual de Mediterra
-- Configurar botón de acción en Facebook: "Enviar mensaje"
-- Publicar presentación del equipo completo en Facebook
+> ⚠️ **Hallazgo confirmado (30 mayo 2026):** Facebook tiene dirección, RRSS y web configurados, pero está abandonado desde 2022 — sin publicaciones nuevas y con mensajes sin responder de esa época. Tres años de silencio frente a pacientes que escribieron.
+
+- Responder todos los mensajes sin contestar (aunque sean de 2022 — señala que la cuenta volvió a estar activa)
+- ~~Actualizar dirección, RRSS y web~~ — ya está configurado
+- Subir foto de portada actualizada con identidad visual actual de Mediterra
+- Verificar y actualizar botón de acción: "Enviar mensaje a WhatsApp"
+- Publicar post de reapertura: "Volvemos con todo — conoce al equipo de Mediterra en 2026"
+- Publicar presentación del equipo completo (foto + especialidad de cada profesional)
 - Optimizar bio de Instagram: especialidades + ubicación + link de agendamiento
 - Crear 6 destacados en Instagram: Ginecología | Urología | Kinesiología | Traumatología | Psicología | Nutrición
 - Definir plantilla visual para todos los posts (colores y tipografía Mediterra)

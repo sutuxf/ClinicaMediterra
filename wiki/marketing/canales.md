@@ -67,10 +67,20 @@ Configuración pendiente:
 
 ## Facebook (clinicamediterra)
 
-Acciones Semana 4:
-- Actualizar horarios, dirección, web y WhatsApp
-- Botón de acción: "Enviar mensaje"
-- Publicar presentación del equipo completo
+**Estado verificado (30 mayo 2026):** ⚠️ Página abandonada desde 2022.
+- ✅ Dirección, RRSS y web configurados
+- 🚨 Sin publicaciones nuevas desde 2022 — 3 años de silencio
+- 🚨 Mensajes de pacientes sin responder de esa época
+- Presencia activa en nombre pero muerta en contenido
+
+**Impacto:** Pacientes que buscaron la clínica hace años y no obtuvieron respuesta. Reputación dañada silenciosamente.
+
+**Acciones Semana 4:**
+- Responder todos los mensajes sin contestar (incluso los de 2022)
+- Subir portada actualizada 2026
+- Verificar botón de acción → WhatsApp
+- Post de reapertura: "Volvemos con todo"
+- Presentación del equipo completo (15 profesionales)
 
 ---
 
