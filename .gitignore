@@ -11,6 +11,9 @@ progress/
 .obsidian/workspace-mobile.json
 .obsidian/cache
 
+# Documentos privados (solo local, nunca al repo)
+privado/
+
 # Claude Code (skills e internals locales)
 .agents/
 .claude/
