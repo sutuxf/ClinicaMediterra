@@ -260,6 +260,81 @@
       { name: "Google Sheets", cost: "Gratis", use: "Seguimiento de pacientes" },
     ];
 
+    const COMPETIDORES = [
+      {
+        id: "hera", nombre: "Clínica Hera", tipo: "Centro salud femenina", ciudad: "La Serena",
+        nivel: "principal", color: "#DC2626",
+        profesionales: "30+", ginecologia: true, urologia: false, kinePelvica: true, sexologia: false, lineaMasculina: false,
+        fortaleza: "15+ ginecólogos · 2 sedes (La Serena + Coquimbo) · Láser CO2 · referente regional",
+        debilidad: "Sin urología · sin sexología · sin línea masculina explícita",
+        alerta: "⚠️ Dr. Ángel Uribe también trabaja en Hera",
+      },
+      {
+        id: "redsalud", nombre: "RedSalud Elqui", tipo: "Clínica alta complejidad", ciudad: "La Serena",
+        nivel: "principal", color: "#7C3AED",
+        profesionales: "120+", ginecologia: true, urologia: true, kinePelvica: true, sexologia: false, lineaMasculina: false,
+        fortaleza: "Alta complejidad · todos los convenios isapre/Fonasa · cirugía laparoscópica 4K",
+        debilidad: "Experiencia masificada · sin foco pélvico · sin sexología · impersonal",
+        alerta: "",
+      },
+      {
+        id: "cip", nombre: "CIP — Centro de Reproducción", tipo: "Fertilidad avanzada", ciudad: "La Serena",
+        nivel: "especializado", color: "#059669",
+        profesionales: "5+", ginecologia: true, urologia: false, kinePelvica: false, sexologia: false, lineaMasculina: false,
+        fortaleza: "Único en fertilidad avanzada (IVF, donación óvulos) · mismo sector que Mediterra",
+        debilidad: "No compite en salud pélvica general · sin kine ni sexología",
+        alerta: "✅ Potencial aliado de derivación cruzada",
+      },
+      {
+        id: "cemuf", nombre: "CEMUF", tipo: "Centro mujer y familia", ciudad: "La Serena",
+        nivel: "especializado", color: "#EA580C",
+        profesionales: "8+", ginecologia: true, urologia: false, kinePelvica: false, sexologia: false, lineaMasculina: false,
+        fortaleza: "Diagnóstico avanzado (4D, genética) · psicología con sexualidad femenina",
+        debilidad: "Sin urología · sin kine pélvica · sin línea masculina",
+        alerta: "",
+      },
+      {
+        id: "andrusco", nombre: "Dr. Andrusco — urologiaelqui.com", tipo: "Urólogo marca personal", ciudad: "La Serena",
+        nivel: "individual", color: "#1D4ED8",
+        profesionales: "1", ginecologia: false, urologia: true, kinePelvica: false, sexologia: false, lineaMasculina: true,
+        fortaleza: "Jefe Urología Hospital La Serena · Fellowship robótica Rochester · 200+ reseñas · marca fuerte",
+        debilidad: "Solo urología · sin kine ni sexología",
+        alerta: "⚠️ Su marca personal puede crecer independiente de Mediterra",
+      },
+      {
+        id: "marr", nombre: "Ks. Pía Marré", tipo: "Kinesiología piso pélvico", ciudad: "La Serena",
+        nivel: "individual", color: "#B45309",
+        profesionales: "1", ginecologia: false, urologia: false, kinePelvica: true, sexologia: false, lineaMasculina: false,
+        fortaleza: "Magíster Salamanca · hiperespecializada · muy bien reseñada · $40.000 CLP",
+        debilidad: "Solo kinesiología · sin interdisciplina · sin línea masculina",
+        alerta: "",
+      },
+      {
+        id: "cemovalle", nombre: "CEMOvalle", tipo: "Centro médico integral", ciudad: "Ovalle",
+        nivel: "regional", color: "#475569",
+        profesionales: "30+", ginecologia: true, urologia: true, kinePelvica: false, sexologia: false, lineaMasculina: false,
+        fortaleza: "3 ginecólogos + 3 urólogos en Ovalle · horario amplio",
+        debilidad: "Sin kinesiología pélvica · sin sexología · el paciente complejo debe viajar a La Serena",
+        alerta: "✅ Pacientes pélvicos complejos de Ovalle no tienen dónde ir localmente",
+      },
+      {
+        id: "atacama", nombre: "Clínica Atacama", tipo: "Clínica regional", ciudad: "Vallenar",
+        nivel: "regional", color: "#475569",
+        profesionales: "10+", ginecologia: true, urologia: true, kinePelvica: false, sexologia: false, lineaMasculina: false,
+        fortaleza: "Cobertura Vallenar y norte de Atacama",
+        debilidad: "Ginecología y urología básicas · sin especialización pélvica",
+        alerta: "✅ El paciente del norte sin alternativa — mercado disponible para Mediterra",
+      },
+    ];
+
+    const MATRIZ_LABELS = [
+      { key: "ginecologia", label: "Ginecología" },
+      { key: "urologia", label: "Urología" },
+      { key: "kinePelvica", label: "Kine Pélvica" },
+      { key: "sexologia", label: "Sexología" },
+      { key: "lineaMasculina", label: "Línea Masculina" },
+    ];
+
     const DIAGNOSTICO_CRITICAS = [
       { id: "dc1", text: "¿Usan algún software de agenda o gestión clínica?", hint: "Medilink, Medigital, Doctoralia, Excel, papel..." },
       { id: "dc2", text: "¿Quién tiene acceso al WhatsApp Business (+56 9 3933 7727)?", hint: "¿Una persona exclusiva? ¿Varios?" },
@@ -465,7 +540,7 @@
               <div style={{ background: "linear-gradient(90deg, #38BDF8, #818CF8)", height: "5px", borderRadius: "6px", width: `${totalPct}%`, transition: "width 0.6s ease" }} />
             </div>
             <div style={{ display: "flex", gap: "6px", paddingBottom: "1px" }}>
-              {[["focos", "🎯 Focos"], ["plan", "📅 Plan"], ["kpis", "📊 Metas"], ["tools", "🛠 Arranque"], ["fondos", "💰 Fondos"], ["camila", "📋 Diagnóstico"]].map(([id, label]) => (
+              {[["focos", "🎯 Focos"], ["plan", "📅 Plan"], ["kpis", "📊 Metas"], ["tools", "🛠 Arranque"], ["fondos", "💰 Fondos"], ["mercado", "🏆 Mercado"], ["camila", "📋 Diagnóstico"]].map(([id, label]) => (
                 <button key={id} onClick={() => setTab(id)} style={{ background: tab === id ? "white" : "transparent", color: tab === id ? "#1C3A5F" : "rgba(255,255,255,0.6)", border: "none", borderRadius: "8px 8px 0 0", padding: "8px 14px", fontSize: "12px", fontWeight: 600, cursor: "pointer", transition: "all 0.2s", whiteSpace: "nowrap" }}>
                   {label}
                 </button>
@@ -675,6 +750,134 @@
                 </div>
               </div>
             )}
+
+          {/* ─── MERCADO TAB ─── */}
+          {tab === "mercado" && (
+            <div>
+              <div style={{ marginBottom: "16px" }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "22px", color: "#1C3A5F", marginBottom: "4px" }}>Análisis de mercado</div>
+                <div style={{ fontSize: "13px", color: "#64748B" }}>Macrozona norte · La Serena · Ovalle · Vallenar · Investigación mayo 2026</div>
+              </div>
+
+              {/* EL GAP */}
+              <div style={{ background: "linear-gradient(135deg, #1C3A5F, #0F2847)", borderRadius: "14px", padding: "18px 16px", marginBottom: "20px" }}>
+                <div style={{ color: "#60A5FA", fontSize: "10px", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "8px" }}>El espacio vacío que nadie ocupa</div>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "18px", color: "white", marginBottom: "10px", lineHeight: 1.3 }}>
+                  Ningún competidor en la macrozona norte combina Urología + Sexología + Kinesiología Pélvica para hombres bajo un mismo techo.
+                </div>
+                <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+                  {["Urología ✅", "Sexología ✅", "Kine Pélvica ✅", "Para hombres ✅"].map(item => (
+                    <div key={item} style={{ background: "rgba(96,165,250,0.2)", border: "1px solid rgba(96,165,250,0.4)", borderRadius: "20px", padding: "4px 12px", color: "#93C5FD", fontSize: "11px", fontWeight: 600 }}>{item}</div>
+                  ))}
+                </div>
+              </div>
+
+              {/* MATRIZ COMPETITIVA */}
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "16px", color: "#1C3A5F", marginBottom: "10px" }}>Matriz competitiva</div>
+              <div style={{ background: "white", borderRadius: "14px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)", marginBottom: "20px" }}>
+                {/* Header */}
+                <div style={{ background: "#1C3A5F", padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 36px)", gap: "4px", alignItems: "center" }}>
+                  <div style={{ color: "#93C5FD", fontSize: "10px", fontWeight: 700, textTransform: "uppercase" }}>Centro</div>
+                  {MATRIZ_LABELS.map(l => (
+                    <div key={l.key} style={{ color: "#93C5FD", fontSize: "9px", fontWeight: 700, textAlign: "center", lineHeight: 1.2 }}>{l.label}</div>
+                  ))}
+                </div>
+                {/* Mediterra row */}
+                <div style={{ padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 36px)", gap: "4px", alignItems: "center", background: "#EFF6FF", borderBottom: "2px solid #1C3A5F" }}>
+                  <div>
+                    <div style={{ fontSize: "12px", fontWeight: 700, color: "#1C3A5F" }}>⭐ Clínica Mediterra</div>
+                    <div style={{ fontSize: "10px", color: "#3B82F6" }}>La Serena · 15 profesionales</div>
+                  </div>
+                  {MATRIZ_LABELS.map(l => (
+                    <div key={l.key} style={{ textAlign: "center", fontSize: "14px" }}>
+                      {l.key === "lineaMasculina" ? "🟡" : "✅"}
+                    </div>
+                  ))}
+                </div>
+                {/* Competitor rows */}
+                {COMPETIDORES.map((c, i) => (
+                  <div key={c.id} style={{ padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 36px)", gap: "4px", alignItems: "center", background: i % 2 === 0 ? "white" : "#FAFAF9", borderTop: "1px solid #F1F5F9" }}>
+                    <div>
+                      <div style={{ fontSize: "11px", fontWeight: 600, color: "#1E293B" }}>{c.nombre}</div>
+                      <div style={{ fontSize: "10px", color: "#94A3B8" }}>{c.ciudad} · {c.tipo}</div>
+                    </div>
+                    {MATRIZ_LABELS.map(l => (
+                      <div key={l.key} style={{ textAlign: "center", fontSize: "13px" }}>
+                        {c[l.key] ? "✅" : "❌"}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+
+              {/* COMPETIDORES DETALLE */}
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "16px", color: "#1C3A5F", marginBottom: "10px" }}>Competidores en detalle</div>
+
+              {/* Tabs de nivel */}
+              {[
+                { key: "principal", label: "🔴 La Serena — Principales", color: "#DC2626" },
+                { key: "especializado", label: "🟠 La Serena — Especializados", color: "#EA580C" },
+                { key: "individual", label: "🟡 Profesionales independientes", color: "#B45309" },
+                { key: "regional", label: "🔵 Macrozona — Regionales", color: "#475569" },
+              ].map(grupo => {
+                const comps = COMPETIDORES.filter(c => c.nivel === grupo.key);
+                return (
+                  <div key={grupo.key} style={{ marginBottom: "16px" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+                      <div style={{ background: grupo.color, borderRadius: "20px", padding: "3px 12px" }}>
+                        <span style={{ color: "white", fontSize: "10px", fontWeight: 700 }}>{grupo.label}</span>
+                      </div>
+                    </div>
+                    {comps.map(c => (
+                      <div key={c.id} style={{ background: "white", borderRadius: "12px", marginBottom: "8px", overflow: "hidden", boxShadow: "0 1px 6px rgba(0,0,0,0.06)", borderLeft: `4px solid ${c.color}` }}>
+                        <div style={{ padding: "12px 14px" }}>
+                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "6px" }}>
+                            <div>
+                              <div style={{ fontSize: "13px", fontWeight: 700, color: "#1E293B" }}>{c.nombre}</div>
+                              <div style={{ fontSize: "11px", color: "#94A3B8" }}>{c.ciudad} · {c.tipo} · {c.profesionales} profesionales</div>
+                            </div>
+                          </div>
+                          <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", marginBottom: "8px" }}>
+                            {MATRIZ_LABELS.map(l => (
+                              <div key={l.key} style={{ background: c[l.key] ? "#ECFDF5" : "#F8FAFC", color: c[l.key] ? "#059669" : "#94A3B8", fontSize: "10px", fontWeight: 600, padding: "2px 8px", borderRadius: "20px", border: `1px solid ${c[l.key] ? "#A7F3D0" : "#E2E8F0"}` }}>
+                                {c[l.key] ? "✓" : "✗"} {l.label}
+                              </div>
+                            ))}
+                          </div>
+                          <div style={{ fontSize: "12px", color: "#334155", marginBottom: "4px" }}>
+                            <span style={{ fontWeight: 600, color: "#059669" }}>+ </span>{c.fortaleza}
+                          </div>
+                          <div style={{ fontSize: "12px", color: "#334155", marginBottom: c.alerta ? "4px" : "0" }}>
+                            <span style={{ fontWeight: 600, color: "#DC2626" }}>– </span>{c.debilidad}
+                          </div>
+                          {c.alerta && (
+                            <div style={{ fontSize: "11px", color: "#B45309", background: "#FFFBEB", borderRadius: "6px", padding: "4px 8px", marginTop: "6px" }}>{c.alerta}</div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                );
+              })}
+
+              {/* OPORTUNIDADES */}
+              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "16px", color: "#1C3A5F", marginBottom: "10px" }}>Oportunidades estratégicas</div>
+              {[
+                { icon: "🤝", titulo: "Alianza con CIP", desc: "CIP (fertilidad avanzada) está en el mismo sector. Pueden derivarse pacientes mutuamente — CIP envía pacientes que necesitan rehabilitación pélvica, Mediterra los recibe." },
+                { icon: "📍", titulo: "Ovalle sin solución pélvica compleja", desc: "CEMOvalle tiene ginecólogos y urólogos, pero sin kinesiología pélvica ni sexología. El paciente pélvico complejo de Ovalle tiene que ir a La Serena — Mediterra es el destino natural." },
+                { icon: "👨", titulo: "Único para hombres con salud pélvica compleja", desc: "El hombre con disfunción eréctil + incontinencia + componente psicológico no tiene dónde resolverlo todo junto en la región. Solo en Mediterra." },
+                { icon: "⚡", titulo: "Precios de referencia del mercado", desc: "Consulta ginecológica: $35.000–$45.000 CLP. Kine pélvica: $40.000 CLP. Consulta urológica (telemedicina Dr. Andrusco): $40.000 CLP. Mediterra puede posicionarse en ese rango con valor diferencial." },
+              ].map((op, i) => (
+                <div key={i} style={{ background: "white", borderRadius: "12px", padding: "12px 14px", marginBottom: "8px", display: "flex", gap: "10px", alignItems: "flex-start", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
+                  <div style={{ fontSize: "20px", flexShrink: 0 }}>{op.icon}</div>
+                  <div>
+                    <div style={{ fontSize: "13px", fontWeight: 700, color: "#1E293B", marginBottom: "3px" }}>{op.titulo}</div>
+                    <div style={{ fontSize: "12px", color: "#64748B", lineHeight: "1.5" }}>{op.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
 
           {/* ─── DIAGNÓSTICO TAB ─── */}
           {tab === "camila" && (

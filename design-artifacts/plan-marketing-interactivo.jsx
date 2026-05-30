@@ -210,14 +210,15 @@ const FOCOS = [
 ];
 
 const KPIS = [
-  { name: "% pacientes hombres", base: "32%", m3: "35%", m6: "40%", icon: "👨" },
-  { name: "% pacientes de otras ciudades", base: "<10%", m3: "—", m6: "20%", icon: "📍" },
-  { name: "Pérdida mensual por no-conversión", base: "$9M", m3: "$6M", m6: "$4M", icon: "💸" },
-  { name: "Crecimiento atenciones mensuales", base: "base", m3: "+15%", m6: "+35%", icon: "📈" },
-  { name: "Reseñas Google 5 estrellas", base: "pocas", m3: "15", m6: "30+", icon: "⭐" },
-  { name: "Seguidores Instagram", base: "actual", m3: "+200", m6: "+500", icon: "📸" },
+  { name: "% pacientes hombres", base: "~32% (est.)", m3: "35%", m6: "40%", icon: "👨" },
+  { name: "% pacientes de otras ciudades", base: "<10% (est.)", m3: "—", m6: "20%", icon: "📍" },
+  { name: "Pérdida por no-conversión", base: "~$9M (est.)", m3: "$6M", m6: "$4M", icon: "💸" },
+  { name: "Canal de origen registrado", base: "0%", m3: "100%", m6: "100%", icon: "📊" },
+  { name: "Tasa conversión contacto→cita", base: "sin datos", m3: "medida", m6: "mejorada", icon: "🎯" },
+  { name: "Reseñas Google 5 estrellas", base: "2 (verificado)", m3: "15", m6: "30+", icon: "⭐" },
+  { name: "Seguidores Instagram", base: "1.196", m3: "+200", m6: "+500", icon: "📸" },
   { name: "Seguidores Facebook", base: "bajo", m3: "+100", m6: "+300", icon: "👥" },
-  { name: "Contactos WhatsApp/mes", base: "actual", m3: "+30", m6: "+80", icon: "💬" },
+  { name: "Crecimiento atenciones/mes", base: "base real mes 1", m3: "+15%", m6: "+35%", icon: "📈" },
 ];
 
 const CHECKLIST = [
