@@ -37,9 +37,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | WhatsApp Business | ✅ Perfil completo — 🚨 sin mensajes automáticos confirmado |
 | Facebook | ✅ Info OK — 🚨 sin posts desde 2022, mensajes sin responder |
 | Google My Business | 🚨 No existe — no aparecen en búsquedas de Google |
-| Sitio web (Wix 2022) | ✅ Activo — SEO débil, sin precios ni contenido en menús |
+| Sitio web (Wix 2022) | ✅ Activo — SEO débil · chat widget = botonera muda sin IA |
+| Trazabilidad | 🚨 Sin sistema — no saben de dónde vienen sus pacientes |
 
-Ver detalle completo: `wiki/auditoria-digital.md`
+Ver detalle: `wiki/auditoria-digital.md` · Preguntas pendientes: `wiki/preguntas-por-confirmar.md`
 
 ## Estructura del repositorio
 
@@ -57,8 +58,11 @@ wiki/                      # Base de conocimiento operacional (Obsidian)
   especialidades/          # Una nota por especialidad (6)
   equipo/                  # Profesionales clave con ángulos de contenido (4)
   marketing/               # Línea masculina, expansión, canales, KPIs
-  operaciones/             # Recordatorios, FAQ WhatsApp, telemedicina
-  ia/                      # Specs técnicas y prompts de los 4 agentes IA
+  operaciones/             # Recordatorios, FAQ WhatsApp, telemedicina, medición
+  ia/                      # Specs técnicas y prompts de los 5 agentes IA
+  fondos/                  # Postulaciones a Kit Digital, Crece Multisectorial, Santander
+  auditoria-digital.md     # Estado verificado canal por canal (30 mayo 2026)
+  preguntas-por-confirmar.md  # Preguntas abiertas para confirmar con Camila
 
 design-artifacts/          # Artefactos WDS y artefactos de diseño
   plan-marketing-interactivo.jsx     # Componente React del plan
@@ -79,16 +83,21 @@ _bmad-output/              # Outputs generales de BMAD
 - **`PANORAMA ACTUAL Y CANVAS MEDITERRA.md`** — Business Model Canvas, Value Proposition Canvas y visión estratégica del fundador.
 - **`plan-de-marketing-digital.md`** — Plan semana a semana de 6 meses, prioridades, KPIs y presupuesto.
 
-## Wiki (`wiki/`)
+## Wiki (`wiki/`) — notas clave
 
 Base de conocimiento operacional enlazada en Obsidian. Leer antes de trabajar en cualquier área:
 
+- `wiki/auditoria-digital.md` — Estado verificado de todos los canales (30 mayo 2026) — leer primero
+- `wiki/preguntas-por-confirmar.md` — 21 preguntas abiertas para confirmar con Camila este fin de semana
 - `wiki/especialidades/` — Estrategia, equipo, contenido y relaciones entre especialidades
-- `wiki/equipo/` — Profesionales con mayor presencia en testimonios y ángulos de contenido únicos
-- `wiki/marketing/linea-masculina.md` — Estrategia detallada para crecer el segmento masculino
-- `wiki/marketing/canales.md` — Estado actual y acciones por canal digital
+- `wiki/equipo/` — Profesionales destacados en testimonios con ángulos de contenido
+- `wiki/marketing/linea-masculina.md` — Estrategia para crecer el segmento masculino (32%→40%)
+- `wiki/marketing/canales.md` — Estado real verificado y acciones por canal digital
+- `wiki/marketing/kpis.md` — KPIs con nota de que los baselines son estimaciones hasta tener trazabilidad
 - `wiki/operaciones/recordatorios-citas.md` — Plantillas WhatsApp listas para usar
-- `wiki/ia/` — Specs técnicas, stacks y prompts de los 4 agentes IA a construir
+- `wiki/operaciones/medicion-y-trazabilidad.md` — Sistema de medición de origen de pacientes (nuevo)
+- `wiki/ia/` — Specs técnicas, stacks y prompts de los 5 agentes IA
+- `wiki/fondos/` — Postulaciones preparadas para Kit Digital, Crece y Santander
 
 ## Agentes IA prioritarios
 
