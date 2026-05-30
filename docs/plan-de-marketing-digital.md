@@ -3,6 +3,22 @@
 
 ---
 
+## Contexto competitivo (investigación 30 mayo 2026)
+
+La clínica opera en un mercado donde **ningún competidor en la macrozona norte combina Urología + Psicología-Sexología + Kinesiología Pélvica para hombres y mujeres bajo un mismo techo.** Ese espacio está disponible.
+
+| Competidor clave | Fortaleza | Lo que NO tiene |
+|-----------------|-----------|-----------------|
+| Clínica Hera (30+ profesionales) | Referente salud femenina | Urología · Sexología · Línea masculina |
+| RedSalud Elqui (120+ profesionales) | Alta complejidad · isapres | Foco pélvico · personalización |
+| CEMUF | Diagnóstico avanzado (4D, genética) | Urología · Kine pélvica |
+| CEMOvalle (Ovalle) | 3 ginecólogos + 3 urólogos locales | Kine pélvica · Sexología |
+| Clínica Atacama (Vallenar) | Cobertura regional norte | Especialización pélvica |
+
+**El diferencial que nadie puede copiar fácilmente:** La combinación Dr. Andrusco (urólogo) + Andrei Andrusco (sexólogo) + equipo de kinesiología pélvica en una sola clínica.
+
+---
+
 ## Prioridades estratégicas
 
 | # | Nivel | Foco | Cuándo | ROI esperado |

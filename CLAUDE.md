@@ -78,9 +78,14 @@ _bmad-output/              # Outputs generales de BMAD
 .obsidian/                 # Configuración del vault Obsidian
 ```
 
+## Documento principal para los socios
+
+`docs/diagnostico-para-socios.md` — el documento más importante del repositorio. Combina auditoría digital + investigación de mercado + hoja de ruta por horizontes (corto/mediano/largo plazo). Escrito para presentar a los socios directores de la clínica. Leer antes de cualquier reunión con los dueños.
+
 ## Documentos estratégicos (`docs/`)
 
-- **`perfil-clinica-mediterra.md`** — Fuente de verdad sobre la clínica: 15 profesionales, horarios, contacto, testimonios reales y observaciones estratégicas. Usar siempre como base para contenido, agentes FAQ y comunicación.
+- **`diagnostico-para-socios.md`** — Documento principal para presentar a los socios. Auditoría digital completa + análisis competitivo + hoja de ruta corto/mediano/largo plazo. Incluye el gap de mercado identificado: nadie en la macrozona ofrece Urología + Sexología + Kinesiología Pélvica para hombres.
+- **`perfil-clinica-mediterra.md`** — Fuente de verdad sobre la clínica: 15 profesionales, horarios, contacto, testimonios reales, auditoría digital y software HealthAtom confirmado.
 - **`PANORAMA ACTUAL Y CANVAS MEDITERRA.md`** — Business Model Canvas, Value Proposition Canvas y visión estratégica del fundador.
 - **`plan-de-marketing-digital.md`** — Plan semana a semana de 6 meses, prioridades, KPIs y presupuesto.
 
