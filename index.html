@@ -495,23 +495,48 @@
       const [expanded, setExpanded] = useState({ w1: true });
       const [tab, setTab] = useState("focos");
       const [answers, setAnswers] = useState({});
+      const [copied, setCopied] = useState(false);
 
       useEffect(() => {
         const link = document.createElement("link");
         link.href = "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;600;700&display=swap";
         link.rel = "stylesheet";
         document.head.appendChild(link);
+
+        // Cargar respuestas desde URL (si se abrió desde un link compartido)
+        const hash = window.location.hash;
+        if (hash.startsWith("#d=")) {
+          try {
+            const decoded = JSON.parse(decodeURIComponent(escape(atob(hash.slice(3)))));
+            setAnswers(decoded);
+            saveDiag(decoded);
+            window.location.hash = ""; // Limpiar el hash de la URL
+          } catch(e) {}
+        } else {
+          const diag = loadDiag();
+          if (diag) setAnswers(diag);
+        }
+
         const saved = loadState();
         if (saved.done) setDone(saved.done);
         if (saved.expanded) setExpanded(saved.expanded);
-        const diag = loadDiag();
-        if (diag) setAnswers(diag);
       }, []);
 
       const updateAnswer = (id, value) => {
         const next = { ...answers, [id]: value };
         setAnswers(next);
         saveDiag(next);
+      };
+
+      const shareAnswers = () => {
+        try {
+          const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(answers))));
+          const url = `${window.location.origin}${window.location.pathname}#d=${encoded}`;
+          navigator.clipboard.writeText(url).then(() => {
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2500);
+          });
+        } catch(e) {}
       };
 
       const persist = (newDone, newExpanded) => saveState({ done: newDone, expanded: newExpanded });
@@ -904,7 +929,7 @@
                 <div style={{ fontSize: "13px", color: "#64748B" }}>Confirmar este fin de semana — las respuestas definen cómo implementar el plan</div>
               </div>
 
-              {/* Progreso */}
+              {/* Progreso + Compartir */}
               {(() => {
                 const all = [...DIAGNOSTICO_CRITICAS, ...DIAGNOSTICO_GENERALES];
                 const answered = all.filter(q => answers[q.id] && answers[q.id].trim().length > 0).length;
@@ -915,9 +940,19 @@
                       <div style={{ color: "#93C5FD", fontSize: "11px", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em" }}>Preguntas respondidas</div>
                       <div style={{ color: "white", fontSize: "16px", fontWeight: 700 }}>{answered}/{all.length}</div>
                     </div>
-                    <div style={{ background: "rgba(255,255,255,0.15)", borderRadius: "4px", height: "6px" }}>
+                    <div style={{ background: "rgba(255,255,255,0.15)", borderRadius: "4px", height: "6px", marginBottom: "12px" }}>
                       <div style={{ background: "linear-gradient(90deg, #38BDF8, #6EE7B7)", height: "6px", borderRadius: "4px", width: `${pct}%`, transition: "width 0.5s" }} />
                     </div>
+                    <button
+                      onClick={shareAnswers}
+                      style={{ width: "100%", background: copied ? "#059669" : "rgba(255,255,255,0.12)", border: `1px solid ${copied ? "#059669" : "rgba(255,255,255,0.25)"}`, borderRadius: "10px", padding: "10px 16px", color: "white", fontSize: "13px", fontWeight: 600, cursor: "pointer", transition: "all 0.3s", display: "flex", alignItems: "center", justifyContent: "center", gap: "8px" }}>
+                      {copied ? "✅ ¡Link copiado! Pégalo donde quieras compartirlo" : "🔗 Compartir respuestas — generar link"}
+                    </button>
+                    {answered === 0 && (
+                      <div style={{ color: "rgba(255,255,255,0.5)", fontSize: "11px", textAlign: "center", marginTop: "6px" }}>
+                        Responde al menos una pregunta para generar el link
+                      </div>
+                    )}
                   </div>
                 );
               })()}
@@ -989,7 +1024,7 @@
               {/* Nota */}
               <div style={{ background: "#FFFBEB", border: "1px solid #FDE68A", borderRadius: "12px", padding: "12px 14px", marginTop: "8px" }}>
                 <div style={{ fontSize: "12px", color: "#78350F", lineHeight: "1.6" }}>
-                  💡 Las respuestas se guardan automáticamente en este dispositivo. No son públicas.
+                  💡 <strong>Las respuestas se guardan en este dispositivo.</strong> Para compartirlas, usa el botón "Compartir respuestas" — genera un link que cualquier persona puede abrir para ver (y editar) las respuestas en su propio dispositivo.
                 </div>
               </div>
             </div>
