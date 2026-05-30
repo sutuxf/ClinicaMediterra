@@ -101,8 +101,25 @@ tags: [auditoria, canales, diagnostico]
 | Precios publicados | ❌ No |
 | Menú "Procedimientos" | ❌ Sin contenido accesible |
 | Menú "Temas de Salud" | ❌ Sin contenido accesible |
+| Chat widget | ✅ Instalado — ⚠️ solo botonera, sin chatbot real |
 
-**Diagnóstico:** Funcional pero limitado. El SEO débil explica en parte por qué no aparecen en Google. Largo plazo: reemplazar Wix con plataforma optimizada (financiable con Crece Multisectorial).
+**Diagnóstico:** Funcional pero limitado. El SEO débil explica en parte por qué no aparecen en Google.
+
+### El chatbot que no es chatbot
+
+El sitio tiene un widget de chat con botonera que redirige a WhatsApp. El problema:
+
+- El paciente hace clic → elige una opción → llega a WhatsApp **sin contexto**
+- WhatsApp recibe el mensaje pero no sabe qué quería el paciente ni desde qué página llegó
+- No hay captura de intención ("quiero agendar", "tengo una duda", "soy de Ovalle")
+- No hay respuesta automática — el paciente espera igual
+
+**Oportunidad:** Reemplazar la botonera muda con un chatbot real que:
+1. Pregunta qué necesita el paciente (captura de intención)
+2. Responde preguntas simples sin necesitar a nadie
+3. Si escala a WhatsApp, envía el contexto: *"Paciente busca: cita urología — viene desde /equipo"*
+
+→ [[../ia/agente-chatbot-web|Ver agente chatbot web (nuevo)]]
 
 ---
 

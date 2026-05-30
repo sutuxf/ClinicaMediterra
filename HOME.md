@@ -63,6 +63,7 @@ tags: [home, index]
 | [[wiki/ia/agente-faq-whatsapp\|FAQ WhatsApp]] | 🟢 Listo hoy | Libera persona de agenda |
 | [[wiki/ia/agente-contenido-rrss\|Generador de contenido]] | 🟢 Listo hoy | Reemplaza $70K/mes |
 | [[wiki/ia/agente-recordatorios\|Recordatorios automáticos]] | 🟠 Necesita WA API | Recupera $5M/mes |
+| [[wiki/ia/agente-chatbot-web\|Chatbot web]] | 🟢 Listo hoy | Captura intención + trazabilidad |
 | [[wiki/ia/agente-reporte-kpis\|Reporte mensual KPIs]] | 🟢 Listo hoy | Automatiza reunión socios |
 
 ---

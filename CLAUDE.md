@@ -97,7 +97,10 @@ Base de conocimiento operacional enlazada en Obsidian. Leer antes de trabajar en
 | FAQ WhatsApp | `wiki/ia/agente-faq-whatsapp.md` | 🟢 Listo hoy | Libera agenda |
 | Generador de contenido | `wiki/ia/agente-contenido-rrss.md` | 🟢 Listo hoy | Reemplaza $70K/mes |
 | Recordatorios de citas | `wiki/ia/agente-recordatorios.md` | 🟠 Requiere WA API | Recupera $5M/mes |
+| Chatbot web | `wiki/ia/agente-chatbot-web.md` | 🟢 Listo hoy | Captura intención + trazabilidad |
 | Reporte mensual KPIs | `wiki/ia/agente-reporte-kpis.md` | 🟢 Listo hoy | Automatiza reunión socios |
+
+**Hallazgo:** El sitio web tiene un chat widget con botonera que redirige a WhatsApp sin capturar intención ni dar respuesta. No es un chatbot real — es una botonera muda.
 
 ## Correr el sitio localmente
 
