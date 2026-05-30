@@ -11,6 +11,10 @@ progress/
 .obsidian/workspace-mobile.json
 .obsidian/cache
 
+# Claude Code (skills e internals locales)
+.agents/
+.claude/
+
 # macOS
 .DS_Store
 **/.DS_Store

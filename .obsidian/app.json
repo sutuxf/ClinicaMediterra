@@ -5,7 +5,9 @@
   "attachmentFolderPath": "docs/assets",
   "showUnsupportedFiles": false,
   "spellcheck": true,
-  "spellcheckLanguages": ["es"],
+  "spellcheckLanguages": [
+    "es"
+  ],
   "strictLineBreaks": false,
   "defaultViewMode": "source",
   "foldHeading": false,

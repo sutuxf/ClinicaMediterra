@@ -9,11 +9,17 @@
   "colorGroups": [
     {
       "query": "path:docs/",
-      "color": { "a": 1, "rgb": 1790847 }
+      "color": {
+        "a": 1,
+        "rgb": 1790847
+      }
     },
     {
       "query": "path:design-artifacts/",
-      "color": { "a": 1, "rgb": 7471224 }
+      "color": {
+        "a": 1,
+        "rgb": 7471224
+      }
     }
   ],
   "collapse-display": false,
@@ -26,6 +32,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1,
-  "close": false
+  "scale": 1.386343490924495,
+  "close": true
 }
