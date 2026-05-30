@@ -38,15 +38,18 @@
             ]
           },
           {
-            id: "w2", name: "Semana 2", focus: "Protocolo de recordatorios",
-            priority: "red", owner: "Persona de agenda", time: "2h setup + 15 min/día",
+            id: "w2", name: "Semana 2", focus: "Medición + protocolo de recordatorios",
+            priority: "red", owner: "Persona de agenda", time: "3h setup + 15 min/día",
             tasks: [
-              { id: "t2_1", text: "Crear plantilla de confirmación al agendar (fecha, hora, qué traer)" },
-              { id: "t2_2", text: "Crear plantilla de recordatorio 48h antes de la consulta" },
-              { id: "t2_3", text: "Crear plantilla de recordatorio 24h antes de la consulta" },
-              { id: "t2_4", text: "Crear plantilla post no-show (48h después, tono empático, invitar a reagendar)" },
-              { id: "t2_5", text: "Asignar responsable del envío diario de recordatorios (15 min/día)" },
-              { id: "t2_6", text: "Crear planilla Google Sheets de seguimiento de pacientes agendados" },
+              { id: "t2_1", text: "🚨 Sin trazabilidad: la clínica no sabe de dónde vienen sus pacientes ni tiene KPIs de agendamiento" },
+              { id: "t2_2", text: "Crear planilla Google Sheets: Fecha · Nombre · Canal · Especialidad · Agendó · Asistió" },
+              { id: "t2_3", text: "Canales a registrar: Instagram · Facebook · Google · WhatsApp · Derivación · Recomendación" },
+              { id: "t2_4", text: "Agregar '¿Cómo nos conociste?' al flujo de bienvenida en WhatsApp" },
+              { id: "t2_5", text: "Crear plantilla de confirmación al agendar (fecha, hora, qué traer)" },
+              { id: "t2_6", text: "Crear plantilla de recordatorio 48h antes de la consulta" },
+              { id: "t2_7", text: "Crear plantilla de recordatorio 24h antes de la consulta" },
+              { id: "t2_8", text: "Crear plantilla post no-show (48h después, tono empático, invitar a reagendar)" },
+              { id: "t2_9", text: "Asignar responsable del registro diario y envío de recordatorios (15 min/día)" },
             ]
           },
           {
@@ -225,14 +228,15 @@
     ];
 
     const KPIS = [
-      { name: "% pacientes hombres", base: "32%", m3: "35%", m6: "40%", icon: "👨" },
-      { name: "% pacientes de otras ciudades", base: "<10%", m3: "—", m6: "20%", icon: "📍" },
-      { name: "Pérdida mensual por no-conversión", base: "$9M", m3: "$6M", m6: "$4M", icon: "💸" },
-      { name: "Crecimiento atenciones mensuales", base: "base", m3: "+15%", m6: "+35%", icon: "📈" },
-      { name: "Reseñas Google 5 estrellas", base: "pocas", m3: "15", m6: "30+", icon: "⭐" },
-      { name: "Seguidores Instagram", base: "actual", m3: "+200", m6: "+500", icon: "📸" },
+      { name: "% pacientes hombres", base: "~32% (est.)", m3: "35%", m6: "40%", icon: "👨" },
+      { name: "% pacientes de otras ciudades", base: "<10% (est.)", m3: "—", m6: "20%", icon: "📍" },
+      { name: "Pérdida por no-conversión", base: "~$9M (est.)", m3: "$6M", m6: "$4M", icon: "💸" },
+      { name: "Canal de origen registrado", base: "0%", m3: "100%", m6: "100%", icon: "📊" },
+      { name: "Tasa conversión contacto→cita", base: "sin datos", m3: "medida", m6: "mejorada", icon: "🎯" },
+      { name: "Reseñas Google 5 estrellas", base: "0 (sin GMB)", m3: "15", m6: "30+", icon: "⭐" },
+      { name: "Seguidores Instagram", base: "1.196", m3: "+200", m6: "+500", icon: "📸" },
       { name: "Seguidores Facebook", base: "bajo", m3: "+100", m6: "+300", icon: "👥" },
-      { name: "Contactos WhatsApp/mes", base: "actual", m3: "+30", m6: "+80", icon: "💬" },
+      { name: "Crecimiento atenciones/mes", base: "base real mes 1", m3: "+15%", m6: "+35%", icon: "📈" },
     ];
 
     const CHECKLIST = [

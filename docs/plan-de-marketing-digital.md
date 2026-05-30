@@ -43,15 +43,23 @@
 - Crear respuestas rápidas: Horarios · Convenios · Cómo agendar · Dirección · Especialidades
 - Crear etiquetas: Nuevo paciente / Confirmó / No confirmó / Cancelado / Reagendar
 
-### Semana 2 · Protocolo de recordatorios
-*Responsable: Persona de agenda · Tiempo: 2h setup + 15 min/día*
+### Semana 2 · Protocolo de recordatorios + sistema de medición
+*Responsable: Persona de agenda · Tiempo: 3h setup + 15 min/día*
 
+> ⚠️ **Hallazgo (30 mayo 2026):** La clínica no sabe de dónde vienen sus pacientes ni tiene KPIs de agendamiento. Sin medición no hay gestión. La planilla de seguimiento es la prioridad #1 de esta semana.
+
+**Sistema de trazabilidad (nuevo — crítico):**
+- Crear planilla Google Sheets: Fecha · Nombre · Canal · Especialidad · Agendó · Asistió
+- Canales a registrar: Instagram · Facebook · Google · WhatsApp directo · Derivación · Recomendación
+- Agregar pregunta "¿Cómo nos conociste?" al flujo de WhatsApp
+- Establecer la línea base real de KPIs en los primeros 30 días
+
+**Protocolo de recordatorios:**
 - Crear plantilla de confirmación al agendar (fecha, hora, qué traer)
 - Crear plantilla de recordatorio 48h antes de la consulta
 - Crear plantilla de recordatorio 24h antes de la consulta
 - Crear plantilla post no-show (48h después, tono empático, invitar a reagendar)
 - Asignar responsable del envío diario de recordatorios (15 min/día)
-- Crear planilla Google Sheets de seguimiento de pacientes agendados
 
 ### Semana 3 · Crear Google My Business desde cero
 *Responsable: Creadora de contenido + 1 médico · Tiempo: 4-6 horas*
@@ -194,16 +202,21 @@
 
 ## Indicadores de éxito (KPIs)
 
-| Indicador | Hoy | Mes 3 | Mes 6 |
-|-----------|-----|-------|-------|
-| % pacientes hombres | 32% | 35% | 40% |
+> ⚠️ **Nota (30 mayo 2026):** Los valores "Hoy" son estimaciones parciales del fundador. La clínica no tiene sistema de medición formal — no se sabe de dónde vienen los pacientes ni la tasa real de conversión. **El mes 1 sirve para establecer la línea base real** antes de medir progreso.
+
+| Indicador | Hoy (estimado) | Mes 3 | Mes 6 |
+|-----------|---------------|-------|-------|
+| % pacientes hombres | ~32% | 35% | 40% |
 | % pacientes de otras ciudades | <10% | — | 20% |
-| Pérdida mensual por no-conversión | $9M | $6M | $4M |
-| Crecimiento atenciones mensuales | base | +15% | +35% |
-| Reseñas Google 5 estrellas | pocas | 15 | 30+ |
-| Seguidores Instagram | actual | +200 | +500 |
+| Pérdida mensual por no-conversión | ~$9M | $6M | $4M |
+| Crecimiento atenciones mensuales | base real (mes 1) | +15% | +35% |
+| Canal de origen registrado | 0% | 100% de contactos | 100% |
+| Tasa de conversión contacto→cita | sin datos | medida | mejorada |
+| Tasa de asistencia (no-shows) | sin datos | medida | mejorada |
+| Reseñas Google 5 estrellas | 0 (sin GMB) | 15 | 30+ |
+| Seguidores Instagram | 1.196 | +200 | +500 |
 | Seguidores Facebook | bajo | +100 | +300 |
-| Contactos WhatsApp/mes | actual | +30 | +80 |
+| Contactos WhatsApp/mes | sin datos | +30 vs base | +80 vs base |
 
 **Revisión:** último viernes de cada mes con los socios directores.
 

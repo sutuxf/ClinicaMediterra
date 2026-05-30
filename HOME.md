@@ -43,6 +43,7 @@ tags: [home, index]
 - [[wiki/marketing/kpis|KPIs y metas]] — Indicadores mensuales y metas a 6 meses
 
 ### ⚙️ Operaciones
+- [[wiki/operaciones/medicion-y-trazabilidad|Medición y trazabilidad]] — 🚨 Sin datos de origen de pacientes ni KPIs reales
 - [[wiki/operaciones/recordatorios-citas|Recordatorios de citas]] — Protocolo + plantillas WhatsApp
 - [[wiki/operaciones/atencion-whatsapp|Atención WhatsApp FAQ]] — Respuestas a preguntas frecuentes
 - [[wiki/operaciones/telemedicina|Telemedicina]] — Palanca para expansión regional
