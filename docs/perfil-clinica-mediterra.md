@@ -63,13 +63,25 @@
 
 ---
 
+## Auditoría digital (30 mayo 2026)
+
+| Canal | Estado | Hallazgo clave |
+|-------|--------|---------------|
+| Instagram @mediterraclinica | ✅ Activo | 1.196 seg · 64 posts · último post 15 mayo · link reserva en bio · sin web |
+| WhatsApp Business +56 9 3933 7727 | ✅ Perfil completo · 🚨 Sin automatización | Confirmado: sin mensaje de ausencia fuera de horario |
+| Facebook clinicamediterra | ✅ Info OK · 🚨 Abandonado | Sin posts desde 2022 · mensajes sin responder |
+| Google My Business | 🚨 No existe | No aparece en búsquedas de Google |
+| Sitio web (Wix 2022) | ✅ Activo · ⚠️ SEO débil | Sin precios · menús vacíos · sin agendamiento real |
+
 ## Observaciones estratégicas
 
-- El sitio web usa **Wix (copyright 2022)** — SEO limitado, difícil de optimizar
 - **No hay precios publicados** en ninguna especialidad
-- El menú incluye "Procedimientos" y "Temas de Salud" pero sin contenido accesible
-- Tienen un formulario de contacto específico para cirugías/procedimientos
-- **Inconsistencia de IG:** el sitio menciona @clinicamediterra.ls pero el handle real activo es @mediterraclinica
+- **Instagram** es el único canal digital realmente activo y sano
+- **Google My Business ausente** es la brecha más crítica — invisibles en búsquedas locales
+- **Facebook muerto desde 2022** — mensajes de pacientes sin respuesta
+- **Inconsistencia de IG:** el sitio menciona @clinicamediterra.ls pero el activo es @mediterraclinica
 - **Traumatología** tiene solo 1 médico (Dr. Ferreira) — especialidad menos desarrollada
 - **Psicología-Sexología** (Andrei Andrusco) es clave para la línea masculina
 - 3 kinesiólogas pélvicas — mayor dotación relativa, core del negocio femenino
+
+→ [[../wiki/auditoria-digital|Ver auditoría digital completa]]

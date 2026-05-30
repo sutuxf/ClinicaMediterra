@@ -30,6 +30,17 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Expansión geográfica: Ovalle, Vicuña, Vallenar, zonas mineras
 - Presupuesto marketing: $200.000 CLP/mes
 
+**Auditoría digital verificada (30 mayo 2026):**
+| Canal | Estado |
+|-------|--------|
+| Instagram @mediterraclinica | ✅ Activo — 1.196 seg, último post 15 mayo, link reserva en bio |
+| WhatsApp Business | ✅ Perfil completo — 🚨 sin mensajes automáticos confirmado |
+| Facebook | ✅ Info OK — 🚨 sin posts desde 2022, mensajes sin responder |
+| Google My Business | 🚨 No existe — no aparecen en búsquedas de Google |
+| Sitio web (Wix 2022) | ✅ Activo — SEO débil, sin precios ni contenido en menús |
+
+Ver detalle completo: `wiki/auditoria-digital.md`
+
 ## Estructura del repositorio
 
 ```
