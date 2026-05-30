@@ -13,6 +13,7 @@ tags: [home, index]
 
 - [[docs/perfil-clinica-mediterra|Perfil de la clínica]] — Equipo, contacto, testimonios, auditoría digital
 - [[wiki/auditoria-digital|Auditoría digital (30 mayo 2026)]] — Estado real verificado canal por canal
+- [[wiki/preguntas-por-confirmar|Preguntas por confirmar con Camila]] — Información desconocida crítica para el plan
 - [[docs/PANORAMA ACTUAL Y CANVAS MEDITERRA|Panorama actual y Canvas]] — BMC y Value Proposition Canvas
 - [[docs/plan-de-marketing-digital|Plan de marketing digital]] — 6 meses, semana a semana, KPIs
 
