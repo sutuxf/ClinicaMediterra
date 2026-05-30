@@ -11,6 +11,21 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: #F4F0E7; }
     ::-webkit-scrollbar { display: none; }
+    .tabs-scroll { display: flex; gap: 4px; overflow-x: auto; padding-bottom: 1px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .tabs-scroll::-webkit-scrollbar { display: none; }
+    .tabs-scroll button { flex-shrink: 0; }
+    .fondos-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 20px; }
+    .matrix-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 14px; }
+    .matrix-table { min-width: 360px; }
+    .kpi-row { display: grid; grid-template-columns: 1fr 58px 58px 58px; gap: 4px; align-items: center; }
+    @media (max-width: 480px) {
+      .fondos-cards { grid-template-columns: 1fr 1fr; gap: 6px; }
+      .kpi-row { grid-template-columns: 1fr 48px 48px 48px; }
+    }
+    @media (max-width: 360px) {
+      .fondos-cards { grid-template-columns: 1fr; }
+      .kpi-row { grid-template-columns: 1fr 44px 44px 44px; }
+    }
   </style>
 </head>
 <body>
@@ -539,9 +554,9 @@
             <div style={{ background: "rgba(255,255,255,0.12)", borderRadius: "6px", height: "5px", marginBottom: "14px" }}>
               <div style={{ background: "linear-gradient(90deg, #38BDF8, #818CF8)", height: "5px", borderRadius: "6px", width: `${totalPct}%`, transition: "width 0.6s ease" }} />
             </div>
-            <div style={{ display: "flex", gap: "6px", paddingBottom: "1px" }}>
+            <div className="tabs-scroll">
               {[["focos", "🎯 Focos"], ["plan", "📅 Plan"], ["kpis", "📊 Metas"], ["tools", "🛠 Arranque"], ["fondos", "💰 Fondos"], ["mercado", "🏆 Mercado"], ["camila", "📋 Diagnóstico"]].map(([id, label]) => (
-                <button key={id} onClick={() => setTab(id)} style={{ background: tab === id ? "white" : "transparent", color: tab === id ? "#1C3A5F" : "rgba(255,255,255,0.6)", border: "none", borderRadius: "8px 8px 0 0", padding: "8px 14px", fontSize: "12px", fontWeight: 600, cursor: "pointer", transition: "all 0.2s", whiteSpace: "nowrap" }}>
+                <button key={id} onClick={() => setTab(id)} style={{ background: tab === id ? "white" : "transparent", color: tab === id ? "#1C3A5F" : "rgba(255,255,255,0.6)", border: "none", borderRadius: "8px 8px 0 0", padding: "8px 12px", fontSize: "11px", fontWeight: 600, cursor: "pointer", transition: "all 0.2s", whiteSpace: "nowrap" }}>
                   {label}
                 </button>
               ))}
@@ -549,7 +564,7 @@
           </div>
 
           {/* CONTENT */}
-          <div style={{ padding: "16px 14px 60px", maxWidth: "700px", margin: "0 auto" }}>
+          <div style={{ padding: "14px 12px 80px", maxWidth: "700px", margin: "0 auto" }}>
 
             {/* FOCOS */}
             {tab === "focos" && (
@@ -675,14 +690,14 @@
                   <div style={{ fontSize: "13px", color: "#64748B" }}>Revisar en la reunión de socios del último viernes de cada mes</div>
                 </div>
                 <div style={{ background: "white", borderRadius: "14px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)", marginBottom: "20px" }}>
-                  <div style={{ background: "#1C3A5F", padding: "12px 16px", display: "grid", gridTemplateColumns: "1fr 60px 60px 60px", gap: "4px", alignItems: "center" }}>
+                  <div className="kpi-row" style={{ background: "#1C3A5F", padding: "12px 16px" }}>
                     <div style={{ color: "#93C5FD", fontSize: "10px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>INDICADOR</div>
                     <div style={{ color: "#93C5FD", fontSize: "10px", fontWeight: 700, textAlign: "center" }}>HOY</div>
                     <div style={{ color: "#FDBA74", fontSize: "10px", fontWeight: 700, textAlign: "center" }}>MES 3</div>
                     <div style={{ color: "#6EE7B7", fontSize: "10px", fontWeight: 700, textAlign: "center" }}>MES 6</div>
                   </div>
                   {KPIS.map((kpi, i) => (
-                    <div key={i} style={{ padding: "11px 16px", display: "grid", gridTemplateColumns: "1fr 60px 60px 60px", gap: "4px", alignItems: "center", background: i % 2 === 0 ? "white" : "#FAFAF9", borderTop: i > 0 ? "1px solid #F1F5F9" : "none" }}>
+                    <div key={i} className="kpi-row" style={{ padding: "11px 16px", background: i % 2 === 0 ? "white" : "#FAFAF9", borderTop: i > 0 ? "1px solid #F1F5F9" : "none" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "7px" }}>
                         <span style={{ fontSize: "14px" }}>{kpi.icon}</span>
                         <span style={{ fontSize: "12px", color: "#334155", lineHeight: "1.4" }}>{kpi.name}</span>
@@ -774,40 +789,42 @@
 
               {/* MATRIZ COMPETITIVA */}
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "16px", color: "#1C3A5F", marginBottom: "10px" }}>Matriz competitiva</div>
-              <div style={{ background: "white", borderRadius: "14px", overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)", marginBottom: "20px" }}>
-                {/* Header */}
-                <div style={{ background: "#1C3A5F", padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 36px)", gap: "4px", alignItems: "center" }}>
-                  <div style={{ color: "#93C5FD", fontSize: "10px", fontWeight: 700, textTransform: "uppercase" }}>Centro</div>
-                  {MATRIZ_LABELS.map(l => (
-                    <div key={l.key} style={{ color: "#93C5FD", fontSize: "9px", fontWeight: 700, textAlign: "center", lineHeight: 1.2 }}>{l.label}</div>
-                  ))}
-                </div>
-                {/* Mediterra row */}
-                <div style={{ padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 36px)", gap: "4px", alignItems: "center", background: "#EFF6FF", borderBottom: "2px solid #1C3A5F" }}>
-                  <div>
-                    <div style={{ fontSize: "12px", fontWeight: 700, color: "#1C3A5F" }}>⭐ Clínica Mediterra</div>
-                    <div style={{ fontSize: "10px", color: "#3B82F6" }}>La Serena · 15 profesionales</div>
+              <div className="matrix-wrap" style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.06)", marginBottom: "20px" }}>
+                <div className="matrix-table" style={{ background: "white", borderRadius: "14px", overflow: "hidden" }}>
+                  {/* Header */}
+                  <div style={{ background: "#1C3A5F", padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 34px)", gap: "3px", alignItems: "center" }}>
+                    <div style={{ color: "#93C5FD", fontSize: "10px", fontWeight: 700, textTransform: "uppercase" }}>Centro</div>
+                    {MATRIZ_LABELS.map(l => (
+                      <div key={l.key} style={{ color: "#93C5FD", fontSize: "8px", fontWeight: 700, textAlign: "center", lineHeight: 1.2 }}>{l.label}</div>
+                    ))}
                   </div>
-                  {MATRIZ_LABELS.map(l => (
-                    <div key={l.key} style={{ textAlign: "center", fontSize: "14px" }}>
-                      {l.key === "lineaMasculina" ? "🟡" : "✅"}
-                    </div>
-                  ))}
-                </div>
-                {/* Competitor rows */}
-                {COMPETIDORES.map((c, i) => (
-                  <div key={c.id} style={{ padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 36px)", gap: "4px", alignItems: "center", background: i % 2 === 0 ? "white" : "#FAFAF9", borderTop: "1px solid #F1F5F9" }}>
+                  {/* Mediterra row */}
+                  <div style={{ padding: "10px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 34px)", gap: "3px", alignItems: "center", background: "#EFF6FF", borderBottom: "2px solid #1C3A5F" }}>
                     <div>
-                      <div style={{ fontSize: "11px", fontWeight: 600, color: "#1E293B" }}>{c.nombre}</div>
-                      <div style={{ fontSize: "10px", color: "#94A3B8" }}>{c.ciudad} · {c.tipo}</div>
+                      <div style={{ fontSize: "12px", fontWeight: 700, color: "#1C3A5F" }}>⭐ Mediterra</div>
+                      <div style={{ fontSize: "10px", color: "#3B82F6" }}>La Serena · 15 prof.</div>
                     </div>
                     {MATRIZ_LABELS.map(l => (
                       <div key={l.key} style={{ textAlign: "center", fontSize: "13px" }}>
-                        {c[l.key] ? "✅" : "❌"}
+                        {l.key === "lineaMasculina" ? "🟡" : "✅"}
                       </div>
                     ))}
                   </div>
-                ))}
+                  {/* Competitor rows */}
+                  {COMPETIDORES.map((c, i) => (
+                    <div key={c.id} style={{ padding: "8px 12px", display: "grid", gridTemplateColumns: "1fr repeat(5, 34px)", gap: "3px", alignItems: "center", background: i % 2 === 0 ? "white" : "#FAFAF9", borderTop: "1px solid #F1F5F9" }}>
+                      <div>
+                        <div style={{ fontSize: "10px", fontWeight: 600, color: "#1E293B" }}>{c.nombre}</div>
+                        <div style={{ fontSize: "9px", color: "#94A3B8" }}>{c.ciudad}</div>
+                      </div>
+                      {MATRIZ_LABELS.map(l => (
+                        <div key={l.key} style={{ textAlign: "center", fontSize: "12px" }}>
+                          {c[l.key] ? "✅" : "❌"}
+                        </div>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* COMPETIDORES DETALLE */}
@@ -987,7 +1004,7 @@
               </div>
 
               {/* Resumen fondos */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "8px", marginBottom: "20px" }}>
+              <div className="fondos-cards">
                 {FONDOS.map(f => {
                   const total = f.tasks.length;
                   const doneCount = f.tasks.filter(t => done[t.id]).length;
