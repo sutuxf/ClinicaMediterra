@@ -46,6 +46,15 @@ tags: [home, index]
 - [[wiki/operaciones/atencion-whatsapp|Atención WhatsApp FAQ]] — Respuestas a preguntas frecuentes
 - [[wiki/operaciones/telemedicina|Telemedicina]] — Palanca para expansión regional
 
+### 💰 Fondos Concursables
+| Fondo | Monto | Estado | Prioridad |
+|-------|-------|--------|-----------|
+| [[wiki/fondos/crece-multisectorial-coquimbo\|Crece Multisectorial Coquimbo]] | $5.000.000 | Verificar apertura | 🔴 Principal |
+| [[wiki/fondos/kit-digital\|Kit Digital (Ruta Digital)]] | $1.200.000 | Cursos pendientes | 🔴 Inmediato |
+| [[wiki/fondos/santander-fondos-concursables\|Santander Fondos Concursables]] | Variable | 3ª versión 2026 | 🟠 Revisar |
+
+→ [[wiki/fondos/resumen-fondos|Ver resumen completo y estrategia de postulación]]
+
 ### 🤖 Automatización IA
 | Agente | Estado | Impacto |
 |--------|--------|---------|
