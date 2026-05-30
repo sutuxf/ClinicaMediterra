@@ -40,13 +40,19 @@ Ver [[../operaciones/recordatorios-citas|Protocolo de recordatorios]] para las p
 
 ## Integración con sistema de agenda
 
-**Opción A — Google Sheets manual:**
-La persona de agenda ingresa datos en una planilla → el agente la lee y dispara los mensajes.
+**Sistema confirmado: HealthAtom (healthatom.io)**
+Usan HealthAtom como software de gestión clínica. Esto cambia las opciones de integración:
 
-**Opción B — Webhook del sistema de agenda:**
-Si usan un software de agenda, el agente se engancha vía webhook.
+**Opción A — Google Sheets manual (arranque inmediato):**
+La persona de agenda ingresa datos en una planilla → el agente la lee y dispara los mensajes. Cero dependencias técnicas.
 
-**Recomendación:** empezar con Opción A (0 integraciones complejas) y migrar a B cuando escale.
+**Opción B — Integración con HealthAtom:**
+HealthAtom ofrece API REST. Si está disponible en el plan que tienen, el agente puede leer la agenda directamente y disparar recordatorios automáticamente sin intervención humana.
+
+**Opción C — Webhook de HealthAtom:**
+Si HealthAtom tiene webhooks, cada cita nueva puede disparar automáticamente el flujo de recordatorios.
+
+**Recomendación:** empezar con Opción A esta semana. Investigar la API de HealthAtom para planificar la Opción B en el mes 2-3.
 
 ## Métricas a monitorear
 

@@ -70,15 +70,20 @@
 | Instagram @mediterraclinica | ✅ Activo | 1.196 seg · 64 posts · último post 15 mayo · link reserva en bio · sin web |
 | WhatsApp Business +56 9 3933 7727 | ✅ Perfil completo · 🚨 Sin automatización | Confirmado: sin mensaje de ausencia fuera de horario |
 | Facebook clinicamediterra | ✅ Info OK · 🚨 Abandonado | Sin posts desde 2022 · mensajes sin responder |
-| Google My Business | 🚨 No existe | No aparece en búsquedas de Google |
+| Google My Business | ⚠️ Existe · solo 2 reseñas · sin fotos | Aparece en Google Maps — reclamar y optimizar |
 | Sitio web (Wix 2022) | ✅ Activo · ⚠️ SEO débil | Sin precios · menús vacíos · sin agendamiento real |
+
+## Software de gestión confirmado
+
+**HealthAtom (healthatom.io)** — Confirmado vía ficha de Google Maps. Software chileno de gestión clínica que incluye ficha clínica electrónica, agendamiento, gestión de pacientes y facturación. Pendiente confirmar con Camila qué módulos usan activamente y si el agendamiento online está activado.
 
 ## Observaciones estratégicas
 
 - **No hay precios publicados** en ninguna especialidad
 - **Instagram** es el único canal digital realmente activo y sano
-- **Google My Business ausente** es la brecha más crítica — invisibles en búsquedas locales
+- **Google My Business existe** pero con solo 2 reseñas y sin optimizar — no crear, reclamar y mejorar
 - **Facebook muerto desde 2022** — mensajes de pacientes sin respuesta
+- **HealthAtom** puede integrarse con el agente de recordatorios si tiene API disponible
 - **Inconsistencia de IG:** el sitio menciona @clinicamediterra.ls pero el activo es @mediterraclinica
 - **Traumatología** tiene solo 1 médico (Dr. Ferreira) — especialidad menos desarrollada
 - **Psicología-Sexología** (Andrei Andrusco) es clave para la línea masculina

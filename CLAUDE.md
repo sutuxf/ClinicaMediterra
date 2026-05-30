@@ -36,7 +36,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | Instagram @mediterraclinica | ✅ Activo — 1.196 seg, último post 15 mayo, link reserva en bio |
 | WhatsApp Business | ✅ Perfil completo — 🚨 sin mensajes automáticos confirmado |
 | Facebook | ✅ Info OK — 🚨 sin posts desde 2022, mensajes sin responder |
-| Google My Business | 🚨 No existe — no aparecen en búsquedas de Google |
+| Google My Business | ⚠️ Existe en Google Maps — solo 2 reseñas, sin fotos, sin optimizar |
+| Software gestión | ✅ HealthAtom (healthatom.io) — EHR + agenda + facturación |
 | Sitio web (Wix 2022) | ✅ Activo — SEO débil · chat widget = botonera muda sin IA |
 | Trazabilidad | 🚨 Sin sistema — no saben de dónde vienen sus pacientes |
 

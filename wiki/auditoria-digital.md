@@ -60,17 +60,43 @@ tags: [auditoria, canales, diagnostico]
 
 ---
 
-## Google My Business 🚨
+## Google My Business ⚠️
 
 | Dato | Valor |
 |------|-------|
-| Ficha activa | 🚨 No aparece en búsquedas de Google |
-| Aparece en Google Maps | No verificado — puede existir sin reclamar |
-| Competidores visibles | "Centro Clínico Mediterráneo" (clínica diferente) aparece primero |
+| Ficha activa | ✅ Existe en Google Maps |
+| Dirección | Av. Juan Cisternas 2497, Local 007, piso -1, La Serena |
+| Teléfono en ficha | (2) 3342 2515 |
+| Sitios web en ficha | clinicamediterra.cl + **healthatom.io** |
+| Reseñas | ⚠️ Solo **2 reseñas** — crítico |
+| Atributos | LGBTQ+ friendly · Se identifica como mujer empresaria |
+| Plus code | 3QG2+8W La Serena |
+| Estado | Reclamada o sin reclamar — verificar acceso |
 
-**Diagnóstico:** La brecha más crítica. Cualquier paciente que busca "ginecólogo La Serena", "urólogo La Serena" o "piso pélvico La Serena" no los encuentra. Canal gratuito con alto impacto en captación local.
+**Diagnóstico:** La ficha existe pero está casi sin trabajar. 2 reseñas es prácticamente invisible en un mercado donde los pacientes filtran por rating. No aparecía en búsquedas anteriores porque no tiene contenido, fotos ni reseñas suficientes para posicionarse.
 
-**Acción:** Crear desde cero en business.google.com. Buscar primero si existe ficha sin reclamar en Google Maps.
+**Acción Semana 3:** No crear — **reclamar acceso y optimizar**.
+- Verificar si la ficha ya está reclamada (¿quién tiene acceso?)
+- Agregar fotos (mínimo 20)
+- Completar todas las categorías de especialidades
+- Activar mensajería directa
+- Campaña de reseñas: objetivo 15 en el mes 1
+
+## Software de gestión — HealthAtom 🆕
+
+**Hallazgo clave (30 mayo 2026):** La ficha de Google Maps muestra **healthatom.io** como uno de los sitios web de la clínica. HealthAtom es un software chileno de gestión clínica que incluye:
+- Ficha clínica electrónica
+- Agendamiento online
+- Gestión de pacientes
+- Facturación electrónica
+
+**Impacto en el plan:**
+- ✅ Responde la pregunta de Camila: tienen software de gestión
+- El agente de recordatorios puede integrarse con HealthAtom si tiene API
+- Posiblemente ya tienen agendamiento online (confirmar con Camila)
+- La planilla Google Sheets de trazabilidad puede complementar, no reemplazar, HealthAtom
+
+→ Confirmar con Camila: ¿qué módulos de HealthAtom usan activamente?
 
 ---
 

@@ -61,18 +61,19 @@
 - Crear plantilla post no-show (48h después, tono empático, invitar a reagendar)
 - Asignar responsable del envío diario de recordatorios (15 min/día)
 
-### Semana 3 · Crear Google My Business desde cero
-*Responsable: Creadora de contenido + 1 médico · Tiempo: 4-6 horas*
+### Semana 3 · Reclamar y optimizar Google My Business
+*Responsable: Creadora de contenido + 1 médico · Tiempo: 3-4 horas*
 
-> ⚠️ **Hallazgo confirmado (30 mayo 2026):** Clínica Mediterra no aparece en búsquedas de Google. No tienen ficha de Google My Business activa o reclamada. Esto es una brecha crítica — cualquier paciente que busca "ginecólogo La Serena" o "urólogo La Serena" no los encuentra.
+> ✅ **Corrección (30 mayo 2026):** La ficha de Google Maps SÍ existe — aparece con dirección, teléfono, horario y healthatom.io. Solo tiene **2 reseñas** y está sin fotos ni contenido. No hay que crear desde cero — hay que reclamar el acceso y optimizar.
+>
+> 🆕 **Hallazgo clave:** La ficha muestra **healthatom.io** como sitio web de la clínica. Usan HealthAtom como software de gestión clínica (EHR + agenda + facturación).
 
-- Buscar en Google Maps si existe ficha sin reclamar ("Clínica Mediterra La Serena")
-- Si existe ficha → reclamarla en business.google.com
-- Si no existe → crear ficha nueva desde cero en business.google.com/create
-- Completar categorías: Clínica médica + Ginecólogo, Urólogo, Kinesiólogo, Traumatólogo, Nutricionista
+- Verificar si la ficha ya está reclamada — preguntar a Camila quién tiene acceso
+- Si no está reclamada → reclamar en business.google.com con la cuenta Google de la clínica
+- Completar categorías: Ginecólogo, Urólogo, Kinesiólogo, Traumatólogo, Nutricionista, Psicólogo
 - Subir 20+ fotos: fachada, recepción, boxes, equipo (con autorización), equipamiento
-- Activar mensajería directa desde la ficha
-- Enviar link de reseña a 10 pacientes habituales para las primeras reseñas
+- Activar mensajería directa
+- Campaña de reseñas: enviar link a 10 pacientes habituales → meta 15 reseñas en el mes
 - Publicar primera novedad: "Conoce a nuestro equipo de urólogos"
 
 ### Semana 4 · Resucitar Facebook y ordenar Instagram

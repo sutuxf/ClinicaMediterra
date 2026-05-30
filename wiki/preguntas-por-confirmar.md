@@ -11,11 +11,11 @@ tags: [diagnostico, pendiente, camila]
 
 ## Software y gestión clínica
 
-- [ ] ¿Usan algún software de agenda o gestión clínica? (Medilink, Medigital, Doctoralia, Excel, papel...)
-- [ ] ¿Tienen ficha clínica electrónica por paciente o es en papel?
-- [ ] ¿El historial del paciente es accesible para todos los especialistas o cada uno lleva el suyo?
-- [ ] ¿Cómo se coordina la agenda entre los distintos especialistas?
-- [ ] ¿Tienen software de facturación o boletas electrónicas?
+- [x] ~~¿Usan algún software de gestión clínica?~~ → **Confirmado: usan HealthAtom (healthatom.io)** — aparece en Google Maps
+- [ ] ¿Qué módulos de HealthAtom usan activamente? (ficha clínica, agenda online, facturación)
+- [ ] ¿El agendamiento online de HealthAtom está activado para los pacientes?
+- [ ] ¿El historial del paciente es accesible para todos los especialistas en HealthAtom?
+- [ ] ¿Tienen acceso a la API de HealthAtom? (relevante para integrar agente de recordatorios)
 
 ## Atención y WhatsApp
 
@@ -26,9 +26,10 @@ tags: [diagnostico, pendiente, camila]
 
 ## Google y presencia digital
 
+- [x] ~~¿Tienen Google My Business?~~ → **Confirmado: sí existe en Google Maps** — solo 2 reseñas, sin fotos, sin optimizar
+- [ ] ¿Quién tiene acceso a la ficha de Google Maps/Business? ¿Está reclamada?
 - [ ] ¿Tienen una cuenta Google asociada a la clínica? (Gmail, Google Workspace)
 - [ ] ¿Alguien tiene acceso al panel Wix del sitio web? ¿Tienen las credenciales?
-- [ ] ¿Saben quién creó el sitio y cuándo fue la última vez que se actualizó?
 
 ## Redes sociales
 

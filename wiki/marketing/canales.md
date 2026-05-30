@@ -39,15 +39,24 @@ Pendiente de configurar:
 
 ## Google My Business
 
-**Estado verificado (30 mayo 2026):** 🚨 **No aparece en Google.**
-Clínica Mediterra no tiene ficha activa o reclamada en Google My Business. Búsquedas de "Clínica Mediterra La Serena" no devuelven panel de negocio. Lo que aparece en Google es "Centro Clínico Mediterráneo" — una clínica distinta.
+**Estado verificado (30 mayo 2026):** ⚠️ **Existe pero casi sin contenido.**
 
-**Impacto:** Cualquier paciente que busca "ginecólogo La Serena", "urólogo La Serena" o "piso pélvico La Serena" no los encuentra. Es la brecha digital más crítica.
+| Dato | Valor |
+|------|-------|
+| Ficha en Google Maps | ✅ Existe |
+| Reseñas | ⚠️ Solo 2 — prácticamente invisible |
+| Fotos | ❌ Sin fotos |
+| Sitios web listados | clinicamediterra.cl + healthatom.io |
+| Atributos | LGBTQ+ friendly · Mujer empresaria |
+| Acceso/reclamada | Por confirmar con Camila |
 
-**Acción Semana 3:** Crear ficha desde cero (no optimizar — crear)
-- Buscar si existe ficha sin reclamar en Google Maps
-- Si existe → reclamar. Si no → crear en business.google.com/create
-- Completar categorías, fotos, mensajería, primeras reseñas
+**Impacto:** Con 2 reseñas no posiciona. Los pacientes que buscan "ginecólogo La Serena" ven clínicas con 50+ reseñas primero.
+
+**Acción Semana 3:** No crear — **reclamar y optimizar**
+- Confirmar quién tiene acceso a la ficha
+- Subir 20+ fotos
+- Completar todas las categorías de especialidades
+- Campaña de reseñas: meta 15 en el primer mes
 
 ---
 

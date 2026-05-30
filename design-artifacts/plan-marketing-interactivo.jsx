@@ -34,17 +34,18 @@ const MONTHS = [
         ]
       },
       {
-        id: "w3", name: "Semana 3", focus: "Crear Google My Business desde cero",
-        priority: "red", owner: "Creadora de contenido + 1 médico", time: "4-6 horas",
+        id: "w3", name: "Semana 3", focus: "Reclamar y optimizar Google My Business",
+        priority: "red", owner: "Creadora de contenido + 1 médico", time: "3-4 horas",
         tasks: [
-          { id: "t3_1", text: "🚨 Clínica Mediterra NO aparece en Google — brecha crítica confirmada el 30 mayo 2026" },
-          { id: "t3_2", text: "Buscar en Google Maps si existe ficha sin reclamar ('Clínica Mediterra La Serena')" },
-          { id: "t3_3", text: "Si existe → reclamarla en business.google.com. Si no → crear desde cero en business.google.com/create" },
-          { id: "t3_4", text: "Completar categorías: Clínica médica + Ginecólogo, Urólogo, Kinesiólogo, Traumatólogo, Nutricionista" },
-          { id: "t3_5", text: "Subir 20+ fotos: fachada, recepción, boxes, equipo (con autorización), equipamiento" },
-          { id: "t3_6", text: "Activar mensajería directa desde la ficha de Google" },
-          { id: "t3_7", text: "Enviar link de reseña a 10 pacientes habituales por WhatsApp para las primeras reseñas" },
-          { id: "t3_8", text: "Publicar primera novedad: 'Conoce a nuestro equipo de urólogos'" },
+          { id: "t3_1", text: "✅ Google My Business existe en Google Maps — solo 2 reseñas, sin fotos, sin contenido" },
+          { id: "t3_2", text: "🆕 Usan HealthAtom (healthatom.io) — software de gestión clínica (EHR + agenda + facturación)" },
+          { id: "t3_3", text: "Verificar con Camila quién tiene acceso a la ficha de Google Maps / Business" },
+          { id: "t3_4", text: "Si no está reclamada → reclamar en business.google.com con cuenta Google de la clínica" },
+          { id: "t3_5", text: "Completar categorías: Ginecólogo, Urólogo, Kinesiólogo, Traumatólogo, Nutricionista, Psicólogo" },
+          { id: "t3_6", text: "Subir 20+ fotos: fachada, recepción, boxes, equipo (con autorización), equipamiento" },
+          { id: "t3_7", text: "Activar mensajería directa desde la ficha" },
+          { id: "t3_8", text: "Campaña de reseñas: enviar link a 10 pacientes habituales → meta 15 reseñas en el mes" },
+          { id: "t3_9", text: "Publicar primera novedad: 'Conoce a nuestro equipo de urólogos'" },
         ]
       },
       {
