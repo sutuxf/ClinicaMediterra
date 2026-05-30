@@ -1,0 +1,14 @@
+{
+  "useMarkdownLinks": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "docs",
+  "attachmentFolderPath": "docs/assets",
+  "showUnsupportedFiles": false,
+  "spellcheck": true,
+  "spellcheckLanguages": ["es"],
+  "strictLineBreaks": false,
+  "defaultViewMode": "source",
+  "foldHeading": false,
+  "foldIndent": true,
+  "alwaysUpdateLinks": true
+}
