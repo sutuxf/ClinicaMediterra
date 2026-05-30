@@ -5,14 +5,54 @@ tags: [home, index]
 # Clínica Mediterra — Base de conocimiento
 
 > Centro de salud pélvica integral en La Serena. Visión: referente regional femenino y masculino.
+> *"Llegar aquí fue un alivio, te hacen sentir escuchado, contenido y acompañado."* — Paciente real
 
 ---
 
-## Contexto estratégico
+## Documentos estratégicos
 
-- [[docs/perfil-clinica-mediterra|Perfil de la clínica]] — 15 profesionales, contacto, testimonios, observaciones
-- [[docs/PANORAMA ACTUAL Y CANVAS MEDITERRA|Panorama actual y Canvas]] — Situación hoy, BMC y Value Proposition Canvas
-- [[docs/plan-de-marketing-digital|Plan de marketing digital]] — 6 meses, semana a semana, KPIs y presupuesto
+- [[docs/perfil-clinica-mediterra|Perfil de la clínica]] — Equipo, contacto, testimonios, observaciones
+- [[docs/PANORAMA ACTUAL Y CANVAS MEDITERRA|Panorama actual y Canvas]] — BMC y Value Proposition Canvas
+- [[docs/plan-de-marketing-digital|Plan de marketing digital]] — 6 meses, semana a semana, KPIs
+
+---
+
+## Wiki
+
+### 🏥 Especialidades
+| Especialidad | Equipo | Prioridad |
+|---|---|---|
+| [[wiki/especialidades/ginecologia\|Ginecología y Obstetricia]] | Uribe · Simoneti · Carvajal · Radic | Core negocio femenino |
+| [[wiki/especialidades/urologia\|Urología]] | Andrusco · Valenzuela · Vera | Mayor potencial de crecimiento |
+| [[wiki/especialidades/kinesiologia-pelvica\|Kinesioterapia Pélvica]] | Tohá · Budinich · Fernández | Diferencial técnico |
+| [[wiki/especialidades/psicologia-sexologia\|Psicología - Sexología]] | Andrei Andrusco | Activo oculto línea masculina |
+| [[wiki/especialidades/traumatologia\|Traumatología]] | Dr. Ferreira | Oportunidad minera |
+| [[wiki/especialidades/nutricion\|Nutrición]] | Carolina Villegas | Soporte programas integrales |
+
+### 👥 Equipo destacado
+- [[wiki/equipo/dr-alexander-andrusco|Dr. Alexander Andrusco]] — Urólogo más mencionado en testimonios
+- [[wiki/equipo/dra-carla-carvajal|Dra. Carla Carvajal]] — Ginecóloga destacada en testimonios
+- [[wiki/equipo/alejandra-budinich|Alejandra Budinich]] — Kinesióloga pélvica destacada
+- [[wiki/equipo/andrei-andrusco|Andrei Andrusco]] — Psicólogo-Sexólogo, clave en línea masculina
+
+### 📣 Marketing
+- [[wiki/marketing/linea-masculina|Línea masculina]] — Estrategia para crecer de 32% a 40% hombres
+- [[wiki/marketing/expansion-geografica|Expansión geográfica]] — Ovalle · Vicuña · Vallenar · Mineros
+- [[wiki/marketing/canales|Canales digitales]] — WhatsApp · GMB · IG · Facebook · TikTok
+- [[wiki/marketing/kpis|KPIs y metas]] — Indicadores mensuales y metas a 6 meses
+
+### ⚙️ Operaciones
+- [[wiki/operaciones/recordatorios-citas|Recordatorios de citas]] — Protocolo + plantillas WhatsApp
+- [[wiki/operaciones/atencion-whatsapp|Atención WhatsApp FAQ]] — Respuestas a preguntas frecuentes
+- [[wiki/operaciones/telemedicina|Telemedicina]] — Palanca para expansión regional
+
+### 🤖 Automatización IA
+| Agente | Estado | Impacto |
+|--------|--------|---------|
+| [[wiki/ia/agente-faq-whatsapp\|FAQ WhatsApp]] | 🟢 Listo hoy | Libera persona de agenda |
+| [[wiki/ia/agente-contenido-rrss\|Generador de contenido]] | 🟢 Listo hoy | Reemplaza $70K/mes |
+| [[wiki/ia/agente-recordatorios\|Recordatorios automáticos]] | 🟠 Necesita WA API | Recupera $5M/mes |
+| [[wiki/ia/agente-reporte-kpis\|Reporte mensual KPIs]] | 🟢 Listo hoy | Automatiza reunión socios |
 
 ---
 
@@ -21,45 +61,10 @@ tags: [home, index]
 | Dato | Valor |
 |------|-------|
 | Segmento actual | 68% mujeres · 32% hombres |
-| Pérdida mensual por no-conversión | $9M CLP |
+| Pérdida por no-conversión | $9M CLP/mes |
 | Presupuesto marketing | $200.000 CLP/mes |
-| Meta hombres a 6 meses | 40% |
-| Cobertura objetivo | La Serena + Ovalle + Vicuña + Vallenar |
+| Meta hombres 6 meses | 40% |
 | WhatsApp | +56 9 3933 7727 |
 | Instagram | @mediterraclinica |
-
----
-
-## Equipo médico
-
-| Especialidad | Profesionales |
-|-------------|---------------|
-| Ginecología y Obstetricia | Dr. Uribe · Dr. Simoneti · Dra. Carvajal · Dra. Radic |
-| Urología | Dr. Andrusco · Dr. Valenzuela · Dr. Vera |
-| Kinesioterapia Pélvica | Camila Tohá · Alejandra Budinich · Paola Fernández |
-| Psicología - Sexología | Andrei Andrusco |
-| Traumatología | Dr. Jorge Ferreira |
-| Nutrición | Carolina Villegas |
-
----
-
-## Artefactos de diseño
-
-- [[design-artifacts/plan-marketing-interactivo|Plan de marketing interactivo (JSX)]]
-- Web publicada: https://sutuxf.github.io/ClinicaMediterra
-
----
-
-## Prioridades de automatización IA
-
-1. 🔴 **Agente FAQ WhatsApp** — Responde con datos reales de los 15 profesionales
-2. 🔴 **Agente generador de contenido RRSS** — Posts por especialidad y profesional
-3. 🟠 **Agente recordatorios de citas** — Flujo confirmación → 48h → 24h → post no-show
-4. 🟠 **Agente reporte mensual KPIs** — Informe ejecutivo automático
-
----
-
-## Frase que define el tono de comunicación
-
-> *"Llegar aquí fue un alivio, te hacen sentir escuchado, contenido y acompañado en todo el proceso."*
-> — Paciente real, Google Reviews
+| Web | www.clinicamediterra.cl |
+| App web del plan | https://sutuxf.github.io/ClinicaMediterra |
