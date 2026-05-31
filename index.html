@@ -36,10 +36,23 @@
 
     const MONTHS = [
       {
-        id: 1, name: "Mes 1", title: "CIMIENTOS", subtitle: "Resolver lo urgente",
-        goal: "Detener la sangría de $18M y poner la casa en orden digital",
+        id: 1, name: "Mes 1", title: "CIMIENTOS + COMUNICACIÓN ROTA", subtitle: "Resolver lo urgente + Auditar INSIGHT #5 (bloqueador crítico)",
+        goal: "Auditar comunicación (teléfono/web/Facebook/WA) + detener $18M sangría + poner digital en orden",
         color: "#DC2626",
         weeks: [
+          {
+            id: "w0", name: "🚨 SEMANA 0 (ESTA SEMANA)", focus: "AUDITAR COMUNICACIÓN ROTA [INSIGHT #5 — Score 88]",
+            priority: "red", owner: "Alex + Camila", time: "2-3 horas",
+            tasks: [
+              { id: "t0_1", text: "🚨 CRÍTICO: Reseña #27 dice 'Nada funciona: teléfono, agendamiento online, Facebook... nada'" },
+              { id: "t0_2", text: "Llamar desde número externo → verificar responde, tiempo espera, buzón, horario 24h" },
+              { id: "t0_3", text: "Probar agendamiento online desde web → verificar error técnico en Medilink" },
+              { id: "t0_4", text: "Enviar mensaje por Facebook → medir tiempo respuesta" },
+              { id: "t0_5", text: "Probar WhatsApp Business → verificar respuesta automática, manual, horario activo" },
+              { id: "t0_6", text: "FIXES INMEDIATOS: Teléfono (persona responsable), Web (debuggear Medilink), Facebook (protocolo 24h), WhatsApp (automatización)" },
+              { id: "t0_7", text: "TESTEO VIERNES: Llamar + probar web + Facebook + WhatsApp (validar fixes)" },
+            ]
+          },
           {
             id: "w1", name: "Semana 1", focus: "Activar automatización en WhatsApp Business",
             priority: "red", owner: "Persona de agenda", time: "1 hora",
