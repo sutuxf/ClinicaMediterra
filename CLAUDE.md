@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Propuesta de valor:** "Atención en Salud de primer nivel, sin que tengas que salir de tu Región, con un toque humano y profesionales excepcionales."
 
-**Estado actual:** Fase de discovery/diseño — sin código de aplicación aún. El foco inmediato es automatización de marketing con IA.
+**Estado actual:** Fase de ejecución — postulación Crece Multisectorial ($5M) con enfoque IA-first. El foco inmediato es implementar 5 agentes IA que resuelven gaps operacionales identificados (recordatorios, trazabilidad, FAQ, contenido, KPIs).
 
 ## Datos clave de la clínica
 
@@ -35,7 +35,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - ~280 atenciones/mes (~14/día) — estimación confirmada
 - Expansión geográfica: Ovalle, Vicuña, Vallenar, zonas mineras (potencial 20% pacientes nuevos)
 - Presupuesto marketing: $200.000 CLP/mes (40% Ads, 35% creadora contenido, 25% otros)
-- Software de gestión: **HealthAtom (healthatom.io)** — EHR + agenda + facturación integrado, fichas electrónicas por paciente
+- Software de gestión: **Medilink** — EHR + agenda + facturación + RCE integrado, fichas electrónicas por paciente. MANTIENEN ESTE SISTEMA (no será reemplazado, será integrado con IA)
 
 **Auditoría digital verificada (30 mayo 2026):**
 | Canal | Estado | Detalles |
@@ -44,7 +44,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | WhatsApp Business | ✅ Instalado | 🚨 **Sin automatización**: sin mensajes ausencia/bienvenida, sin recordatorios |
 | Facebook | 🚨 Muerto | Sin posts desde 2022, mensajes viejos sin responder, potencial alto para pauta |
 | Google My Business | ⚠️ Existe | Solo 2 reseñas, sin fotos, sin optimizar — canal gratuito crítico |
-| Software gestión | ✅ HealthAtom | EHR + agenda + facturación. Estadística no-show pero no es clara |
+| Software gestión | ✅ Medilink | EHR + agenda + facturación + RCE. Será integrado con agentes IA (no reemplazado) |
 | Sitio web (Wix 2022) | ✅ Activo | SEO débil. **Chat widget = botonera muda** — redirige a WA sin capturar intención |
 | Trazabilidad | 🚨 **Crítica** | **SIN SISTEMA** — no saben de dónde vienen pacientes. Origen: boca a boca + derivaciones internas (estimado) |
 | Creadora contenido | ✅ Contratada | Precio bajo, 1-2 posts/semana (insuficiente, plan requiere 3 posts/semana) |
