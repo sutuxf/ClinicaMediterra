@@ -24,24 +24,36 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Equipo:** 15 profesionales en 6 especialidades — Ginecología (4), Urología (3), Kinesioterapia Pélvica (3), Psicología-Sexología (1), Traumatología (1), Nutrición (1).
 
+**Roles administrativos confirmados:**
+- **Alex** — Gestor administrativo · Acceso a HealthAtom, Wix, credenciales Google
+- **Secretaria** — Atiende, recibe pacientes Y gestiona agenda (rol combinado, sobrecargada)
+- **Una kinesiólogo** — Ayuda con redes sociales Instagram (sin ser su rol formal)
+
 **Contexto estratégico clave:**
 - 68% pacientes mujeres / 32% hombres — meta: 40% hombres en 6 meses
-- $9M CLP/mes se pierden en no-conversiones → solución: protocolo de recordatorios
-- Expansión geográfica: Ovalle, Vicuña, Vallenar, zonas mineras
-- Presupuesto marketing: $200.000 CLP/mes
+- **$9M CLP/mes se pierden en no-conversiones** → causas confirmadas: sin recordatorios automáticos + sin medición de no-show
+- ~280 atenciones/mes (~14/día) — estimación confirmada
+- Expansión geográfica: Ovalle, Vicuña, Vallenar, zonas mineras (potencial 20% pacientes nuevos)
+- Presupuesto marketing: $200.000 CLP/mes (40% Ads, 35% creadora contenido, 25% otros)
+- Software de gestión: **HealthAtom (healthatom.io)** — EHR + agenda + facturación integrado, fichas electrónicas por paciente
 
 **Auditoría digital verificada (30 mayo 2026):**
-| Canal | Estado |
-|-------|--------|
-| Instagram @mediterraclinica | ✅ Activo — 1.196 seg, último post 15 mayo, link reserva en bio |
-| WhatsApp Business | ✅ Perfil completo — 🚨 sin mensajes automáticos confirmado |
-| Facebook | ✅ Info OK — 🚨 sin posts desde 2022, mensajes sin responder |
-| Google My Business | ⚠️ Existe en Google Maps — solo 2 reseñas, sin fotos, sin optimizar |
-| Software gestión | ✅ HealthAtom (healthatom.io) — EHR + agenda + facturación |
-| Sitio web (Wix 2022) | ✅ Activo — SEO débil · chat widget = botonera muda sin IA |
-| Trazabilidad | 🚨 Sin sistema — no saben de dónde vienen sus pacientes |
+| Canal | Estado | Detalles |
+|-------|--------|----------|
+| Instagram @mediterraclinica | ✅ Activo | 1.196 seg, último post 15 mayo, link reserva en bio, historias guardadas |
+| WhatsApp Business | ✅ Instalado | 🚨 **Sin automatización**: sin mensajes ausencia/bienvenida, sin recordatorios |
+| Facebook | 🚨 Muerto | Sin posts desde 2022, mensajes viejos sin responder, potencial alto para pauta |
+| Google My Business | ⚠️ Existe | Solo 2 reseñas, sin fotos, sin optimizar — canal gratuito crítico |
+| Software gestión | ✅ HealthAtom | EHR + agenda + facturación. Estadística no-show pero no es clara |
+| Sitio web (Wix 2022) | ✅ Activo | SEO débil. **Chat widget = botonera muda** — redirige a WA sin capturar intención |
+| Trazabilidad | 🚨 **Crítica** | **SIN SISTEMA** — no saben de dónde vienen pacientes. Origen: boca a boca + derivaciones internas (estimado) |
+| Creadora contenido | ✅ Contratada | Precio bajo, 1-2 posts/semana (insuficiente, plan requiere 3 posts/semana) |
+| Convenios | ✅ Activos | Isapres + Fonasa para 3 especialidades principales (Gine, Uro, Kine Pélvica) |
 
-Ver detalle: `wiki/auditoria-digital.md` · Preguntas pendientes: `wiki/preguntas-por-confirmar.md`
+**Documentos de diagnóstico:**
+- `RESPUESTAS-DIAGNOSTICO.md` — 21 preguntas respondidas (7 críticas + 14 generales) — **completar junto a Camila**
+- `wiki/auditoria-digital.md` — Estado detallado por canal
+- Link interactivo con respuestas: https://sutuxf.github.io/ClinicaMediterra/#d=[encoded]
 
 ## Estructura del repositorio
 
@@ -105,17 +117,23 @@ Base de conocimiento operacional enlazada en Obsidian. Leer antes de trabajar en
 - `wiki/ia/` — Specs técnicas, stacks y prompts de los 5 agentes IA
 - `wiki/fondos/` — Postulaciones preparadas para Kit Digital, Crece y Santander
 
-## Agentes IA prioritarios
+## Agentes IA prioritarios — Depuración 2026
 
-| Agente | Archivo | Estado | Impacto |
-|--------|---------|--------|---------|
-| FAQ WhatsApp | `wiki/ia/agente-faq-whatsapp.md` | 🟢 Listo hoy | Libera agenda |
-| Generador de contenido | `wiki/ia/agente-contenido-rrss.md` | 🟢 Listo hoy | Reemplaza $70K/mes |
-| Recordatorios de citas | `wiki/ia/agente-recordatorios.md` | 🟠 Requiere WA API | Recupera $5M/mes |
-| Chatbot web | `wiki/ia/agente-chatbot-web.md` | 🟢 Listo hoy | Captura intención + trazabilidad |
-| Reporte mensual KPIs | `wiki/ia/agente-reporte-kpis.md` | 🟢 Listo hoy | Automatiza reunión socios |
+| Agente | Archivo | Estado | Impacto | Prioridad |
+|--------|---------|--------|---------|-----------|
+| **Recordatorios de citas** | `wiki/ia/agente-recordatorios.md` | 🔴 Bloqueado: requiere WA API | **Recupera $5M/mes** | **#1 CRÍTICA** |
+| **Chatbot web + trazabilidad** | `wiki/ia/agente-chatbot-web.md` | 🟢 Listo hoy (remplazar botonera) | Captura intención + canal origen | **#2 URGENTE** |
+| **FAQ WhatsApp** | `wiki/ia/agente-faq-whatsapp.md` | 🟢 Listo hoy (con respuestas rápidas) | Libera secretaria (~15-25 msg/día) | **#3 IMPORTANTE** |
+| Generador de contenido | `wiki/ia/agente-contenido-rrss.md` | 🟡 Listo pero necesita marca guide | Reemplaza $70K/mes (creadora) | #4 MEDIANO |
+| Reporte mensual KPIs | `wiki/ia/agente-reporte-kpis.md` | 🟢 Listo hoy | Automatiza reunión socios | #5 PLANIFICADO |
 
-**Hallazgo:** El sitio web tiene un chat widget con botonera que redirige a WhatsApp sin capturar intención ni dar respuesta. No es un chatbot real — es una botonera muda.
+**Cambios respecto a plan original:**
+- Recordatorios sube a #1 (era #3 bloqueado)
+- Chatbot web sube a #2 (era #3, ahora urgente reemplazar botonera muda)
+- FAQ baja a #3 (importante pero menos impacto que recordatorios)
+- Generador de contenido baja a #4 (creadora contratada ya existe, puede optimizarse después)
+
+**Hallazgo crítico:** El "chatbot" actual es una botonera muda que redirige a WhatsApp sin capturar intención ni datos de paciente — cero trazabilidad. Reemplazar por chatbot real con IA es URGENTE para empezar a medir origen de pacientes.
 
 ## Correr el sitio localmente
 
