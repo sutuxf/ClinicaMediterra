@@ -225,6 +225,7 @@
                 { id: "plan", label: "📅 Plan 6 Meses" },
                 { id: "research", label: "🔍 Customer Research" },
                 { id: "pauta", label: "📊 Pauta" },
+                { id: "grabaciones", label: "🎬 Grabaciones" },
                 { id: "tracking", label: "📈 Tracking" },
                 { id: "docs", label: "📁 Documentos" },
               ].map(tab => (
@@ -279,6 +280,20 @@
                 <div className="card" style={{ borderLeftColor: "#059669" }}>
                   <h3>✨ #3: Explicación es tu diferenciador</h3>
                   <p>Pacientes valoran: "Te explicamos todo, sin jerga". Esto no lo hace nadie más. Es tu ángulo #1 para pauta.</p>
+                </div>
+
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "18px", color: "#1C3A5F", fontFamily: "'Playfair Display', serif" }}>📌 Recursos Rápidos</h2>
+
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "12px", marginBottom: "24px" }}>
+                  <button className="btn" onClick={() => window.location.href = 'pautas.html'} style={{ textAlign: "center", padding: "16px 12px" }}>
+                    📊 Ver Pautas Interactivas
+                  </button>
+                  <button className="btn" onClick={() => window.location.href = 'grabaciones.html'} style={{ textAlign: "center", padding: "16px 12px" }}>
+                    🎬 Guía Visual Grabaciones
+                  </button>
+                  <button className="btn secondary" onClick={() => window.location.href = '/brief-creativo/' } style={{ textAlign: "center", padding: "16px 12px", background: "white", color: "#1C3A5F", border: "2px solid #1C3A5F" }}>
+                    📄 Brief Creador
+                  </button>
                 </div>
 
                 <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "18px", color: "#1C3A5F", fontFamily: "'Playfair Display', serif" }}>Próximos Pasos (Esta semana)</h2>
