@@ -284,56 +284,67 @@ DESGLOSE:
 
 ---
 
-### **B.2 — Sistema Agendamiento Online**
+### **B.2 — Integración Web + Medilink (Sin Reemplazar Sistema)**
 ```
-Descripción: Plataforma reserva citas + gestión pacientes
-             - Integración HealthAtom (sincronización)
-             - Calendario médicos
-             - Confirmación automática WhatsApp
-             - Recordatorios 24h antes
-             - Pago online (opcional)
-             - Dashboard pacientes
+Descripción: Portal web integrado con Medilink (mantienen su EHR actual)
+             - Widget agendamiento web → Medilink backend
+             - Sincronización bidirecional de citas
+             - Confirmación automática WhatsApp (vía Medilink API)
+             - Recordatorios automáticos 24h (vía Medilink webhooks)
+             - Dashboard pacientes (lectura de Medilink)
+             - Trazabilidad origen pacientes
 
 Duración:    Junio-Agosto 2026 (3 meses)
-Proveedor:   Desarrollo custom + Zapier + Make
+Proveedor:   Integración custom (Medilink API) + Zapier/Make
 
 DESGLOSE:
-├─ Plataforma agendamiento (setup custom)  $600.000
-│  └─ Calendly + modificaciones
-│     Integración HealthAtom
-│     API custom
+├─ Integración Medilink API (desarrollo)    $250.000
+│  └─ Autenticación y webhooks
+│     Sincronización citas (2-vías)
+│     Lectura disponibilidad médicos
 │
-├─ Automatizaciones Zapier/Make            $200.000
-│  └─ Flujos: confirmación → SMS → recordatorio
-│     Sincronización HealthAtom
-│     Webhook desarrollo
+├─ Widget agendamiento web                  $150.000
+│  └─ Interfaz web integrada
+│     Validaciones en tiempo real
+│     Link agendamiento en web
 │
-├─ Pago online (Stripe/Webpay)             $100.000
-│  └─ Setup Stripe
-│     Gestión pagos
+├─ Automatizaciones Zapier/Make             $100.000
+│  └─ Flujos: confirmación WhatsApp → recordatorio
+│     Webhook Medilink para trigger
+│     SMS fallback si WhatsApp falla
 │
-└─ Testing + deployment                     $100.000
-   └─ QA + soporte go-live
+└─ Testing + deployment                      $50.000
+   └─ QA integración Medilink
+      Soporte go-live
+      Monitoreo APIs
 
-💰 SUBTOTAL B.2: $1.000.000 ✅
+💰 SUBTOTAL B.2: $550.000 (AHORRADO: $450K vs sistema nuevo)
 ```
 
-**FUNCIONALIDAD:**
+**FUNCIONALIDAD (Medilink como source of truth):**
 ```
-PACIENTE VE:
-✅ Calendario disponibilidad
-✅ Reserva cita
-✅ Confirmación automática WhatsApp
-✅ Recordatorio 24h antes
+PACIENTE VE (desde web):
+✅ Calendario disponibilidad (desde Medilink)
+✅ Reserva cita → se guarda en Medilink
+✅ Confirmación automática WhatsApp (vía Medilink)
+✅ Recordatorio 24h antes (vía Medilink webhooks)
 ✅ Link telemedicina si aplica
-✅ Historial citas
+✅ Historial citas (desde Medilink)
 
-CLÍNICA VE:
+CLÍNICA VE (en Medilink + dashboard web):
 ✅ Dashboard citas (por especialidad/médico)
-✅ No-shows automático
-✅ Reportes ocupación
-✅ Integración HealthAtom
-✅ Estadísticas origen pacientes
+✅ No-shows automático (en Medilink)
+✅ Reportes ocupación (desde Medilink)
+✅ Estadísticas origen pacientes (NUEVA - trazabilidad web)
+✅ Pagos (sigue siendo en Medilink, no en web)
+✅ RCE (Recepción/Consulta/Emisión en Medilink, SIN cambios)
+
+MEDILINK MANTIENE:
+✅ EHR electrónico (fichas pacientes)
+✅ Sistema de pagos
+✅ RCE (Recepción, Consulta, Emisión)
+✅ Integraciones Isapres/Fonasa
+✅ Facturación electrónica
 ```
 
 ---
@@ -472,17 +483,22 @@ TESTIMONIALES VIDEOOOOO (4 total):
 
 ---
 
-## **TOTAL ÁREA B: TECNOLOGÍA E INNOVACIÓN = $4.100.000**
-**AJUSTE:** Reducir $100K
+## **TOTAL ÁREA B: TECNOLOGÍA E INNOVACIÓN = $4.000.000**
 
-**REAJUSTE:**
-- B.1 (web): $1.500.000 ✅
-- B.2 (agendamiento): $1.000.000 ✅
+**DISTRIBUCIÓN FINAL (MEDILINK-CENTRIC):**
+- B.1 (web integrada): $1.500.000 ✅
+- B.2 (integración Medilink): $550.000 ✅ (NO es sistema nuevo, es integración)
 - B.3 (telemedicina): $800.000 ✅
-- B.4 (audiovisual): $700.000 (reducir $100K)
+- B.4 (audiovisual): $800.000 ✅
 
-**NUEVO B.4:** $700.000
-**TOTAL ÁREA B AJUSTADO: $4.000.000** ✅
+**TOTAL ÁREA B: $4.000.000** ✅
+
+**⚠️ NOTA CRÍTICA:**
+- Medilink es el sistema central (EHR + pagos + RCE + agendamiento)
+- NO reemplazan Medilink
+- SÍ integran web + Medilink para mejor experiencia
+- Ahorran $450K vs presupuestar un sistema nuevo
+- Datos sincronizados automáticamente en tiempo real
 
 ---
 
@@ -497,11 +513,11 @@ A. GESTIÓN EMPRESARIAL
    └─ A.5 Herramientas (AJUSTADO)          $50.000
    SUBTOTAL A:                          $1.000.000
 
-B. TECNOLOGÍA E INNOVACIÓN
+B. TECNOLOGÍA E INNOVACIÓN (MEDILINK-INTEGRATED)
    ├─ B.1 Desarrollo web custom        $1.500.000
-   ├─ B.2 Sistema agendamiento online  $1.000.000
+   ├─ B.2 Integración Medilink         $550.000 (no sistema nuevo)
    ├─ B.3 Equipamiento telemedicina      $800.000
-   └─ B.4 Audiovisual (AJUSTADO)         $700.000
+   └─ B.4 Audiovisual + contenido        $800.000
    SUBTOTAL B:                          $4.000.000
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
