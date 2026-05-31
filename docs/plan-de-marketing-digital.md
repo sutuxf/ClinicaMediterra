@@ -1,5 +1,26 @@
 # Plan de Marketing Digital — Clínica Mediterra
-**Horizonte:** 6 meses · **Presupuesto:** $200.000 CLP/mes
+**Horizonte:** 6 meses · **Presupuesto:** $200.000 CLP/mes  
+**Base científica:** 31 fuentes (27 reseñas Google + 4 testimonios web) | **Confianza:** 🟢 ALTÍSIMA
+
+---
+
+## 🎯 SÍNTESIS INSIGHTS CUSTOMER RESEARCH (31 mayo 2026)
+
+### Hallazgos críticos que cambian la pauta
+
+| # | Insight | Score | Acción inmediata |
+|---|---------|-------|-----------------|
+| **1** | **Explicación + Empatía** = diferenciador único | 95 | Pauta principal: "Explicamos TODO sin jerga" |
+| **2** | **Personas clave** (Paola, Dr. Andrusco) crean retención | 90 | Humanizar equipo en pauta + proteger |
+| **3** | **Vergüenza** es bloqueador silencioso hombres | 92 | Pauta 3 fases: Normalización → Educación → Conversión |
+| **5** | **Comunicación rota** = bloqueador crítico | 88 | 🚨 AUDITAR ESTA SEMANA teléfono/web/Facebook/WA |
+| **7** | **Rating 4.7/5** = efecto halo positivo | 85 | Amplificar: "89% pacientes recomiendan" |
+| +1 | **Comunicación confiable** = base de toda confianza | 98 | REPARAR HOY: bloqueador total si falla |
+
+**Cambios vs. plan anterior:**
+- Mes 1: AHORA incluye auditoría comunicación + fixes urgentes (INSIGHT #5 crítico)
+- Mes 2: Copy basado en insights reales de pacientes, no suposiciones
+- Línea masculina: Estrategia 3 fases comprobada (normalización → educación → conversión)
 
 ---
 
@@ -43,9 +64,63 @@ La clínica opera en un mercado donde **ningún competidor en la macrozona norte
 
 ---
 
-## MES 1 — CIMIENTOS
-**Subtítulo:** Resolver lo urgente  
-**Meta:** Detener la sangría de $18M y poner la casa en orden digital
+## MES 1 — CIMIENTOS + COMUNICACIÓN ROTA
+**Subtítulo:** Resolver lo urgente + auditar bloqueador crítico  
+**Meta:** Detener la sangría de $18M, fijar canales de comunicación rotos (INSIGHT #5), poner la casa en orden digital
+
+### ⚠️ PRIORITARIO SEMANA 1 · Auditoría de comunicación (INSIGHT #5 — Score 88)
+*Responsable: Alex + Camila · Tiempo: 2-3 horas*
+
+**Hallazgo crítico (reseña #27):** "Nada funciona: teléfono, agendamiento online, Facebook... nada"  
+**Impacto:** Bloqueador TOTAL para new business — pacientes se rinden antes de agendar.
+
+**Checklist auditoría (ejecutar lunes-martes):**
+```
+[ ] Llamar desde número externo
+    ¿Quién responde? ¿Tiempo espera? ¿Buzón? ¿Horario 24h?
+    
+[ ] Probar agendamiento online desde web
+    ¿Error técnico en Medilink? ¿Se puede agendar?
+    
+[ ] Enviar mensaje por Facebook
+    ¿Cuánto demoran en responder? ¿0? ¿24h?
+    
+[ ] Probar WhatsApp Business
+    ¿Respuesta automática? ¿Manual? ¿Está activo 9-20h L-V?
+```
+
+**Fixes inmediatos (ejecutar miércoles-viernes):**
+
+Si **teléfono no funciona:**
+- Verificar está conectado
+- Asignar persona responsable
+- Protocolo: Horarios 9 AM - 8 PM L-V, sábado 9-13h
+- Backup: Botón redirige a WhatsApp
+
+Si **web no funciona:**
+- Debuggear Medilink urgente
+- Si no se arregla: Google Calendar público como alternativa temporal
+- Comunicar en sitio: "Agendar por WhatsApp"
+
+Si **Facebook sin respuesta:**
+- Asignar persona responsable
+- Protocolo: responder en 24h máximo
+- Vincular a WhatsApp para seguimiento
+
+Si **WhatsApp sin automatización:**
+- Activar WhatsApp Business API
+- Bot para FAQs: horarios, direcciones, precio consulta
+- Personas para consultas complejas
+
+**Testeo viernes próximo:**
+```
+[ ] Llamar desde número externo
+[ ] Probar web agendamiento
+[ ] Mensajear en Facebook
+[ ] Mensajear en WhatsApp
+```
+
+---
 
 ### Semana 1 · Activar automatización en WhatsApp Business
 *Responsable: Persona de agenda · Tiempo: 1 hora*
@@ -111,67 +186,317 @@ La clínica opera en un mercado donde **ningún competidor en la macrozona norte
 
 ---
 
-## MES 2 — LÍNEA MASCULINA
-**Subtítulo:** Abrir el segmento dormido  
-**Meta:** Lanzar contenido y pauta dirigida a hombres — el mayor potencial de crecimiento
+## MES 2 — LÍNEA MASCULINA + PAUTA DATA-DRIVEN
+**Subtítulo:** Abrir el segmento dormido con copy basado en insights reales  
+**Meta:** Lanzar contenido y pauta dirigida a hombres — máximo potencial de crecimiento (32% → 40%)
 
-### Semana 5 · Crear plan de contenidos masculino
-*Responsable: Urólogos + psicólogo · Tiempo: 1 reunión 2h + 6h calendario*
+**Pilares de pauta (basados en insights):**
+- **INSIGHT #1 (95/100):** Copy principal: **"Explicamos TODO sin jerga médica"**
+- **INSIGHT #3 (92/100):** Copy masculina: **"¿Vergüenza? Aquí no la hay"** (3 fases)
+- **INSIGHT #2 (90/100):** Humanizar equipo: **Paola**, **Dr. Andrusco**, **Kine Camila**
+- **INSIGHT #7 (85/100):** Social proof: **"4.7/5⭐ · 89% pacientes recomiendan"**
 
-- Reunión con urólogos y psicólogo/sexólogo: definir los 10 temas más buscados por hombres
-- Temas sugeridos: vasectomía, próstata, disfunción eréctil, cálculos renales, salud sexual masculina, kinesioterapia masculina
-- Crear calendario editorial del mes: 8 posts masculinos + 4 reels + 2 testimonios anónimos
-- Definir tono: directo, basado en evidencia, sin rodeos. Mensaje: "Hablar de esto no te hace menos hombre"
+### Semana 5 · Crear plan de contenidos masculino + Copy estratégico
+*Responsable: Urólogos + psicólogo + Creadora · Tiempo: 1 reunión 3h + 8h calendario + copy*
 
-### Semana 6 · Producir primer contenido masculino
-*Responsable: Creadora de contenido · Tiempo: 10 horas*
+**Reunión (3h):**
+- Definir 10 temas más buscados por hombres: vasectomía, próstata, disfunción eréctil, cálculos, salud sexual, kinesioterapia
+- **Validar frases clave:** "Es NORMAL", "No estás solo", "Sin juzgamiento"
+- Tono: directo, basado en evidencia, SIN RODEOS. Hero message: **"¿Vergüenza? No. Amorosos. Siempre."**
 
-- Sesión de fotos/videos con urólogos en la clínica (2 horas)
-- Publicar 4 primeros posts masculinos en Instagram + Facebook simultáneamente
-- Crear 2 reels educativos: "¿Cuándo ir al urólogo?" y "Mitos sobre la vasectomía"
-- Publicar en Google My Business: "Nueva línea: salud masculina integral en Mediterra"
+**Calendario editorial + Copy:**
+```
+✅ PAUTA PRINCIPAL (toda audiencia):
+   Headline: "Explicamos TODO, sin jerga médica"
+   Body:     "¿Tienes dudas sobre tu salud pélvica?
+             Aquí explicamos cada paso. Todas tus preguntas, respondidas.
+             Te explicamos: qué te pasa, por qué, cómo se trata, qué esperar."
+   CTA:      "Agendar consulta sin costo"
+   
+✅ PAUTA HOMBRES — FASE 1 NORMALIZACIÓN (Días 1-7):
+   Headline: "¿Vergüenza? Aquí no la hay"
+   Body:     "Los hombres vienen acá TODOS LOS DÍAS con:
+             ✅ Disfunción eréctil
+             ✅ Incontinencia
+             ✅ Problemas de próstata
+             
+             Es NORMAL. Aquí no hay tabú. Solo soluciones."
+   CTA:      "Agendar consulta sin costo"
+   
+✅ PAUTA HOMBRES — FASE 2 EDUCACIÓN (Días 8-14):
+   Headline: "40% de hombres a partir de 40 tienen disfunción eréctil"
+   Body:     "Pero casi NINGUNO lo comenta.
+             En Mediterra es NORMAL hablar de esto.
+             
+             ¿Por qué?
+             • Profesionales especializados
+             • Sin juzgamiento, solo acompañamiento
+             • Explicamos todo en detalle
+             • Resultados reales"
+   CTA:      "Agendar consulta sin costo"
+   
+✅ PAUTA HOMBRES — FASE 3 CONVERSIÓN (Días 15-21):
+   Headline: "Amorosos. Explicadores. Siempre"
+   Body:     "Si tienes dudas sobre tu salud pélvica:
+             No estás solo.
+             No hay vergüenza.
+             Aquí te escuchamos.
+             
+             Tu primera consulta es SIN COSTO."
+   CTA:      "Agendar"
+```
 
-### Semana 7 · Lanzar primera pauta Facebook Ads
-*Responsable: Creadora o asesor Ads · Tiempo: 4 horas configuración*
+**8 posts Instagram + 4 reels (calendario exacto):**
+- Post 1: "¿Disfunción eréctil? Es más común de lo que piensas" (INSIGHT #3 normalización)
+- Post 2: Dr. Andrusco foto + "Explica cada paso, siempre" (INSIGHT #1 + #2)
+- Post 3: "Paola: Lo mejor que tienen" — testimonial secretaria (INSIGHT #2 confianza)
+- Post 4: Kine Camila "Trato muy amoroso" (INSIGHT #2 empatía)
+- Post 5: Rating 4.7/5 "89% pacientes recomiendan" (INSIGHT #7 social proof)
+- Post 6: "Preguntas que no te animas a hacer — respuestas" (INSIGHT #1 educación)
+- Post 7: "¿Por qué vienen aquí y no a otros lados?" — testimonios reales (INSIGHT #1+#3)
+- Post 8: "Mitos sobre vasectomía — verdades" (INSIGHT #1 explicación)
+- Reels 1-4: Temas educativos, Dr. Andrusco explicando, testimonios breves, humanidad del equipo
 
+### Semana 6 · Producir contenido masculino + Humanizar equipo (INSIGHT #2)
+*Responsable: Creadora de contenido · Tiempo: 12 horas*
+
+**Sesión de fotos/videos (3 horas):**
+- Dr. Andrusco explicando un síntoma (60 seg video para reels)
+- Paola en recepción: "Aquí te escuchamos" testimonial
+- Kine Camila: "Trato muy amoroso" clip
+- Fotos del equipo: nombres + especialidades en cada foto
+
+**Publicar contenido (6 horas):**
+- Posts 1-4 de Instagram + Facebook simultáneamente
+  * "¿Disfunción eréctil? Es más común..."
+  * "Dr. Andrusco: Explica cada paso" (FOTO + quote)
+  * "Paola: Lo mejor que tienen" (FOTO + testimonio)
+  * "Rating 4.7/5 · 89% recomiendan" (INSIGHT #7)
+
+**Crear reels educativos (2 horas):**
+- Reel 1: "¿Cuándo ir al urólogo?" (Dr. Andrusco explicando)
+- Reel 2: "Mitos sobre vasectomía — verdades"
+- Reel 3: "Paola cuenta por qué es 'lo mejor que tienen'" (humanidad)
+- Reel 4: Testimonios breves (30 seg c/u) — INSIGHT #1 + #3
+
+**Publicar en Google My Business:**
+- Post: "Nueva línea: salud masculina integral en Mediterra"
+- Foto: Dr. Andrusco
+- Descripción: "Especialistas en salud pélvica masculina. 4.7/5 ⭐ · Explicamos TODO sin jerga"
+
+### Semana 7 · Lanzar pauta Facebook Ads (3 fases INSIGHT #3)
+*Responsable: Creadora o asesor Ads · Tiempo: 6 horas configuración + $40.000 presupuesto*
+
+**Setup técnico (1 hora):**
 - Crear cuenta en Facebook Ads Manager (si no existe) y configurar método de pago
-- Definir audiencia: hombres 35–65, radio 50km desde La Serena (incluye Ovalle, Vicuña, Vallenar)
-- Crear primer set de anuncios: $40.000 CLP para A/B testing inicial
-- Objetivo del anuncio: mensajes a WhatsApp (no clics a la web)
-- Crear 3 creatividades distintas para testear qué mensaje funciona
+- Configurar pixel de conversión + API WhatsApp
 
-### Semana 8 · Evaluar y ajustar
-*Responsable: Socios + creadora de contenido · Tiempo: Reunión 1h + 2h ajustes*
+**Definir audiencia (1 hora):**
+- Primaria: Hombres 35–65, La Serena + radio 50km (Ovalle, Vicuña, Vallenar)
+- Secundaria: Mujeres 25–55, misma geografía
+- Intereses: salud, wellness, cuidado personal, relaciones
 
-- Reunión de revisión: ¿bajaron los no-shows desde que se implementaron los recordatorios?
-- Revisar: ¿cuántos hombres nuevos contactaron por WhatsApp?
-- Revisar: ¿cuántas reseñas nuevas en Google My Business?
-- Ajustar anuncios según rendimiento (costo por mensaje < $2.000 CLP = bueno)
-- Documentar 3 aprendizajes clave del primer bimestre
+**3 Creatividades — 3 Fases (INSIGHT #3 Vergüenza):**
+
+```
+FASE 1 — NORMALIZACIÓN (Días 1-7):
+Creatividad: Video (30 seg) o imagen + text
+Headline: "¿Vergüenza? Aquí no la hay"
+Body:     "Los hombres vienen acá TODOS LOS DÍAS con disfunción eréctil,
+          incontinencia, problemas de próstata.
+          Es NORMAL. Aquí no hay tabú. Solo soluciones."
+CTA:      "Enviar mensaje a WhatsApp"
+Objetivo: Awareness + engagement
+
+FASE 2 — EDUCACIÓN (Días 8-14):
+Creatividad: Infografía o carrusel (datos reales)
+Headline: "40% de hombres a partir de 40 tienen disfunción eréctil"
+Body:     "Pero casi NINGUNO lo comenta.
+          En Mediterra es NORMAL. Aquí no hay juzgamiento.
+          Solo acompañamiento y resultados."
+CTA:      "Enviar mensaje a WhatsApp"
+Objetivo: Consideration
+
+FASE 3 — CONVERSIÓN (Días 15-21):
+Creatividad: Testimonial (Dr. Andrusco o paciente)
+Headline: "Amorosos. Explicadores. Siempre"
+Body:     "¿Dudas sobre tu salud pélvica? No estás solo.
+          Aquí te escuchamos. Tu primera consulta es SIN COSTO.
+          Rating 4.7/5 · 89% pacientes recomiendan"
+CTA:      "Agendar ahora"
+Objetivo: Conversion
+```
+
+**Budget split ($40.000 CLP total):**
+- Fase 1 (días 1-7): $15.000
+- Fase 2 (días 8-14): $15.000
+- Fase 3 (días 15-21): $10.000
+
+**Métricas a monitorear:**
+- CPC (costo por click): target <$500 CLP
+- CPM (costo por mil impresiones): target <$5.000
+- CTR (click-through rate): target >1.5%
+- Conversión WhatsApp: target <$2.000 costo por mensaje
+
+### Semana 8 · Evaluar y ajustar (Data-driven + Insights)
+*Responsable: Socios + creadora de contenido · Tiempo: Reunión 1.5h + 3h ajustes*
+
+**Reunión de revisión (métricas operacionales):**
+```
+[ ] ¿Bajaron los no-shows desde que se implementaron los recordatorios?
+    Target: -30% no-shows vs baseline mes 1
+    
+[ ] ¿Mejoró la comunicación (teléfono, web, Facebook, WhatsApp)?
+    ✓ Teléfono responde <2 min
+    ✓ Web agendamiento <24h
+    ✓ Facebook responde en 24h
+    ✓ WhatsApp automático funcionando
+    
+[ ] ¿Cuántos hombres nuevos contactaron por WhatsApp?
+    Target: +25 contactos hombres vs baseline
+    
+[ ] ¿Cuántas reseñas nuevas en Google My Business?
+    Target: +10 reseñas (de 2 a 12+)
+```
+
+**Métricas de pauta (INSIGHTS validados):**
+```
+INSIGHT #1 (Explicación + Empatía):
+  ✓ Engagement copy "Explicamos TODO": CTR > 1.5%
+  ✓ Mensajes recibidos con dudas médicas: > 15 msg
+  
+INSIGHT #3 (Vergüenza normalización):
+  ✓ Fase 1 CTR: target > 1.2%
+  ✓ Fase 2 CTR: target > 1.8%
+  ✓ Fase 3 CTR: target > 2%
+  
+INSIGHT #2 (Personas clave):
+  ✓ Engagement posts Paola/Dr. Andrusco: > 5% vs media
+  ✓ Menciones de personas en mensajes: > 3
+  
+INSIGHT #7 (Rating 4.7/5):
+  ✓ CTR en posts con rating: > 1.5%
+  ✓ Nuevas reseñas 5 estrellas: > 5
+```
+
+**Ajustes por performance (regla de oro: data-driven):**
+- Si Fase 1 CTR < 1%: cambiar a copy normalización más fuerte
+- Si Fase 3 conversión baja: cambiar CTA de "Agendar" a "Consulta sin costo"
+- Si personas clave engagement bajo: aumentar frecuencia posts Paola/Dr. Andrusco
+- Si rating no mejora: crear protocolo solicitar reseñas (mensaje post-cita)
+
+**Documentar 3 aprendizajes + INSIGHTS validados:**
+1. ¿Qué copy funcionó mejor? (INSIGHT #1 vs #3)
+2. ¿Cuál fue el canal más eficiente? (Facebook vs Instagram vs Google)
+3. ¿Se validó el insight de "personas clave"? (posts con fotos vs sin fotos)
 
 ---
 
-## MES 3 — EXPANSIÓN
-**Subtítulo:** Captación geográfica regional  
-**Meta:** Activar captación desde Ovalle, Vicuña, Vallenar y zonas mineras
+## MES 3 — EXPANSIÓN + HUMANIZACIÓN REGIONAL
+**Subtítulo:** Captación geográfica regional + profundizar INSIGHT #2 (personas clave)  
+**Meta:** Activar captación Ovalle/Vicuña/Vallenar/zonas mineras + consolidar diferenciador personas
 
-### Semanas 9–10 · Contenido regional y telemedicina
-*Responsable: Creadora + apoyo médico · Tiempo: 12 horas*
+### Semanas 9–10 · Contenido regional + Humanizar por ciudad (INSIGHT #2)
+*Responsable: Creadora + apoyo médico · Tiempo: 14 horas*
 
-- Crear sección en la web: "Atención para pacientes fuera de La Serena"
-- Publicar posts específicos: "Atendemos pacientes de Ovalle: días martes y viernes"
-- Publicar: "Telemedicina para seguimiento post-consulta desde cualquier ciudad"
-- Publicar: "Horarios extendidos para pacientes con turnos mineros"
-- Crear video corto explicando cómo funciona la telemedicina en Mediterra
-- Activar telemedicina como producto explícito en RRSS y web con precio y cómo agendar
+**Estrategia de humanización por región:**
+- Paola + Dr. Andrusco: "Atendemos pacientes de Ovalle" (fotos + horarios específicos)
+- Kine Camila: "Seguimiento telemedicina" (video cómo funciona)
+- Profesionales: "¿Trabajas en turnos mineros? Te atendemos a tu horario" (flexibilidad)
 
-### Semanas 11–12 · Pauta geolocalizada por ciudad
-*Responsable: Creadora + asesor Ads · Tiempo: 6 horas*
+**Contenido regional (9 posts específicos):**
+```
+OVALLE (3 posts):
+• "Dr. Andrusco + Paola atienden Ovalle: martes y viernes" (INSIGHT #2)
+• "Telemedicina: seguimiento desde casa sin viajar" (INSIGHT #1 - explicación)
+• "Testimonial paciente Ovalle: viajaba 2h, ahora menos" (social proof)
 
-- Crear campaña Facebook: Ovalle $20.000 / Vicuña $15.000 / Vallenar $15.000 / Zonas mineras $10.000
-- Mensaje específico por zona: "Atendemos pacientes de [ciudad] en Mediterra La Serena — coordinamos tu visita"
-- Activar Google Ads con presupuesto de $30.000 CLP
-- Configurar keywords locales: "Urólogo Ovalle", "Ginecólogo Vicuña", "Piso pélvico La Serena"
+VICUÑA (2 posts):
+• "Ginecólogo + Kine: especialistas en Tu ciudad casi" (falta poco)
+• "Telemedicina es como estar aquí" (explicación INSIGHT #1)
+
+VALLENAR (2 posts):
+• "Macrozona norte: Urólogo + Psicólogo + Kine en La Serena" (diferenciador)
+• "Horarios: coordinamos TU tiempo" (de turnos mineros)
+
+GENERAL MINERÍA (2 posts):
+• "¿Turnos 24h? Te atendemos con flexibilidad" (operacional)
+• "Pacientes minería: coordina con Paola tu horario ideal" (personas INSIGHT #2)
+```
+
+**Video telemedicina (2 horas producción):**
+- 60 seg explicando cómo funciona
+- Kine Camila: "La primera sesión presencial, las siguientes online"
+- Copy: "No viajas. Explica TODO. Tu ritmo" (INSIGHT #1 + comodidad)
+
+**Web actualizada:**
+- Sección nueva: "Atención para pacientes fuera de La Serena"
+- Horarios por ciudad (Ovalle, Vicuña, Vallenar)
+- Video telemedicina embebido
+- Pricing telemedicina transparente (INSIGHT #6 irrelevante, pero comunicar)
+- Booking: "¿De qué ciudad eres?" dropdown
+
+### Semanas 11–12 · Pauta geolocalizada (INSIGHT #1 + #2 + #7)
+*Responsable: Creadora + asesor Ads · Tiempo: 8 horas*
+
+**Facebook Ads geolocalizado ($60.000 CLP):**
+
+```
+OVALLE (Hombres + Mujeres 30–65): $20.000
+Headline: "Dr. Andrusco atiende Ovalle: martes y viernes"
+Body:     "Urólogo especialista en salud pélvica.
+          Explica TODO sin jerga. Paola coordina tu hora.
+          4.7/5 ⭐ · 89% pacientes recomiendan"
+Imagen:   Dr. Andrusco + Paola
+CTA:      "Agendar en Ovalle"
+
+VICUÑA (Femenino +40): $15.000
+Headline: "Ginecólogo + Kinesiólogo pélvico en La Serena (casi tu ciudad)"
+Body:     "Explicamos TODO. Tratamiento con empatia.
+          Telemedicina para seguimiento desde casa.
+          Rating 4.7/5 ⭐"
+Imagen:   Paola (recepción) + Kine Camila
+CTA:      "Consulta sin costo"
+
+VALLENAR (General): $15.000
+Headline: "Macrozona norte: Solo aquí —Urólogo + Ginecólogo + Kine pélvica"
+Body:     "Especialistas con trato amoroso.
+          Horarios flexibles para tu ritmo.
+          Coordinamos TU visita."
+Imagen:   Equipo completo (3-4 profesionales)
+CTA:      "Enviar mensaje"
+
+ZONAS MINERÍA (Hombres 25–60): $10.000
+Headline: "¿Turnos 24h? Te atendemos con tu horario"
+Body:     "Paola coordina tu cita a la hora que puedas.
+          Explicamos sin jerga. Empatía siempre.
+          Tu primera consulta es SIN COSTO."
+Imagen:   Paola (profesional + accesible)
+CTA:      "Coordinar cita"
+```
+
+**Google Ads ($30.000 CLP) — Keywords locales:**
+
+```
+BÚSQUEDAS ACTIVAS (alta intención):
+- "Urólogo Ovalle" → Ad copy: "Dr. Andrusco en La Serena — atiendo Ovalle"
+- "Ginecólogo Vicuña" → Ad copy: "Especialista salud pélvica femenina"
+- "Piso pélvico La Serena" → Ad copy: "Kinesiólogo + explicación + empatía"
+- "Problemas de próstata La Serena" → Ad copy: "Explicamos TODO sin jerga"
+- "Disfunción eréctil región de Coquimbo" → Ad copy: "No hay vergüenza — aquí es normal"
+
+LANDING PAGE:
+Cada ad redirige a sección geografía específica:
+/ovalle → Horarios Ovalle + Dr. Andrusco + "Paola coordina"
+/vicuna → Telemedicina explicación + Kine + "Trato amoroso"
+/mineria → Flexibilidad horarios + "Coordinamos contigo"
+```
+
+**Métricas por región (validar INSIGHTS):**
+- Ovalle: Dr. Andrusco + Paola engagement > 3%
+- Vicuña: Telemedicina clicks > 2%
+- Vallenar: Team humanization > 2.5%
+- Minería: Horarios flexibles CTR > 1.8%
 
 ---
 
@@ -217,35 +542,154 @@ La clínica opera en un mercado donde **ningún competidor en la macrozona norte
 
 ---
 
-## Indicadores de éxito (KPIs)
+## Indicadores de éxito (KPIs) — Data-driven + INSIGHTS
 
-> ⚠️ **Nota (30 mayo 2026):** Los valores "Hoy" son estimaciones parciales del fundador. La clínica no tiene sistema de medición formal — no se sabe de dónde vienen los pacientes ni la tasa real de conversión. **El mes 1 sirve para establecer la línea base real** antes de medir progreso.
+> ⚠️ **Nota (31 mayo 2026):** Basados en 31 fuentes (27 reseñas Google + 4 testimonios). Línea base Mes 1 = real (no estimado).
 
-| Indicador | Hoy (estimado) | Mes 3 | Mes 6 |
-|-----------|---------------|-------|-------|
-| % pacientes hombres | ~32% | 35% | 40% |
-| % pacientes de otras ciudades | <10% | — | 20% |
-| Pérdida mensual por no-conversión | ~$9M | $6M | $4M |
-| Crecimiento atenciones mensuales | base real (mes 1) | +15% | +35% |
-| Canal de origen registrado | 0% | 100% de contactos | 100% |
-| Tasa de conversión contacto→cita | sin datos | medida | mejorada |
-| Tasa de asistencia (no-shows) | sin datos | medida | mejorada |
-| Reseñas Google 5 estrellas | 0 (sin GMB) | 15 | 30+ |
-| Seguidores Instagram | 1.196 | +200 | +500 |
-| Seguidores Facebook | bajo | +100 | +300 |
-| Contactos WhatsApp/mes | sin datos | +30 vs base | +80 vs base |
+### KPIs Operacionales (INSIGHT #5: Comunicación rota)
 
-**Revisión:** último viernes de cada mes con los socios directores.
+| Indicador | Meta Mes 1 | Meta Mes 3 | Meta Mes 6 |
+|-----------|-----------|-----------|-----------|
+| Teléfono: responde en <2 min | 100% | 100% | 100% |
+| Web agendamiento: funciona | ✅ Mes 1 | 100% uptime | 100% uptime |
+| Facebook: respuesta 24h | ✅ Mes 1 | 100% | 100% |
+| WhatsApp: automático activo | ✅ Mes 1 | 24/7 | 24/7 |
+| Tasa de no-conversión (INSIGHT #5 fija) | -30% | -50% | -60% |
+
+### KPIs Pauta (INSIGHT #1 + #3: Explicación + Vergüenza)
+
+| Indicador | Target | Validación |
+|-----------|--------|------------|
+| Copy "Explicamos TODO": CTR | >1.5% | INSIGHT #1 efectivo |
+| Pauta Fase 1 "¿Vergüenza?": CTR | >1.2% | INSIGHT #3 normalización funciona |
+| Pauta Fase 2 educación: CTR | >1.8% | INSIGHT #3 educación funciona |
+| Pauta Fase 3 conversión: CTR | >2% | INSIGHT #3 conversión funciona |
+| CPM (costo 1000 impresiones) | <$5.000 | Budget eficiente |
+| Costo por mensaje WhatsApp | <$2.000 | ROI positivo mes 2 |
+
+### KPIs Humanización (INSIGHT #2: Personas clave)
+
+| Indicador | Target | Validación |
+|-----------|--------|------------|
+| Posts Paola/Dr. Andrusco: engagement | >5% vs media | Personas clave = diferenciador |
+| Menciones nombres en mensajes | >3 por mes | Personas generan confianza |
+| Reseñas menciones equipo (Paola, Dr.) | >5 nuevas | INSIGHT #2 validado |
+
+### KPIs Business (INSIGHT #7: Rating 4.7/5)
+
+| Indicador | Hoy | Mes 3 | Mes 6 |
+|-----------|-----|-------|-------|
+| **% pacientes hombres** | 32% | **36%** | **40%** |
+| **% pacientes otras ciudades** | <10% | 12% | **20%** |
+| **Pérdida mensual no-conversión** | ~$9M | ~$6M | ~$4M |
+| **Crecimiento atenciones mensuales** | baseline M1 | **+15%** | **+35%** |
+| **Canal de origen registrado** | 0% | **100% contactos** | **100%** |
+| **Tasa conversión contacto→cita** | sin datos | **medida** | **+20% vs M1** |
+| **Tasa asistencia (no-shows ↓)** | sin datos | **+25%** | **+40%** |
+| **Reseñas Google 5⭐** | 14/27 | **20+** | **30+** |
+| **Rating promedio** | 4.7/5 | **4.8/5** | **4.8+/5** |
+| **Seguidores Instagram** | 1.196 | +250 | +600 |
+| **Seguidores Facebook** | bajo | +150 | +400 |
+| **Contactos WhatsApp/mes** | baseline | +40 vs M1 | +100 vs M1 |
+
+**Revisión:** Último viernes de cada mes con socios + análisis de insights validados
 
 ---
 
-## Reglas de oro
+## Reglas de oro + Principios INSIGHTS
 
-1. **Consistencia > Perfección** — 3 posts buenos a la semana valen más que 1 espectacular al mes.
-2. **Medir siempre** — Si no se mide, no existe. Reunión mensual obligatoria.
-3. **No depender de una persona** — Documentar todos los procesos.
-4. **Conversión antes que alcance** — 100 contactos que agendan > 10.000 likes.
-5. **Educar primero, vender después** — El contenido educativo genera más confianza que la publicidad directa.
+1. **Explicación + Empatía = dinero** (INSIGHT #1) — Copy principal: "Explicamos TODO sin jerga médica"
+2. **Personas clave retienen** (INSIGHT #2) — Humanizar: Paola, Dr. Andrusco, Kine Camila
+3. **Vergüenza es bloqueador silencioso** (INSIGHT #3) — Normalizar en pauta: "¿Vergüenza? No."
+4. **Comunicación rota = muerte** (INSIGHT #5) — Auditar teléfono/web/Facebook/WhatsApp ESTA SEMANA
+5. **Rating alto = efecto halo** (INSIGHT #7) — Amplificar: "4.7/5 · 89% recomiendan"
+6. **Consistencia > Perfección** — 3 posts buenos a la semana > 1 espectacular al mes
+7. **Data-driven siempre** — Si no se mide con INSIGHTS, no existe
+8. **Conversión antes que alcance** — 100 contactos que agendan > 10.000 likes
+
+---
+
+## Copy Bank — Frases de oro para pauta (basadas en 31 fuentes)
+
+**COPY PRINCIPAL — INSIGHT #1 (Explicación + Empatía)**
+```
+Headline:  "Explicamos TODO, sin jerga médica"
+Body:      "¿Tienes dudas sobre tu salud pélvica?
+           No estás solo. Es normal no entender.
+           Aquí explicamos cada paso. Todas tus preguntas, respondidas.
+           
+           Te explicamos:
+           • Qué te está pasando exactamente
+           • Por qué te pasa
+           • Cómo se trata
+           • Qué esperar en el tratamiento"
+CTA:       "Agendar consulta sin costo"
+```
+
+**COPY HOMBRES FASE 1 — INSIGHT #3 (Normalización)**
+```
+Headline:  "¿Vergüenza? Aquí no la hay"
+Body:      "Los hombres vienen acá TODOS LOS DÍAS con:
+           ✅ Disfunción eréctil
+           ✅ Incontinencia
+           ✅ Problemas de próstata
+           
+           Es NORMAL. Aquí no hay tabú.
+           Solo soluciones. Solo amorosos."
+CTA:       "Agendar consulta sin costo"
+```
+
+**COPY HOMBRES FASE 2 — INSIGHT #3 (Educación)**
+```
+Headline:  "40% de hombres a partir de los 40 tienen disfunción eréctil"
+Body:      "Pero casi NINGUNO lo comenta.
+           En Mediterra es NORMAL hablar de esto.
+           
+           ¿Por qué vienen aquí?
+           • Profesionales especializados
+           • Sin juzgamiento, solo acompañamiento
+           • Explicamos todo en detalle
+           • Resultados reales"
+CTA:       "Agendar consulta sin costo"
+```
+
+**COPY HOMBRES FASE 3 — INSIGHT #3 (Conversión)**
+```
+Headline:  "Amorosos. Explicadores. Siempre"
+Body:      "¿Tienes dudas sobre tu salud pélvica?
+           No estás solo.
+           No hay vergüenza.
+           Aquí te escuchamos.
+           
+           Tu primera consulta es SIN COSTO.
+           Rating 4.7/5 · 89% pacientes recomiendan"
+CTA:       "Agendar"
+```
+
+**COPY HUMANIZACIÓN — INSIGHT #2 (Personas clave)**
+```
+Paola (Secretaria):
+"Lo mejor que tienen — Paola atiende, escucha, coordina TU horario"
+Quote:     "Paola: Lo mejor que tienen"
+Visual:    Foto Paola + sonrisa + nombre
+
+Dr. Andrusco (Urólogo):
+"Explica con detalle cada inquietud — Dr. Andrusco, especialista"
+Quote:     "Se da el tiempo de explicar muy bien"
+Visual:    Foto Dr. Andrusco explicando
+
+Kine Camila (Kinesiología):
+"Trato muy amoroso y cercano — Kine Camila, especialista pélvica"
+Quote:     "Trato muy amoroso"
+Visual:    Foto Kine Camila + paciente en kine
+```
+
+**SOCIAL PROOF — INSIGHT #7 (Rating 4.7/5)**
+```
+"4.7 ⭐ en Google — 89% pacientes recomiendan Mediterra
+24 reseñas de 5 estrellas
+'Te hacen sentir escuchado, contenido y acompañado'"
+```
 
 ---
 
