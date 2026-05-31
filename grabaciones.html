@@ -77,32 +77,132 @@
     .card h2 { font-family: "'Playfair Display', serif"; font-size: 20px; margin-bottom: 12px; color: #1C3A5F; }
     .card h3 { font-size: 14px; font-weight: 700; margin-top: 12px; margin-bottom: 8px; color: #1C3A5F; }
 
-    /* TELEPROMPTER */
+    /* TELEPROMPTER MEJORADO */
     .teleprompter {
       background: #1C3A5F;
       color: white;
-      padding: 24px;
+      padding: 32px;
       border-radius: 12px;
-      font-size: 18px;
-      line-height: 1.8;
-      font-family: 'Courier New', monospace;
-      min-height: 300px;
+      font-size: 24px;
+      line-height: 2;
+      font-family: "'Playfair Display', serif";
+      min-height: 400px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       margin-bottom: 12px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
     }
 
-    .teleprompter p { margin-bottom: 8px; }
-    .teleprompter .pause { color: #EA580C; font-weight: 700; font-style: italic; }
+    .teleprompter-line {
+      margin-bottom: 16px;
+    }
+
+    .teleprompter .pause {
+      color: #EA580C;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 16px;
+      display: block;
+      margin: 12px 0;
+    }
 
     /* TABS */
     .tabs { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid #E5DDD0; }
     .tab { background: none; border: none; padding: 8px 0; margin-right: 16px; font-size: 13px; font-weight: 600; color: #94A3B8; cursor: pointer; transition: all 0.2s; }
     .tab.active { color: #1C3A5F; border-bottom: 3px solid #1C3A5F; }
 
-    /* SECTION TOGGLE */
+    /* CAMERA ANGLES VISUAL */
+    .angles-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 16px 0;
+    }
+
+    .angle-visual {
+      background: #F8FAFC;
+      border: 2px solid #E5DDD0;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .angle-visual svg {
+      width: 100%;
+      height: 180px;
+      margin-bottom: 8px;
+    }
+
+    .angle-name {
+      font-weight: 700;
+      font-size: 12px;
+      color: #1C3A5F;
+      margin-bottom: 4px;
+    }
+
+    .angle-desc {
+      font-size: 11px;
+      color: #64748B;
+    }
+
+    /* STORYBOARD VISUAL */
+    .storyboard-visual {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .storyboard-frame {
+      background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%);
+      border: 2px solid #1D4ED8;
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+      min-height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .storyboard-frame.post7 { border-color: #B45309; background: linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%); }
+    .storyboard-frame.post5 { border-color: #DC2626; background: linear-gradient(135deg, #FEE2E2 0%, #FCA5A5 100%); }
+
+    .frame-time {
+      font-weight: 700;
+      font-size: 11px;
+      color: #1C3A5F;
+    }
+
+    .frame-visual {
+      font-size: 48px;
+      margin: 8px 0;
+    }
+
+    .frame-label {
+      font-size: 10px;
+      color: #475569;
+      font-weight: 600;
+    }
+
+    /* LOCATION MAP VISUAL */
+    .location-visual {
+      background: #F8FAFC;
+      border: 2px dashed #1C3A5F;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+
+    .location-visual svg {
+      width: 100%;
+      height: 200px;
+    }
+
+    /* EXPANDIBLE */
     .section-toggle {
       background: #F8FAFC;
       border: 1px solid #E5DDD0;
@@ -113,111 +213,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: all 0.2s;
     }
 
     .section-toggle:hover { background: #EFF6FF; }
-    .section-toggle.open { background: #EFF6FF; }
 
     .section-content {
       display: none;
       padding: 12px 0;
       font-size: 12px;
-      line-height: 1.6;
       color: #475569;
     }
 
     .section-content.open { display: block; }
 
-    /* DIAGRAMA */
-    .diagram {
-      background: #F8FAFC;
-      border: 1px dashed #1C3A5F;
-      padding: 16px;
-      border-radius: 8px;
-      font-family: 'Courier New', monospace;
-      font-size: 11px;
-      line-height: 1.4;
-      overflow-x: auto;
-      margin: 12px 0;
-    }
-
-    /* STORYBOARD */
-    .storyboard {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 10px;
-      margin: 12px 0;
-    }
-
-    .storyboard-frame {
-      background: #E5DDD0;
-      border-radius: 8px;
-      padding: 10px;
-      text-align: center;
-      border: 2px solid #1C3A5F;
-    }
-
-    .storyboard-frame .time { font-weight: 700; font-size: 11px; color: #1C3A5F; margin-bottom: 4px; }
-    .storyboard-frame .action { font-size: 10px; color: #475569; line-height: 1.3; }
-
-    /* CAMERA ANGLES */
-    .angle-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin: 12px 0;
-    }
-
-    .angle-box {
-      background: #F0F9FF;
-      border-left: 4px solid #1D4ED8;
-      padding: 10px;
-      border-radius: 6px;
-      font-size: 11px;
-    }
-
-    .angle-box .name { font-weight: 700; color: #1C3A5F; }
-    .angle-box .desc { color: #64748B; margin-top: 4px; }
-
-    /* LOCATION MAP */
-    .location-map {
-      background: #F8FAFC;
-      border: 1px solid #E5DDD0;
-      padding: 16px;
-      border-radius: 8px;
-      margin: 12px 0;
-    }
-
-    .location-map h4 { font-size: 12px; font-weight: 700; color: #1C3A5F; margin-bottom: 8px; }
-
-    /* CHECKLIST */
-    .checklist {
-      background: #F8FAFC;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 12px;
-      margin: 12px 0;
-    }
-
-    .checklist-item { display: flex; align-items: center; margin-bottom: 6px; }
+    .checklist { padding: 12px 0; }
+    .checklist-item { display: flex; align-items: center; margin-bottom: 8px; font-size: 12px; }
     .checklist-item input { margin-right: 8px; }
-    .checklist-item label { cursor: pointer; }
-
-    /* TONE EXAMPLES */
-    .tone-example {
-      background: #ECFDF5;
-      border-left: 4px solid #059669;
-      padding: 10px;
-      border-radius: 6px;
-      margin: 8px 0;
-      font-size: 11px;
-    }
-
-    .tone-example.bad { background: #FEE2E2; border-left-color: #DC2626; }
-
-    .tone-example .label { font-weight: 700; color: #1C3A5F; margin-bottom: 4px; }
-    .tone-example .text { color: #475569; }
 
     /* BUTTON */
     .btn {
@@ -243,31 +254,6 @@
       text-align: center;
       font-size: 12px;
     }
-
-    /* EXPANDIBLE */
-    .expandible-header {
-      background: linear-gradient(135deg, #1C3A5F15, #0F284715);
-      padding: 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 8px;
-      border: 1px solid #E5DDD0;
-    }
-
-    .expandible-header:hover { background: linear-gradient(135deg, #1C3A5F25, #0F284725); }
-
-    .expandible-content {
-      display: none;
-      background: #F8FAFC;
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 12px;
-    }
-
-    .expandible-content.open { display: block; }
   </style>
 </head>
 <body>
@@ -293,7 +279,7 @@
   <footer>
     <div class="container">
       <p>Guía Visual de Grabación — Clínica Mediterra | Actualizado 30 mayo 2026</p>
-      <p style="margin-top: 8px;"><a href="maestro.html" style="color: #93C5FD;">← Volver a Maestro</a> | <a href="pautas.html" style="color: #93C5FD;">Ver Pautas →</a></p>
+      <p style="margin-top: 8px;"><a href="maestro.html" style="color: #93C5FD;">← Volver a Maestro</a></p>
     </div>
   </footer>
 
@@ -316,54 +302,31 @@
           location: 'Consultorio Dr. Andrusco',
           style: 'ESTÁTICO ✓',
           color: '#1D4ED8',
-          teleprompter: `Los hombres vienen acá
-todos los días con:
-
-• Disfunción eréctil
-• Incontinencia
-• Problemas de próstata
-
-[PAUSA 1 seg]
-
-Es normal.
-
-[PAUSA 1 seg]
-
-Yo lo veo a diario.
-
-[PAUSA 1 seg]
-
-Y aquí lo resolvemos.
-
-[PAUSA 2 seg]
-
-No hay vergüenza.
-
-Solo profesionales que
-explican TODO.`,
-          tono: {
-            velocity: 'Lenta a normal, pausas deliberadas',
-            volume: 'Consistente, proyectado',
-            intonation: 'Natural, énfasis en "TODOS", "AQUÍ", "TODO"',
-            contactoVisual: 'Directo con cámara durante todo'
-          },
-          angulos: [
-            { name: 'Close-up (0-3s)', desc: 'Rostro + hombros, conexión máxima' },
-            { name: 'Plano medio (3-10s)', desc: 'Sentado, gesto apertura con manos' },
-            { name: 'Close-up (10-15s)', desc: 'Primerísimo plano, énfasis emocional' },
-            { name: 'Plano medio (15-25s)', desc: 'Postura segura, luz natural' },
-            { name: 'Close-up final (25-30s)', desc: 'Máximo énfasis, pausa visual' }
+          teleprompterLines: [
+            'Los hombres vienen acá',
+            'todos los días con:',
+            '',
+            '• Disfunción eréctil',
+            '• Incontinencia',
+            '• Problemas de próstata',
+            '',
+            'Es normal.',
+            '',
+            'Yo lo veo a diario.',
+            '',
+            'Y aquí lo resolvemos.',
+            '',
+            'No hay vergüenza.',
+            '',
+            'Solo profesionales',
+            'que explican TODO.'
           ],
-          locaciones: [
-            { name: 'Consultorio Dr. A.', elements: 'Escritorio, silla, certificados, plantas, luz natural', ideal: true },
-            { name: 'Fondo', elements: 'Sin distracciones, profesional, cálido', ideal: true }
-          ],
-          storyboard: [
-            { time: '0-3s', action: 'Close-up\n"Los hombres vienen..."' },
-            { time: '3-10s', action: 'Medio\n"...acá todos los días"' },
-            { time: '10-15s', action: 'Close-up\n"Es normal"' },
-            { time: '15-25s', action: 'Medio\n"Y aquí lo resolvemos"' },
-            { time: '25-30s', action: 'Close-up\n"Sin vergüenza"' }
+          storyboardFrames: [
+            { time: '0-3s', icon: '📹', label: 'Close-up' },
+            { time: '3-10s', icon: '🎯', label: 'Medio' },
+            { time: '10-15s', icon: '📹', label: 'Close-up' },
+            { time: '15-25s', icon: '🎯', label: 'Medio' },
+            { time: '25-30s', icon: '📹', label: 'Final' }
           ]
         },
         post7: {
@@ -372,123 +335,122 @@ explican TODO.`,
           location: 'Recepción + Consultorio',
           style: 'CON MOVIMIENTO ✓',
           color: '#B45309',
-          teleprompter: `¿Nervioso por tu
-primera consulta?
-
-[PAUSA 1 seg]
-
-PASO 1: Bienvenida cálida
-Te hacen sentir contenido
-desde que entras
-
-[PAUSA 1 seg]
-
-PASO 2: Explicación completa
-Sin jerga médica
-
-[PAUSA 1 seg]
-
-PASO 3: Examen profesional
-Respetuoso, confidencial
-
-[PAUSA 1 seg]
-
-PASO 4: Plan claro
-Sabes exactamente qué esperar
-
-[PAUSA 2 seg]
-
-Te hacen sentir
-escuchado, contenido
-y acompañado.`,
-          tono: {
-            velocity: 'Normal, pausas entre pasos',
-            volume: 'Claro y penetrante',
-            intonation: 'Conversacional, énfasis en numeración (1, 2, 3, 4)',
-            contactoVisual: 'Variable según movimiento'
-          },
-          angulos: [
-            { name: 'Wide shot (0-3s)', desc: 'Entrada recepción, cámara sigue' },
-            { name: 'Plano americano (3-8s)', desc: 'Caminando pasillos, gestual' },
-            { name: 'Montaje rápido (8-15s)', desc: 'Diferentes ángulos transiciones' },
-            { name: 'Plano medio (15-25s)', desc: 'Consultorio, explicando pasos' },
-            { name: 'Close-up (25-30s)', desc: 'Frases clave, contacto visual' },
-            { name: 'Wide shot cierre (30-45s)', desc: 'Salida/vista exterior clínica' }
+          teleprompterLines: [
+            '¿Nervioso por tu',
+            'primera consulta?',
+            '',
+            'PASO 1: Bienvenida cálida',
+            'Te hacen sentir contenido',
+            'desde que entras',
+            '',
+            'PASO 2: Explicación completa',
+            'Sin jerga médica',
+            '',
+            'PASO 3: Examen profesional',
+            'Respetuoso, confidencial',
+            '',
+            'PASO 4: Plan claro',
+            'Sabes exactamente',
+            'qué esperar',
+            '',
+            'Te hacen sentir',
+            'escuchado, contenido',
+            'y acompañado.'
           ],
-          locaciones: [
-            { name: 'Recepción', elements: 'Mostrador, personas, plantas, luz profesional', ideal: true },
-            { name: 'Pasillos', elements: 'Luz natural, puertas consultorios, arquitectura', ideal: true },
-            { name: 'Consultorio', elements: 'Escritorio, silla, luz controlada', ideal: true },
-            { name: 'Sala de espera', elements: 'Sillas, ambiente acogedor', ideal: false }
-          ],
-          storyboard: [
-            { time: '0-3s', action: 'Wide\nEntrada' },
-            { time: '3-8s', action: 'Am.\nPasillos' },
-            { time: '8-15s', action: 'Montaje\nPaso 1-2' },
-            { time: '15-25s', action: 'Medio\nConsultorio' },
-            { time: '25-30s', action: 'Close-up\nFrase clave' },
-            { time: '30-45s', action: 'Wide\nCierre' }
+          storyboardFrames: [
+            { time: '0-3s', icon: '🚪', label: 'Entrada' },
+            { time: '3-8s', icon: '🚶', label: 'Pasillos' },
+            { time: '8-15s', icon: '📊', label: 'Montaje' },
+            { time: '15-25s', icon: '💼', label: 'Consul.' },
+            { time: '25-30s', icon: '📹', label: 'Close-up' },
+            { time: '30-45s', icon: '✨', label: 'Cierre' }
           ]
         },
         post5: {
           title: 'POST 5: Testimonio Pia',
           duration: '60 segundos',
           location: 'Vida diaria + Consultorio',
-          style: 'DINÁMICO (montaje) ✓',
+          style: 'DINÁMICO ✓',
           color: '#DC2626',
-          teleprompter: `[NARRACIÓN]
-
-"Pia vino con síntomas
-que la limitaban..."
-
-[VIDA DIARIA: montaje rápido]
-
-[CONSULTORIO]
-
-Pia hablando (CITA EXACTA):
-
-"Me explicaron TODO.
-
-El Dr. Andrusco explica
-con detalle cada inquietud.
-
-Me ayudó de gran manera
-a mejorar mis síntomas."
-
-[PAUSA]
-
-[VIDA DIARIA DESPUÉS: montaje]
-
-"Eso no es una clínica normal.
-Eso es Mediterra."`,
-          tono: {
-            velocity: 'Natural, conversacional de Pia',
-            volume: 'Íntimo, sin forzar',
-            intonation: 'Auténtica, no actuada',
-            contactoVisual: 'Variable (a cámara y naturales)'
-          },
-          angulos: [
-            { name: 'Wide shot (0-5s)', desc: 'Pia en vida diaria, corriendo/riendo' },
-            { name: 'Close-up (5-30s)', desc: 'Pia hablando, rostro lleno, emocional' },
-            { name: 'Wide shot montaje (30-45s)', desc: 'Vida normal recuperada, dinámico' },
-            { name: 'Transiciones', desc: 'Fade suave entre vida diaria y consultorio' }
+          teleprompterLines: [
+            'Me explicaron TODO.',
+            '',
+            'El Dr. Andrusco explica',
+            'con detalle cada inquietud.',
+            '',
+            'Me ayudó de gran manera',
+            'a mejorar mis síntomas.'
           ],
-          locaciones: [
-            { name: 'Vida diaria (antes)', elements: 'Outdoor, movimiento natural, personas', ideal: true },
-            { name: 'Consultorio', elements: 'Close, luz cálida, íntimo', ideal: true },
-            { name: 'Vida diaria (después)', elements: 'Mismo lugar que antes (contraste)', ideal: true }
-          ],
-          storyboard: [
-            { time: '0-5s', action: 'Wide\nVida diaria' },
-            { time: '5-15s', action: 'Close-up\n"Explicaron TODO"' },
-            { time: '15-30s', action: 'Close-up\n"Dr. Andrusco..."' },
-            { time: '30-45s', action: 'Close-up\n"Mejoré síntomas"' },
-            { time: '45-60s', action: 'Wide\nVida normal' }
+          storyboardFrames: [
+            { time: '0-5s', icon: '🏃', label: 'Antes' },
+            { time: '5-30s', icon: '🎤', label: 'Testimonio' },
+            { time: '30-45s', icon: '💬', label: 'Quote 2' },
+            { time: '45-60s', icon: '😊', label: 'Después' }
           ]
         }
       };
 
       const activeData = videos[activeVideo];
+
+      const CameraAngleSVG = ({ type }) => {
+        const svgs = {
+          closeup: (
+            <svg viewBox="0 0 200 150" style={{filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'}}>
+              <rect x="20" y="20" width="160" height="110" fill="#E0F2FE" stroke="#1D4ED8" strokeWidth="2"/>
+              <circle cx="100" cy="65" r="25" fill="#1C3A5F" stroke="#1D4ED8" strokeWidth="2"/>
+              <text x="100" y="135" textAnchor="middle" fontSize="11" fill="#1C3A5F" fontWeight="700">Close-up</text>
+            </svg>
+          ),
+          medio: (
+            <svg viewBox="0 0 200 150" style={{filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'}}>
+              <rect x="20" y="20" width="160" height="110" fill="#E0F2FE" stroke="#1D4ED8" strokeWidth="2"/>
+              <circle cx="100" cy="50" r="20" fill="#1C3A5F" stroke="#1D4ED8" strokeWidth="2"/>
+              <rect x="85" y="70" width="30" height="40" fill="#1C3A5F" stroke="#1D4ED8" strokeWidth="2"/>
+              <text x="100" y="135" textAnchor="middle" fontSize="11" fill="#1C3A5F" fontWeight="700">Plano Medio</text>
+            </svg>
+          ),
+          general: (
+            <svg viewBox="0 0 200 150" style={{filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'}}>
+              <rect x="20" y="20" width="160" height="110" fill="#E0F2FE" stroke="#1D4ED8" strokeWidth="2"/>
+              <circle cx="100" cy="45" r="15" fill="#1C3A5F" stroke="#1D4ED8" strokeWidth="2"/>
+              <rect x="85" y="60" width="30" height="35" fill="#1C3A5F" stroke="#1D4ED8" strokeWidth="2"/>
+              <polygon points="85,95 100,110 115,95" fill="#1C3A5F" stroke="#1D4ED8" strokeWidth="2"/>
+              <text x="100" y="135" textAnchor="middle" fontSize="11" fill="#1C3A5F" fontWeight="700">Plano General</text>
+            </svg>
+          )
+        };
+        return svgs[type] || svgs.closeup;
+      };
+
+      const LocationMapSVG = () => {
+        if (activeVideo === 'post3') {
+          return (
+            <svg viewBox="0 0 300 200" style={{filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'}}>
+              <rect x="30" y="40" width="80" height="100" fill="#FFF7ED" stroke="#1C3A5F" strokeWidth="2" rx="4"/>
+              <text x="70" y="95" textAnchor="middle" fontSize="12" fill="#1C3A5F" fontWeight="700">Consultorio</text>
+              <text x="70" y="130" textAnchor="middle" fontSize="10" fill="#64748B">Dr. Andrusco</text>
+              <circle cx="70" cy="60" r="8" fill="#EA580C"/>
+              <text x="70" y="175" textAnchor="middle" fontSize="10" fill="#1C3A5F">Luz Natural</text>
+            </svg>
+          );
+        }
+        return (
+          <svg viewBox="0 0 300 200" style={{filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'}}>
+            <rect x="20" y="50" width="70" height="80" fill="#FFF7ED" stroke="#B45309" strokeWidth="2" rx="4"/>
+            <text x="55" y="100" textAnchor="middle" fontSize="10" fill="#B45309" fontWeight="700">Recepción</text>
+            <rect x="105" y="50" width="70" height="80" fill="#F0F9FF" stroke="#1D4ED8" strokeWidth="2" rx="4"/>
+            <text x="140" y="100" textAnchor="middle" fontSize="10" fill="#1D4ED8" fontWeight="700">Pasillos</text>
+            <rect x="190" y="50" width="70" height="80" fill="#EFF6FF" stroke="#059669" strokeWidth="2" rx="4"/>
+            <text x="225" y="100" textAnchor="middle" fontSize="10" fill="#059669" fontWeight="700">Consultorio</text>
+            <path d="M 95 90 L 105 90 M 180 90 L 190 90" stroke="#64748B" strokeWidth="2" markerEnd="url(#arrowhead)"/>
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                <polygon points="0 0, 10 5, 0 10" fill="#64748B"/>
+              </marker>
+            </defs>
+          </svg>
+        );
+      };
 
       return (
         <div>
@@ -530,238 +492,139 @@ Eso es Mediterra."`,
             </div>
           </div>
 
-          {/* CONTENT GRID */}
-          <div className="content-area">
-            {/* TELEPROMPTER */}
-            <div>
-              <h3 style={{ marginBottom: '12px', color: '#1C3A5F' }}>📝 Teleprompter (Script exacto)</h3>
-              <div className="teleprompter">
-                {activeData.teleprompter.split('\n').map((line, idx) => (
-                  <div key={idx}>
-                    {line.includes('[') ? <span className="pause">{line}</span> : line}
+          {/* TELEPROMPTER */}
+          <div className="card" style={{ marginBottom: '20px' }}>
+            <h3>📝 TELEPROMPTER (Script para imprimir y practicar)</h3>
+            <div className="teleprompter">
+              <div>
+                {activeData.teleprompterLines.map((line, idx) => (
+                  <div key={idx} className="teleprompter-line" style={{ minHeight: line === '' ? '4px' : 'auto' }}>
+                    {line}
                   </div>
                 ))}
               </div>
-              <div style={{ fontSize: '11px', color: '#64748B', marginTop: '8px' }}>
-                ✓ Script listo para imprimir y practicar con Dr. Andrusco
-              </div>
             </div>
-
-            {/* TONO */}
-            <div>
-              <h3 style={{ marginBottom: '12px', color: '#1C3A5F' }}>🎤 Tono y Lenguaje</h3>
-              <div className="card" style={{ padding: '12px' }}>
-                <div style={{ marginBottom: '10px' }}>
-                  <div style={{ fontWeight: '700', fontSize: '11px', color: '#1C3A5F' }}>Velocidad</div>
-                  <div style={{ fontSize: '11px', color: '#475569' }}>{activeData.tono.velocity}</div>
-                </div>
-                <div style={{ marginBottom: '10px' }}>
-                  <div style={{ fontWeight: '700', fontSize: '11px', color: '#1C3A5F' }}>Volumen</div>
-                  <div style={{ fontSize: '11px', color: '#475569' }}>{activeData.tono.volume}</div>
-                </div>
-                <div style={{ marginBottom: '10px' }}>
-                  <div style={{ fontWeight: '700', fontSize: '11px', color: '#1C3A5F' }}>Entonación</div>
-                  <div style={{ fontSize: '11px', color: '#475569' }}>{activeData.tono.intonation}</div>
-                </div>
-                <div>
-                  <div style={{ fontWeight: '700', fontSize: '11px', color: '#1C3A5F' }}>Contacto visual</div>
-                  <div style={{ fontSize: '11px', color: '#475569' }}>{activeData.tono.contactoVisual}</div>
-                </div>
-
-                <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid #E5DDD0' }}>
-                  <div style={{ fontWeight: '700', fontSize: '11px', marginBottom: '6px', color: '#1C3A5F' }}>✅ Hacer:</div>
-                  <div className="tone-example">
-                    <div className="label">Profesional pero accesible</div>
-                    <div className="text">"Es normal que sientas esto" / "Aquí hay solución"</div>
-                  </div>
-                </div>
-              </div>
+            <div style={{ fontSize: '11px', color: '#64748B' }}>
+              ✓ Script listo para imprimir en papel grande (16pt mínimo)
             </div>
           </div>
 
           {/* ÁNGULOS DE CÁMARA */}
           <div className="card" style={{ marginBottom: '20px' }}>
-            <h3 style={{ marginBottom: '12px' }}>📹 Ángulos de Cámara</h3>
-            <div className="angle-grid">
-              {activeData.angulos.map((angle, idx) => (
-                <div key={idx} className="angle-box" style={{ borderLeftColor: activeData.color }}>
-                  <div className="name">{angle.name}</div>
-                  <div className="desc">{angle.desc}</div>
-                </div>
-              ))}
-            </div>
-
-            {/* DIAGRAMA ÁNGULOS */}
-            <div style={{ marginTop: '12px' }}>
-              <h4 style={{ fontSize: '12px', fontWeight: '700', marginBottom: '8px', color: '#1C3A5F' }}>Esquema Visual (Ángulos)</h4>
-              <div className="diagram">
-{`
-CLOSE-UP (Primerísimo plano):
-     ╔═════════════╗
-     ║    ROSTRO   ║  ← Barbilla a frente
-     ║  (conexión) ║     0.5-0.75m
-     ╚═════════════╝
-
-PLANO MEDIO-CERRADO (Pecho hacia arriba):
-     ╔═══════════════╗
-     ║  👤           ║  ← Cabeza + hombros
-     ║  (contacto)   ║     1-1.5m
-     ╚═══════════════╝
-
-PLANO AMERICANO (Cintura hacia arriba):
-     ╔═══════════════╗
-     ║    👤        ║  ← Cabeza + torso
-     ║   /|\\        ║     hasta cintura
-     ║   / \\        ║     1.5-2m
-     ╚═══════════════╝
-
-PLANO GENERAL (Cuerpo completo):
-     ╔═══════════════╗
-     ║   👤         ║  ← Cuerpo + contexto
-     ║  /|\\         ║     2.5-3.5m
-     ║  / \\         ║     (más dinámico)
-     ║/   \\         ║
-     ╚═══════════════╝
-`}
+            <h3>📹 Ángulos de Cámara (Visuales)</h3>
+            <div className="angles-container">
+              <div className="angle-visual">
+                <CameraAngleSVG type="closeup" />
+                <div className="angle-name">Close-up</div>
+                <div className="angle-desc">Rostro + conexión máxima (0.5-0.75m)</div>
+              </div>
+              <div className="angle-visual">
+                <CameraAngleSVG type="medio" />
+                <div className="angle-name">Plano Medio-Cerrado</div>
+                <div className="angle-desc">Pecho hacia arriba (1-1.5m)</div>
+              </div>
+              <div className="angle-visual">
+                <CameraAngleSVG type="general" />
+                <div className="angle-name">Plano General</div>
+                <div className="angle-desc">Cuerpo completo + contexto (2.5-3.5m)</div>
+              </div>
+              <div className="angle-visual">
+                <svg viewBox="0 0 200 150" style={{filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.1))'}}>
+                  <rect x="20" y="20" width="160" height="110" fill="#E0F2FE" stroke="#1D4ED8" strokeWidth="2"/>
+                  <circle cx="70" cy="70" r="15" fill="#1C3A5F" stroke="#1D4ED8" strokeWidth="2"/>
+                  <rect x="100" y="50" width="50" height="50" fill="#E0F2FE" stroke="#1D4ED8" strokeWidth="2" opacity="0.5"/>
+                  <text x="100" y="135" textAnchor="middle" fontSize="11" fill="#1C3A5F" fontWeight="700">Over-Shoulder</text>
+                </svg>
+                <div className="angle-name">Over-Shoulder</div>
+                <div className="angle-desc">Dinámico e interactivo (1-1.5m)</div>
               </div>
             </div>
           </div>
 
           {/* LOCACIONES */}
           <div className="card" style={{ marginBottom: '20px' }}>
-            <h3 style={{ marginBottom: '12px' }}>📍 Locaciones Ideales</h3>
-            {activeData.locaciones.map((loc, idx) => (
-              <div key={idx} style={{ marginBottom: '12px', paddingBottom: '12px', borderBottom: idx < activeData.locaciones.length - 1 ? '1px solid #E5DDD0' : 'none' }}>
-                <div style={{ fontWeight: '700', fontSize: '12px', color: '#1C3A5F', marginBottom: '4px' }}>
-                  {loc.ideal ? '✅' : '⚠️'} {loc.name}
-                </div>
-                <div style={{ fontSize: '11px', color: '#475569' }}>
-                  {loc.elements}
-                </div>
-              </div>
-            ))}
-
-            {/* MAPA CLÍNICA */}
-            <div style={{ marginTop: '12px' }}>
-              <h4 style={{ fontSize: '12px', fontWeight: '700', marginBottom: '8px', color: '#1C3A5F' }}>Layout Clínica (Recorrido)</h4>
-              <div className="diagram">
-{`
-RECEPCIÓN          PASILLOS           CONSULTORIO
-┌─────────┐        ┌──────────┐      ┌──────────┐
-│ 🎬 CAM  │────────│    Dr.A  │──────│ 💼 Escritorio
-│ Mostrador │      │  (walking)│      │ 🪟 Ventana
-└─────────┘        └──────────┘      └──────────┘
-
-FLUJO GRABACIÓN:
-Entrada → Bienvenida → Pasillos (caminata) → Consultorio
-(wide)   (close)     (americano)           (múltiples)
-`}
-              </div>
+            <h3>📍 Locación & Flujo de Grabación</h3>
+            <div className="location-visual">
+              <LocationMapSVG />
+            </div>
+            <div style={{ fontSize: '11px', color: '#64748B', marginTop: '8px' }}>
+              {activeVideo === 'post3'
+                ? '✓ Consultorio: luz natural + profesional, sin distracciones'
+                : '✓ Recorrido: Entrada → Pasillos (caminata) → Consultorio (explicación)'}
             </div>
           </div>
 
           {/* STORYBOARD */}
           <div className="card" style={{ marginBottom: '20px' }}>
-            <h3 style={{ marginBottom: '12px' }}>🎬 Storyboard Timeline</h3>
-            <div className="storyboard">
-              {activeData.storyboard.map((frame, idx) => (
-                <div key={idx} className="storyboard-frame">
-                  <div className="time">{frame.time}</div>
-                  <div className="action">{frame.action}</div>
+            <h3>🎬 Storyboard & Timeline</h3>
+            <div className="storyboard-visual">
+              {activeData.storyboardFrames.map((frame, idx) => (
+                <div key={idx} className={`storyboard-frame ${activeVideo === 'post7' ? 'post7' : activeVideo === 'post5' ? 'post5' : ''}`}>
+                  <div className="frame-time">{frame.time}</div>
+                  <div className="frame-visual">{frame.icon}</div>
+                  <div className="frame-label">{frame.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* CHECKLIST TÉCNICO */}
+          {/* CHECKLIST */}
           <div className="card" style={{ marginBottom: '20px' }}>
-            <h3 style={{ marginBottom: '12px' }}>✅ Checklist Pre-Grabación</h3>
+            <h3>✅ Checklist Pre-Grabación</h3>
 
-            <div className="expandible-header" onClick={() => toggleSection('vestuario')}>
-              <span style={{ fontWeight: '700', fontSize: '12px' }}>👔 Vestuario</span>
+            <div className="section-toggle" onClick={() => toggleSection('vestuario')}>
+              <span style={{ fontWeight: '700' }}>👔 Vestuario</span>
               <span>{expandedSections.vestuario ? '▼' : '▶'}</span>
             </div>
-            <div className={`expandible-content ${expandedSections.vestuario ? 'open' : ''}`}>
+            <div className={`section-content ${expandedSections.vestuario ? 'open' : ''}`}>
               <div className="checklist">
                 <div className="checklist-item"><input type="checkbox" /><label>Bata blanca (impecable)</label></div>
                 <div className="checklist-item"><input type="checkbox" /><label>Sin logos grandes</label></div>
                 <div className="checklist-item"><input type="checkbox" /><label>Zapatos profesionales</label></div>
-                <div className="checklist-item"><input type="checkbox" /><label>Peinado natural</label></div>
               </div>
             </div>
 
-            <div className="expandible-header" onClick={() => toggleSection('luz')}>
-              <span style={{ fontWeight: '700', fontSize: '12px' }}>💡 Luz</span>
+            <div className="section-toggle" onClick={() => toggleSection('luz')}>
+              <span style={{ fontWeight: '700' }}>💡 Luz</span>
               <span>{expandedSections.luz ? '▼' : '▶'}</span>
             </div>
-            <div className={`expandible-content ${expandedSections.luz ? 'open' : ''}`}>
+            <div className={`section-content ${expandedSections.luz ? 'open' : ''}`}>
               <div className="checklist">
                 <div className="checklist-item"><input type="checkbox" /><label>Luz natural de ventana</label></div>
                 <div className="checklist-item"><input type="checkbox" /><label>LED auxiliar (3000K)</label></div>
-                <div className="checklist-item"><input type="checkbox" /><label>Reflector blanco (llenar sombras)</label></div>
-                <div className="checklist-item"><input type="checkbox" /><label>Test de white balance</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Reflector blanco</label></div>
               </div>
             </div>
 
-            <div className="expandible-header" onClick={() => toggleSection('audio')}>
-              <span style={{ fontWeight: '700', fontSize: '12px' }}>🎙️ Audio</span>
+            <div className="section-toggle" onClick={() => toggleSection('audio')}>
+              <span style={{ fontWeight: '700' }}>🎙️ Audio</span>
               <span>{expandedSections.audio ? '▼' : '▶'}</span>
             </div>
-            <div className={`expandible-content ${expandedSections.audio ? 'open' : ''}`}>
+            <div className={`section-content ${expandedSections.audio ? 'open' : ''}`}>
               <div className="checklist">
                 <div className="checklist-item"><input type="checkbox" /><label>Micrófono lavalier inalámbrico</label></div>
                 <div className="checklist-item"><input type="checkbox" /><label>Batería test</label></div>
-                <div className="checklist-item"><input type="checkbox" /><label>Distancia correcta (20-30cm)</label></div>
-                <div className="checklist-item"><input type="checkbox" /><label>Sin interferencias</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Distancia: 20-30cm</label></div>
               </div>
             </div>
 
-            <div className="expandible-header" onClick={() => toggleSection('camara')}>
-              <span style={{ fontWeight: '700', fontSize: '12px' }}>📷 Cámara</span>
+            <div className="section-toggle" onClick={() => toggleSection('camara')}>
+              <span style={{ fontWeight: '700' }}>📷 Cámara</span>
               <span>{expandedSections.camara ? '▼' : '▶'}</span>
             </div>
-            <div className={`expandible-content ${expandedSections.camara ? 'open' : ''}`}>
+            <div className={`section-content ${expandedSections.camara ? 'open' : ''}`}>
               <div className="checklist">
                 <div className="checklist-item"><input type="checkbox" /><label>Batería cargada</label></div>
-                <div className="checklist-item"><input type="checkbox" /><label>Memoria vacía (espacio)</label></div>
-                <div className="checklist-item"><input type="checkbox" /><label>Lente limpia</label></div>
-                <div className="checklist-item"><input type="checkbox" /><label>4K / 24fps settings</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Memoria vacía</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>4K / 24fps</label></div>
               </div>
             </div>
           </div>
 
-          {/* ESPECIFICACIONES TÉCNICAS */}
-          <div className="card" style={{ marginBottom: '20px' }}>
-            <h3 style={{ marginBottom: '12px' }}>⚙️ Especificaciones Técnicas</h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px' }}>
-              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', fontSize: '11px' }}>
-                <div style={{ fontWeight: '700', color: '#1C3A5F' }}>Cámara</div>
-                <div style={{ color: '#475569', marginTop: '4px' }}>Sony A6700 / iPhone 14+</div>
-              </div>
-              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', fontSize: '11px' }}>
-                <div style={{ fontWeight: '700', color: '#1C3A5F' }}>Resolución</div>
-                <div style={{ color: '#475569', marginTop: '4px' }}>4K (para zoom post)</div>
-              </div>
-              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', fontSize: '11px' }}>
-                <div style={{ fontWeight: '700', color: '#1C3A5F' }}>Frame Rate</div>
-                <div style={{ color: '#475569', marginTop: '4px' }}>24fps (cinematic)</div>
-              </div>
-              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', fontSize: '11px' }}>
-                <div style={{ fontWeight: '700', color: '#1C3A5F' }}>Lente</div>
-                <div style={{ color: '#475569', marginTop: '4px' }}>35mm (focal fija)</div>
-              </div>
-            </div>
-          </div>
-
-          {/* ACCIONES RÁPIDAS */}
+          {/* CTA */}
           <div style={{ padding: '20px', background: '#F0F9FF', borderRadius: '12px', border: '1px solid #1D4ED8' }}>
-            <h3 style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px', color: '#1C3A5F' }}>
-              🚀 Próximos Pasos
-            </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
-              <button className="btn" onClick={() => window.location.href = '/brief-creativo/GUIA-GRABACION-DR-ANDRUSCO.md'}>
-                📄 Descargar guía completa
-              </button>
+            <h3 style={{ marginBottom: '12px' }}>🚀 Links Rápidos</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '10px' }}>
               <button className="btn" onClick={() => window.location.href = 'maestro.html'}>
                 🎯 Volver a maestro
               </button>
