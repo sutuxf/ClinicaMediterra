@@ -23,7 +23,7 @@
 - 1 especialista
 - Terapia sexual, pareja, ansiedad de desempeño
 
-### [[traumatologia|Traumatología]]
+### [[traumatologia]]
 - 1 especialista
 - Lesiones musculoesqueléticas
 

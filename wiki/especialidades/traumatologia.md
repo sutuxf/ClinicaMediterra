@@ -10,7 +10,7 @@ tags: [especialidad, traumatologia]
 
 | Profesional | Notas |
 |-------------|-------|
-| [[equipo/dr-jorge-ferreira\|Dr. Jorge Ferreira]] | Único traumatólogo del equipo |
+| Dr. Jorge Ferreira | Único traumatólogo del equipo |
 
 ## Rol actual
 
@@ -26,3 +26,7 @@ Los pacientes con turnos mineros de Ovalle/Vallenar/norte tienen alta incidencia
 
 - Derivación cruzada con [[kinesiologia-pelvica]] (rehabilitación post-lesión)
 - Potencial derivación desde medicina laboral / empresas mineras
+
+---
+
+Volver a: [[INDEX]]
