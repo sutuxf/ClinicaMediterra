@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guía de Grabación — Clínica Mediterra</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: linear-gradient(135deg, #F4F0E7 0%, #FBF8F3 100%); font-family: "'DM Sans', system-ui, sans-serif"; color: #1E293B; }
+
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 16px; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1C3A5F 0%, #0F2847 100%);
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { color: white; font-size: 20px; font-weight: 700; font-family: "'Playfair Display', serif"; }
+    .subtitle { color: #93C5FD; font-size: 12px; }
+
+    /* VIDEO SELECTOR */
+    .video-selector {
+      display: flex;
+      gap: 12px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+    }
+
+    .video-btn {
+      background: white;
+      border: 2px solid #E5DDD0;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .video-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+    .video-btn.active {
+      background: #1C3A5F;
+      color: white;
+      border-color: #1C3A5F;
+    }
+
+    /* CONTENT AREA */
+    .content-area {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .content-area { grid-template-columns: 1fr; }
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .card h2 { font-family: "'Playfair Display', serif"; font-size: 20px; margin-bottom: 12px; color: #1C3A5F; }
+    .card h3 { font-size: 14px; font-weight: 700; margin-top: 12px; margin-bottom: 8px; color: #1C3A5F; }
+
+    /* TELEPROMPTER */
+    .teleprompter {
+      background: #1C3A5F;
+      color: white;
+      padding: 24px;
+      border-radius: 12px;
+      font-size: 18px;
+      line-height: 1.8;
+      font-family: 'Courier New', monospace;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .teleprompter p { margin-bottom: 8px; }
+    .teleprompter .pause { color: #EA580C; font-weight: 700; font-style: italic; }
+
+    /* TABS */
+    .tabs { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid #E5DDD0; }
+    .tab { background: none; border: none; padding: 8px 0; margin-right: 16px; font-size: 13px; font-weight: 600; color: #94A3B8; cursor: pointer; transition: all 0.2s; }
+    .tab.active { color: #1C3A5F; border-bottom: 3px solid #1C3A5F; }
+
+    /* SECTION TOGGLE */
+    .section-toggle {
+      background: #F8FAFC;
+      border: 1px solid #E5DDD0;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.2s;
+    }
+
+    .section-toggle:hover { background: #EFF6FF; }
+    .section-toggle.open { background: #EFF6FF; }
+
+    .section-content {
+      display: none;
+      padding: 12px 0;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #475569;
+    }
+
+    .section-content.open { display: block; }
+
+    /* DIAGRAMA */
+    .diagram {
+      background: #F8FAFC;
+      border: 1px dashed #1C3A5F;
+      padding: 16px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      line-height: 1.4;
+      overflow-x: auto;
+      margin: 12px 0;
+    }
+
+    /* STORYBOARD */
+    .storyboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin: 12px 0;
+    }
+
+    .storyboard-frame {
+      background: #E5DDD0;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      border: 2px solid #1C3A5F;
+    }
+
+    .storyboard-frame .time { font-weight: 700; font-size: 11px; color: #1C3A5F; margin-bottom: 4px; }
+    .storyboard-frame .action { font-size: 10px; color: #475569; line-height: 1.3; }
+
+    /* CAMERA ANGLES */
+    .angle-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 12px 0;
+    }
+
+    .angle-box {
+      background: #F0F9FF;
+      border-left: 4px solid #1D4ED8;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 11px;
+    }
+
+    .angle-box .name { font-weight: 700; color: #1C3A5F; }
+    .angle-box .desc { color: #64748B; margin-top: 4px; }
+
+    /* LOCATION MAP */
+    .location-map {
+      background: #F8FAFC;
+      border: 1px solid #E5DDD0;
+      padding: 16px;
+      border-radius: 8px;
+      margin: 12px 0;
+    }
+
+    .location-map h4 { font-size: 12px; font-weight: 700; color: #1C3A5F; margin-bottom: 8px; }
+
+    /* CHECKLIST */
+    .checklist {
+      background: #F8FAFC;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      margin: 12px 0;
+    }
+
+    .checklist-item { display: flex; align-items: center; margin-bottom: 6px; }
+    .checklist-item input { margin-right: 8px; }
+    .checklist-item label { cursor: pointer; }
+
+    /* TONE EXAMPLES */
+    .tone-example {
+      background: #ECFDF5;
+      border-left: 4px solid #059669;
+      padding: 10px;
+      border-radius: 6px;
+      margin: 8px 0;
+      font-size: 11px;
+    }
+
+    .tone-example.bad { background: #FEE2E2; border-left-color: #DC2626; }
+
+    .tone-example .label { font-weight: 700; color: #1C3A5F; margin-bottom: 4px; }
+    .tone-example .text { color: #475569; }
+
+    /* BUTTON */
+    .btn {
+      background: #1C3A5F;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn:hover { background: #0F2847; transform: translateY(-2px); }
+
+    /* FOOTER */
+    footer {
+      background: #1C3A5F;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* EXPANDIBLE */
+    .expandible-header {
+      background: linear-gradient(135deg, #1C3A5F15, #0F284715);
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      border: 1px solid #E5DDD0;
+    }
+
+    .expandible-header:hover { background: linear-gradient(135deg, #1C3A5F25, #0F284725); }
+
+    .expandible-content {
+      display: none;
+      background: #F8FAFC;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .expandible-content.open { display: block; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div>
+        <div class="logo">🎬 Grabaciones</div>
+        <div class="subtitle">Clínica Mediterra — Guía Visual Completa</div>
+      </div>
+      <div style="color: white; font-size: 12px; text-align: right;">
+        <div style="font-weight: 700;">3 Videos</div>
+        <div>2-4 horas producción</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding: 24px 0;">
+      <div id="app"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Guía Visual de Grabación — Clínica Mediterra | Actualizado 30 mayo 2026</p>
+      <p style="margin-top: 8px;"><a href="maestro.html" style="color: #93C5FD;">← Volver a Maestro</a> | <a href="pautas.html" style="color: #93C5FD;">Ver Pautas →</a></p>
+    </div>
+  </footer>
+
+  <script type="text/babel">
+    const GrabacionesApp = () => {
+      const [activeVideo, setActiveVideo] = React.useState('post3');
+      const [expandedSections, setExpandedSections] = React.useState({});
+
+      const toggleSection = (sectionId) => {
+        setExpandedSections(prev => ({
+          ...prev,
+          [sectionId]: !prev[sectionId]
+        }));
+      };
+
+      const videos = {
+        post3: {
+          title: 'POST 3: "Los hombres vienen acá"',
+          duration: '30 segundos',
+          location: 'Consultorio Dr. Andrusco',
+          style: 'ESTÁTICO ✓',
+          color: '#1D4ED8',
+          teleprompter: `Los hombres vienen acá
+todos los días con:
+
+• Disfunción eréctil
+• Incontinencia
+• Problemas de próstata
+
+[PAUSA 1 seg]
+
+Es normal.
+
+[PAUSA 1 seg]
+
+Yo lo veo a diario.
+
+[PAUSA 1 seg]
+
+Y aquí lo resolvemos.
+
+[PAUSA 2 seg]
+
+No hay vergüenza.
+
+Solo profesionales que
+explican TODO.`,
+          tono: {
+            velocity: 'Lenta a normal, pausas deliberadas',
+            volume: 'Consistente, proyectado',
+            intonation: 'Natural, énfasis en "TODOS", "AQUÍ", "TODO"',
+            contactoVisual: 'Directo con cámara durante todo'
+          },
+          angulos: [
+            { name: 'Close-up (0-3s)', desc: 'Rostro + hombros, conexión máxima' },
+            { name: 'Plano medio (3-10s)', desc: 'Sentado, gesto apertura con manos' },
+            { name: 'Close-up (10-15s)', desc: 'Primerísimo plano, énfasis emocional' },
+            { name: 'Plano medio (15-25s)', desc: 'Postura segura, luz natural' },
+            { name: 'Close-up final (25-30s)', desc: 'Máximo énfasis, pausa visual' }
+          ],
+          locaciones: [
+            { name: 'Consultorio Dr. A.', elements: 'Escritorio, silla, certificados, plantas, luz natural', ideal: true },
+            { name: 'Fondo', elements: 'Sin distracciones, profesional, cálido', ideal: true }
+          ],
+          storyboard: [
+            { time: '0-3s', action: 'Close-up\n"Los hombres vienen..."' },
+            { time: '3-10s', action: 'Medio\n"...acá todos los días"' },
+            { time: '10-15s', action: 'Close-up\n"Es normal"' },
+            { time: '15-25s', action: 'Medio\n"Y aquí lo resolvemos"' },
+            { time: '25-30s', action: 'Close-up\n"Sin vergüenza"' }
+          ]
+        },
+        post7: {
+          title: 'POST 7: "Tu primera consulta"',
+          duration: '45 segundos',
+          location: 'Recepción + Consultorio',
+          style: 'CON MOVIMIENTO ✓',
+          color: '#B45309',
+          teleprompter: `¿Nervioso por tu
+primera consulta?
+
+[PAUSA 1 seg]
+
+PASO 1: Bienvenida cálida
+Te hacen sentir contenido
+desde que entras
+
+[PAUSA 1 seg]
+
+PASO 2: Explicación completa
+Sin jerga médica
+
+[PAUSA 1 seg]
+
+PASO 3: Examen profesional
+Respetuoso, confidencial
+
+[PAUSA 1 seg]
+
+PASO 4: Plan claro
+Sabes exactamente qué esperar
+
+[PAUSA 2 seg]
+
+Te hacen sentir
+escuchado, contenido
+y acompañado.`,
+          tono: {
+            velocity: 'Normal, pausas entre pasos',
+            volume: 'Claro y penetrante',
+            intonation: 'Conversacional, énfasis en numeración (1, 2, 3, 4)',
+            contactoVisual: 'Variable según movimiento'
+          },
+          angulos: [
+            { name: 'Wide shot (0-3s)', desc: 'Entrada recepción, cámara sigue' },
+            { name: 'Plano americano (3-8s)', desc: 'Caminando pasillos, gestual' },
+            { name: 'Montaje rápido (8-15s)', desc: 'Diferentes ángulos transiciones' },
+            { name: 'Plano medio (15-25s)', desc: 'Consultorio, explicando pasos' },
+            { name: 'Close-up (25-30s)', desc: 'Frases clave, contacto visual' },
+            { name: 'Wide shot cierre (30-45s)', desc: 'Salida/vista exterior clínica' }
+          ],
+          locaciones: [
+            { name: 'Recepción', elements: 'Mostrador, personas, plantas, luz profesional', ideal: true },
+            { name: 'Pasillos', elements: 'Luz natural, puertas consultorios, arquitectura', ideal: true },
+            { name: 'Consultorio', elements: 'Escritorio, silla, luz controlada', ideal: true },
+            { name: 'Sala de espera', elements: 'Sillas, ambiente acogedor', ideal: false }
+          ],
+          storyboard: [
+            { time: '0-3s', action: 'Wide\nEntrada' },
+            { time: '3-8s', action: 'Am.\nPasillos' },
+            { time: '8-15s', action: 'Montaje\nPaso 1-2' },
+            { time: '15-25s', action: 'Medio\nConsultorio' },
+            { time: '25-30s', action: 'Close-up\nFrase clave' },
+            { time: '30-45s', action: 'Wide\nCierre' }
+          ]
+        },
+        post5: {
+          title: 'POST 5: Testimonio Pia',
+          duration: '60 segundos',
+          location: 'Vida diaria + Consultorio',
+          style: 'DINÁMICO (montaje) ✓',
+          color: '#DC2626',
+          teleprompter: `[NARRACIÓN]
+
+"Pia vino con síntomas
+que la limitaban..."
+
+[VIDA DIARIA: montaje rápido]
+
+[CONSULTORIO]
+
+Pia hablando (CITA EXACTA):
+
+"Me explicaron TODO.
+
+El Dr. Andrusco explica
+con detalle cada inquietud.
+
+Me ayudó de gran manera
+a mejorar mis síntomas."
+
+[PAUSA]
+
+[VIDA DIARIA DESPUÉS: montaje]
+
+"Eso no es una clínica normal.
+Eso es Mediterra."`,
+          tono: {
+            velocity: 'Natural, conversacional de Pia',
+            volume: 'Íntimo, sin forzar',
+            intonation: 'Auténtica, no actuada',
+            contactoVisual: 'Variable (a cámara y naturales)'
+          },
+          angulos: [
+            { name: 'Wide shot (0-5s)', desc: 'Pia en vida diaria, corriendo/riendo' },
+            { name: 'Close-up (5-30s)', desc: 'Pia hablando, rostro lleno, emocional' },
+            { name: 'Wide shot montaje (30-45s)', desc: 'Vida normal recuperada, dinámico' },
+            { name: 'Transiciones', desc: 'Fade suave entre vida diaria y consultorio' }
+          ],
+          locaciones: [
+            { name: 'Vida diaria (antes)', elements: 'Outdoor, movimiento natural, personas', ideal: true },
+            { name: 'Consultorio', elements: 'Close, luz cálida, íntimo', ideal: true },
+            { name: 'Vida diaria (después)', elements: 'Mismo lugar que antes (contraste)', ideal: true }
+          ],
+          storyboard: [
+            { time: '0-5s', action: 'Wide\nVida diaria' },
+            { time: '5-15s', action: 'Close-up\n"Explicaron TODO"' },
+            { time: '15-30s', action: 'Close-up\n"Dr. Andrusco..."' },
+            { time: '30-45s', action: 'Close-up\n"Mejoré síntomas"' },
+            { time: '45-60s', action: 'Wide\nVida normal' }
+          ]
+        }
+      };
+
+      const activeData = videos[activeVideo];
+
+      return (
+        <div>
+          {/* SELECTOR */}
+          <div style={{ marginBottom: '32px' }}>
+            <h1 style={{ fontSize: '28px', marginBottom: '16px', fontFamily: "'Playfair Display', serif" }}>
+              🎬 Guía Visual de Grabación
+            </h1>
+            <div className="video-selector">
+              {Object.keys(videos).map(key => (
+                <button
+                  key={key}
+                  className={`video-btn ${activeVideo === key ? 'active' : ''}`}
+                  onClick={() => setActiveVideo(key)}
+                  style={activeVideo === key ? { background: videos[key].color, borderColor: videos[key].color } : {}}
+                >
+                  {videos[key].title.split(':')[0]}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* HEADER INFO */}
+          <div className="card" style={{ marginBottom: '20px', borderLeft: `6px solid ${activeData.color}` }}>
+            <h2>{activeData.title}</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px', marginTop: '12px' }}>
+              <div style={{ fontSize: '12px' }}>
+                <div style={{ fontWeight: '700', color: activeData.color }}>Duración</div>
+                <div style={{ color: '#64748B' }}>{activeData.duration}</div>
+              </div>
+              <div style={{ fontSize: '12px' }}>
+                <div style={{ fontWeight: '700', color: activeData.color }}>Locación</div>
+                <div style={{ color: '#64748B' }}>{activeData.location}</div>
+              </div>
+              <div style={{ fontSize: '12px' }}>
+                <div style={{ fontWeight: '700', color: activeData.color }}>Estilo</div>
+                <div style={{ color: '#64748B' }}>{activeData.style}</div>
+              </div>
+            </div>
+          </div>
+
+          {/* CONTENT GRID */}
+          <div className="content-area">
+            {/* TELEPROMPTER */}
+            <div>
+              <h3 style={{ marginBottom: '12px', color: '#1C3A5F' }}>📝 Teleprompter (Script exacto)</h3>
+              <div className="teleprompter">
+                {activeData.teleprompter.split('\n').map((line, idx) => (
+                  <div key={idx}>
+                    {line.includes('[') ? <span className="pause">{line}</span> : line}
+                  </div>
+                ))}
+              </div>
+              <div style={{ fontSize: '11px', color: '#64748B', marginTop: '8px' }}>
+                ✓ Script listo para imprimir y practicar con Dr. Andrusco
+              </div>
+            </div>
+
+            {/* TONO */}
+            <div>
+              <h3 style={{ marginBottom: '12px', color: '#1C3A5F' }}>🎤 Tono y Lenguaje</h3>
+              <div className="card" style={{ padding: '12px' }}>
+                <div style={{ marginBottom: '10px' }}>
+                  <div style={{ fontWeight: '700', fontSize: '11px', color: '#1C3A5F' }}>Velocidad</div>
+                  <div style={{ fontSize: '11px', color: '#475569' }}>{activeData.tono.velocity}</div>
+                </div>
+                <div style={{ marginBottom: '10px' }}>
+                  <div style={{ fontWeight: '700', fontSize: '11px', color: '#1C3A5F' }}>Volumen</div>
+                  <div style={{ fontSize: '11px', color: '#475569' }}>{activeData.tono.volume}</div>
+                </div>
+                <div style={{ marginBottom: '10px' }}>
+                  <div style={{ fontWeight: '700', fontSize: '11px', color: '#1C3A5F' }}>Entonación</div>
+                  <div style={{ fontSize: '11px', color: '#475569' }}>{activeData.tono.intonation}</div>
+                </div>
+                <div>
+                  <div style={{ fontWeight: '700', fontSize: '11px', color: '#1C3A5F' }}>Contacto visual</div>
+                  <div style={{ fontSize: '11px', color: '#475569' }}>{activeData.tono.contactoVisual}</div>
+                </div>
+
+                <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid #E5DDD0' }}>
+                  <div style={{ fontWeight: '700', fontSize: '11px', marginBottom: '6px', color: '#1C3A5F' }}>✅ Hacer:</div>
+                  <div className="tone-example">
+                    <div className="label">Profesional pero accesible</div>
+                    <div className="text">"Es normal que sientas esto" / "Aquí hay solución"</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ÁNGULOS DE CÁMARA */}
+          <div className="card" style={{ marginBottom: '20px' }}>
+            <h3 style={{ marginBottom: '12px' }}>📹 Ángulos de Cámara</h3>
+            <div className="angle-grid">
+              {activeData.angulos.map((angle, idx) => (
+                <div key={idx} className="angle-box" style={{ borderLeftColor: activeData.color }}>
+                  <div className="name">{angle.name}</div>
+                  <div className="desc">{angle.desc}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* DIAGRAMA ÁNGULOS */}
+            <div style={{ marginTop: '12px' }}>
+              <h4 style={{ fontSize: '12px', fontWeight: '700', marginBottom: '8px', color: '#1C3A5F' }}>Esquema Visual (Ángulos)</h4>
+              <div className="diagram">
+{`
+CLOSE-UP (Primerísimo plano):
+     ╔═════════════╗
+     ║    ROSTRO   ║  ← Barbilla a frente
+     ║  (conexión) ║     0.5-0.75m
+     ╚═════════════╝
+
+PLANO MEDIO-CERRADO (Pecho hacia arriba):
+     ╔═══════════════╗
+     ║  👤           ║  ← Cabeza + hombros
+     ║  (contacto)   ║     1-1.5m
+     ╚═══════════════╝
+
+PLANO AMERICANO (Cintura hacia arriba):
+     ╔═══════════════╗
+     ║    👤        ║  ← Cabeza + torso
+     ║   /|\\        ║     hasta cintura
+     ║   / \\        ║     1.5-2m
+     ╚═══════════════╝
+
+PLANO GENERAL (Cuerpo completo):
+     ╔═══════════════╗
+     ║   👤         ║  ← Cuerpo + contexto
+     ║  /|\\         ║     2.5-3.5m
+     ║  / \\         ║     (más dinámico)
+     ║/   \\         ║
+     ╚═══════════════╝
+`}
+              </div>
+            </div>
+          </div>
+
+          {/* LOCACIONES */}
+          <div className="card" style={{ marginBottom: '20px' }}>
+            <h3 style={{ marginBottom: '12px' }}>📍 Locaciones Ideales</h3>
+            {activeData.locaciones.map((loc, idx) => (
+              <div key={idx} style={{ marginBottom: '12px', paddingBottom: '12px', borderBottom: idx < activeData.locaciones.length - 1 ? '1px solid #E5DDD0' : 'none' }}>
+                <div style={{ fontWeight: '700', fontSize: '12px', color: '#1C3A5F', marginBottom: '4px' }}>
+                  {loc.ideal ? '✅' : '⚠️'} {loc.name}
+                </div>
+                <div style={{ fontSize: '11px', color: '#475569' }}>
+                  {loc.elements}
+                </div>
+              </div>
+            ))}
+
+            {/* MAPA CLÍNICA */}
+            <div style={{ marginTop: '12px' }}>
+              <h4 style={{ fontSize: '12px', fontWeight: '700', marginBottom: '8px', color: '#1C3A5F' }}>Layout Clínica (Recorrido)</h4>
+              <div className="diagram">
+{`
+RECEPCIÓN          PASILLOS           CONSULTORIO
+┌─────────┐        ┌──────────┐      ┌──────────┐
+│ 🎬 CAM  │────────│    Dr.A  │──────│ 💼 Escritorio
+│ Mostrador │      │  (walking)│      │ 🪟 Ventana
+└─────────┘        └──────────┘      └──────────┘
+
+FLUJO GRABACIÓN:
+Entrada → Bienvenida → Pasillos (caminata) → Consultorio
+(wide)   (close)     (americano)           (múltiples)
+`}
+              </div>
+            </div>
+          </div>
+
+          {/* STORYBOARD */}
+          <div className="card" style={{ marginBottom: '20px' }}>
+            <h3 style={{ marginBottom: '12px' }}>🎬 Storyboard Timeline</h3>
+            <div className="storyboard">
+              {activeData.storyboard.map((frame, idx) => (
+                <div key={idx} className="storyboard-frame">
+                  <div className="time">{frame.time}</div>
+                  <div className="action">{frame.action}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CHECKLIST TÉCNICO */}
+          <div className="card" style={{ marginBottom: '20px' }}>
+            <h3 style={{ marginBottom: '12px' }}>✅ Checklist Pre-Grabación</h3>
+
+            <div className="expandible-header" onClick={() => toggleSection('vestuario')}>
+              <span style={{ fontWeight: '700', fontSize: '12px' }}>👔 Vestuario</span>
+              <span>{expandedSections.vestuario ? '▼' : '▶'}</span>
+            </div>
+            <div className={`expandible-content ${expandedSections.vestuario ? 'open' : ''}`}>
+              <div className="checklist">
+                <div className="checklist-item"><input type="checkbox" /><label>Bata blanca (impecable)</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Sin logos grandes</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Zapatos profesionales</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Peinado natural</label></div>
+              </div>
+            </div>
+
+            <div className="expandible-header" onClick={() => toggleSection('luz')}>
+              <span style={{ fontWeight: '700', fontSize: '12px' }}>💡 Luz</span>
+              <span>{expandedSections.luz ? '▼' : '▶'}</span>
+            </div>
+            <div className={`expandible-content ${expandedSections.luz ? 'open' : ''}`}>
+              <div className="checklist">
+                <div className="checklist-item"><input type="checkbox" /><label>Luz natural de ventana</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>LED auxiliar (3000K)</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Reflector blanco (llenar sombras)</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Test de white balance</label></div>
+              </div>
+            </div>
+
+            <div className="expandible-header" onClick={() => toggleSection('audio')}>
+              <span style={{ fontWeight: '700', fontSize: '12px' }}>🎙️ Audio</span>
+              <span>{expandedSections.audio ? '▼' : '▶'}</span>
+            </div>
+            <div className={`expandible-content ${expandedSections.audio ? 'open' : ''}`}>
+              <div className="checklist">
+                <div className="checklist-item"><input type="checkbox" /><label>Micrófono lavalier inalámbrico</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Batería test</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Distancia correcta (20-30cm)</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Sin interferencias</label></div>
+              </div>
+            </div>
+
+            <div className="expandible-header" onClick={() => toggleSection('camara')}>
+              <span style={{ fontWeight: '700', fontSize: '12px' }}>📷 Cámara</span>
+              <span>{expandedSections.camara ? '▼' : '▶'}</span>
+            </div>
+            <div className={`expandible-content ${expandedSections.camara ? 'open' : ''}`}>
+              <div className="checklist">
+                <div className="checklist-item"><input type="checkbox" /><label>Batería cargada</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Memoria vacía (espacio)</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>Lente limpia</label></div>
+                <div className="checklist-item"><input type="checkbox" /><label>4K / 24fps settings</label></div>
+              </div>
+            </div>
+          </div>
+
+          {/* ESPECIFICACIONES TÉCNICAS */}
+          <div className="card" style={{ marginBottom: '20px' }}>
+            <h3 style={{ marginBottom: '12px' }}>⚙️ Especificaciones Técnicas</h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px' }}>
+              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', fontSize: '11px' }}>
+                <div style={{ fontWeight: '700', color: '#1C3A5F' }}>Cámara</div>
+                <div style={{ color: '#475569', marginTop: '4px' }}>Sony A6700 / iPhone 14+</div>
+              </div>
+              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', fontSize: '11px' }}>
+                <div style={{ fontWeight: '700', color: '#1C3A5F' }}>Resolución</div>
+                <div style={{ color: '#475569', marginTop: '4px' }}>4K (para zoom post)</div>
+              </div>
+              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', fontSize: '11px' }}>
+                <div style={{ fontWeight: '700', color: '#1C3A5F' }}>Frame Rate</div>
+                <div style={{ color: '#475569', marginTop: '4px' }}>24fps (cinematic)</div>
+              </div>
+              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', fontSize: '11px' }}>
+                <div style={{ fontWeight: '700', color: '#1C3A5F' }}>Lente</div>
+                <div style={{ color: '#475569', marginTop: '4px' }}>35mm (focal fija)</div>
+              </div>
+            </div>
+          </div>
+
+          {/* ACCIONES RÁPIDAS */}
+          <div style={{ padding: '20px', background: '#F0F9FF', borderRadius: '12px', border: '1px solid #1D4ED8' }}>
+            <h3 style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px', color: '#1C3A5F' }}>
+              🚀 Próximos Pasos
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+              <button className="btn" onClick={() => window.location.href = '/brief-creativo/GUIA-GRABACION-DR-ANDRUSCO.md'}>
+                📄 Descargar guía completa
+              </button>
+              <button className="btn" onClick={() => window.location.href = 'maestro.html'}>
+                🎯 Volver a maestro
+              </button>
+              <button className="btn" onClick={() => window.location.href = 'pautas.html'}>
+                📊 Ver pautas
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    ReactDOM.render(<GrabacionesApp />, document.getElementById('app'));
+  </script>
+</body>
+</html>
