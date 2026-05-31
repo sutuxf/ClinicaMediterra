@@ -5,7 +5,7 @@
 
 ---
 
-## POST 1: "¿Vergüenza?" — Lunes 5 junio, 9 AM
+## POST 1: "¿Vergüenza?" — Viernes 5 junio, 9 AM
 ### INSTAGRAM
 
 ```

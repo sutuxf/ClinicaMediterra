@@ -4,7 +4,7 @@
 **Para:** Francisco Tohá, Camila Tohá  
 **Preparado por:** Director Digital  
 **Fecha:** Domingo 31 mayo 2026  
-**Próxima reunión:** Lunes 3 junio 2026, 9:00 AM
+**Próxima reunión:** Miércoles 3 junio 2026, 9:00 AM
 
 ---
 
@@ -214,13 +214,13 @@ HITO: Formulario testeado, equipo alineado, listo envío
 **Tema:** ENVÍO + POST-POSTULACIÓN
 
 ```
-LUNES 10 JUNIO:
+MIÉRCOLES 10 JUNIO:
 └─ Última validación antes envío
 
-MARTES 11 JUNIO 14:30:
-└─ ✅ POSTULACIÓN ENVIADA (antes 15:00)
+JUEVES 11 JUNIO 14:30:
+└─ ✅ POSTULACIÓN ENVIADA (antes 15:00 — CIERRE CRECE)
 
-MIÉRCOLES-VIERNES:
+VIERNES 12 - DOMINGO 14 JUNIO:
 ├─ Pauta Fase 3 (conversión) activa
 ├─ Monitoreo performance mes 2 final
 └─ Respaldo documentación completado
@@ -389,4 +389,4 @@ HORIZONTE 6 MESES:
 **Versión:** 1.0 FINAL  
 **Estado:** ✅ LISTO PARA EJECUTAR
 
-**Próxima revisión:** Lunes 3 junio 2026, 9:00 AM (morning call Francisco + Camila)
+**Próxima revisión:** Miércoles 3 junio 2026, 9:00 AM (morning call Francisco + Camila)

@@ -810,13 +810,13 @@ Web: www.previred.cl
 2. Camila: Revisar guión + empezar documentos
 3. Ambos: Marcar calendario con todas fechas
 
-**LUNES 3 JUNIO, 9 AM:**
+**MIÉRCOLES 3 JUNIO, 9 AM:**
 - Reunión corta (30 min) Francisco + Camila
 - Revisar avance
 - Ajustar si es necesario
 
-**MARTES 11 JUNIO, 14:30:**
-- ✅ POSTULACIÓN ENVIADA
+**JUEVES 11 JUNIO, 14:30:**
+- ✅ POSTULACIÓN ENVIADA (DEADLINE CIERRE: 15:00)
 
 ---
 
