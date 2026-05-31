@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maestro: Transformación Digital Clínica Mediterra</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: linear-gradient(135deg, #F4F0E7 0%, #FBF8F3 100%); font-family: "'DM Sans', system-ui, sans-serif"; color: #1E293B; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1C3A5F 0%, #0F2847 100%);
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+
+    .logo { color: white; font-size: 20px; font-weight: 700; font-family: "'Playfair Display', serif"; }
+
+    .progress-badge { background: rgba(255,255,255,0.12); border-radius: 12px; padding: 8px 16px; text-align: center; }
+    .progress-badge .pct { color: white; font-size: 22px; font-weight: 700; }
+    .progress-badge .label { color: #93C5FD; font-size: 10px; margin-top: 2px; }
+
+    /* TABS */
+    .tabs { display: flex; gap: 8px; overflow-x: auto; padding: 16px 0; border-bottom: 2px solid #E5DDD0; margin-bottom: 24px; scrollbar-width: none; }
+    .tabs::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255,255,255,0.6);
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .tab-btn.active {
+      background: white;
+      color: #1C3A5F;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* CONTENT */
+    .content { display: none; animation: fadeIn 0.3s; }
+    .content.active { display: block; }
+
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    /* SECTIONS */
+    h1 { font-family: "'Playfair Display', serif"; font-size: 28px; margin-bottom: 8px; color: #1C3A5F; }
+    .subtitle { font-size: 13px; color: #64748B; margin-bottom: 24px; }
+
+    /* CARD */
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-left: 4px solid #059669;
+    }
+
+    .card h3 { font-size: 14px; color: #1E293B; margin-bottom: 6px; font-weight: 600; }
+    .card p { font-size: 12px; color: #64748B; line-height: 1.5; }
+
+    /* GRID */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+
+    @media (max-width: 768px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    /* STAT BOX */
+    .stat {
+      background: white;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .stat .value { font-size: 20px; font-weight: 700; color: #1C3A5F; }
+    .stat .label { font-size: 10px; color: #94A3B8; margin-top: 4px; }
+
+    /* TABLE */
+    .table-wrap { overflow-x: auto; margin-bottom: 16px; border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; background: white; }
+    table th { background: #1C3A5F; color: white; padding: 10px; text-align: left; font-size: 11px; font-weight: 700; }
+    table td { padding: 10px; border-bottom: 1px solid #F1F5F9; font-size: 12px; }
+    table tr:hover { background: #F8FAFC; }
+
+    /* BADGE */
+    .badge {
+      display: inline-block;
+      background: #ECFDF5;
+      color: #059669;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 600;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+
+    .badge.high { background: #FEE2E2; color: #DC2626; }
+    .badge.medium { background: #FEF3C7; color: #B45309; }
+    .badge.low { background: #DBEAFE; color: #1D4ED8; }
+
+    /* QUOTE */
+    .quote {
+      background: linear-gradient(135deg, #1C3A5F15, #0F284715);
+      border-left: 4px solid #1C3A5F;
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    .quote p { font-size: 12px; color: #334155; font-style: italic; margin-bottom: 4px; }
+    .quote .source { font-size: 10px; color: #94A3B8; }
+
+    /* BUTTON */
+    .btn {
+      background: #1C3A5F;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn:hover { background: #0F2847; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+
+    /* FOOTER */
+    footer { padding: 24px 0; text-align: center; font-size: 11px; color: #94A3B8; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function MaestroApp() {
+      const [activeTab, setActiveTab] = useState("home");
+      const [expandedSection, setExpandedSection] = useState({});
+      const [checkedTasks, setCheckedTasks] = useState({});
+
+      // Data
+      const PLAN_MONTHS = [
+        { id: 1, name: "Mes 1", title: "CIMIENTOS", color: "#DC2626", weeks: 4 },
+        { id: 2, name: "Mes 2", title: "LÍNEA MASCULINA", color: "#EA580C", weeks: 4 },
+        { id: 3, name: "Mes 3", title: "EXPANSIÓN", color: "#B45309", weeks: 2 },
+      ];
+
+      const RESEARCH_PAINS = [
+        { id: 1, pain: "Incertidumbre / Falta de explicación", freq: "75%", intensity: "Alta", solution: "Explica TODO sin jerga" },
+        { id: 2, pain: "Síntomas físicos sin resolver", freq: "25%", intensity: "Alta", solution: "Muestra resultados reales" },
+        { id: 3, pain: "Soledad + Vergüenza (hombres)", freq: "100%", intensity: "Alta", solution: "Normaliza: 'aquí no hay vergüenza'" },
+      ];
+
+      const RESEARCH_MOTIVATORS = [
+        { id: 1, mot: "Recomendación de confianza", freq: "100%", intensity: "⭐⭐⭐⭐⭐" },
+        { id: 2, mot: "Profesionalismo + Explicación clara", freq: "75%", intensity: "⭐⭐⭐⭐" },
+        { id: 3, mot: "Ser escuchado + Sentirse contenido", freq: "75%", intensity: "⭐⭐⭐⭐" },
+      ];
+
+      const GOLDEN_PHRASES = [
+        { phrase: "Los hombres vienen acá todos los días. Aquí no hay vergüenza.", usage: "Fase 1: Normalización", phase: 1 },
+        { phrase: "Te explicamos TODO, sin jerga médica", usage: "Todas las fases", phase: 0 },
+        { phrase: "Te hacen sentir escuchado, contenido y acompañado", usage: "Fase 2: Educación", phase: 2 },
+        { phrase: "Me ayudó de gran manera a mejorar mis síntomas", usage: "Testimonios", phase: 0 },
+        { phrase: "Agendá tu consulta sin vergüenza", usage: "Call-to-action", phase: 0 },
+      ];
+
+      const PAUTA_FASES = [
+        { week: "Semana 5", phase: "NORMALIZACIÓN", copy: "Los hombres vienen acá", budget: "$9.000", audience: "Cold (45K)", cpm: 1-2 },
+        { week: "Semana 6", phase: "EDUCACIÓN", copy: "Preguntas que nunca", budget: "$9.000", audience: "Warm (900)", cpm: 3-5 },
+        { week: "Semana 7-8", phase: "CONVERSIÓN", copy: "Tu primera consulta", budget: "$9.000", audience: "Hot (150)", cpm: 5-15 },
+      ];
+
+      const toggleSection = (id) => {
+        setExpandedSection({ ...expandedSection, [id]: !expandedSection[id] });
+      };
+
+      const toggleTask = (id) => {
+        setCheckedTasks({ ...checkedTasks, [id]: !checkedTasks[id] });
+      };
+
+      return (
+        <div style={{ background: "#F4F0E7", minHeight: "100vh" }}>
+          {/* HEADER */}
+          <header>
+            <div className="container">
+              <div className="logo">🎯 MAESTRO: Transformación Digital Mediterra</div>
+              <div className="progress-badge">
+                <div className="pct">100%</div>
+                <div className="label">Plan + Research + Pauta</div>
+              </div>
+            </div>
+          </header>
+
+          {/* TABS */}
+          <div className="container" style={{ marginTop: "16px" }}>
+            <div className="tabs" style={{ borderColor: "white" }}>
+              {[
+                { id: "home", label: "🏠 Home" },
+                { id: "plan", label: "📅 Plan 6 Meses" },
+                { id: "research", label: "🔍 Customer Research" },
+                { id: "pauta", label: "📊 Pauta" },
+                { id: "tracking", label: "📈 Tracking" },
+                { id: "docs", label: "📁 Documentos" },
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  className={`tab-btn ${activeTab === tab.id ? "active" : ""}`}
+                  onClick={() => setActiveTab(tab.id)}
+                  style={{ color: activeTab === tab.id ? "#1C3A5F" : "#94A3B8" }}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* CONTENT */}
+          <div className="container" style={{ paddingTop: "24px", paddingBottom: "80px" }}>
+
+            {/* HOME */}
+            {activeTab === "home" && (
+              <div className="content active">
+                <h1>🎯 Bienvenido a MAESTRO</h1>
+                <p className="subtitle">Control central de tu transformación digital. Plan 6 meses + Customer Research + Pauta + Tracking.</p>
+
+                <div className="grid-3" style={{ marginTop: "24px" }}>
+                  <div className="stat">
+                    <div className="value">280</div>
+                    <div className="label">Atenciones/mes actual</div>
+                  </div>
+                  <div className="stat">
+                    <div className="value">32% → 40%</div>
+                    <div className="label">Meta: Pacientes hombres</div>
+                  </div>
+                  <div className="stat">
+                    <div className="value">$9M</div>
+                    <div className="label">Recuperables/mes</div>
+                  </div>
+                </div>
+
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "18px", color: "#1C3A5F", fontFamily: "'Playfair Display', serif" }}>3 Hallazgos Clave</h2>
+
+                <div className="card" style={{ borderLeftColor: "#DC2626" }}>
+                  <h3>🚨 #1: Trazabilidad es bloqueador #1</h3>
+                  <p>No saben de dónde vienen pacientes. Chatbot web es botonera muda. Solución: Reemplazar + campo "¿Cómo nos conociste?"</p>
+                </div>
+
+                <div className="card" style={{ borderLeftColor: "#EA580C" }}>
+                  <h3>🎯 #2: Vergüenza es bloqueador para hombres</h3>
+                  <p>32% hombres vs 68% mujeres. Brecha NO es demanda = es vergüenza. Solución: Normalizar en pauta ANTES de vender.</p>
+                </div>
+
+                <div className="card" style={{ borderLeftColor: "#059669" }}>
+                  <h3>✨ #3: Explicación es tu diferenciador</h3>
+                  <p>Pacientes valoran: "Te explicamos todo, sin jerga". Esto no lo hace nadie más. Es tu ángulo #1 para pauta.</p>
+                </div>
+
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "18px", color: "#1C3A5F", fontFamily: "'Playfair Display', serif" }}>Próximos Pasos (Esta semana)</h2>
+
+                <div style={{ background: "white", borderRadius: "12px", padding: "16px" }}>
+                  {[
+                    { id: "1", task: "Aprobación de pauta ($27K mes 2)" },
+                    { id: "2", task: "Grabar 3 videos (1-2 horas)" },
+                    { id: "3", task: "Crear 2 imágenes en Canva (1-2 horas)" },
+                    { id: "4", task: "Setup técnico: Meta Ads + Google Ads (Alex, 4-6h)" },
+                    { id: "5", task: "Lanzar Fase 1 (1 de junio)" },
+                  ].map(t => (
+                    <div key={t.id} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 0", borderBottom: "1px solid #F1F5F9" }}>
+                      <input
+                        type="checkbox"
+                        checked={checkedTasks[t.id] || false}
+                        onChange={() => toggleTask(t.id)}
+                        style={{ cursor: "pointer" }}
+                      />
+                      <span style={{ fontSize: "12px", color: checkedTasks[t.id] ? "#94A3B8" : "#1E293B", textDecoration: checkedTasks[t.id] ? "line-through" : "none" }}>
+                        {t.task}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* PLAN 6 MESES */}
+            {activeTab === "plan" && (
+              <div className="content active">
+                <h1>📅 Plan 6 Meses (Junio-Noviembre 2026)</h1>
+                <p className="subtitle">Cambios respecto al plan original basados en diagnóstico completado.</p>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Cambios Principales</h2>
+
+                {PLAN_MONTHS.map((m, i) => (
+                  <div key={m.id} className="card" style={{ borderLeftColor: m.color, marginBottom: "12px", cursor: "pointer" }} onClick={() => toggleSection(`month-${m.id}`)}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div>
+                        <h3 style={{ color: m.color }}>{m.name}: {m.title}</h3>
+                        <p>{m.weeks} semanas</p>
+                      </div>
+                      <span style={{ fontSize: "20px" }}>{expandedSection[`month-${m.id}`] ? "▼" : "▶"}</span>
+                    </div>
+
+                    {expandedSection[`month-${m.id}`] && (
+                      <div style={{ marginTop: "12px", paddingTop: "12px", borderTop: "1px solid #E5DDD0" }}>
+                        {m.id === 1 && (
+                          <ul style={{ fontSize: "12px", color: "#334155", lineHeight: "1.8", marginLeft: "16px" }}>
+                            <li><strong>URGENTE:</strong> Reemplazar chatbot botonera (semana 1)</li>
+                            <li>Activar WhatsApp automático (mensajes ausencia + respuestas rápidas)</li>
+                            <li>Crear campo "¿Cómo nos conociste?" en WA</li>
+                            <li>Optimizar Google My Business (20+ fotos)</li>
+                            <li>Reactivar Facebook (responder viejos + nuevo contenido)</li>
+                          </ul>
+                        )}
+                        {m.id === 2 && (
+                          <ul style={{ fontSize: "12px", color: "#334155", lineHeight: "1.8", marginLeft: "16px" }}>
+                            <li><strong>PAUTA LÍNEA MASCULINA:</strong> 3 fases ($27K mes)</li>
+                            <li>Fase 1: Normalización ("aquí no hay vergüenza")</li>
+                            <li>Fase 2: Educación ("preguntas que nunca")</li>
+                            <li>Fase 3: Conversión ("tu primera consulta")</li>
+                            <li>Meta: +25 pacientes hombres nuevos (32%→35%)</li>
+                          </ul>
+                        )}
+                        {m.id === 3 && (
+                          <ul style={{ fontSize: "12px", color: "#334155", lineHeight: "1.8", marginLeft: "16px" }}>
+                            <li>Expansión geográfica: Ovalle, Vicuña, Vallenar</li>
+                            <li>Pauta geolocalizadas ($60K: Ovalle $20K, Vicuña $15K, Vallenar $15K, zonas mineras $10K)</li>
+                            <li>Telemedicina como producto explícito</li>
+                          </ul>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>KPIs</h2>
+
+                <div className="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>KPI</th>
+                        <th>Hoy</th>
+                        <th>Mes 3</th>
+                        <th>Mes 6</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>% Pacientes hombres</td>
+                        <td>32%</td>
+                        <td>35%</td>
+                        <td>40%</td>
+                      </tr>
+                      <tr>
+                        <td>Atenciones/mes</td>
+                        <td>280</td>
+                        <td>320</td>
+                        <td>378</td>
+                      </tr>
+                      <tr>
+                        <td>Pérdida por no-conversión</td>
+                        <td>~$9M</td>
+                        <td>$6M</td>
+                        <td>$4M</td>
+                      </tr>
+                      <tr>
+                        <td>Canales origen medidos</td>
+                        <td>0%</td>
+                        <td>100%</td>
+                        <td>100%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* CUSTOMER RESEARCH */}
+            {activeTab === "research" && (
+              <div className="content active">
+                <h1>🔍 Customer Research — Análisis de Testimonios</h1>
+                <p className="subtitle">Basado en 4 testimonios reales + diagnóstico. Confianza: ALTA.</p>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Dolores Principales</h2>
+
+                <div>
+                  {RESEARCH_PAINS.map(p => (
+                    <div key={p.id} className="card" style={{ marginBottom: "10px" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "6px" }}>
+                        <h3>{p.pain}</h3>
+                        <span className={`badge ${p.intensity === "Alta" ? "high" : p.intensity === "Media" ? "medium" : "low"}`}>{p.intensity}</span>
+                      </div>
+                      <p style={{ marginBottom: "8px" }}>Frecuencia: {p.freq}</p>
+                      <p style={{ color: "#059669", fontWeight: "600", fontSize: "11px" }}>✓ Solución: {p.solution}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Motivadores Principales</h2>
+
+                <div>
+                  {RESEARCH_MOTIVATORS.map(m => (
+                    <div key={m.id} className="card" style={{ marginBottom: "10px", borderLeftColor: "#059669" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "6px" }}>
+                        <h3>{m.mot}</h3>
+                        <span style={{ fontSize: "14px" }}>{m.intensity}</span>
+                      </div>
+                      <p>Frecuencia: {m.freq}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Frases de Oro (Úsalas en pauta)</h2>
+
+                <div>
+                  {GOLDEN_PHRASES.map((q, i) => (
+                    <div key={i} className="quote">
+                      <p>"{q.phrase}"</p>
+                      <div className="source">→ {q.usage}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Diferenciadores vs. Competencia</h2>
+
+                <div className="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Competencia dice</th>
+                        <th>Mediterra dice</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>"Servicios de urología especializados"</td>
+                        <td>"Te explicamos TODO, sin jerga"</td>
+                      </tr>
+                      <tr>
+                        <td>"20+ años experiencia"</td>
+                        <td>"Empatía + resultados"</td>
+                      </tr>
+                      <tr>
+                        <td>"Consulta médica"</td>
+                        <td>"Te hacen sentir escuchado y acompañado"</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* PAUTA */}
+            {activeTab === "pauta" && (
+              <div className="content active">
+                <h1>📊 Pauta: Línea Masculina Mes 2</h1>
+                <p className="subtitle">3 fases, 5 anuncios, $27.000 CLP. Objetivo: +3% pacientes hombres (32%→35%).</p>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Las 3 Fases</h2>
+
+                <div>
+                  {PAUTA_FASES.map((f, i) => (
+                    <div key={i} className="card" style={{ marginBottom: "10px", borderLeftColor: ["#DC2626", "#EA580C", "#059669"][i] }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "8px" }}>
+                        <div>
+                          <h3>{f.phase}</h3>
+                          <p style={{ fontSize: "11px", color: "#94A3B8", marginTop: "2px" }}>{f.week}</p>
+                        </div>
+                        <div style={{ textAlign: "right" }}>
+                          <div style={{ fontSize: "16px", fontWeight: "700", color: "#1C3A5F" }}>{f.budget}</div>
+                          <div style={{ fontSize: "10px", color: "#94A3B8", marginTop: "2px" }}>CTR: {f.cpm}%</div>
+                        </div>
+                      </div>
+                      <p><strong>Copy:</strong> {f.copy}</p>
+                      <p style={{ fontSize: "11px", color: "#94A3B8", marginTop: "4px" }}>Audiencia: {f.audience}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Los 5 Anuncios</h2>
+
+                <div className="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Anuncio</th>
+                        <th>Formato</th>
+                        <th>Copy</th>
+                        <th>Presupuesto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1A</td>
+                        <td>Video Reel</td>
+                        <td>"Los hombres vienen acá"</td>
+                        <td>$4.000</td>
+                      </tr>
+                      <tr>
+                        <td>1B</td>
+                        <td>Carousel</td>
+                        <td>"Problemas comunes"</td>
+                        <td>$3.000</td>
+                      </tr>
+                      <tr>
+                        <td>2A</td>
+                        <td>Video Reel</td>
+                        <td>"Preguntas nunca"</td>
+                        <td>$4.000</td>
+                      </tr>
+                      <tr>
+                        <td>2B</td>
+                        <td>Video</td>
+                        <td>Testimonial Pia</td>
+                        <td>$3.000</td>
+                      </tr>
+                      <tr>
+                        <td>3B</td>
+                        <td>Search</td>
+                        <td>"Urología sin vergüenza"</td>
+                        <td>$6.000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Métrica de Éxito</h2>
+
+                <div className="grid-2">
+                  <div className="stat">
+                    <div className="value">$800</div>
+                    <div className="label">Cost per Lead objetivo</div>
+                  </div>
+                  <div className="stat">
+                    <div className="value">$450</div>
+                    <div className="label">Cost per Appointment</div>
+                  </div>
+                </div>
+
+                <div className="card" style={{ borderLeftColor: "#1D4ED8" }}>
+                  <h3>Fórmula de Éxito</h3>
+                  <p style={{ fontSize: "11px", lineHeight: "2" }}>
+                    $27.000 ÷ $800 CPL = 34 leads<br/>
+                    × 40% (lead→appointment) = 14 citas<br/>
+                    × 75% (show rate) = 10 consultas<br/>
+                    × 80% (conversión) = <strong>8 nuevos pacientes hombres</strong><br/>
+                    × 4 semanas = <strong>32 nuevos hombres en mes 2</strong> ✓
+                  </p>
+                </div>
+              </div>
+            )}
+
+            {/* TRACKING */}
+            {activeTab === "tracking" && (
+              <div className="content active">
+                <h1>📈 Tracking & Métricas</h1>
+                <p className="subtitle">Dashboard para monitorear progreso en tiempo real.</p>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Meta Principal: % Pacientes Hombres</h2>
+
+                <div className="grid-3">
+                  <div className="stat">
+                    <div className="value" style={{ color: "#B45309" }}>32%</div>
+                    <div className="label">Hoy (Baseline)</div>
+                  </div>
+                  <div className="stat">
+                    <div className="value" style={{ color: "#EA580C" }}>35%</div>
+                    <div className="label">Meta Mes 3</div>
+                  </div>
+                  <div className="stat">
+                    <div className="value" style={{ color: "#059669" }}>40%</div>
+                    <div className="label">Meta Mes 6</div>
+                  </div>
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Tabla de Seguimiento (Semana 5)</h2>
+
+                <div className="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Métrica</th>
+                        <th>Target</th>
+                        <th>Actual</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Impresiones</td>
+                        <td>50.000</td>
+                        <td>—</td>
+                        <td style={{ color: "#94A3B8" }}>⏳</td>
+                      </tr>
+                      <tr>
+                        <td>Video plays</td>
+                        <td>15.000</td>
+                        <td>—</td>
+                        <td style={{ color: "#94A3B8" }}>⏳</td>
+                      </tr>
+                      <tr>
+                        <td>Clicks</td>
+                        <td>450</td>
+                        <td>—</td>
+                        <td style={{ color: "#94A3B8" }}>⏳</td>
+                      </tr>
+                      <tr>
+                        <td>CTR</td>
+                        <td>1%</td>
+                        <td>—</td>
+                        <td style={{ color: "#94A3B8" }}>⏳</td>
+                      </tr>
+                      <tr>
+                        <td>CPM</td>
+                        <td>$8-12</td>
+                        <td>—</td>
+                        <td style={{ color: "#94A3B8" }}>⏳</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Reuniones de Revisión</h2>
+
+                <div className="card" style={{ borderLeftColor: "#1D4ED8", marginBottom: "10px" }}>
+                  <h3>Viernes 7 junio (Día 7)</h3>
+                  <p>Revisar Fase 1: impresiones, CTR, CPL. Decisión: continuar, pausar o pivotear.</p>
+                </div>
+
+                <div className="card" style={{ borderLeftColor: "#1D4ED8", marginBottom: "10px" }}>
+                  <h3>Viernes 14 junio (Día 14)</h3>
+                  <p>Performance Fase 2. Análisis: qué creatividades funcionan. Escalar ganadores, pausar losers.</p>
+                </div>
+
+                <div className="card" style={{ borderLeftColor: "#1D4ED8", marginBottom: "10px" }}>
+                  <h3>Viernes 28 junio (Final mes 2)</h3>
+                  <p>Reporte final: ¿Crecimos de 32% a 35%? Análisis para mes 3.</p>
+                </div>
+              </div>
+            )}
+
+            {/* DOCUMENTOS */}
+            {activeTab === "docs" && (
+              <div className="content active">
+                <h1>📁 Documentos & Recursos</h1>
+                <p className="subtitle">Descarga todos los documentos detallados generados en esta sesión.</p>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Documentos Principales</h2>
+
+                {[
+                  { name: "RESPUESTAS-DIAGNOSTICO.md", desc: "21 respuestas diagnóstico (7 críticas + 14 generales)", type: "Diagnóstico" },
+                  { name: "CUSTOMER-RESEARCH-ANALISIS.md", desc: "Análisis completo de testimonios + VOC quote bank", type: "Research" },
+                  { name: "PAUTA-LINEA-MASCULINA-MES2.md", desc: "Pauta detallada con 5 anuncios + presupuesto + tracking", type: "Pauta" },
+                  { name: "PAUTA-RESUMEN-EJECUTIVO.md", desc: "Una página ejecutiva (para presentar rápido)", type: "Pauta" },
+                  { name: "wiki/PLAN-DEPURADO-6MESES.md", desc: "Plan original vs. depurado (cambios mes a mes)", type: "Estrategia" },
+                  { name: "ANALISIS-SKILLS-RECOMENDADOS.md", desc: "Skills BMAD a usar + workflow de implementación", type: "Estrategia" },
+                ].map((doc, i) => (
+                  <div key={i} className="card" style={{ marginBottom: "10px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "6px" }}>
+                      <h3>{doc.name}</h3>
+                      <span className="badge">{doc.type}</span>
+                    </div>
+                    <p>{doc.desc}</p>
+                    <button className="btn" style={{ marginTop: "8px" }}>Descargar</button>
+                  </div>
+                ))}
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Links Compartibles</h2>
+
+                <div className="card" style={{ borderLeftColor: "#1D4ED8" }}>
+                  <h3>Link con respuestas de diagnóstico</h3>
+                  <p style={{ fontSize: "11px", color: "#64748B", marginBottom: "8px", wordBreak: "break-all" }}>
+                    https://sutuxf.github.io/ClinicaMediterra/#d=eyJkYzEi...
+                  </p>
+                  <button className="btn" style={{ fontSize: "11px" }}>Copiar</button>
+                </div>
+              </div>
+            )}
+
+          </div>
+
+          {/* FOOTER */}
+          <footer>
+            <div className="container">
+              <p>🎯 Maestro: Control Central de Transformación Digital Mediterra</p>
+              <p>Plan 6 meses + Customer Research + Pauta | Actualizado: 30 mayo 2026</p>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<MaestroApp />);
+  </script>
+</body>
+</html>
