@@ -276,24 +276,40 @@ DESGLOSE:
 
 ---
 
-## 📊 DISTRIBUCIÓN FINAL
+## 📊 DISTRIBUCIÓN FINAL — EXACTO $5.000.000
 
 ```
 A. GESTIÓN EMPRESARIAL                 $1.000.000 (20%)
-B. INNOVACIÓN IA FIRST                 $2.200.000 (44%)
-   ├─ B.1-B.5: 5 agentes IA             $530.000
-   ├─ B.6: Web + Medilink               $500.000
-   ├─ B.7: Telemedicina                 $630.000
-   └─ B.8: Audiovisual                  $460.000
-C. CAPITAL REMANENTE                   $1.800.000 (36%) ✅
-   └─ DESTINADO A:
-      • Expansión Ovalle/Vicuña
-      • Personal adicional (2-3 sueldos)
-      • Marketing propio (1 meses)
-      • Experimentos y learning
-      • Buffer/contingencia
+   ├─ A.1: Gestor Digital/PM            $300.000
+   ├─ A.2: Training IA + Medilink       $250.000
+   ├─ A.3: Consultoría técnica          $200.000
+   ├─ A.4: Identidad visual             $150.000
+   └─ A.5: Herramientas/APIs            $100.000
+   SUBTOTAL A:                          $1.000.000 ✅
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+B. INNOVACIÓN IA FIRST                 $2.320.000 (46%)
+   ├─ B.1-B.5: 5 agentes IA             $530.000
+   │  (Recordatorios $120K, Chatbot $110K, FAQ $80K,
+   │   Contenido $130K, KPIs $90K)
+   ├─ B.6: Web + Medilink integracion   $600.000
+   ├─ B.7: Telemedicina                 $790.000
+   └─ B.8: Audiovisual + contenido      $400.000
+   SUBTOTAL B:                          $2.320.000 ✅
+
+C. CAPITAL REMANENTE                   $1.680.000 (34%) ✅
+   └─ DESTINADO A:
+      • Expansión Ovalle/Vicuña         ($600K)
+      • Personal adicional (2-3 sueldos)($400K)
+      • Marketing propio                ($300K)
+      • Experimentos y learning         ($200K)
+      • Buffer/contingencia             ($180K)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VERIFICACIÓN:
+A: $1.000.000
+B: $2.320.000
+C: $1.680.000
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 TOTAL FONDO CRECE SOLICITADO:          $5.000.000 ✅
 ```
 
@@ -421,18 +437,19 @@ KPIs AUTOMÁTICOS:
 
 ```
 ESCENARIO CON ESTE PRESUPUESTO:
-• Invierten $530K en IA (10.6%)
-• Tienen $1.8M libre ($300K/mes x 6 meses)
-• Aprenden operación IA en producción
-• ROI positivo desde mes 3
-• Caso de éxito para Kit Digital
+• Invierten $530K en IA (10.6% del fondo)
+• Tienen $1.68M libre para expansión/hiring/buffer
+• Aprenden operación IA en producción (6 meses)
+• ROI positivo desde mes 4 (recordatorios: +$5M/mes)
+• Caso de éxito documentado para Kit Digital
 
 RESULT:
-✅ Fondo Crece resuelve NON-SHOWS
-✅ Equipo aprende IA/automatización
-✅ Capital para expansión sin deuda
-✅ Lista para postular Kit Digital ($1.2M) con caso de éxito
+✅ Fondo Crece resuelve $9M en pérdidas (no-shows)
+✅ Equipo aprende IA/automatización operativa
+✅ Capital para expansión sin deuda ($1.68M)
+✅ Lista para postular Kit Digital ($1.2M) con evidencia
 ✅ Escalable a 2027 sin fondos externos
+✅ PRESUPUESTO EXACTO: $5.000.000
 ```
 
 ---
@@ -466,14 +483,24 @@ PROPUESTA:
 Usar Crece para implementar IA que resuelva gaps reales 
 + quedarse con capital para aprender y escalar
 
+DISTRIBUCIÓN EXACTA $5.000.000:
+├─ A. Gestión empresarial:    $1.000.000 (20%)
+├─ B. Innovación IA + Tech:   $2.320.000 (46%)
+│  └─ 5 Agentes IA:            $530.000
+│  └─ Web + Medilink:          $600.000
+│  └─ Telemedicina:            $790.000
+│  └─ Audiovisual:             $400.000
+└─ C. Capital remanente:       $1.680.000 (34%)
+   └─ Expansión + hiring + buffer
+
 INVERSIÓN IA: $530K (10.6% del fondo)
 IMPACTO ESPERADO: +$5M en conversiones (mes 4-6)
-CAPITAL REMANENTE: $1.8M para expansión
-TIMELINE: 6 meses a ROI positivo sin deuda
+CAPITAL REMANENTE: $1.68M para expansión sin deuda
+TIMELINE: 6 meses a ROI positivo
 
 DIFERENCIAL: No es "modernizar sitio web"
             Es "automatizar $9M en pérdidas"
-            Con capital para crecer 2027
+            Con $1.68M capital para crecer 2027
 ```
 
 ---
