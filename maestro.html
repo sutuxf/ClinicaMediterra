@@ -226,6 +226,7 @@
                 { id: "research", label: "🔍 Customer Research" },
                 { id: "pauta", label: "📊 Pauta" },
                 { id: "grabaciones", label: "🎬 Grabaciones" },
+                { id: "fondos", label: "💰 Fondos" },
                 { id: "tracking", label: "📈 Tracking" },
                 { id: "docs", label: "📁 Documentos" },
               ].map(tab => (
@@ -675,6 +676,111 @@
                 <div className="card" style={{ borderLeftColor: "#1D4ED8", marginBottom: "10px" }}>
                   <h3>Viernes 28 junio (Final mes 2)</h3>
                   <p>Reporte final: ¿Crecimos de 32% a 35%? Análisis para mes 3.</p>
+                </div>
+              </div>
+            )}
+
+            {/* FONDOS */}
+            {activeTab === "fondos" && (
+              <div className="content active">
+                <h1>💰 Levantamiento de Capital: Fondos Concursables</h1>
+                <p className="subtitle">Postulación Crece Multisectorial ($5M) + Kit Digital ($1.2M) + Santander (Variable)</p>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Fondo Prioritario: CRECE MULTISECTORIAL</h2>
+
+                <div className="grid-3">
+                  <div className="stat">
+                    <div className="value" style={{ color: "#EA580C" }}>$5M</div>
+                    <div className="label">Monto</div>
+                  </div>
+                  <div className="stat">
+                    <div className="value" style={{ color: "#1C3A5F" }}>11 JUN</div>
+                    <div className="label">Cierre 🔥</div>
+                  </div>
+                  <div className="stat">
+                    <div className="value" style={{ color: "#059669" }}>11 días</div>
+                    <div className="label">Restantes</div>
+                  </div>
+                </div>
+
+                <div className="card" style={{ borderLeftColor: "#EA580C", background: "#FFFBF0", marginTop: "16px" }}>
+                  <h3>🔥 URGENTE: Postulación antes 11 junio 15:00</h3>
+                  <p>Cronograma ejecutado: Francisco (Santiago) + Camila (La Serena). Aporte propio: $1.5M.</p>
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Tracker de Postulación</h2>
+
+                {[
+                  { phase: "PRE-POSTULACIÓN (31 may - 8 jun)", progress: 0, status: "⏳ INICIO", items: ["Documentación empresa", "Presupuesto $5M", "Plan de negocio", "Video pitch 90 seg"] },
+                  { phase: "INTEGRACIÓN (8-10 jun)", progress: 0, status: "⏳ BLOQUEADO", items: ["Formulario SERCOTEC", "Testing", "Backup documentación"] },
+                  { phase: "ENVÍO (11 jun)", progress: 0, status: "🔥 CRÍTICO", items: ["POSTULAR antes 15:00"] },
+                  { phase: "EVALUACIÓN (12 jun - 28 jul)", progress: 0, status: "⏰ FUTURO", items: ["Elegibilidad", "Preselección", "Entrevista", "Resultado"] },
+                ].map((f, i) => (
+                  <div key={i} className="card" style={{ marginBottom: "12px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "8px" }}>
+                      <h3>{f.phase}</h3>
+                      <span style={{ fontSize: "12px", fontWeight: 600, padding: "4px 8px", background: "#F1F5F9", borderRadius: "6px" }}>{f.status}</span>
+                    </div>
+                    <div style={{ marginBottom: "8px", background: "#E5E7EB", height: "6px", borderRadius: "3px", overflow: "hidden" }}>
+                      <div style={{ width: f.progress + "%", height: "100%", background: "#059669", transition: "width 0.3s" }}></div>
+                    </div>
+                    <p style={{ fontSize: "11px", color: "#64748B" }}>{f.items.join(" • ")}</p>
+                  </div>
+                ))}
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Otros Fondos</h2>
+
+                <div className="grid-2">
+                  <div className="card" style={{ borderLeftColor: "#1D4ED8" }}>
+                    <h3>Kit Digital (Ruta Digital)</h3>
+                    <p>$1.2M para CRM + web + recordatorios. Postular 2 julio. Prerequisito: 9 cursos Ruta Digital.</p>
+                    <div style={{ marginTop: "8px", fontSize: "12px", color: "#1C3A5F", fontWeight: 600 }}>Prioridad: #2 📚</div>
+                  </div>
+                  <div className="card" style={{ borderLeftColor: "#8B5CF6" }}>
+                    <h3>Santander Fondos Concursables</h3>
+                    <p>Monto variable para empresa salud. Verificar si aplica a clínicas privadas (focus ONGs). </p>
+                    <div style={{ marginTop: "8px", fontSize: "12px", color: "#1C3A5F", fontWeight: 600 }}>Prioridad: #3 ⏳</div>
+                  </div>
+                </div>
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Documentos Fondos</h2>
+
+                {[
+                  { name: "GUION-VIDEO-PITCH-CRECE-90SEG.md", desc: "Guión listo para grabar (90 seg exactos) + instrucciones técnicas", status: "⏳ INICIO" },
+                  { name: "PRESUPUESTO-CRECE-5M-DESGLOSADO.md", desc: "Presupuesto detallado por área (gestión + tecnología)", status: "⏳ INICIO" },
+                  { name: "CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md", desc: "Tareas día-a-día (11 días) con responsables y deadlines", status: "⏳ INICIO" },
+                  { name: "BASES-CRECE-2026-COQUIMBO-RESUMEN.md", desc: "Resumen ejecutivo de bases oficiales (sin consumir tokens del PDF)", status: "✅ LISTO" },
+                  { name: "TRACKER-POSTULACION-CRECE.md", desc: "Seguimiento de hitos + progreso + riesgos/contingencias", status: "✅ LISTO" },
+                ].map((doc, i) => (
+                  <div key={i} className="card" style={{ marginBottom: "10px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "6px" }}>
+                      <h3 style={{ fontSize: "13px" }}>{doc.name}</h3>
+                      <span style={{ fontSize: "10px", fontWeight: 600, padding: "3px 8px", background: doc.status === "✅ LISTO" ? "#D1FAE5" : "#FEF3C7", color: doc.status === "✅ LISTO" ? "#059669" : "#B45309", borderRadius: "4px" }}>{doc.status}</span>
+                    </div>
+                    <p style={{ fontSize: "12px" }}>{doc.desc}</p>
+                  </div>
+                ))}
+
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Impacto Financiero</h2>
+
+                <div className="grid-3">
+                  <div className="stat" style={{ background: "#FEF3C7", borderRadius: "12px", padding: "16px" }}>
+                    <div className="value" style={{ color: "#B45309" }}>$5M</div>
+                    <div className="label" style={{ color: "#92400E" }}>Crece (si gana)</div>
+                  </div>
+                  <div className="stat" style={{ background: "#DBEAFE", borderRadius: "12px", padding: "16px" }}>
+                    <div className="value" style={{ color: "#1D4ED8" }}>$1.2M</div>
+                    <div className="label" style={{ color: "#1E40AF" }}>Kit Digital (2 julio)</div>
+                  </div>
+                  <div className="stat" style={{ background: "#E9D5FF", borderRadius: "12px", padding: "16px" }}>
+                    <div className="value" style={{ color: "#7C3AED" }}>$6.2M+</div>
+                    <div className="label" style={{ color: "#5B21B6" }}>Total potencial</div>
+                  </div>
+                </div>
+
+                <div className="card" style={{ borderLeftColor: "#059669", marginTop: "16px", background: "#F0FDF4" }}>
+                  <h3>Retorno de Inversión (ROI)</h3>
+                  <p>Con $5M invertido: Recupera $5M/mes en no-shows (mes 4), +35% ocupación consultorios, +3 sueldos formales. ROI 2.3x en 6 meses.</p>
                 </div>
               </div>
             )}
