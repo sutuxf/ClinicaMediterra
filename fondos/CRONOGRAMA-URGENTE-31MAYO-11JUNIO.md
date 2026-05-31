@@ -8,19 +8,20 @@
 ## 📅 VISTA GENERAL
 
 ```
+HOY: DOMINGO 31 DE MAYO 2026
 DÍAS RESTANTES: 11 (31 mayo → 11 junio)
 TAREAS CRÍTICAS: 18
 RESPONSABLES: Francisco + Camila + Alex
 
 RUTA CRÍTICA:
-31-5 → Documentación + Video ────────┐
-6-6  → Aprobación + Setup            │ → 11-6: POSTULAR
-10-6 → Compilación final + Testing ──┘
+Domingo 31-5 → Documentación + Video ────────┐
+Viernes 6-6  → Aprobación + Setup            │ → Jueves 11-6: POSTULAR
+Martes 10-6  → Compilación final + Testing ──┘
 ```
 
 ---
 
-## 🔥 DÍA 0: VIERNES 31 MAYO
+## 🔥 DÍA 0: DOMINGO 31 MAYO
 
 **TIEMPO TOTAL: 4h**
 
@@ -34,7 +35,7 @@ Sistema: www.sercotec.cl
    ✅ Guardar credenciales en Keeper/1Password
 ```
 ⏱️ **Duración:** 15 min  
-✅ **Deadline:** Viernes 31, 4 PM
+✅ **Deadline:** Domingo 31, 4 PM
 
 ---
 
@@ -45,7 +46,7 @@ Documentar cambios/personalizaciones
 Enviar borrador a Camila para feedback
 ```
 ⏱️ **Duración:** 45 min  
-✅ **Deadline:** Viernes 31, 5 PM
+✅ **Deadline:** Domingo 31, 5 PM
 
 ---
 
@@ -57,7 +58,7 @@ Notas: requisitos, documentos, criterios evaluación, fechas
 Crear checklist en Google Docs
 ```
 ⏱️ **Duración:** 1 hora  
-✅ **Deadline:** Viernes 31, 6 PM
+✅ **Deadline:** Domingo 31, 6 PM
 
 ---
 
@@ -72,7 +73,7 @@ Feedback: ¿Suena auténtico?
 Responder Francisco por WhatsApp
 ```
 ⏱️ **Duración:** 30 min  
-✅ **Deadline:** Viernes 31, 5 PM
+✅ **Deadline:** Domingo 31, 5 PM
 
 ---
 
@@ -93,7 +94,7 @@ Guardar en carpeta compartida: Dropbox o Google Drive
 Nombre carpeta: "POSTULACION-CRECE-DOCUMENTOS"
 ```
 ⏱️ **Duración:** 1h 30 min (puede incluir llamadas)  
-✅ **Deadline:** Viernes 31, 6 PM
+✅ **Deadline:** Domingo 31, 6 PM
 
 ---
 
@@ -102,7 +103,7 @@ Nombre carpeta: "POSTULACION-CRECE-DOCUMENTOS"
 
 ---
 
-### 📋 CHECKLIST DÍA 0
+### 📋 CHECKLIST DÍA 0 (DOMINGO 31)
 
 - [ ] Francisco: Cuenta SERCOTEC creada
 - [ ] Francisco: Guión video enviado a Camila
@@ -112,7 +113,7 @@ Nombre carpeta: "POSTULACION-CRECE-DOCUMENTOS"
 
 ---
 
-## 📅 DÍA 1: SÁBADO 1 JUNIO
+## 📅 DÍA 1: LUNES 1 JUNIO
 
 **TIEMPO TOTAL: 3h**
 
@@ -121,7 +122,7 @@ Nombre carpeta: "POSTULACION-CRECE-DOCUMENTOS"
 **TAREA C1.1: Coordinar grabación video pitch**
 ```
 Definir:
-├─ Fechas posibles: sábado 1 o domingo 2 junio
+├─ Fechas posibles: lunes 1 o martes 2 junio
 ├─ Horario: mañana (8-11 AM, buena luz natural)
 ├─ Locutor: Francisco o Dr. Andrusco
 ├─ Ubicación: Consultorio Mediterra
@@ -132,7 +133,7 @@ Agendar en calendario compartido
 Confirmar con locutor + ayudante por WhatsApp
 ```
 ⏱️ **Duración:** 45 min  
-✅ **Deadline:** Sábado 1, 10 AM
+✅ **Deadline:** Lunes 1, 10 AM
 
 ---
 
@@ -149,7 +150,7 @@ Nombrar: F29_ABRIL_MAYO_JUNIO.pdf
          FICHA_TRIBUTARIA.pdf
 ```
 ⏱️ **Duración:** 1h 15 min  
-✅ **Deadline:** Sábado 1, 12 PM
+✅ **Deadline:** Lunes 1, 12 PM
 
 ---
 
@@ -171,7 +172,7 @@ Opción 2: Llamada
 Guardar como: CERTIFICADO-DEUDAS-PREVISIONALES.pdf
 ```
 ⏱️ **Duración:** 1 hora  
-✅ **Deadline:** Sábado 1, 2 PM
+✅ **Deadline:** Lunes 1, 2 PM
 
 ---
 
@@ -180,7 +181,7 @@ Guardar como: CERTIFICADO-DEUDAS-PREVISIONALES.pdf
 
 ---
 
-### 📋 CHECKLIST DÍA 1
+### 📋 CHECKLIST DÍA 1 (LUNES 1)
 
 - [ ] Camila: Grabación video agendada (fecha + hora)
 - [ ] Camila: F29 descargado (3 meses)
@@ -190,7 +191,7 @@ Guardar como: CERTIFICADO-DEUDAS-PREVISIONALES.pdf
 
 ---
 
-## 📅 DÍAS 2-3: DOMINGO 2 - LUNES 3 JUNIO
+## 📅 DÍAS 2-3: MARTES 2 - MIÉRCOLES 3 JUNIO
 
 **TIEMPO TOTAL: 8h**
 
@@ -198,7 +199,7 @@ Guardar como: CERTIFICADO-DEUDAS-PREVISIONALES.pdf
 
 **TAREA C2.1: Grabar video pitch**
 ```
-DÍA: Domingo 2 junio (mañana, 8-10 AM)
+DÍA: Martes 2 junio (mañana, 8-10 AM)
 
 SETUP TÉCNICO:
 ├─ Luz natural (consultorio, ventana)
@@ -220,7 +221,7 @@ DURACIÓN EXACTA: 90 segundos (contar con cronómetro)
 Guardar video como: VIDEO-PITCH-CRECE-90SEG-TOMA1.mp4
 
 ⏱️ Duración: 1h 30 min
-✅ Deadline: Domingo 2, 10 AM
+✅ Deadline: Martes 2, 10 AM
 ```
 
 ---
@@ -240,8 +241,8 @@ ARCHIVO FINAL: VIDEO-PITCH-CRECE-MEDITERRANA-90SEG.mp4
 
 Compartir con Francisco (Google Drive)
 
-⏱️ Duración: 2h 30 min (can overlap con grabación)
-✅ Deadline: Domingo 2, 3 PM
+⏱️ Duración: 2h 30 min (puede solaparse con grabación)
+✅ Deadline: Martes 2, 3 PM
 ```
 
 ---
@@ -260,7 +261,7 @@ VERIFICAR QUE TENEMOS:
 Si falta algo: CONTACTAR INMEDIATAMENTE
 
 ⏱️ Duración: 30 min
-✅ Deadline: Domingo 2, 4 PM
+✅ Deadline: Martes 2, 4 PM
 ```
 
 ---
@@ -286,7 +287,7 @@ ARCHIVOS:
 └─ PRESUPUESTO-CRECE-5M-RESUMEN.pdf
 
 ⏱️ Duración: 2h
-✅ Deadline: Domingo 2, 5 PM
+✅ Deadline: Martes 2, 5 PM
 ```
 
 ---
@@ -305,7 +306,7 @@ TONO: profesional, concreto, basado en datos (diagnóstico)
 ARCHIVO: PLAN-NEGOCIO-CRECE-DRAFT.docx
 
 ⏱️ Duración: 2h
-✅ Deadline: Domingo 2, 6 PM
+✅ Deadline: Martes 2, 6 PM
 ```
 
 ---
@@ -321,7 +322,7 @@ ARCHIVO: PLAN-NEGOCIO-CRECE-DRAFT.docx
 
 ---
 
-## 📅 DÍAS 4-5: LUNES 3 - MARTES 4 JUNIO
+## 📅 DÍAS 4-5: MIÉRCOLES 3 - JUEVES 4 JUNIO
 
 **TIEMPO TOTAL: 6h**
 
@@ -346,7 +347,7 @@ Feedback: aprobación o cambios
 Enviar feedback a Francisco por email + WhatsApp
 
 ⏱️ Duración: 1h 30 min
-✅ Deadline: Lunes 3, 10 AM
+✅ Deadline: Miércoles 3, 10 AM
 ```
 
 ---
@@ -369,7 +370,7 @@ NOTAS: Nombres deben ser claros
            "CERTIFICADO-DEUDAS-PREVIRED.pdf"
 
 ⏱️ Duración: 30 min
-✅ Deadline: Lunes 3, 11 AM
+✅ Deadline: Miércoles 3, 11 AM
 ```
 
 ---
@@ -393,7 +394,7 @@ ARCHIVOS FINALES:
 └─ PLAN-NEGOCIO-CRECE-FINAL.docx
 
 ⏱️ Duración: 1h 30 min
-✅ Deadline: Lunes 3, 2 PM
+✅ Deadline: Miércoles 3, 2 PM
 ```
 
 ---
@@ -409,12 +410,12 @@ CHECKLIST:
 ☐ ¿Presupuesto y aporte propio citados?
 ☐ ¿Camila aprobó?
 
-SI FALLA ALGO: solicitar re-grabación (martes 4 AM)
+SI FALLA ALGO: solicitar re-grabación (jueves 4 AM)
 
 ARCHIVO: VIDEO-PITCH-CRECE-MEDITERRANA-90SEG.mp4
 
 ⏱️ Duración: 30 min
-✅ Deadline: Lunes 3, 2 PM
+✅ Deadline: Miércoles 3, 2 PM
 ```
 
 ---
@@ -436,7 +437,7 @@ LLENAR:
 ⚠️ NO ENVIAR AÚN: solo llenar, guardar como borrador
 
 ⏱️ Duración: 2h
-✅ Deadline: Martes 4, 5 PM
+✅ Deadline: Jueves 4, 5 PM
 ```
 
 ---
@@ -455,7 +456,7 @@ LLENAR:
 
 ---
 
-## 📅 DÍAS 6-9: MIÉRCOLES 5 - SÁBADO 8 JUNIO
+## 📅 DÍAS 6-9: VIERNES 5 - LUNES 8 JUNIO
 
 **TIEMPO TOTAL: 4h**
 
@@ -474,7 +475,7 @@ EMAIL A FRANCISCO:
 "Presupuesto, plan y video están OK. Puedo enviar mañana."
 
 ⏱️ Duración: 1h
-✅ Deadline: Sábado 8, 12 PM
+✅ Deadline: Lunes 8, 12 PM
 ```
 
 ---
@@ -523,7 +524,7 @@ REVISAR:
 ☐ Cambiar status: "Guardado" → "Listo para enviar"
 
 ⏱️ Duración: 2h 30 min
-✅ Deadline: Sábado 8, 5 PM
+✅ Deadline: Lunes 8, 5 PM
 ```
 
 ---
@@ -533,7 +534,7 @@ REVISAR:
 CREAR CARPETA BACKUP:
 ├─ Guardar en Dropbox personal
 ├─ Guardar en Google Drive personal
-├─ Guardar en email draft (franciso@gmail.com)
+├─ Guardar en email draft (francisco@gmail.com)
 └─ Guardar en laptop local
 
 NOMBRAR CARPETA: "CRECE-POSTULACION-BACKUP-080626"
@@ -551,7 +552,7 @@ INCLUIR:
 ⚠️ CRÍTICO: Si falla servidor SERCOTEC, tenemos respaldo
 
 ⏱️ Duración: 30 min
-✅ Deadline: Sábado 8, 6 PM
+✅ Deadline: Lunes 8, 6 PM
 ```
 
 ---
@@ -570,7 +571,7 @@ INCLUIR:
 
 ---
 
-## 📅 DÍAS 10-11: DOMINGO 9 - LUNES 10 JUNIO
+## 📅 DÍAS 10-11: MARTES 9 - MIÉRCOLES 10 JUNIO
 
 **TIEMPO TOTAL: 2h**
 
@@ -578,19 +579,19 @@ INCLUIR:
 
 **TAREA F5.1: Testing pre-envío**
 ```
-VIERNES 8 (tarde):
+LUNES 8 (tarde):
 ├─ Revisar formulario SERCOTEC nuevamente
 ├─ Probar adjuntos (¿se abren correctamente?)
 ├─ Revisar archivos: no corrupted, nombres claros
 └─ Cambiar idioma navegador a ESPAÑOL si es necesario
 
-DOMINGO 9 (mañana):
+MARTES 9 (mañana):
 ├─ Revisar nuevamente todo (paranoia positiva)
-├─ Estar listo para envío lunes 10 a las 9 AM
+├─ Estar listo para envío miércoles 10 a las 9 AM
 └─ Tener teléfono a mano (por si hay errores)
 
 ⏱️ Duración: 1h
-✅ Deadline: Domingo 9, 10 AM
+✅ Deadline: Martes 9, 10 AM
 ```
 
 ---
@@ -626,16 +627,16 @@ Si servidor SERCOTEC está caído lunes 10:
 Guardar EMAIL DRAFT listo para envío emergencia.
 
 ⏱️ Duración: 30 min
-✅ Deadline: Domingo 9, 11 AM
+✅ Deadline: Martes 9, 11 AM
 ```
 
 ---
 
 ### **Camila (La Serena) — 1h**
 
-**TAREA C5.1: Estar disponible lunes 10 (morning call)**
+**TAREA C5.1: Estar disponible miércoles 10 (morning call)**
 ```
-LUNES 10 JUNIO, 9:00 AM:
+MIÉRCOLES 10 JUNIO, 9:00 AM:
 ├─ Francisco envía postulación
 ├─ Camila recibe confirmación de envío
 ├─ Validar juntos que se envió correctamente
@@ -646,7 +647,7 @@ Si no se recibe confirmación en 30 min:
    Preguntar: ¿Se recibió postulación Clínica Mediterra?
 
 ⏱️ Duración: 1h disponibilidad
-✅ Deadline: Lunes 10, 10:30 AM
+✅ Deadline: Miércoles 10, 10:30 AM
 ```
 
 ---
@@ -655,13 +656,13 @@ Si no se recibe confirmación en 30 min:
 
 - [ ] Francisco: Formulario testeado (archivos se abren OK)
 - [ ] Francisco: Email de contingencia draft preparado
-- [ ] Francisco: Listo para enviar lunes 9 AM
-- [ ] Camila: Disponible lunes 10, 9 AM (morning call)
+- [ ] Francisco: Listo para enviar miércoles 10 AM
+- [ ] Camila: Disponible miércoles 10, 9 AM (morning call)
 - [ ] Ambos: Confirmación de envío exitoso
 
 ---
 
-## 🔥 DÍA CRÍTICO: MARTES 11 JUNIO
+## 🔥 DÍA CRÍTICO: JUEVES 11 JUNIO
 
 **TIEMPO TOTAL: 2h**
 
@@ -669,7 +670,7 @@ Si no se recibe confirmación en 30 min:
 
 **TAREA F6.1: ENVIAR POSTULACIÓN (ANTES DE LAS 15:00)**
 ```
-⏰ DEADLINE ABSOLUTO: MARTES 11 JUNIO A LAS 15:00 HORAS
+⏰ DEADLINE ABSOLUTO: JUEVES 11 JUNIO A LAS 15:00 HORAS
 
 PASOS:
 1. Ingresar a www.sercotec.cl con credenciales

@@ -1,10 +1,10 @@
-# RESUMEN EJECUTIVO: 31 MAYO 2026
+# RESUMEN EJECUTIVO: 31 MAYO 2026 (DOMINGO)
 ## Transformación Digital + Fondos Concursables
 
 **Para:** Francisco Tohá, Camila Tohá  
 **Preparado por:** Director Digital  
-**Fecha:** 31 mayo 2026  
-**Próxima reunión:** 3 junio 2026 (lunes 9 AM)
+**Fecha:** Domingo 31 mayo 2026  
+**Próxima reunión:** Lunes 3 junio 2026, 9:00 AM
 
 ---
 
@@ -38,12 +38,12 @@ COMPLETITUD FONDOS: 0% ejecución (comienza HOY)
 
 | Tarea | Responsable | Deadline | Tiempo |
 |-------|-------------|----------|--------|
-| Documentación empresa (F29 + deudas + movimientos) | Camila | 6 junio | 2h |
-| Presupuesto $5M draft + aprobación | Francisco | 4 junio | 2h |
-| Plan de negocio draft + aprobación | Francisco | 4 junio | 2h |
-| Video pitch grabado, editado, aprobado | Camila | 2 junio | 4h |
-| Formulario SERCOTEC completado + testing | Francisco | 10 junio | 3h |
-| **POSTULACIÓN ENVIADA** | **Francisco** | **11 junio 14:30** | **0.5h** |
+| Documentación empresa (F29 + deudas + movimientos) | Camila | Viernes 6 junio | 2h |
+| Presupuesto $5M draft + aprobación | Francisco | Jueves 4 junio | 2h |
+| Plan de negocio draft + aprobación | Francisco | Jueves 4 junio | 2h |
+| Video pitch grabado, editado, aprobado | Camila | Martes 2 junio | 4h |
+| Formulario SERCOTEC completado + testing | Francisco | Miércoles 10 junio | 3h |
+| **POSTULACIÓN ENVIADA** | **Francisco** | **Jueves 11 junio 14:30** | **0.5h** |
 
 **Tiempo total:** 13.5h distribuidas en 11 días  
 **Equipo:** 2 personas (Francisco + Camila)  
@@ -234,16 +234,16 @@ PRÓXIMAS ETAPAS:
 
 ---
 
-## ✅ ACCIÓN INMEDIATA (HOY 31 MAYO)
+## ✅ ACCIÓN INMEDIATA (HOY DOMINGO 31 MAYO)
 
-### **ANTES DE LAS 4 PM:**
+### **ANTES DE LAS 4 PM (DOMINGO):**
 
-**Francisco:**
+**Francisco (Santiago):**
 1. [ ] Leer `CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md` (20 min)
 2. [ ] Crear cuenta www.sercotec.cl (15 min)
 3. [ ] Revisar `PRESUPUESTO-CRECE-5M-DESGLOSADO.md` (15 min)
 
-**Camila:**
+**Camila (La Serena):**
 1. [ ] Revisar guión video `GUION-VIDEO-PITCH-CRECE-90SEG.md` (10 min)
 2. [ ] Feedback a Francisco (10 min)
 3. [ ] Iniciar recopilación documentación empresa (30 min)
