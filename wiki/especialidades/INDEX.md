@@ -4,30 +4,30 @@
 
 ---
 
-## Especialidades Principales
+## Especialidades Disponibles
 
-### Ginecología
+### [[ginecologia|Ginecología]]
 - 4 médicos
 - Patologías urinarias, pélvicas, reproductivas en mujeres
 
-### Urología
-- 3 médicos (Dr. Alexander Andrusco, Dr. Andrei Andrusco, +1)
+### [[urologia|Urología]]
+- 3 médicos
 - Especialidad única en macrozona para hombres
 - Disfunción eréctil, eyaculación precoz, salud urinaria, próstata
 
-### Kinesioterapia Pélvica
+### [[kinesiologia-pelvica|Kinesioterapia Pélvica]]
 - 3 kinesiólogos
 - Reeducación muscular, incontinencia, rehabilitación post-parto
 
-### Psicología-Sexología
+### [[psicologia-sexologia|Psicología-Sexología]]
 - 1 especialista
 - Terapia sexual, pareja, ansiedad de desempeño
 
-### Traumatología
+### [[traumatologia|Traumatología]]
 - 1 especialista
 - Lesiones musculoesqueléticas
 
-### Nutrición
+### [[nutricion|Nutrición]]
 - 1 especialista
 - Nutrición pélvica, cambios estilo de vida
 
@@ -41,12 +41,6 @@ Ningún otro centro en la macrozona (Coquimbo) ofrece esta combinación.
 
 ---
 
-## Especialidades Archivos
-
-- [[traumatologia|Traumatología]] (details)
-
----
-
 **Última actualización:** 31 mayo 2026  
-Volver a: [[INDEX|Índice Principal]]
+Volver a: [[INDEX]]
 

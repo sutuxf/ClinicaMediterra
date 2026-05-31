@@ -6,13 +6,15 @@
 
 ## Profesionales Destacados
 
-### Médicos
-- [[dr-alexander-andrusco|Dr. Alexander Andrusco]] — Urología (3 médicos)
-- [[andrei-andrusco|Dr. Andrei Andrusco]] — Urología
-- [[dra-carla-carvajal|Dra. Carla Carvajal]] — Ginecología (4 médicos)
+### Médicos Urología
+- [[dr-alexander-andrusco]] — Dr. Alexander Andrusco
+- [[andrei-andrusco]] — Dr. Andrei Andrusco
+
+### Médicos Ginecología
+- [[dra-carla-carvajal]] — Dra. Carla Carvajal
 
 ### Otros Especialistas
-- [[alejandra-budinich|Alejandra Budinich]] — Kinesioterapia Pélvica (3 kinesiólogos)
+- [[alejandra-budinich]] — Kinesioterapia Pélvica
 
 ---
 
@@ -34,5 +36,5 @@ Cada profesional tiene ángulos únicos:
 ---
 
 **Última actualización:** 31 mayo 2026  
-Volver a: [[INDEX|Índice Principal]]
+Volver a: [[INDEX]]
 

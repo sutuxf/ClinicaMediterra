@@ -9,35 +9,35 @@
 ## Agentes Prioritarios
 
 ### 1️⃣ Recordatorios Automáticos
-[[agente-recordatorios|Agente Recordatorios]]
+[[agente-recordatorios]]
 - **Problema:** 40-50% no-shows
 - **Solución:** Confirmación inmediata → 48h → 24h → post no-show empático
 - **ROI:** Recupera $2.7-3M/mes (mes 4+)
 - **Presupuesto:** $120K setup
 
 ### 2️⃣ Chatbot Web + Trazabilidad
-[[agente-chatbot-web|Agente Chatbot Web]]
+[[agente-chatbot-web]]
 - **Problema:** 0% trazabilidad de pacientes web
 - **Solución:** Chat captura intención + ciudad + especialidad
 - **ROI:** 100% origen de pacientes catalogado
 - **Presupuesto:** $110K setup
 
 ### 3️⃣ FAQ WhatsApp
-[[agente-faq-whatsapp|Agente FAQ WhatsApp]]
+[[agente-faq-whatsapp]]
 - **Problema:** Secretaria sobrecargada 15-25 msg/día
 - **Solución:** Bot responde 60%+ preguntas automáticamente
 - **ROI:** Libera 20h/semana
 - **Presupuesto:** $80K setup
 
 ### 4️⃣ Generador de Contenido
-[[agente-contenido-rrss|Agente Contenido RRSS]]
+[[agente-contenido-rrss]]
 - **Problema:** Vergüenza/tabú en hombres → sin educación
 - **Solución:** 5-8 posts/día basados en especialidades + testimonios
 - **ROI:** 160 posts/mes vs 40 actuales (-$420K creadora 6m)
 - **Presupuesto:** $130K setup
 
 ### 5️⃣ Reporte KPIs Automático
-[[agente-reporte-kpis|Agente Reporte KPIs]]
+[[agente-reporte-kpis]]
 - **Problema:** Decisiones ad-hoc sin datos
 - **Solución:** Daily report automático con KPIs
 - **ROI:** Decisiones data-driven cada mañana
@@ -54,5 +54,5 @@
 ---
 
 **Última actualización:** 31 mayo 2026  
-Volver a: [[INDEX|Índice Principal]]
+Volver a: [[INDEX]]
 

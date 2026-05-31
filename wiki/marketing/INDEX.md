@@ -5,7 +5,7 @@ Estrategia de crecimiento 6 meses (línea masculina + expansión + canales).
 ---
 
 ## Línea Masculina
-[[linea-masculina|Línea Masculina: 32% → 40%]]
+[[linea-masculina]]
 
 **Meta:** +25 pacientes hombres en mes 2 (pauta)  
 **Raíz:** Vergüenza/tabú + falta de información  
@@ -14,16 +14,16 @@ Estrategia de crecimiento 6 meses (línea masculina + expansión + canales).
 ---
 
 ## Expansión Geográfica
-[[expansion-geografica|Expansión Geográfica]]
+[[expansion-geografica]]
 
 **Ciudades:** Ovalle, Vicuña, Vallenar, zonas mineras  
 **Potencial:** +20% pacientes nuevos  
-**Infraestructura:** Telemedicina ($790K)
+**Infraestructura:** Telemedicina
 
 ---
 
-## Canales
-[[canales|Canales Digitales]]
+## Canales Digitales
+[[canales]]
 
 **Estado verificado (30 mayo):**
 - ✅ Instagram (@mediterraclinica) — 1.196 seg, activo
@@ -34,8 +34,8 @@ Estrategia de crecimiento 6 meses (línea masculina + expansión + canales).
 
 ---
 
-## KPIs
-[[kpis|KPIs y Medición]]
+## KPIs y Medición
+[[kpis]]
 
 **Baseline (estimado sin trazabilidad):**
 - No-shows: ~40-50% (confirmado)
@@ -50,5 +50,5 @@ Estrategia de crecimiento 6 meses (línea masculina + expansión + canales).
 ---
 
 **Última actualización:** 31 mayo 2026  
-Volver a: [[INDEX|Índice Principal]]
+Volver a: [[INDEX]]
 

@@ -5,7 +5,7 @@ Procesos operacionales clave para automatizar con IA.
 ---
 
 ## Recordatorios de Citas
-[[recordatorios-citas|Recordatorios y Confirmación]]
+[[recordatorios-citas]]
 
 **Problema:** 40-50% no-shows → $9M/mes perdidos  
 **Solución:** Flujo WhatsApp automático
@@ -18,8 +18,8 @@ Procesos operacionales clave para automatizar con IA.
 
 ---
 
-## FAQ WhatsApp
-[[faq-whatsapp|FAQ WhatsApp Automático]]
+## FAQ y Atención WhatsApp
+[[atencion-whatsapp]]
 
 **Problema:** Secretaria sobrecargada 15-25 msg/día  
 **Solución:** Bot responde 60% preguntas
@@ -34,7 +34,7 @@ Procesos operacionales clave para automatizar con IA.
 ---
 
 ## Medición y Trazabilidad
-[[medicion-y-trazabilidad|Sistema de Trazabilidad]]
+[[medicion-y-trazabilidad]]
 
 **Problema:** No saben de dónde vienen pacientes  
 **Solución:** 
@@ -47,7 +47,7 @@ Procesos operacionales clave para automatizar con IA.
 ---
 
 ## Telemedicina
-[[telemedicina|Telemedicina para Expansión]]
+[[telemedicina]]
 
 **Problema:** Expansión geográfica requiere presencia física  
 **Solución:** 3 consultorios equipados (Ovalle, Vicuña, Vallenar)  
@@ -56,5 +56,5 @@ Procesos operacionales clave para automatizar con IA.
 ---
 
 **Última actualización:** 31 mayo 2026  
-Volver a: [[INDEX|Índice Principal]]
+Volver a: [[INDEX]]
 
