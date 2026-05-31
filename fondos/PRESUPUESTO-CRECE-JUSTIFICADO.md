@@ -25,91 +25,134 @@
 
 **Justificación:** Gobernanza, coordinación y capacitación del proyecto
 
-### A.1 Gestor Digital / Project Manager = $300.000
+### A.1 Gestoría Técnica de Implementación IA = $300.000
 
-**¿Por qué?** Alguien debe orquestar 5 agentes IA simultáneamente durante 6 meses.
+**¿Por qué?** Orquestar 5 agentes IA simultáneamente requiere gestión técnica especializada durante implementación.
 
-**Desglose:**
-- Persona: Especialista IA/PM (tiempo completo 6 meses)
-- Salario mensual: $50.000 (mercado para PM tech en región)
-- Duración: 6 meses
+**Desglose (TRABAJOS DEFINIDOS):**
+- Diseño del roadmap ejecutivo (trabajo puntual): $50K
+  - Mapeo de fases, dependencias, riesgos
+  - Plan de escalamiento 6 meses
+  
+- Auditoría técnica pre-lanzamiento (trabajo puntual): $80K
+  - Revisión arquitectura agentes
+  - Testing integración Medilink
+  - Validación seguridad datos
+  
+- Coordinación lanzamiento fase 1-2 (trabajo puntual): $100K
+  - Setup inicial infraestructura
+  - Go-live soporte (recordatorios + FAQ)
+  - Documentación operaciones
+  
+- Auditoría post-implementación (trabajo puntual): $70K
+  - Validación KPIs (mes 2-3)
+  - Optimización prompts basado en datos reales
+  - Plan ajustes
+  
 - **Total: $300.000**
 
 **Entregables:**
-✅ Roadmap de implementación agentes IA  
-✅ Weekly reports a SERCOTEC  
-✅ Coordinación equipo técnico + clínico  
-✅ Monitoreo KPIs agentes
+✅ Documento roadmap técnico detallado  
+✅ Reporte auditoría pre-lanzamiento  
+✅ Documentación operaciones (SOPs)  
+✅ Reporte post-implementación con optimizaciones
 
 ---
 
-### A.2 Training IA + Medilink Integración = $250.000
+### A.2 Capacitación Técnica Especializada = $250.000
 
-**¿Por qué?** El equipo actual NO conoce IA ni APIs. Necesitan capacitación formal.
+**¿Por qué?** El equipo actual necesita capacitación formal en IA, APIs y Medilink integración (trabajos puntuales definidos).
 
-**Desglose:**
-- Workshop inicial (2 días): $30K
+**Desglose (SERVICIOS ESPECIALIZADOS):**
+- Workshop IA + APIs (2 días, 12 personas): $60K
   - Conceptos IA, prompting, Medilink API, Zapier/Make
-- Mentoring semanal (24 semanas): $200K
-  - 2h/semana con especialista externo
-  - Resolución de problemas en vivo
-- Documentación + protocolos: $20K
-  - Guías operativas, checklists, troubleshooting
+  - Prácticas en vivo con casos reales
+  
+- Capacitación operaciones agentes (3 sesiones, 2h c/u): $50K
+  - Sesión 1: Recordatorios + Chatbot web
+  - Sesión 2: FAQ WhatsApp + Contenido IA
+  - Sesión 3: KPIs automáticos + troubleshooting
+  
+- Documentación + Protocolos (trabajo puntual): $80K
+  - Manuales operativos (Spanish) - 50h @ $1.6K/h
+  - SOPs para cada agente (checklists, emergencias)
+  - Guías troubleshooting por escenario
+  
+- Mentoring post-lanzamiento (2 meses): $60K
+  - 4h/semana disponibilidad (NO salario, trabajo puntual)
+  - Soporte en vivo primeras 8 semanas
+  - Resolución de problemas emergentes
+  
 - **Total: $250.000**
 
 **Entregables:**
-✅ Equipo capacitado en operación de agentes  
-✅ Documentación interna (Spanish)  
-✅ Protocolos de escalamiento  
-✅ SOP (Standard Operating Procedures) para cada agente
+✅ Equipo certificado en operación de agentes  
+✅ Manuales operativos en Spanish (100+ páginas)  
+✅ SOPs por agente con checklists  
+✅ Banco de soluciones troubleshooting
 
 ---
 
-### A.3 Consultoría Técnica (Arquitectura IA) = $200.000
+### A.3 Consultoría Arquitectura IA = $200.000
 
-**¿Por qué?** Diseño de flujos complejos requiere experticia external especializada.
+**¿Por qué?** Diseño de flujos complejos requiere experticia especializada (trabajos por proyecto, no horas de consultoría abierta).
 
-**Desglose:**
-- Diseño arquitectura agentes (80h @ $1.5K/h): $120K
-  - Mapeo de integraciones Medilink ↔ APIs
-  - Definición de prompts + flows
-  - Escalabilidad + seguridad
-- Integración técnica (40h @ $1.5K/h): $60K
-  - Setup infraestructura (Railway, Render, webhooks)
-  - Testing y validación
-- Auditoría de datos (20h @ $1K/h): $20K
-  - RGPD/privacidad (datos pacientes)
+**Desglose (PROYECTOS DEFINIDOS):**
+- Diseño arquitectura 5 agentes IA (proyecto): $80K
+  - Definición de flujos específicos (Medilink ↔ APIs)
+  - Especificaciones prompts + templates
+  - Diagrama integraciones
+  
+- Integración técnica Medilink (proyecto): $60K
+  - Setup webhooks Medilink → agentes
+  - Testing integración (ambiente staging)
+  - Documentación técnica API
+  
+- Auditoría seguridad datos (proyecto): $40K
+  - Validación RGPD (datos pacientes)
+  - Análisis de riesgos
+  - Plan de mitigación
+  
+- Plan escalamiento + contingencia (proyecto): $20K
+  - Validación para crecimiento mes 4-6
+  - Contingencies si APIs fallan
+  
 - **Total: $200.000**
 
 **Entregables:**
-✅ Documento arquitectura técnica  
-✅ Guía de integración Medilink  
-✅ Plan de seguridad de datos  
-✅ Roadmap de escalamiento
+✅ Documento arquitectura completo  
+✅ Especificaciones técnicas (prompts, flows)  
+✅ Reporte seguridad RGPD  
+✅ Plan escalamiento + contingencias
 
 ---
 
-### A.4 Identidad Visual + Brand Guidelines IA = $150.000
+### A.4 Brand Guidelines + Diseño Interfaz IA = $150.000
 
-**¿Por qué?** Los agentes IA tienen "voz" y "tono". Deben alinearse con marca Mediterra.
+**¿Por qué?** Los agentes IA tienen "voz" que debe alinearse con marca Mediterra (trabajos específicos, no servicios indefinidos).
 
-**Desglose:**
-- Brand guide para respuestas IA: $50K
-  - Tono (empatía, profesionalismo, educativo)
-  - Plantillas de mensajes (confirmación, recordatorio, post no-show)
-  - Paleta de emojis consistente (sin ser infantil)
-- Diseño chat widget (Wix + WhatsApp): $60K
-  - Visual profesional
-  - Flujos intuitivos
-  - Responsive mobile
-- Capacitación contenido (equipo crea posts post-lanzamiento): $40K
+**Desglose (SERVICIOS DISEÑO PUNTUALES):**
+- Brand guidelines IA (proyecto): $50K
+  - Documento tone of voice (tono, empatía, educativo)
+  - Templates mensajes por agente (confirmación, recordatorio, post no-show)
+  - Paleta emojis + ejemplos
+  
+- Diseño chat widget (proyecto): $60K
+  - Diseño visual (Figma)
+  - Implementación en Wix
+  - Testing responsivo mobile
+  
+- Design review + ajustes (proyecto): $40K
+  - 2 rondas ajustes pos-feedback Camila
+  - Validación UX (4h usuario testing)
+  
 - **Total: $150.000**
 
 **Entregables:**
-✅ Brand guide IA (documento 20-30 páginas)  
+✅ Brand guidelines IA (documento 20 páginas)  
 ✅ Chat widget diseñado + implementado  
-✅ Templates mensajes por agente  
-✅ Training equipo en tone of voice
+✅ Template library (5+ templates por agente)  
+✅ Reporte testing UX
 
 ---
 
