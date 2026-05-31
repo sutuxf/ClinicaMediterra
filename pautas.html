@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pautas Interactivas — Clínica Mediterra</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: linear-gradient(135deg, #F4F0E7 0%, #FBF8F3 100%); font-family: "'DM Sans', system-ui, sans-serif"; color: #1E293B; }
+
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 16px; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1C3A5F 0%, #0F2847 100%);
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    header .container { display: flex; justify-content: space-between; align-items: center; }
+    .logo { color: white; font-size: 20px; font-weight: 700; font-family: "'Playfair Display', serif"; }
+    .subtitle { color: #93C5FD; font-size: 12px; }
+
+    /* PHASE SELECTOR */
+    .phase-selector {
+      display: flex;
+      gap: 12px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+    }
+
+    .phase-btn {
+      background: white;
+      border: 2px solid #E5DDD0;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .phase-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+
+    .phase-btn.active {
+      background: #1C3A5F;
+      color: white;
+      border-color: #1C3A5F;
+      box-shadow: 0 4px 16px rgba(28, 58, 95, 0.3);
+    }
+
+    .phase-badge {
+      position: absolute;
+      top: -8px;
+      right: 8px;
+      background: #EA580C;
+      color: white;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    /* CARDS */
+    .phase-card {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      border-left: 6px solid #059669;
+    }
+
+    .phase-card.fase1 { border-left-color: #1D4ED8; }
+    .phase-card.fase2 { border-left-color: #B45309; }
+    .phase-card.fase3 { border-left-color: #DC2626; }
+
+    .phase-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .phase-header h2 { font-family: "'Playfair Display', serif"; font-size: 24px; color: #1C3A5F; }
+
+    .budget-badge {
+      background: linear-gradient(135deg, #EA580C, #DC2626);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .phase-description {
+      background: #F8FAFC;
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+      border-left: 4px solid #059669;
+    }
+
+    .phase-description p { font-size: 14px; line-height: 1.6; color: #334155; margin-bottom: 6px; }
+
+    /* ANUNCIOS GRID */
+    .anuncios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .anuncio-card {
+      background: #FFFFFF;
+      border: 1px solid #E5DDD0;
+      border-radius: 12px;
+      padding: 14px;
+      transition: all 0.2s;
+    }
+
+    .anuncio-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-color: #1C3A5F;
+    }
+
+    .anuncio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 10px;
+      gap: 8px;
+    }
+
+    .anuncio-title { font-size: 13px; font-weight: 700; color: #1C3A5F; }
+    .anuncio-format { font-size: 10px; background: #ECFDF5; color: #059669; padding: 3px 8px; border-radius: 6px; white-space: nowrap; }
+
+    .anuncio-body {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #475569;
+      margin-bottom: 10px;
+      padding: 10px;
+      background: #F8FAFC;
+      border-radius: 8px;
+      max-height: 120px;
+      overflow-y: auto;
+    }
+
+    .anuncio-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: #94A3B8;
+      border-top: 1px solid #E5DDD0;
+      padding-top: 8px;
+    }
+
+    /* METRICS */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .metric-box {
+      background: linear-gradient(135deg, #1C3A5F15, #0F284715);
+      border: 1px solid #E5DDD0;
+      border-radius: 10px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .metric-value { font-size: 16px; font-weight: 700; color: #1C3A5F; }
+    .metric-label { font-size: 10px; color: #94A3B8; margin-top: 4px; }
+
+    /* AUDIENCE */
+    .audience-box {
+      background: #F0F9FF;
+      border-left: 4px solid #1D4ED8;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .audience-title { font-weight: 700; color: #1C3A5F; margin-bottom: 6px; }
+
+    /* TIMELINE */
+    .timeline {
+      display: flex;
+      gap: 4px;
+      height: 24px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 12px 0;
+    }
+
+    .timeline-segment {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      transition: all 0.2s;
+    }
+
+    .timeline-segment:hover { filter: brightness(0.9); }
+
+    .fase1-color { background: #1D4ED8; }
+    .fase2-color { background: #B45309; }
+    .fase3-color { background: #DC2626; }
+
+    /* TABS */
+    .tabs { display: flex; gap: 8px; margin-bottom: 16px; border-bottom: 2px solid #E5DDD0; }
+    .tab { background: none; border: none; padding: 8px 0; margin-right: 16px; font-size: 14px; font-weight: 600; color: #94A3B8; cursor: pointer; transition: all 0.2s; }
+    .tab.active { color: #1C3A5F; border-bottom: 3px solid #1C3A5F; }
+
+    /* BUTTON */
+    .btn {
+      background: #1C3A5F;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn:hover { background: #0F2847; transform: translateY(-2px); }
+    .btn.secondary { background: white; color: #1C3A5F; border: 2px solid #1C3A5F; }
+
+    /* COMPARATIVA */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin: 12px 0;
+    }
+
+    .comparison-table th { background: #1C3A5F; color: white; padding: 12px; text-align: left; font-size: 12px; font-weight: 700; }
+    .comparison-table td { padding: 10px 12px; border-bottom: 1px solid #F1F5F9; font-size: 12px; }
+    .comparison-table tr:hover { background: #F8FAFC; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .phase-selector { gap: 8px; }
+      .phase-header { flex-direction: column; }
+      .anuncios-grid { grid-template-columns: 1fr; }
+      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1C3A5F;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div>
+        <div class="logo">🎯 Pautas Interactivas</div>
+        <div class="subtitle">Clínica Mediterra — Línea Masculina Mes 2</div>
+      </div>
+      <div style="color: white; font-size: 12px; text-align: right;">
+        <div style="font-weight: 700; font-size: 16px;">$27.000 CLP</div>
+        <div>Presupuesto Total</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding: 24px 0;">
+      <div id="app"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Pautas Interactivas — Mes 2 (Junio 2026) | Última actualización: 30 mayo 2026</p>
+      <p style="margin-top: 8px;">Fuente: PAUTA-LINEA-MASCULINA-MES2.md | <a href="maestro.html" style="color: #93C5FD;">Volver a Maestro</a></p>
+    </div>
+  </footer>
+
+  <script type="text/babel">
+    const PautasApp = () => {
+      const [activePhase, setActivePhase] = React.useState('fase1');
+      const [activeView, setActiveView] = React.useState('anuncios');
+
+      const phases = {
+        fase1: {
+          name: 'Fase 1: Normalización',
+          week: 'Semana 5 (1-7 junio)',
+          budget: '$10.000 CLP',
+          color: '#1D4ED8',
+          objective: 'Romper el tabú. No hay vergüenza en buscar ayuda.',
+          message: '"Los hombres vienen acá todos los días. Aquí no hay vergüenza."',
+          audience: 'Hombres 35-65 años (frío, no engaged) | ~45.000 personas',
+          expectedCTR: '1-2%',
+          expectedLeads: '~450-900',
+          anuncios: [
+            {
+              id: '1A',
+              title: 'Video "Los hombres vienen acá"',
+              format: 'Reel/Video',
+              platform: 'Instagram + Facebook',
+              budget: '$4.000 CLP',
+              copy: '"Los hombres vienen acá todos los días. Disfunción eréctil. Incontinencia. Problemas de próstata. Aquí no hay vergüenza. Solo soluciones. Agendá sin costo."',
+              metrics: 'Video plays, Shares, Views',
+              cpl: '~$10-15'
+            },
+            {
+              id: '1B',
+              title: 'Carousel "¿Esto te suena?"',
+              format: 'Carousel (5 slides)',
+              platform: 'Facebook',
+              budget: '$3.000 CLP',
+              copy: 'Slide 1: "¿Esto te suena?" | Slides 2-4: Disfunción eréctil (40%), Incontinencia, Problemas próstata | Slide 5: "Consulta gratis"',
+              metrics: 'Clicks a slide 5, Lead form completions',
+              cpl: '~$8-12'
+            },
+            {
+              id: '1C',
+              title: 'Static post "¿Sabías que...?"',
+              format: 'Single Image',
+              platform: 'Facebook + Instagram',
+              budget: '$2.000 CLP',
+              copy: '"¿Sabías que 40% de hombres a los 40+ tiene disfunción eréctil? Pero casi nadie lo comenta. En Mediterra es NORMAL. Aquí no hay tabú."',
+              metrics: 'CTR, Landing page visits',
+              cpl: '~$7-10'
+            }
+          ]
+        },
+        fase2: {
+          name: 'Fase 2: Educación',
+          week: 'Semana 6 (8-14 junio)',
+          budget: '$10.000 CLP',
+          color: '#B45309',
+          objective: 'Educar sobre problemas comunes. Mostrar expertise.',
+          message: '"Preguntas que nunca te animaste a hacer al urólogo"',
+          audience: 'Warm audience (vieron Fase 1) + Website visitors | ~1.200 personas',
+          expectedCTR: '4-6%',
+          expectedLeads: '~48-72',
+          anuncios: [
+            {
+              id: '2A',
+              title: 'Video "Preguntas que nunca..."',
+              format: 'Reel/Video',
+              platform: 'Instagram Reels + Facebook',
+              budget: '$4.500 CLP',
+              copy: '"Preguntas que nunca te animaste a hacer: ¿Es normal? ¿Tiene solución? ¿Duele? El Dr. Andrusco responde sin jerga."',
+              metrics: 'Video completion rate, Shares',
+              cpl: '~$60-80'
+            },
+            {
+              id: '2B',
+              title: 'Testimonial Pia (60 seg)',
+              format: 'Video Testimonial',
+              platform: 'Instagram + Facebook',
+              budget: '$3.000 CLP',
+              copy: 'Pia cuenta: "Me explicaron TODO. Me ayudó de gran manera. No es una clínica normal, es Mediterra."',
+              metrics: 'Video views, Engagement',
+              cpl: '~$50-70'
+            },
+            {
+              id: '2C',
+              title: 'Carrusel "Mitos vs Realidad"',
+              format: 'Carousel (4 slides)',
+              platform: 'Facebook + Instagram',
+              budget: '$2.500 CLP',
+              copy: 'Mito 1: "Solo le pasa a mayores" | Realidad: Aparece en 30+ | Mito 2: "No tiene solución" | Realidad: Se trata y mejora',
+              metrics: 'Carousel interactions',
+              cpl: '~$55-75'
+            }
+          ]
+        },
+        fase3: {
+          name: 'Fase 3: Conversión',
+          week: 'Semana 7-8 (15-28 junio)',
+          budget: '$7.000 CLP',
+          color: '#DC2626',
+          objective: 'Convertir interés en acción. Agendar consulta.',
+          message: '"Tu primera consulta: qué esperar"',
+          audience: 'Hot audience (clickearon fases anteriores) + Google Search | ~300 personas',
+          expectedCTR: '8-12%',
+          expectedLeads: '~24-36',
+          anuncios: [
+            {
+              id: '3A',
+              title: 'Video "Tu primera consulta"',
+              format: 'Reel (45 seg)',
+              platform: 'Instagram + Facebook',
+              budget: '$3.500 CLP',
+              copy: '"1️⃣ Bienvenida cálida 2️⃣ Explicación completa 3️⃣ Examen respetuoso 4️⃣ Plan claro. Te hacen sentir escuchado, contenido y acompañado."',
+              metrics: 'Video views, Clicks to WhatsApp',
+              cpl: '~$150-200'
+            },
+            {
+              id: '3B',
+              title: 'Google Search Ads',
+              format: 'Search Text Ad',
+              platform: 'Google Ads',
+              budget: '$2.000 CLP',
+              copy: 'Headline: "Urología sin Vergüenza" | Keywords: "urólogo La Serena", "problemas próstata", "disfunción eréctil"',
+              metrics: 'Impressions, CTR, Conversions',
+              cpl: '~$100-150'
+            },
+            {
+              id: '3C',
+              title: 'Retargeting "Último llamado"',
+              format: 'Static + Video',
+              platform: 'Facebook + Instagram',
+              budget: '$1.500 CLP',
+              copy: '"Este mes hablamos sin tabú. Si tienes dudas: ahora es el momento. Aquí no hay vergüenza. Solo soluciones."',
+              metrics: 'Click-through rate, Conversions',
+              cpl: '~$120-180'
+            }
+          ]
+        }
+      };
+
+      const activePhaseData = phases[activePhase];
+
+      return (
+        <div>
+          {/* SELECTOR DE FASES */}
+          <div style={{ marginBottom: '32px' }}>
+            <h1 style={{ fontSize: '28px', marginBottom: '16px', fontFamily: "'Playfair Display', serif" }}>
+              Línea Masculina: 3 Fases
+            </h1>
+            <div className="phase-selector">
+              {Object.keys(phases).map(key => (
+                <button
+                  key={key}
+                  className={`phase-btn ${activePhase === key ? 'active' : ''}`}
+                  onClick={() => setActivePhase(key)}
+                >
+                  {phases[key].name}
+                  <span className="phase-badge">{phases[key].week.split('(')[1]}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* RESUMEN DE FASE */}
+          <div className={`phase-card ${activePhase}`}>
+            <div className="phase-header">
+              <div>
+                <h2>{activePhaseData.name}</h2>
+                <div style={{ fontSize: '13px', color: '#64748B', marginTop: '4px' }}>
+                  {activePhaseData.week}
+                </div>
+              </div>
+              <div className="budget-badge">{activePhaseData.budget}</div>
+            </div>
+
+            <div className="phase-description">
+              <p><strong>Objetivo:</strong> {activePhaseData.objective}</p>
+              <p><strong>Mensaje clave:</strong> {activePhaseData.message}</p>
+              <p><strong>Audiencia:</strong> {activePhaseData.audience}</p>
+            </div>
+
+            {/* MÉTRICAS ESPERADAS */}
+            <h3 style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px', color: '#1C3A5F' }}>
+              📊 Métricas Esperadas
+            </h3>
+            <div className="metrics-grid">
+              <div className="metric-box">
+                <div className="metric-value">{activePhaseData.expectedCTR}</div>
+                <div className="metric-label">CTR esperado</div>
+              </div>
+              <div className="metric-box">
+                <div className="metric-value">{activePhaseData.expectedLeads}</div>
+                <div className="metric-label">Leads estimado</div>
+              </div>
+              <div className="metric-box">
+                <div className="metric-value">{activePhaseData.budget}</div>
+                <div className="metric-label">Presupuesto</div>
+              </div>
+            </div>
+          </div>
+
+          {/* ANUNCIOS */}
+          <h2 style={{ fontSize: '20px', fontWeight: '700', marginTop: '32px', marginBottom: '16px', color: '#1C3A5F', fontFamily: "'Playfair Display', serif" }}>
+            🎨 {activePhaseData.anuncios.length} Anuncios
+          </h2>
+          <div className="anuncios-grid">
+            {activePhaseData.anuncios.map(anuncio => (
+              <div key={anuncio.id} className="anuncio-card">
+                <div className="anuncio-header">
+                  <span className="anuncio-title">{anuncio.id}: {anuncio.title}</span>
+                  <span className="anuncio-format">{anuncio.format}</span>
+                </div>
+
+                <div style={{ fontSize: '10px', color: '#94A3B8', marginBottom: '8px' }}>
+                  📍 {anuncio.platform}
+                </div>
+
+                <div className="anuncio-body">
+                  {anuncio.copy}
+                </div>
+
+                <div className="anuncio-meta">
+                  <span>💰 {anuncio.budget}</span>
+                  <span>CPL: {anuncio.cpl}</span>
+                  <span>📈 {anuncio.metrics}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* COMPARATIVA DE FASES */}
+          <h2 style={{ fontSize: '20px', fontWeight: '700', marginTop: '32px', marginBottom: '16px', color: '#1C3A5F', fontFamily: "'Playfair Display', serif" }}>
+            📊 Comparativa de Fases
+          </h2>
+          <div style={{ overflowX: 'auto' }}>
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>Fase</th>
+                  <th>Período</th>
+                  <th>Objetivo</th>
+                  <th>Audiencia</th>
+                  <th>Budget</th>
+                  <th>Anuncios</th>
+                  <th>Meta Leads</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.values(phases).map(phase => (
+                  <tr key={phase.name}>
+                    <td><strong style={{ color: phase.color }}>{phase.name.split(':')[0]}</strong></td>
+                    <td>{phase.week}</td>
+                    <td>{phase.objective}</td>
+                    <td><small>{phase.audience.split('|')[0]}</small></td>
+                    <td><strong>{phase.budget}</strong></td>
+                    <td>{phase.anuncios.length} creatividades</td>
+                    <td><strong>{phase.expectedLeads}</strong></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* RESUMEN PRESUPUESTO */}
+          <div className="phase-card" style={{ marginTop: '32px', borderLeft: '6px solid #059669' }}>
+            <h3 style={{ fontSize: '16px', fontWeight: '700', marginBottom: '12px', color: '#1C3A5F' }}>
+              💰 Resumen Presupuesto Mes 2
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '12px' }}>
+              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', textAlign: 'center' }}>
+                <div style={{ fontSize: '18px', fontWeight: '700', color: '#1D4ED8' }}>$10.000</div>
+                <div style={{ fontSize: '11px', color: '#64748B' }}>Fase 1 (Normalización)</div>
+              </div>
+              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', textAlign: 'center' }}>
+                <div style={{ fontSize: '18px', fontWeight: '700', color: '#B45309' }}>$10.000</div>
+                <div style={{ fontSize: '11px', color: '#64748B' }}>Fase 2 (Educación)</div>
+              </div>
+              <div style={{ padding: '10px', background: '#F8FAFC', borderRadius: '8px', textAlign: 'center' }}>
+                <div style={{ fontSize: '18px', fontWeight: '700', color: '#DC2626' }}>$7.000</div>
+                <div style={{ fontSize: '11px', color: '#64748B' }}>Fase 3 (Conversión)</div>
+              </div>
+              <div style={{ padding: '10px', background: 'linear-gradient(135deg, #1C3A5F15, #0F284715)', borderRadius: '8px', textAlign: 'center', border: '2px solid #1C3A5F' }}>
+                <div style={{ fontSize: '18px', fontWeight: '700', color: '#1C3A5F' }}>$27.000</div>
+                <div style={{ fontSize: '11px', color: '#64748B' }}>TOTAL MES 2</div>
+              </div>
+            </div>
+          </div>
+
+          {/* ACCIONES RÁPIDAS */}
+          <div style={{ marginTop: '32px', padding: '20px', background: '#F0F9FF', borderRadius: '12px', border: '1px solid #1D4ED8' }}>
+            <h3 style={{ fontSize: '14px', fontWeight: '700', marginBottom: '12px', color: '#1C3A5F' }}>
+              🚀 Acciones Rápidas
+            </h3>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+              <button className="btn" onClick={() => window.location.href = '/docs/pauta/PAUTA-LINEA-MASCULINA-MES2.md'}>
+                📄 Ver documento completo
+              </button>
+              <button className="btn secondary" onClick={() => window.location.href = '/brief-creativo/BRIEF-CREADORA-CONTENIDO.md'}>
+                🎬 Ver brief creativo
+              </button>
+              <button className="btn secondary" onClick={() => window.location.href = 'maestro.html'}>
+                🎯 Volver a maestro.html
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    ReactDOM.render(<PautasApp />, document.getElementById('app'));
+  </script>
+</body>
+</html>
