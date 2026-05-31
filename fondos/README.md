@@ -9,12 +9,13 @@
 
 ```
 /fondos/
-├── README.md                                   ← ESTE ARCHIVO
-├── GUION-VIDEO-PITCH-CRECE-90SEG.md           ← Video script (listo grabar)
-├── PRESUPUESTO-CRECE-5M-DESGLOSADO.md         ← Presupuesto detallado
-├── CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md       ← Tareas día-a-día (11 días)
-├── BASES-CRECE-2026-COQUIMBO-RESUMEN.md       ← Bases oficiales (MD, sin tokens)
-└── TRACKER-POSTULACION-CRECE.md               ← Seguimiento + hitos
+├── README.md                                          ← ESTE ARCHIVO
+├── GUION-VIDEO-PITCH-CRECE-90SEG.md                  ← Video script (listo grabar)
+├── PRESUPUESTO-INNOVACION-IA-CRECE-5M.md             ← NUEVO: IA como innovación (RECOMENDADO)
+├── PRESUPUESTO-CRECE-5M-DESGLOSADO.md                ← Versión anterior (web + Medilink)
+├── CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md              ← Tareas día-a-día (11 días)
+├── BASES-CRECE-2026-COQUIMBO-RESUMEN.md              ← Bases oficiales (MD, sin tokens)
+└── TRACKER-POSTULACION-CRECE.md                      ← Seguimiento + hitos
 ```
 
 ---
@@ -27,7 +28,8 @@
 |---------|-----------|-----------|--------|
 | **CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md** | Tareas día-a-día | Francisco + Camila | 📌 LEER PRIMERO |
 | **GUION-VIDEO-PITCH-CRECE-90SEG.md** | Grabar video pitch | Camila | Memorizar + grabar domingo |
-| **PRESUPUESTO-CRECE-5M-DESGLOSADO.md** | Crear presupuesto | Francisco | Personalizar + validar |
+| **PRESUPUESTO-INNOVACION-IA-CRECE-5M.md** | 🆕 RECOMENDADO: IA como innovación | Francisco + Camila | REVISAR PRIMERO (mejor enfoque) |
+| **PRESUPUESTO-CRECE-5M-DESGLOSADO.md** | (Versión anterior) | Francisco | Para comparar (web + Medilink básico) |
 
 ### **PARA POSTULACIÓN (1-11 junio)**
 
@@ -109,17 +111,31 @@
 
 ---
 
-### **3. PRESUPUESTO (PARA COMPLETAR)**
-📄 **PRESUPUESTO-CRECE-5M-DESGLOSADO.md**  
-⏱️ **Tiempo de lectura:** 25 minutos  
-🎯 **Por qué:** Base para formulario postulación
+### **3. PRESUPUESTO: VERSIÓN IA (RECOMENDADA)**
+📄 **PRESUPUESTO-INNOVACION-IA-CRECE-5M.md** ⭐ MEJOR ENFOQUE  
+⏱️ **Tiempo de lectura:** 30 minutos  
+🎯 **Por qué:** Resuelve gaps reales con IA + deja capital ($1.8M)
 
 **Contenido:**
-- Área A: Gestión empresarial ($1M)
-- Área B: Tecnología e innovación ($4M)
+- 5 agentes IA específicos (recordatorios, chatbot, FAQ, contenido, KPIs)
+- Presupuesto por agent ($530K total IA)
+- Web + Medilink mejorado ($500K)
+- Telemedicina ($630K)
+- **Capital remanente: $1.8M** para expansión/learning
+- ROI: +$5M en conversiones + capacidad de crecer sin deuda
+- Timeline: 6 meses a ROI positivo
+
+### **3B. PRESUPUESTO: VERSIÓN ANTERIOR**
+📄 **PRESUPUESTO-CRECE-5M-DESGLOSADO.md** (para comparar)  
+⏱️ **Tiempo de lectura:** 25 minutos  
+🎯 **Alternativa:** Web + Medilink integración (menos IA)
+
+**Contenido:**
+- Enfoque: mejora web + integración Medilink
+- Presupuesto web integración: $550K
 - Aporte propio $1.5M desglosado
-- ROI esperado
-- Indicadores éxito
+- ROI: 2.3x
+- (Menos recomendado: foco en infraestructura, no en gaps operacionales)
 
 ---
 
