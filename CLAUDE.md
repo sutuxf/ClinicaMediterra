@@ -10,6 +10,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Estado actual:** Fase de ejecución — postulación Crece Multisectorial ($5M) con enfoque IA-first. El foco inmediato es implementar 5 agentes IA que resuelven gaps operacionales identificados (recordatorios, trazabilidad, FAQ, contenido, KPIs).
 
+**Presupuesto CRECE (31 mayo):** ✅ $5.000.000 exacto. Sección A reestructurada: trabajos/proyectos definidos (NO salarios mensuales). Listo para postulación 11 junio 14:30 UTC-4.
+
 ## Datos clave de la clínica
 
 | Campo | Dato |
@@ -154,6 +156,26 @@ Instalado en `_bmad/` (read-only). Configuración:
 npx bmad-method@latest update   # Actualizar
 npx bmad-method@latest install  # Reinstalar
 ```
+
+## Estructura de FONDOS
+
+**Carpeta:** `/fondos/` — Documentos para postulación Crece Multisectorial ($5M)
+
+| Documento | Propósito | Estado |
+|-----------|----------|--------|
+| `PRESUPUESTO-CRECE-JUSTIFICADO.md` | $5M línea por línea (A: $1M gestión, B: $2.32M tecno, C: $1.68M operación) | ✅ FINAL |
+| `PLAN-NEGOCIO-CRECE-FINAL.md` | Contexto + problema + solución + ROI 2.3x (4 páginas) | ✅ FINAL |
+| `CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md` | 11 días postulación (31 mayo - 11 junio 14:30) | ✅ FINAL |
+| `GUION-VIDEO-PITCH-CRECE-90SEG.md` | 90 segundos para grabar + instrucciones técnicas | ✅ LISTO |
+| `BASES-CRECE-2026-COQUIMBO-RESUMEN.md` | Resumen ejecutivo de bases (requisitos, criteros) | ✅ REFERENCIA |
+| `TRACKER-POSTULACION-CRECE.md` | Seguimiento visual de hitos + progreso | ✅ TRACKING |
+| `README.md` | Índice y documentación de carpeta | ✅ ACTUAL |
+
+**Archivos eliminados (obsoletos):**
+- ❌ `PRESUPUESTO-CRECE-5M-DESGLOSADO.md` (reemplazado por PRESUPUESTO-CRECE-JUSTIFICADO.md)
+- ❌ `PRESUPUESTO-INNOVACION-IA-CRECE-5M.md` (reemplazado por PRESUPUESTO-CRECE-JUSTIFICADO.md)
+
+---
 
 ## WDS Methodology — Fases y agentes
 
