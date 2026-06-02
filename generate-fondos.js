@@ -15,7 +15,7 @@ const FONDOS_FILES = [
 ];
 
 // Generar objeto JS con contenido
-let fondosObj = 'const FONDOS_DOCS = {\n';
+let fondosObj = 'window.FONDOS_DOCS = {\n';
 
 FONDOS_FILES.forEach((filePath) => {
   try {
