@@ -7,6 +7,7 @@
   <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { background: linear-gradient(135deg, #F4F0E7 0%, #FBF8F3 100%); font-family: "'DM Sans', system-ui, sans-serif"; color: #1E293B; }
@@ -162,6 +163,9 @@
       const [activeTab, setActiveTab] = useState("home");
       const [expandedSection, setExpandedSection] = useState({});
       const [checkedTasks, setCheckedTasks] = useState({});
+      const [viewingDoc, setViewingDoc] = useState(null);
+      const [docContent, setDocContent] = useState("");
+      const [docLoading, setDocLoading] = useState(false);
 
       // Data
       const PLAN_MONTHS = [
@@ -219,6 +223,21 @@
 
       const toggleTask = (id) => {
         setCheckedTasks({ ...checkedTasks, [id]: !checkedTasks[id] });
+      };
+
+      const loadMarkdownDoc = async (filePath, docName) => {
+        setViewingDoc(docName);
+        setDocLoading(true);
+        try {
+          const rawUrl = `https://raw.githubusercontent.com/sutuxf/ClinicaMediterra/main/${filePath}`;
+          const response = await fetch(rawUrl);
+          if (!response.ok) throw new Error("Error loading document");
+          const text = await response.text();
+          setDocContent(text);
+        } catch (error) {
+          setDocContent("Error cargando documento. Verifica la conexión e intenta de nuevo.");
+        }
+        setDocLoading(false);
       };
 
       return (
@@ -971,13 +990,13 @@
                 <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>📋 Documentos (carpeta /fondos/)</h2>
 
                 {[
-                  { name: "PRESUPUESTO-CRECE-JUSTIFICADO.md", desc: "Presupuesto oficial $5M desglosado (A+B+C) + justificación cada línea", status: "✅ FINAL" },
-                  { name: "PLAN-NEGOCIO-CRECE-FINAL.md", desc: "Plan de negocio 4 páginas: problema $9M + solución 5 agentes + ROI 2.3x", status: "✅ FINAL" },
-                  { name: "CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md", desc: "Tareas día-a-día (11 días) con responsables, deadlines, checklists", status: "✅ FINAL" },
-                  { name: "GUION-VIDEO-PITCH-CRECE-90SEG.md", desc: "Guión 90 seg (225 palabras) + timing exacto + instrucciones técnicas", status: "✅ LISTO" },
-                  { name: "BASES-CRECE-2026-COQUIMBO-RESUMEN.md", desc: "Resumen ejecutivo de bases oficiales SERCOTEC", status: "✅ LISTO" },
-                  { name: "TRACKER-POSTULACION-CRECE.md", desc: "Tracker visual con 4 fases, hitos, riesgos, contingencias, métricas éxito", status: "✅ LISTO" },
-                  { name: "README.md", desc: "Índice maestro de carpeta (priorización lectura + paso a paso)", status: "✅ LISTO" },
+                  { name: "PRESUPUESTO-CRECE-JUSTIFICADO.md", path: "fondos/PRESUPUESTO-CRECE-JUSTIFICADO.md", desc: "Presupuesto oficial $5M desglosado (A+B+C) + justificación cada línea", status: "✅ FINAL" },
+                  { name: "PLAN-NEGOCIO-CRECE-FINAL.md", path: "fondos/PLAN-NEGOCIO-CRECE-FINAL.md", desc: "Plan de negocio 4 páginas: problema $9M + solución 5 agentes + ROI 2.3x", status: "✅ FINAL" },
+                  { name: "CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md", path: "fondos/CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md", desc: "Tareas día-a-día (11 días) con responsables, deadlines, checklists", status: "✅ FINAL" },
+                  { name: "GUION-VIDEO-PITCH-CRECE-90SEG.md", path: "fondos/GUION-VIDEO-PITCH-CRECE-90SEG.md", desc: "Guión 90 seg (225 palabras) + timing exacto + instrucciones técnicas", status: "✅ LISTO" },
+                  { name: "BASES-CRECE-2026-COQUIMBO-RESUMEN.md", path: "fondos/BASES-CRECE-2026-COQUIMBO-RESUMEN.md", desc: "Resumen ejecutivo de bases oficiales SERCOTEC", status: "✅ LISTO" },
+                  { name: "TRACKER-POSTULACION-CRECE.md", path: "fondos/TRACKER-POSTULACION-CRECE.md", desc: "Tracker visual con 4 fases, hitos, riesgos, contingencias, métricas éxito", status: "✅ LISTO" },
+                  { name: "README.md", path: "fondos/README.md", desc: "Índice maestro de carpeta (priorización lectura + paso a paso)", status: "✅ LISTO" },
                 ].map((doc, i) => (
                   <div key={i} className="card" style={{ marginBottom: "8px" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "4px" }}>
@@ -985,6 +1004,7 @@
                       <span style={{ fontSize: "9px", fontWeight: 600, padding: "3px 8px", background: doc.status === "✅ FINAL" || doc.status === "✅ LISTO" ? "#D1FAE5" : "#FEF3C7", color: doc.status === "✅ FINAL" || doc.status === "✅ LISTO" ? "#059669" : "#B45309", borderRadius: "4px", whiteSpace: "nowrap" }}>{doc.status}</span>
                     </div>
                     <p style={{ fontSize: "11px", color: "#64748B" }}>{doc.desc}</p>
+                    <button className="btn" style={{ marginTop: "8px", fontSize: "11px", padding: "6px 12px" }} onClick={() => loadMarkdownDoc(doc.path, doc.name)}>👁️ Ver documento</button>
                   </div>
                 ))}
 
@@ -1034,6 +1054,28 @@
             )}
 
           </div>
+
+          {/* MODAL VER DOCUMENTOS */}
+          {viewingDoc && (
+            <div style={{ position: "fixed", top: 0, left: 0, right: 0, bottom: 0, background: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000 }}>
+              <div style={{ background: "white", borderRadius: "12px", width: "90%", maxWidth: "900px", maxHeight: "90vh", overflow: "auto", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+                {/* Header */}
+                <div style={{ background: "#1C3A5F", color: "white", padding: "16px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 1001 }}>
+                  <h2 style={{ fontSize: "16px", margin: 0 }}>📄 {viewingDoc}</h2>
+                  <button onClick={() => setViewingDoc(null)} style={{ background: "white", color: "#1C3A5F", border: "none", borderRadius: "6px", padding: "8px 12px", cursor: "pointer", fontWeight: 600, fontSize: "14px" }}>✕ Cerrar</button>
+                </div>
+
+                {/* Content */}
+                <div style={{ padding: "24px", fontFamily: "system-ui, -apple-system, sans-serif", lineHeight: "1.6", fontSize: "13px", color: "#333" }}>
+                  {docLoading ? (
+                    <div style={{ textAlign: "center", padding: "40px", color: "#94A3B8" }}>Cargando documento...</div>
+                  ) : (
+                    <div dangerouslySetInnerHTML={{ __html: window.marked ? window.marked(docContent) : docContent.replace(/\n/g, "<br/>") }} style={{ fontSize: "12px" }} />
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* FOOTER */}
           <footer>
