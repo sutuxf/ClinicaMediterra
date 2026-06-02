@@ -8,6 +8,7 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
   <!-- FONDOS_START -->
 <script>
@@ -2913,6 +2914,24 @@ SEMANA 3+ (post-envío):
         window.open(githubUrl, '_blank');
       };
 
+      const exportToPDF = () => {
+        if (!viewingDoc || !docContent) return;
+        const element = document.getElementById('markdown-content-export');
+        if (!element) return;
+
+        const fileName = viewingDoc.replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_-]/g, '');
+        const opt = {
+          margin: [10, 10, 10, 10],
+          filename: `${fileName}.pdf`,
+          image: { type: 'jpeg', quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' },
+          pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+        };
+
+        window.html2pdf().set(opt).from(element).save();
+      };
+
       return (
         <div style={{ background: "#F4F0E7", minHeight: "100vh" }}>
           {/* HEADER */}
@@ -3736,6 +3755,7 @@ SEMANA 3+ (post-envío):
                 <div style={{ background: "#1C3A5F", color: "white", padding: "16px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 1001 }}>
                   <h2 style={{ fontSize: "16px", margin: 0 }}>📄 {viewingDoc}</h2>
                   <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+                    <button onClick={exportToPDF} style={{ background: "#059669", color: "white", border: "none", borderRadius: "6px", padding: "8px 12px", cursor: "pointer", fontWeight: 600, fontSize: "12px" }}>⬇️ Descargar PDF</button>
                     <button onClick={openDocOnGitHub} style={{ background: "#0284C7", color: "white", border: "none", borderRadius: "6px", padding: "8px 12px", cursor: "pointer", fontWeight: 600, fontSize: "12px" }}>🔗 Abrir en GitHub</button>
                     <button onClick={() => setViewingDoc(null)} style={{ background: "white", color: "#1C3A5F", border: "none", borderRadius: "6px", padding: "8px 12px", cursor: "pointer", fontWeight: 600, fontSize: "14px" }}>✕ Cerrar</button>
                   </div>
@@ -3748,7 +3768,7 @@ SEMANA 3+ (post-envío):
                       <p style={{ fontWeight: 600, marginBottom: "8px" }}>{docContent}</p>
                     </div>
                   ) : (
-                    <div className="markdown-content" dangerouslySetInnerHTML={{
+                    <div id="markdown-content-export" className="markdown-content" dangerouslySetInnerHTML={{
                       __html: window.marked?.parse ? window.marked.parse(docContent) : (typeof window.marked === 'function' ? window.marked(docContent) : docContent.replace(/\n\n/g, "<p></p>").replace(/\n/g, "<br/>"))
                     }} style={{
                       fontSize: "14px",
