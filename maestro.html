@@ -730,104 +730,267 @@
             {/* FONDOS */}
             {activeTab === "fondos" && (
               <div className="content active">
-                <h1>💰 Levantamiento de Capital: Fondos Concursables</h1>
-                <p className="subtitle">Postulación Crece Multisectorial ($5M) + Kit Digital ($1.2M) + Santander (Variable)</p>
+                <h1>💰 Fondos Concursables: CRECE Multisectorial $5M</h1>
+                <p className="subtitle">Postulación 31 mayo - 11 junio | Implementación agosto-octubre 2026</p>
 
-                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Fondo Prioritario: CRECE MULTISECTORIAL</h2>
-
-                <div className="grid-3">
-                  <div className="stat">
-                    <div className="value" style={{ color: "#EA580C" }}>$5M</div>
-                    <div className="label">Monto</div>
-                  </div>
-                  <div className="stat">
-                    <div className="value" style={{ color: "#1C3A5F" }}>11 JUN</div>
-                    <div className="label">Cierre 🔥</div>
-                  </div>
-                  <div className="stat">
-                    <div className="value" style={{ color: "#059669" }}>11 días</div>
-                    <div className="label">Restantes</div>
-                  </div>
-                </div>
-
-                <div className="card" style={{ borderLeftColor: "#EA580C", background: "#FFFBF0", marginTop: "16px" }}>
-                  <h3>🔥 URGENTE: Postulación antes 11 junio 15:00</h3>
-                  <p>Cronograma ejecutado: Francisco (Santiago) + Camila (La Serena). Aporte propio: $1.5M.</p>
-                </div>
-
-                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Tracker de Postulación</h2>
-
-                {[
-                  { phase: "PRE-POSTULACIÓN (31 may - 8 jun)", progress: 0, status: "⏳ INICIO", items: ["Documentación empresa", "Presupuesto $5M", "Plan de negocio", "Video pitch 90 seg"] },
-                  { phase: "INTEGRACIÓN (8-10 jun)", progress: 0, status: "⏳ BLOQUEADO", items: ["Formulario SERCOTEC", "Testing", "Backup documentación"] },
-                  { phase: "ENVÍO (11 jun)", progress: 0, status: "🔥 CRÍTICO", items: ["POSTULAR antes 15:00"] },
-                  { phase: "EVALUACIÓN (12 jun - 28 jul)", progress: 0, status: "⏰ FUTURO", items: ["Elegibilidad", "Preselección", "Entrevista", "Resultado"] },
-                ].map((f, i) => (
-                  <div key={i} className="card" style={{ marginBottom: "12px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "8px" }}>
-                      <h3>{f.phase}</h3>
-                      <span style={{ fontSize: "12px", fontWeight: 600, padding: "4px 8px", background: "#F1F5F9", borderRadius: "6px" }}>{f.status}</span>
-                    </div>
-                    <div style={{ marginBottom: "8px", background: "#E5E7EB", height: "6px", borderRadius: "3px", overflow: "hidden" }}>
-                      <div style={{ width: f.progress + "%", height: "100%", background: "#059669", transition: "width 0.3s" }}></div>
-                    </div>
-                    <p style={{ fontSize: "11px", color: "#64748B" }}>{f.items.join(" • ")}</p>
-                  </div>
-                ))}
-
-                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Otros Fondos</h2>
-
-                <div className="grid-2">
-                  <div className="card" style={{ borderLeftColor: "#1D4ED8" }}>
-                    <h3>Kit Digital (Ruta Digital)</h3>
-                    <p>$1.2M para CRM + web + recordatorios. Postular 2 julio. Prerequisito: 9 cursos Ruta Digital.</p>
-                    <div style={{ marginTop: "8px", fontSize: "12px", color: "#1C3A5F", fontWeight: 600 }}>Prioridad: #2 📚</div>
-                  </div>
-                  <div className="card" style={{ borderLeftColor: "#8B5CF6" }}>
-                    <h3>Santander Fondos Concursables</h3>
-                    <p>Monto variable para empresa salud. Verificar si aplica a clínicas privadas (focus ONGs). </p>
-                    <div style={{ marginTop: "8px", fontSize: "12px", color: "#1C3A5F", fontWeight: 600 }}>Prioridad: #3 ⏳</div>
-                  </div>
-                </div>
-
-                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Documentos Fondos</h2>
-
-                {[
-                  { name: "GUION-VIDEO-PITCH-CRECE-90SEG.md", desc: "Guión listo para grabar (90 seg exactos) + instrucciones técnicas", status: "⏳ INICIO" },
-                  { name: "PRESUPUESTO-CRECE-5M-DESGLOSADO.md", desc: "Presupuesto detallado por área (gestión + tecnología)", status: "⏳ INICIO" },
-                  { name: "CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md", desc: "Tareas día-a-día (11 días) con responsables y deadlines", status: "⏳ INICIO" },
-                  { name: "BASES-CRECE-2026-COQUIMBO-RESUMEN.md", desc: "Resumen ejecutivo de bases oficiales (sin consumir tokens del PDF)", status: "✅ LISTO" },
-                  { name: "TRACKER-POSTULACION-CRECE.md", desc: "Seguimiento de hitos + progreso + riesgos/contingencias", status: "✅ LISTO" },
-                ].map((doc, i) => (
-                  <div key={i} className="card" style={{ marginBottom: "10px" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "6px" }}>
-                      <h3 style={{ fontSize: "13px" }}>{doc.name}</h3>
-                      <span style={{ fontSize: "10px", fontWeight: 600, padding: "3px 8px", background: doc.status === "✅ LISTO" ? "#D1FAE5" : "#FEF3C7", color: doc.status === "✅ LISTO" ? "#059669" : "#B45309", borderRadius: "4px" }}>{doc.status}</span>
-                    </div>
-                    <p style={{ fontSize: "12px" }}>{doc.desc}</p>
-                  </div>
-                ))}
-
-                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>Impacto Financiero</h2>
+                {/* RESUMEN EJECUTIVO */}
+                <h2 style={{ marginTop: "24px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>📊 Resumen Ejecutivo</h2>
 
                 <div className="grid-3">
                   <div className="stat" style={{ background: "#FEF3C7", borderRadius: "12px", padding: "16px" }}>
                     <div className="value" style={{ color: "#B45309" }}>$5M</div>
-                    <div className="label" style={{ color: "#92400E" }}>Crece (si gana)</div>
+                    <div className="label">Solicitado</div>
                   </div>
-                  <div className="stat" style={{ background: "#DBEAFE", borderRadius: "12px", padding: "16px" }}>
-                    <div className="value" style={{ color: "#1D4ED8" }}>$1.2M</div>
-                    <div className="label" style={{ color: "#1E40AF" }}>Kit Digital (2 julio)</div>
+                  <div className="stat" style={{ background: "#F0FDF4", borderRadius: "12px", padding: "16px" }}>
+                    <div className="value" style={{ color: "#059669" }}>2.3x</div>
+                    <div className="label">ROI (6 meses)</div>
                   </div>
-                  <div className="stat" style={{ background: "#E9D5FF", borderRadius: "12px", padding: "16px" }}>
-                    <div className="value" style={{ color: "#7C3AED" }}>$6.2M+</div>
-                    <div className="label" style={{ color: "#5B21B6" }}>Total potencial</div>
+                  <div className="stat" style={{ background: "#EFF6FF", borderRadius: "12px", padding: "16px" }}>
+                    <div className="value" style={{ color: "#0284C7" }}>$1.5M</div>
+                    <div className="label">Aporte propio</div>
                   </div>
                 </div>
 
-                <div className="card" style={{ borderLeftColor: "#059669", marginTop: "16px", background: "#F0FDF4" }}>
-                  <h3>Retorno de Inversión (ROI)</h3>
-                  <p>Con $5M invertido: Recupera $5M/mes en no-shows (mes 4), +35% ocupación consultorios, +3 sueldos formales. ROI 2.3x en 6 meses.</p>
+                <div className="card" style={{ borderLeftColor: "#EA580C", background: "#FFFBF0", marginTop: "16px" }}>
+                  <h3>🔥 URGENTE: Postulación 11 junio 14:30 UTC-4</h3>
+                  <p><strong>Responsables:</strong> Francisco (presupuesto + formulario) | Camila (documentación + video)</p>
+                  <p><strong>Estado:</strong> Presupuesto FINAL ✅ | Documentación en proceso | Video pendiente</p>
+                </div>
+
+                {/* ESTRUCTURA PRESUPUESTARIA */}
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>💵 Estructura Presupuestaria ($5.000.000)</h2>
+
+                {[
+                  {
+                    section: "A. GESTIÓN EMPRESARIAL",
+                    monto: "$1.000.000",
+                    pct: 20,
+                    items: [
+                      { sub: "A.1 Gestoría Técnica IA", val: "$300K", desc: "Roadmap, auditoría, coordinación lanzamiento" },
+                      { sub: "A.2 Capacitación Especializada", val: "$250K", desc: "Workshop + manuales operativos en Spanish" },
+                      { sub: "A.3 Consultoría Arquitectura", val: "$200K", desc: "Diseño agentes, integración Medilink, RGPD" },
+                      { sub: "A.4 Brand Guidelines IA", val: "$150K", desc: "Tone of voice, chat widget, templates" },
+                      { sub: "A.5 Herramientas & APIs", val: "$100K", desc: "Claude API, WhatsApp, cloud, Airtable" },
+                    ],
+                    color: "#1C3A5F"
+                  },
+                  {
+                    section: "B. INNOVACIÓN IA + TECH",
+                    monto: "$2.320.000",
+                    pct: 46.4,
+                    items: [
+                      { sub: "B.1-B.5 Cinco Agentes IA", val: "$530K", desc: "Recordatorios, chatbot web, FAQ, contenido, KPIs" },
+                      { sub: "B.6 Web Mejorado + Medilink", val: "$600K", desc: "Integración dashboard, mejoras Wix" },
+                      { sub: "B.7 Telemedicina", val: "$790K", desc: "3 consultorios equipados, conectividad, software" },
+                      { sub: "B.8 Contenido Audiovisual", val: "$400K", desc: "8 videos educativos profesionales" },
+                    ],
+                    color: "#EA580C"
+                  },
+                  {
+                    section: "C. OPERACIÓN & ESCALAMIENTO",
+                    monto: "$1.680.000",
+                    pct: 33.6,
+                    items: [
+                      { sub: "C.1 Recursos Humanos (6m)", val: "$600K", desc: "Community manager + customer success" },
+                      { sub: "C.2 Marketing & Pauta", val: "$580K", desc: "Pauta línea masculina + expansión geográfica" },
+                      { sub: "C.3 Capacitación Equipo", val: "$200K", desc: "Ruta Digital + cursos complementarios" },
+                      { sub: "C.4 Contingencia & Buffer", val: "$300K", desc: "Imprevistos, escalamiento, learning" },
+                    ],
+                    color: "#059669"
+                  },
+                ].map((cat, i) => (
+                  <div key={i} style={{ marginBottom: "20px" }}>
+                    <div className="card" style={{ borderLeftColor: cat.color, marginBottom: "12px", cursor: "pointer" }} onClick={() => toggleSection(`presupuesto-${i}`)}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                        <div>
+                          <h3 style={{ color: cat.color }}>{cat.section}</h3>
+                          <p style={{ fontSize: "14px", fontWeight: 700, color: cat.color }}>{cat.monto}</p>
+                        </div>
+                        <span style={{ fontSize: "20px" }}>{expandedSection[`presupuesto-${i}`] ? "▼" : "▶"}</span>
+                      </div>
+                      <div style={{ background: "#E5E7EB", height: "8px", borderRadius: "4px", overflow: "hidden" }}>
+                        <div style={{ width: cat.pct + "%", height: "100%", background: cat.color, transition: "width 0.3s" }}></div>
+                      </div>
+                    </div>
+
+                    {expandedSection[`presupuesto-${i}`] && (
+                      <div style={{ marginLeft: "12px", borderLeft: "2px solid " + cat.color, paddingLeft: "12px" }}>
+                        {cat.items.map((item, j) => (
+                          <div key={j} style={{ marginBottom: "12px", paddingBottom: "12px", borderBottom: "1px solid #E5DDD0" }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "4px" }}>
+                              <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#1E293B" }}>{item.sub}</h4>
+                              <span style={{ fontSize: "13px", fontWeight: 700, color: cat.color }}>{item.val}</span>
+                            </div>
+                            <p style={{ fontSize: "11px", color: "#64748B" }}>{item.desc}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+
+                {/* 5 AGENTES IA */}
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>🤖 5 Agentes IA (Soluciones Específicas)</h2>
+
+                {[
+                  {
+                    num: "1",
+                    name: "Recordatorios Automáticos",
+                    problema: "$9M/mes en no-shows (40-50% pacientes)",
+                    solucion: "Flujo WhatsApp: confirmación → 48h → 24h → post no-show empático",
+                    inversion: "$120K",
+                    roi: "Recupera ~30% no-shows = $2.7M-3M/mes (mes 4+)"
+                  },
+                  {
+                    num: "2",
+                    name: "Chatbot Web + Trazabilidad",
+                    problema: "100% pacientes web sin origen conocido (0% datos)",
+                    solucion: "Chat captura intención + ciudad → dashboard origen (web, IG, Google, ref)",
+                    inversion: "$110K",
+                    roi: "100% visibilidad sobre origen pacientes + mejor targeting"
+                  },
+                  {
+                    num: "3",
+                    name: "FAQ WhatsApp",
+                    problema: "Secretaria sobrecargada: 15-25 mensajes/día sin respuesta",
+                    solucion: "Bot responde 60%+ automático (horarios, especialidades, costo, ubicación)",
+                    inversion: "$80K",
+                    roi: "Libera 20h/semana (-$500K/año secretaria)"
+                  },
+                  {
+                    num: "4",
+                    name: "Generador Contenido IA",
+                    problema: "Vergüenza/tabú hombres → 40 posts/mes = insuficiente",
+                    solucion: "Produce 5-8 posts/día basados en especialidades + copy testimonios reales",
+                    inversion: "$130K",
+                    roi: "160 posts/mes vs 40 = -$420K creadora en 6m"
+                  },
+                  {
+                    num: "5",
+                    name: "Reporte KPIs Automático",
+                    problema: "Decisiones ad-hoc sin datos (no saben no-show rate, origen, ROI pauta)",
+                    solucion: "Daily report automático: ocupación, no-shows, origen, pauta, ingresos",
+                    inversion: "$90K",
+                    roi: "Decisiones data-driven cada mañana"
+                  },
+                ].map((agent, i) => (
+                  <div key={i} className="card" style={{ borderLeftColor: "#7C3AED", marginBottom: "12px", cursor: "pointer" }} onClick={() => toggleSection(`agent-${i}`)}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
+                      <div style={{ flex: 1 }}>
+                        <h3 style={{ fontSize: "14px", color: "#1E293B" }}>
+                          <span style={{ background: "#7C3AED", color: "white", borderRadius: "50%", width: "24px", height: "24px", display: "inline-flex", alignItems: "center", justifyContent: "center", marginRight: "8px", fontSize: "12px", fontWeight: 700 }}>{agent.num}</span>
+                          {agent.name}
+                        </h3>
+                        {expandedSection[`agent-${i}`] && (
+                          <div style={{ marginTop: "12px", paddingTop: "12px", borderTop: "1px solid #E5DDD0" }}>
+                            <p style={{ fontSize: "11px", marginBottom: "8px" }}><strong>🚨 Problema:</strong> {agent.problema}</p>
+                            <p style={{ fontSize: "11px", marginBottom: "8px" }}><strong>✅ Solución:</strong> {agent.solucion}</p>
+                            <div style={{ display: "flex", justifyContent: "space-between", fontSize: "11px", color: "#7C3AED", fontWeight: 600 }}>
+                              <span>Inversión: {agent.inversion}</span>
+                              <span>ROI: {agent.roi.substring(0, 30)}...</span>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <span style={{ fontSize: "18px", marginLeft: "8px" }}>{expandedSection[`agent-${i}`] ? "▼" : "▶"}</span>
+                    </div>
+                  </div>
+                ))}
+
+                {/* TIMELINE */}
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>📅 Timeline de Postulación (11 días)</h2>
+
+                {[
+                  { date: "31 mayo", day: "Día 0", task: "Crear cuenta SERCOTEC + compartir cronograma", status: "✅ DONE" },
+                  { date: "1-2 junio", day: "Día 1-2", task: "Grabar video pitch (90 seg) + recopilar documentación", status: "⏳ HOY" },
+                  { date: "3-5 junio", day: "Día 3-5", task: "Presupuesto revisado, plan de negocio redactado", status: "⏳ SIGUIENTE" },
+                  { date: "6-8 junio", day: "Día 6-8", task: "Formulario SERCOTEC completado 80% + testing archivos", status: "⏳" },
+                  { date: "9-10 junio", day: "Día 9-10", task: "Revisión final Camila + backup en Dropbox/Drive", status: "⏳" },
+                  { date: "11 junio 14:30", day: "Día 11 🔥", task: "POSTULAR ANTES 15:00 UTC-4", status: "🎯 META" },
+                ].map((item, i) => (
+                  <div key={i} className="card" style={{ borderLeftColor: item.status === "✅ DONE" ? "#059669" : item.status === "🎯 META" ? "#DC2626" : "#94A3B8", marginBottom: "8px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start" }}>
+                      <div style={{ flex: 1 }}>
+                        <h4 style={{ fontSize: "12px", fontWeight: 600, color: "#1E293B", marginBottom: "4px" }}>
+                          {item.date} <span style={{ color: "#64748B" }}>({item.day})</span>
+                        </h4>
+                        <p style={{ fontSize: "11px", color: "#334155" }}>{item.task}</p>
+                      </div>
+                      <span style={{ fontSize: "11px", fontWeight: 600, whiteSpace: "nowrap", marginLeft: "8px" }}>{item.status}</span>
+                    </div>
+                  </div>
+                ))}
+
+                {/* ROI PROJECTION */}
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>📈 Proyección ROI (6 Meses)</h2>
+
+                <div className="table-wrap">
+                  <table style={{ fontSize: "12px" }}>
+                    <thead>
+                      <tr>
+                        <th>Mes</th>
+                        <th>Fase</th>
+                        <th>Agentes Activos</th>
+                        <th>Impacto Estimado</th>
+                        <th>Ingresos Nuevos</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>Junio</td><td>MVP Setup</td><td>Recordatorios + FAQ + Chatbot</td><td>0% (setup)</td><td>$0</td></tr>
+                      <tr><td>Julio</td><td>Momentum</td><td>+ Contenido + KPIs</td><td>-10% no-show</td><td>+$900K</td></tr>
+                      <tr><td>Agosto</td><td>Early ROI</td><td>Todos activos</td><td>-30% no-show</td><td>+$2.7M</td></tr>
+                      <tr><td>Septiembre</td><td>Optimización</td><td>Todos + telemedicina</td><td>+20% ocupación</td><td>+$3.5M</td></tr>
+                      <tr><td>Octubre</td><td>Escalamiento</td><td>Expansión geográfica</td><td>+35% ocupación</td><td>+$4.8M</td></tr>
+                      <tr style={{ background: "#F0FDF4" }}><td style={{ fontWeight: 600 }}>TOTAL 6M</td><td colSpan="3" style={{ fontWeight: 600 }}>Retorno invertido $5M</td><td style={{ fontWeight: 600, color: "#059669" }}>+$11.9M</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="card" style={{ borderLeftColor: "#059669", background: "#F0FDF4", marginTop: "16px" }}>
+                  <h3>✨ Capital Remanente: $1.8M</h3>
+                  <p>Después de implementar 5 agentes IA + web + telemedicina + marketing, quedan $1.8M para expansión sin deuda (nuevas sedes, equipo, contingencias).</p>
+                </div>
+
+                {/* OTROS FONDOS */}
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>🎯 Otros Fondos Concursables</h2>
+
+                <div className="grid-2">
+                  <div className="card" style={{ borderLeftColor: "#1D4ED8" }}>
+                    <h3>Kit Digital (Ruta Digital)</h3>
+                    <p style={{ fontSize: "11px", color: "#64748B" }}>$1.2M | Postular 2 julio | Complementa Crece (CRM + web mejorado)</p>
+                    <div style={{ marginTop: "8px", fontSize: "11px", color: "#1D4ED8", fontWeight: 600 }}>Prioridad: #2 (POST Crece) 📚</div>
+                  </div>
+                  <div className="card" style={{ borderLeftColor: "#8B5CF6" }}>
+                    <h3>Santander Fondos Concursables</h3>
+                    <p style={{ fontSize: "11px", color: "#64748B" }}>Monto variable | Para ONGs principalmente | Verificar elegibilidad</p>
+                    <div style={{ marginTop: "8px", fontSize: "11px", color: "#8B5CF6", fontWeight: 600 }}>Prioridad: #3 (exploratorio) ⏳</div>
+                  </div>
+                </div>
+
+                {/* DOCUMENTOS */}
+                <h2 style={{ marginTop: "32px", marginBottom: "12px", fontSize: "16px", color: "#1C3A5F" }}>📋 Documentos (carpeta /fondos/)</h2>
+
+                {[
+                  { name: "PRESUPUESTO-CRECE-JUSTIFICADO.md", desc: "Presupuesto oficial $5M desglosado (A+B+C) + justificación cada línea", status: "✅ FINAL" },
+                  { name: "PLAN-NEGOCIO-CRECE-FINAL.md", desc: "Plan de negocio 4 páginas: problema $9M + solución 5 agentes + ROI 2.3x", status: "✅ FINAL" },
+                  { name: "CRONOGRAMA-URGENTE-31MAYO-11JUNIO.md", desc: "Tareas día-a-día (11 días) con responsables, deadlines, checklists", status: "✅ FINAL" },
+                  { name: "GUION-VIDEO-PITCH-CRECE-90SEG.md", desc: "Guión 90 seg (225 palabras) + timing exacto + instrucciones técnicas", status: "✅ LISTO" },
+                  { name: "BASES-CRECE-2026-COQUIMBO-RESUMEN.md", desc: "Resumen ejecutivo de bases oficiales SERCOTEC", status: "✅ LISTO" },
+                  { name: "TRACKER-POSTULACION-CRECE.md", desc: "Tracker visual con 4 fases, hitos, riesgos, contingencias, métricas éxito", status: "✅ LISTO" },
+                  { name: "README.md", desc: "Índice maestro de carpeta (priorización lectura + paso a paso)", status: "✅ LISTO" },
+                ].map((doc, i) => (
+                  <div key={i} className="card" style={{ marginBottom: "8px" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "start", marginBottom: "4px" }}>
+                      <h3 style={{ fontSize: "12px", fontWeight: 600 }}>{doc.name}</h3>
+                      <span style={{ fontSize: "9px", fontWeight: 600, padding: "3px 8px", background: doc.status === "✅ FINAL" || doc.status === "✅ LISTO" ? "#D1FAE5" : "#FEF3C7", color: doc.status === "✅ FINAL" || doc.status === "✅ LISTO" ? "#059669" : "#B45309", borderRadius: "4px", whiteSpace: "nowrap" }}>{doc.status}</span>
+                    </div>
+                    <p style={{ fontSize: "11px", color: "#64748B" }}>{doc.desc}</p>
+                  </div>
+                ))}
+
+                <div className="card" style={{ borderLeftColor: "#1D4ED8", marginTop: "16px", background: "#EFF6FF" }}>
+                  <h3>📂 Ubicación</h3>
+                  <p style={{ fontSize: "11px" }}>Todos los documentos están en <code>/fondos/</code>. Léelos en orden: README.md → CRONOGRAMA → PRESUPUESTO → PLAN → BASES.</p>
                 </div>
               </div>
             )}
