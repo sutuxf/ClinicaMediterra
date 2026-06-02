@@ -179,6 +179,7 @@
       const [expandedSection, setExpandedSection] = useState({});
       const [checkedTasks, setCheckedTasks] = useState({});
       const [viewingDoc, setViewingDoc] = useState(null);
+      const [docPath, setDocPath] = useState(null);
       const [docContent, setDocContent] = useState("");
       const [docLoading, setDocLoading] = useState(false);
 
@@ -242,6 +243,7 @@
 
       const loadMarkdownDoc = async (filePath, docName) => {
         setViewingDoc(docName);
+        setDocPath(filePath);
         setDocLoading(true);
         try {
           const rawUrl = `https://raw.githubusercontent.com/sutuxf/ClinicaMediterra/main/${filePath}`;
@@ -261,8 +263,10 @@
         }
       };
 
-      const openDocOnGitHub = (filePath) => {
-        const githubUrl = `https://github.com/sutuxf/ClinicaMediterra/blob/main/${filePath}`;
+      const openDocOnGitHub = () => {
+        if (!docPath) return;
+        const githubUrl = `https://github.com/sutuxf/ClinicaMediterra/blob/main/${docPath}`;
+        console.log("Abriendo:", githubUrl);
         window.open(githubUrl, '_blank');
       };
 
@@ -1091,7 +1095,10 @@
                 {/* Header */}
                 <div style={{ background: "#1C3A5F", color: "white", padding: "16px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "sticky", top: 0, zIndex: 1001 }}>
                   <h2 style={{ fontSize: "16px", margin: 0 }}>📄 {viewingDoc}</h2>
-                  <button onClick={() => setViewingDoc(null)} style={{ background: "white", color: "#1C3A5F", border: "none", borderRadius: "6px", padding: "8px 12px", cursor: "pointer", fontWeight: 600, fontSize: "14px" }}>✕ Cerrar</button>
+                  <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+                    <button onClick={openDocOnGitHub} style={{ background: "#0284C7", color: "white", border: "none", borderRadius: "6px", padding: "8px 12px", cursor: "pointer", fontWeight: 600, fontSize: "12px" }}>🔗 Abrir en GitHub</button>
+                    <button onClick={() => setViewingDoc(null)} style={{ background: "white", color: "#1C3A5F", border: "none", borderRadius: "6px", padding: "8px 12px", cursor: "pointer", fontWeight: 600, fontSize: "14px" }}>✕ Cerrar</button>
+                  </div>
                 </div>
 
                 {/* Content */}
@@ -1104,7 +1111,7 @@
                   ) : docContent.startsWith("Error") ? (
                     <div style={{ padding: "20px", background: "#FEE2E2", borderRadius: "8px", color: "#991B1B" }}>
                       <p style={{ fontWeight: 600, marginBottom: "8px" }}>⚠️ {docContent}</p>
-                      <button className="btn" style={{ fontSize: "11px", padding: "6px 12px", background: "#DC2626" }} onClick={() => openDocOnGitHub(viewingDoc)}>Abrir en GitHub</button>
+                      <button className="btn" style={{ fontSize: "11px", padding: "6px 12px", background: "#DC2626" }} onClick={openDocOnGitHub}>Abrir en GitHub</button>
                     </div>
                   ) : (
                     <div className="markdown-content" dangerouslySetInnerHTML={{
