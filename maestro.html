@@ -149,6 +149,21 @@
 
     .btn:hover { background: #0F2847; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
+    /* MARKDOWN MODAL STYLES */
+    .markdown-content h1, .markdown-content h2, .markdown-content h3 { margin-top: 16px; margin-bottom: 8px; font-weight: 700; }
+    .markdown-content h1 { font-size: 18px; color: #1C3A5F; }
+    .markdown-content h2 { font-size: 15px; color: #1C3A5F; }
+    .markdown-content h3 { font-size: 13px; color: #1E293B; }
+    .markdown-content p { margin-bottom: 10px; }
+    .markdown-content ul, .markdown-content ol { margin-bottom: 12px; margin-left: 20px; }
+    .markdown-content li { margin-bottom: 4px; }
+    .markdown-content code { background: #F1F5F9; padding: 2px 6px; border-radius: 4px; font-family: monospace; }
+    .markdown-content pre { background: #1C3A5F; color: white; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 12px 0; }
+    .markdown-content table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    .markdown-content th, .markdown-content td { border: 1px solid #E5DDD0; padding: 8px; text-align: left; }
+    .markdown-content th { background: #F1F5F9; font-weight: 600; }
+    .markdown-content blockquote { border-left: 4px solid #1C3A5F; padding-left: 12px; margin: 12px 0; color: #64748B; font-style: italic; }
+
     /* FOOTER */
     footer { padding: 24px 0; text-align: center; font-size: 11px; color: #94A3B8; margin-top: 40px; }
   </style>
@@ -230,14 +245,25 @@
         setDocLoading(true);
         try {
           const rawUrl = `https://raw.githubusercontent.com/sutuxf/ClinicaMediterra/main/${filePath}`;
-          const response = await fetch(rawUrl);
-          if (!response.ok) throw new Error("Error loading document");
+          const response = await fetch(rawUrl, { mode: 'cors' });
+          if (!response.ok) {
+            setDocContent(`Error: No se pudo cargar el documento (${response.status}). Abre directamente en GitHub.`);
+            setDocLoading(false);
+            return;
+          }
           const text = await response.text();
           setDocContent(text);
+          setDocLoading(false);
         } catch (error) {
-          setDocContent("Error cargando documento. Verifica la conexión e intenta de nuevo.");
+          console.error("Error loading document:", error);
+          setDocContent(`Error cargando documento: ${error.message}. Prueba abriendo el documento en GitHub directamente.`);
+          setDocLoading(false);
         }
-        setDocLoading(false);
+      };
+
+      const openDocOnGitHub = (filePath) => {
+        const githubUrl = `https://github.com/sutuxf/ClinicaMediterra/blob/main/${filePath}`;
+        window.open(githubUrl, '_blank');
       };
 
       return (
@@ -1004,7 +1030,10 @@
                       <span style={{ fontSize: "9px", fontWeight: 600, padding: "3px 8px", background: doc.status === "✅ FINAL" || doc.status === "✅ LISTO" ? "#D1FAE5" : "#FEF3C7", color: doc.status === "✅ FINAL" || doc.status === "✅ LISTO" ? "#059669" : "#B45309", borderRadius: "4px", whiteSpace: "nowrap" }}>{doc.status}</span>
                     </div>
                     <p style={{ fontSize: "11px", color: "#64748B" }}>{doc.desc}</p>
-                    <button className="btn" style={{ marginTop: "8px", fontSize: "11px", padding: "6px 12px" }} onClick={() => loadMarkdownDoc(doc.path, doc.name)}>👁️ Ver documento</button>
+                    <div style={{ marginTop: "8px", display: "flex", gap: "8px" }}>
+                      <button className="btn" style={{ fontSize: "11px", padding: "6px 12px", flex: 1 }} onClick={() => loadMarkdownDoc(doc.path, doc.name)}>👁️ Ver aquí</button>
+                      <button className="btn" style={{ fontSize: "11px", padding: "6px 12px", flex: 1, background: "#0F2847" }} onClick={() => openDocOnGitHub(doc.path)}>🔗 Abrir GitHub</button>
+                    </div>
                   </div>
                 ))}
 
@@ -1068,9 +1097,22 @@
                 {/* Content */}
                 <div style={{ padding: "24px", fontFamily: "system-ui, -apple-system, sans-serif", lineHeight: "1.6", fontSize: "13px", color: "#333" }}>
                   {docLoading ? (
-                    <div style={{ textAlign: "center", padding: "40px", color: "#94A3B8" }}>Cargando documento...</div>
+                    <div style={{ textAlign: "center", padding: "40px", color: "#94A3B8" }}>
+                      <p>Cargando documento...</p>
+                      <p style={{ fontSize: "12px", marginTop: "12px", color: "#cbd5e1" }}>Si tarda mucho, usa el botón "Abrir GitHub"</p>
+                    </div>
+                  ) : docContent.startsWith("Error") ? (
+                    <div style={{ padding: "20px", background: "#FEE2E2", borderRadius: "8px", color: "#991B1B" }}>
+                      <p style={{ fontWeight: 600, marginBottom: "8px" }}>⚠️ {docContent}</p>
+                      <button className="btn" style={{ fontSize: "11px", padding: "6px 12px", background: "#DC2626" }} onClick={() => openDocOnGitHub(viewingDoc)}>Abrir en GitHub</button>
+                    </div>
                   ) : (
-                    <div dangerouslySetInnerHTML={{ __html: window.marked ? window.marked(docContent) : docContent.replace(/\n/g, "<br/>") }} style={{ fontSize: "12px" }} />
+                    <div className="markdown-content" dangerouslySetInnerHTML={{
+                      __html: window.marked ? window.marked(docContent) : docContent.replace(/\n\n/g, "<p></p>").replace(/\n/g, "<br/>")
+                    }} style={{
+                      fontSize: "12px",
+                      lineHeight: "1.8"
+                    }} />
                   )}
                 </div>
               </div>
