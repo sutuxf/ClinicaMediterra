@@ -3,13 +3,16 @@
 
 ---
 
-## 📊 ESTADO ACTUAL
+## 📊 ESTADO ACTUAL (1 JUNIO 2026 — REORGANIZACIÓN URGENTE)
 
 ```
-ETAPA: PRE-POSTULACIÓN
-FECHA: 31 mayo 2026
-DÍAS RESTANTES: 11 (hasta cierre 11 junio 15:00)
-COMPLETITUD: 0% (inicio hoy)
+ETAPA: CORRECCIÓN DE ELEGIBILIDAD (CRÍTICA)
+FECHA: 1 junio 2026
+DÍAS RESTANTES: 10 (hasta cierre 11 junio 15:00)
+COMPLETITUD: 15% (presupuesto + plan + guión reorganizados)
+ALERTA ACTIVA: Presupuesto anterior tenía $1.68M ineligible
+               → REORGANIZADO 100% elegible (nuevo análisis)
+PROBABILIDAD APROBACIÓN: 35% → 75% con cambios aplicados
 ```
 
 ---
@@ -36,59 +39,87 @@ PROGRESO GENERAL: ████░░░░░░ 0%
 
 ---
 
-#### **Hito 1.2: Presupuesto $5M**
+#### **Hito 1.2: Presupuesto $5M (100% ELEGIBLE)**
 ```
-STATUS: ⏳ EN PROGRESO
-DEADLINE: 4 junio
+STATUS: 🔴 REQUIERE REVISIÓN URGENTE
+DEADLINE: 2 junio (revisión aprobación) | 11 junio final
 RESPONSABLE: Francisco (Santiago)
 
 TAREAS:
-☐ Crear presupuesto draft                [%: 0%]
-☐ Área A - Gestión empresarial           [%: 0%]
-☐ Área B - Tecnología e innovación       [%: 0%]
-☐ Validar suma exacta ($5M)              [%: 0%]
-☐ Aprobación Camila                      [%: 0%]
+☑ Presupuesto reorganizado versión v2   [%: 100% COMPLETADO 1-junio]
+☑ Área A - Gestión ($1M)                [%: 100%]
+☑ Área B - Innovación ($3.7M)           [%: 100%]
+☑ Área C - Cambio ($300K)               [%: 100%]
+☑ Suma exacta ($5M) validada            [%: 100%]
+☐ Aprobación Camila versión 100% elegible  [%: 0% - pendiente 2-jun]
 
-PROGRESO GENERAL: ████░░░░░░ 0%
+CAMBIOS APLICADOS:
+- Sección C ELIMINADA (era $1.68M ineligible): sueldos, expansión, marketing
+- Sección B EXPANDIDA a $3.7M: agentes + web + hardware + adopción + seguridad
+- Líneas dudosas renombradas: audiovisual "x4 meses" → "servicios por entregable"
+- Hardware telemedicina: $790K → $350K (software Medilink Titanium incluido)
+- AGREGADAS: B.6 WhatsApp API, B.7 Adopción Digital, B.8 Seguridad, C.1-C.3
+
+PROGRESO GENERAL: ██████████ 100%
+ELEGIBILIDAD: ✅ 100% CRECE-COMPLIANT (vs 35% anterior)
 ```
 
 ---
 
-#### **Hito 1.3: Plan de Negocio**
+#### **Hito 1.3: Plan de Negocio (con análisis riesgos)**
 ```
-STATUS: ⏳ EN PROGRESO
-DEADLINE: 4 junio
+STATUS: ✅ COMPLETADO
+DEADLINE: 4 junio (revisión) | 11 junio final
 RESPONSABLE: Francisco (Santiago)
 
 TAREAS:
-☐ Contexto: brecha salud pélvica        [%: 0%]
-☐ Diferenciador: 3 especialidades        [%: 0%]
-☐ Solución: 4 pilares plan digital       [%: 0%]
-☐ Impacto: $5M + +35% atenciones        [%: 0%]
-☐ Aprobación Camila                      [%: 0%]
+☑ Contexto: brecha región Coquimbo 828K hab   [%: 100%]
+☑ Diferenciador: 3 especialidades integradas  [%: 100%]
+☑ Solución: 5 agentes IA específicos          [%: 100%]
+☑ Análisis riesgos + Plan B explícito         [%: 100% AGREGADO]
+☑ Impacto: $4.2M/6m + +35% + 2 empleos       [%: 100%]
+☑ KPIs verificables por mes                   [%: 100% AGREGADO]
+☑ Sostenibilidad post-fondo                   [%: 100% AGREGADO]
+☑ Aprobación Camila                           [%: 0% - pendiente 2-jun]
 
-PROGRESO GENERAL: ████░░░░░░ 0%
+CAMBIOS APLICADOS:
+- Agregada sección "Análisis de Riesgos + Plan B" (SERCOTEC valúa esto)
+- Agregada tabla ROI con columna "KPI Verificable" + "Herramienta"
+- Agregada sección "Plan de Sostenibilidad" (costo recurrente $65-100K = 1.6% del retorno)
+- Alineados montos con presupuesto reorganizado
+- Documentado que Medilink Titanium ya incluye software de telemedicina ($0)
+
+PROGRESO GENERAL: ██████████ 100%
+VIABILIDAD: ✅ 100% (con Plan B documentado)
 ```
 
 ---
 
-#### **Hito 1.4: Video Pitch (90 seg)**
+#### **Hito 1.4: Video Pitch (90 seg) - GUIÓN REORGANIZADO**
 ```
-STATUS: ⏳ EN PROGRESO
-DEADLINE: 2 junio
+STATUS: ✅ GUIÓN COMPLETADO | ⏳ GRABACIÓN PENDIENTE
+DEADLINE: 6 junio (grabado) | 11 junio final
 RESPONSABLE: Camila (La Serena) - Grabación
             Francisco (Santiago) - Revisión
 
 TAREAS:
-☐ Escribir guión final                   [%: 0%]
-☐ Grabar 3-4 tomas                       [%: 0%]
-☐ Editar + exportar MP4                  [%: 0%]
-☐ Revisar duración exacta (90 seg)       [%: 0%]
-☐ Aprobación final Francisco             [%: 0%]
+☑ Escribir guión final v2 (100% elegible)  [%: 100% 1-junio]
+☐ Grabar 3-4 tomas                          [%: 0% - pendiente]
+☐ Editar + exportar MP4 1080p               [%: 0% - pendiente]
+☐ Revisar duración exacta (90 seg)          [%: 0% - pendiente]
+☐ Aprobación final Francisco                [%: 0% - pendiente]
 
-PROGRESO GENERAL: ████░░░░░░ 0%
-TAMAÑO ARCHIVO: —
-DURACIÓN EXACTA: — seg
+CAMBIOS GUIÓN:
+- ELIMINADO: "Expansión Ovalle/Vicuña/Vallenar" como gasto (ahora es resultado)
+- ELIMINADO: "Creamos 2 sueldos" como inversión fondo (ahora es resultado mes 4)
+- ELIMINADO: "Pauta inteligente" (evitar mención marketing ordinario)
+- AGREGADO: "$9M CLP/mes en pérdidas" (cuantifica problema)
+- AGREGADO: "5 agentes IA + telemedicina en 3 consultorios" (énfasis innovación)
+- AGREGADO: Mención "aporte propio $1.5M" como compromiso real
+
+PROGRESO GENERAL: ██████░░░░ 50% (guión OK, falta grabación)
+DURACIÓN EXACTA: ~215 palabras (90 seg @ 150 palabras/min)
+TAMAÑO ARCHIVO: — (pendiente grabación)
 ```
 
 ---

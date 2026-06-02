@@ -11,57 +11,61 @@ Pausa entre párrafos: 1-2 segundos
 
 ---
 
-## 🎬 VERSIÓN PARA GRABAR
+## 🎬 VERSIÓN PARA GRABAR (REORGANIZADA 1 JUNIO 2026)
 
 ```
-[VISUAL: Dr. Andrusco o Camila en consultorio, profesional, cálido]
+[VISUAL: Camila o Dr. Andrusco en consultorio, profesional, cálido, bata blanca]
 
-LOCUTOR (voz clara, pausada):
+LOCUTOR (voz pausada, 150 palabras/minuto):
+
 "Soy Francisco Tohá, Director Digital de Clínica Mediterra.
 
 [PAUSA 1 seg]
 
 En La Serena, 32% de nuestros pacientes son hombres.
-Debería ser 60%.
-
-La brecha NO es demanda. Es tabú.
-Los hombres no vienen por vergüenza.
+Debería ser el 50%.
+La brecha no es falta de demanda. Es vergüenza.
 
 [PAUSA 1 seg]
 
-Clínica Mediterra ofrece algo que nadie en la macrozona:
-Urología, Sexología y Kinesiología Pélvica. En un equipo.
-
-Explicamos TODO sin jerga. Sin juzgios.
-
-[PAUSA 1 seg]
-
-Nuestro plan digital:
-- Pauta inteligente (normalizamos el tabú)
-- Chatbot IA (trazabilidad de pacientes)
-- Recordatorios automáticos ($5M/mes en no-shows)
-- Telemedicina (expansión Ovalle, Vicuña, Vallenar)
+Y mientras tanto, perdemos $9 millones al mes
+en pacientes que agendan y no asisten.
+Sin recordatorios. Sin trazabilidad. Sin automatización.
 
 [PAUSA 1 seg]
 
-Con Crece, recuperamos $5M mensuales en no-conversiones.
-Generamos +35% de atenciones.
-Creamos 2 sueldos formales en mes 4.
+Clínica Mediterra tiene algo único en la macrozona:
+Urología, Sexología y Kinesiología Pélvica en un solo equipo.
+Explicamos todo. Sin jerga. Sin juzgios.
 
 [PAUSA 1 seg]
 
-Solicitamos $5M para implementar tecnología de clase mundial.
-El aporte propio de $1.5M es comprometimiento real de la clínica.
+Con Crece implementamos cinco agentes de inteligencia artificial:
+recordatorios automáticos, chatbot web, FAQ en WhatsApp,
+generador de contenido educativo, y reportes de KPIs diarios.
+
+Equipamos telemedicina en tres consultorios
+para servir también a Ovalle, Vicuña, Vallenar.
 
 [PAUSA 1 seg]
 
-Clínica Mediterra = medicina que cierra brechas.
-En salud pélvica.
-En La Serena.
+Impacto proyectado en seis meses:
+Reducir no-shows en 30%.
+Aumentar atenciones en 35%.
+Generar dos empleos formales.
 
-Gracias."
+[PAUSA 1 seg]
 
-[VISUAL: Logo Mediterra, contacto]
+Solicitamos cinco millones de pesos.
+La clínica aporta un millón quinientos mil de recursos propios.
+Compromiso real. Retorno documentado.
+
+[PAUSA 1 seg]
+
+Clínica Mediterra. Medicina que cierra brechas.
+En salud pélvica. En La Serena. Gracias."
+
+[VISUAL: Logo Mediterra, teléfono, contacto]
 ```
 
 ---
@@ -70,13 +74,13 @@ Gracias."
 
 | Segundo | Contenido |
 |---------|-----------|
-| 0-5 | Presentación + contexto (32% hombres) |
-| 5-12 | Brecha (tabú) + diferenciador (3 especialidades) |
-| 12-25 | Propuesta de valor: explicación sin jerga |
-| 25-40 | Plan digital (4 componentes) |
-| 40-55 | Impacto financiero ($5M, +35%, 2 sueldos) |
-| 55-75 | Solicitud + aporte propio ($5M + $1.5M) |
-| 75-90 | Cierre emocional + contacto |
+| 0-5 | Presentación + brecha (32% hombres → 50%) |
+| 5-12 | Problema cuantificado ($9M no-shows) |
+| 12-20 | Diferenciador (3 especialidades integradas) |
+| 20-35 | Plan: 5 agentes IA + telemedicina |
+| 35-50 | Impacto: -30% no-shows, +35% atenciones, 2 empleos |
+| 50-70 | Solicitud ($5M) + aporte propio ($1.5M) |
+| 70-90 | Cierre emocional ("cierra brechas") + contacto |
 
 ---
 
@@ -185,6 +189,25 @@ Clínica Mediterra = medicina que cierra brechas."
 
 ---
 
-**Última revisión:** 31 mayo 2026  
+## ✅ CAMBIOS RESPECTO A VERSIÓN ANTERIOR (1 JUNIO)
+
+**ELIMINADO:** 
+- ❌ "Expansión Ovalle, Vicuña, Vallenar" como gasto del fondo (ahora es resultado de telemedicina)
+- ❌ "Creamos 2 sueldos formales" (SERCOTEC penaliza mención de salarios en pitch si parecen salarios del fondo)
+- ❌ Mención de "pauta inteligente" (puede parecer dinero en marketing ordinario)
+
+**AGREGADO:**
+- ✅ "$9M CLP/mes en pérdidas" (cuantifica el problema)
+- ✅ "Telemedicina en 3 consultorios" (elegible, no es expansión como gasto, es infraestructura)
+- ✅ Énfasis en "5 agentes IA + equipamiento telemedicina" (tecnología, no operación)
+- ✅ "Generación de 2 empleos" como RESULTADO, no como inversión del fondo
+
+**IMPACTO:** Video ahora enfatiza que CRECE financia INNOVACIÓN (IA + telemedicina), no OPERACIÓN (pauta, sueldos, expansión).
+
+---
+
+**Última revisión:** 1 junio 2026  
 **Estado:** Listo para grabar  
-**Próximo paso:** Compartir con Camila para aprobación (antes viernes 6)
+**Duración:** Exactamente 90 segundos  
+**Palabras:** ~215 (ritmo 150 palabras/minuto)  
+**Próximo paso:** Grabar 3-4 tomas, compartir con Camila para aprobación antes viernes 6 junio

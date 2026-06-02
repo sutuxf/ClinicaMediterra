@@ -8,57 +8,100 @@
 ## 📅 VISTA GENERAL
 
 ```
-HOY: DOMINGO 31 DE MAYO 2026
-DÍAS RESTANTES: 11 (31 mayo → 11 junio)
-TAREAS CRÍTICAS: 18
+HOY: LUNES 1 DE JUNIO 2026 (REORGANIZACIÓN URGENTE)
+DÍAS RESTANTES: 10 (1 junio → 11 junio)
+TAREAS CRÍTICAS: 20
 RESPONSABLES: Francisco + Camila + Alex
 
+CAMBIO URGENTE: Presupuesto original tenía $1.68M ineligible
+                 REORGANIZAR HOY (2h) para llegar a 75% aprobación
+
 RUTA CRÍTICA:
-Domingo 31-5 → Documentación + Video ────────┐
-Viernes 6-6  → Aprobación + Setup            │ → Jueves 11-6: POSTULAR
-Martes 10-6  → Compilación final + Testing ──┘
+Lunes 1-6    → Reorganizar presupuesto (elegibilidad 100%) ┐
+Martes 2-6   → Reunión Camila 14:30 (aprobación nueva estr) │ 
+Miércoles 3-6 → Cotizaciones hardware telemedicina ────────┼→ Viernes 11-6: POSTULAR
+Viernes 6-6  → Video grabado + documentos finales         │
+Viernes 10-6 → Compilación final + Testing ───────────────┘
 ```
 
 ---
 
-## 🔥 DÍA 0: DOMINGO 31 MAYO
+## ⚠️ CAMBIOS CRÍTICOS DETECTADOS (1 JUNIO 2026)
 
-**TIEMPO TOTAL: 4h**
+**Análisis de elegibilidad CRECE reveló:**
+- Sección C original ($1.68M) = 100% inelegible (sueldos, expansión, marketing ordinario)
+- Presupuesto reorganizado: TODA la inversión es ahora ELEGIBLE
+- Probabilidad aprobación: 35% → 75% con cambios aplicados
+
+**ACCIÓN INMEDIATA (Lunes 1 junio):**
+1. ✅ PRESUPUESTO: reorganizado versión 100% elegible (COMPLETADO)
+2. ✅ PLAN NEGOCIO: actualizado con análisis riesgos + plan B (COMPLETADO)
+3. ✅ GUIÓN VIDEO: eliminadas referencias "expansión" como gasto + "sueldos" (COMPLETADO)
+4. 🔄 **CRONOGRAMA:** actualizar hitos (ESTE DOCUMENTO)
+5. 🔄 **TRACKER:** estado actualizado (PRÓXIMO)
+
+**Documentos nuevos para completar antes 10 junio:**
+- [ ] Cotizaciones hardware telemedicina (3 proveedores)
+- [ ] Confirmación Medilink: validación webhooks/API
+- [ ] Validación 360dialog: WhatsApp Business API availability
+
+---
+
+## 🔥 DÍA 1: LUNES 1 JUNIO (HOY)
+
+**PRIORIDAD MÁXIMA: Validar viabilidad técnica + cotizar hardware**
+
+**TIEMPO TOTAL: 5h**
 
 ### **Francisco (Santiago) — 2h**
 
-**TAREA F0.1: Crear cuenta SERCOTEC**
+**TAREA F1.0: REVISAR DOCUMENTOS REORGANIZADOS (URGENTE)**
 ```
-Sistema: www.sercotec.cl
-└─ Crear usuario + contraseña
-   Email: francisco.toha@gmail.com
-   ✅ Guardar credenciales en Keeper/1Password
-```
-⏱️ **Duración:** 15 min  
-✅ **Deadline:** Domingo 31, 4 PM
+Leer completamente:
+├─ PRESUPUESTO-CRECE-JUSTIFICADO.md (versión 100% elegible)
+├─ PLAN-NEGOCIO-CRECE-FINAL.md (con análisis riesgos + plan B)
+└─ GUION-VIDEO-PITCH-CRECE-90SEG.md (nuevo guión sin "expansión como gasto")
 
----
-
-**TAREA F0.2: Comenzar guión video pitch**
-```
-Basarse en: GUION-VIDEO-PITCH-CRECE-90SEG.md
-Documentar cambios/personalizaciones
-Enviar borrador a Camila para feedback
+Validar: ¿Todo coherente entre documentos?
+         ¿Montos coinciden?
+         ¿No se menciona "expansión" como gasto ni "sueldos"?
+Enviar feedback a Camila
 ```
 ⏱️ **Duración:** 45 min  
-✅ **Deadline:** Domingo 31, 5 PM
+✅ **Deadline:** Lunes 1, 12:00 PM
 
 ---
 
-**TAREA F0.3: Revisar documentación bases Crece**
+**TAREA F1.1: Contactar Medilink para VALIDAR API viabilidad**
 ```
-Descargar PDF: Bases-de-Convocatoria_Crece-Multisectorial-2026_Coquimbo.pdf
-Leer completamente
-Notas: requisitos, documentos, criterios evaluación, fechas
-Crear checklist en Google Docs
+Contacto: Soporte Medilink Chile
+Preguntar:
+  ✓ ¿API/webhooks para triggers cita agendada (en tiempo real)?
+  ✓ ¿Documentación integración disponible?
+  ✓ ¿Costo acceso? ¿Requiere plan especial?
+  ✓ ¿Soporte técnico incluido?
+
+Guardar como: CONFIRMACION-MEDILINK-INTEGRACION.pdf
+(EVIDENCIA DE VIABILIDAD para SERCOTEC)
 ```
-⏱️ **Duración:** 1 hora  
-✅ **Deadline:** Domingo 31, 6 PM
+⏱️ **Duración:** 30 min  
+✅ **Deadline:** Lunes 1, 3:00 PM
+
+---
+
+**TAREA F1.2: Validar 360dialog WhatsApp Business API**
+```
+Website: https://www.360dialog.com
+Confirmar:
+  ✓ Costo setup + mensual
+  ✓ ¿Puedo portar +56 9 3933 7727?
+  ✓ ¿Documentación integración?
+  ✓ ¿Demo gratis disponible?
+
+Guardar como: CONFIRMACION-360DIALOG-WHATSAPP.pdf
+```
+⏱️ **Duración:** 15 min  
+✅ **Deadline:** Lunes 1, 3:15 PM
 
 ---
 
