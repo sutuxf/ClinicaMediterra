@@ -2800,27 +2800,35 @@ SEMANA 3+ (post-envío):
 
     /* MARKDOWN MODAL STYLES */
     .markdown-content { font-size: 14px; line-height: 1.8; color: #1E293B; }
-    .markdown-content h1, .markdown-content h2, .markdown-content h3, .markdown-content h4 { margin-top: 20px; margin-bottom: 12px; font-weight: 700; }
-    .markdown-content h1 { font-size: 24px; color: #1C3A5F; border-bottom: 2px solid #E5DDD0; padding-bottom: 8px; }
-    .markdown-content h2 { font-size: 18px; color: #1C3A5F; }
-    .markdown-content h3 { font-size: 15px; color: #334155; }
-    .markdown-content h4 { font-size: 13px; color: #475569; }
-    .markdown-content p { margin-bottom: 12px; }
-    .markdown-content ul, .markdown-content ol { margin-bottom: 16px; margin-left: 24px; }
-    .markdown-content li { margin-bottom: 6px; line-height: 1.7; }
-    .markdown-content code { background: #F1F5F9; color: #DC2626; padding: 2px 6px; border-radius: 4px; font-family: 'Monaco', 'Courier New', monospace; font-size: 13px; }
-    .markdown-content pre { background: #1C3A5F; color: #E2E8F0; padding: 16px; border-radius: 6px; overflow-x: auto; margin: 16px 0; line-height: 1.5; }
-    .markdown-content pre code { background: none; color: inherit; padding: 0; }
-    .markdown-content table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 13px; }
-    .markdown-content th, .markdown-content td { border: 1px solid #E5DDD0; padding: 10px; text-align: left; }
-    .markdown-content th { background: #F8FAFC; font-weight: 700; color: #1C3A5F; }
+    .markdown-content h1, .markdown-content h2, .markdown-content h3, .markdown-content h4, .markdown-content h5 { margin-top: 24px; margin-bottom: 14px; font-weight: 700; page-break-after: avoid; }
+    .markdown-content h1 { font-size: 26px; color: #1C3A5F; border-bottom: 2px solid #1C3A5F; padding-bottom: 10px; letter-spacing: -0.5px; }
+    .markdown-content h2 { font-size: 20px; color: #1C3A5F; border-bottom: 1px solid #E5DDD0; padding-bottom: 8px; }
+    .markdown-content h3 { font-size: 16px; color: #334155; font-weight: 600; }
+    .markdown-content h4 { font-size: 14px; color: #475569; font-weight: 600; }
+    .markdown-content h5 { font-size: 13px; color: #64748B; font-weight: 600; }
+    .markdown-content p { margin-bottom: 14px; line-height: 1.8; }
+    .markdown-content ul, .markdown-content ol { margin-bottom: 16px; margin-left: 28px; }
+    .markdown-content li { margin-bottom: 8px; line-height: 1.7; }
+    .markdown-content code { background: #F0F4F8; color: #C7254E; padding: 3px 8px; border-radius: 3px; font-family: 'Courier New', 'Monaco', monospace; font-size: 12px; }
+    .markdown-content pre { background: #2D3748; color: #E2E8F0; padding: 14px; border-radius: 4px; overflow-x: auto; margin: 18px 0; line-height: 1.5; border-left: 4px solid #1C3A5F; }
+    .markdown-content pre code { background: none; color: inherit; padding: 0; font-size: 11px; }
+    .markdown-content table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 12px; page-break-inside: avoid; }
+    .markdown-content th { background: #1C3A5F; color: white; font-weight: 700; padding: 12px; text-align: left; border: 1px solid #1C3A5F; }
+    .markdown-content td { border: 1px solid #D1D5DB; padding: 11px; }
     .markdown-content tr:nth-child(even) { background: #F8FAFC; }
-    .markdown-content blockquote { border-left: 4px solid #1C3A5F; padding-left: 16px; margin: 16px 0; color: #64748B; font-style: italic; }
+    .markdown-content tr:hover { background: #F0F4F8; }
+    .markdown-content blockquote { border-left: 4px solid #1C3A5F; padding-left: 18px; margin: 18px 0; color: #64748B; font-style: italic; background: #F8FAFC; padding: 14px 14px 14px 18px; border-radius: 3px; }
     .markdown-content strong { font-weight: 700; color: #1E293B; }
     .markdown-content em { font-style: italic; }
-    .markdown-content a { color: #0284C7; text-decoration: none; border-bottom: 1px dotted #0284C7; }
-    .markdown-content a:hover { color: #0F2847; border-bottom: 1px solid #0F2847; }
-    .markdown-content hr { border: none; border-top: 2px solid #E5DDD0; margin: 24px 0; }
+    .markdown-content a { color: #0284C7; text-decoration: none; border-bottom: 1px solid #0284C7; }
+    .markdown-content a:hover { color: #0F2847; }
+    .markdown-content hr { border: none; border-top: 2px solid #E5DDD0; margin: 28px 0; page-break-after: avoid; }
+    .markdown-content > *:first-child { margin-top: 0; }
+
+    @media print {
+      .markdown-content p, .markdown-content li, .markdown-content td, .markdown-content th { page-break-inside: avoid; }
+      .markdown-content h2, .markdown-content h3 { page-break-after: avoid; }
+    }
 
     /* FOOTER */
     footer { padding: 24px 0; text-align: center; font-size: 11px; color: #94A3B8; margin-top: 40px; }
@@ -2916,20 +2924,54 @@ SEMANA 3+ (post-envío):
 
       const exportToPDF = () => {
         if (!viewingDoc || !docContent) return;
-        const element = document.getElementById('markdown-content-export');
-        if (!element) return;
+
+        // Crear contenedor temporal con estilos profesionales
+        const container = document.createElement('div');
+        container.style.cssText = 'width: 100%; max-width: 210mm; margin: 0 auto; padding: 20mm; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; color: #1E293B; background: white;';
+
+        // Header profesional
+        const header = document.createElement('div');
+        header.style.cssText = 'border-bottom: 3px solid #1C3A5F; padding-bottom: 20px; margin-bottom: 30px;';
+        header.innerHTML = `
+          <h1 style="margin: 0 0 10px 0; color: #1C3A5F; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">${viewingDoc}</h1>
+          <p style="margin: 0; color: #64748B; font-size: 12px;">Clínica Mediterra • Transformación Digital 2026</p>
+        `;
+        container.appendChild(header);
+
+        // Contenido markdown
+        const content = document.createElement('div');
+        content.id = 'markdown-content-export';
+        content.className = 'markdown-content';
+        content.innerHTML = window.marked?.parse ? window.marked.parse(docContent) : (typeof window.marked === 'function' ? window.marked(docContent) : docContent.replace(/\n\n/g, "<p></p>").replace(/\n/g, "<br/>"));
+
+        // Estilos para PDF
+        content.style.cssText = 'font-size: 11pt; line-height: 1.7;';
+        container.appendChild(content);
+
+        // Footer profesional
+        const footer = document.createElement('div');
+        footer.style.cssText = 'border-top: 2px solid #E5DDD0; margin-top: 40px; padding-top: 20px; text-align: center; color: #94A3B8; font-size: 10px;';
+        footer.innerHTML = `
+          <p style="margin: 0;">Documento generado: ${new Date().toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        `;
+        container.appendChild(footer);
+
+        // Agregar temporalmente al DOM para renderizar
+        document.body.appendChild(container);
 
         const fileName = viewingDoc.replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_-]/g, '');
         const opt = {
-          margin: [10, 10, 10, 10],
+          margin: [15, 15, 15, 15],
           filename: `${fileName}.pdf`,
           image: { type: 'jpeg', quality: 0.98 },
-          html2canvas: { scale: 2 },
-          jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' },
+          html2canvas: { scale: 2, useCORS: true, logging: false },
+          jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4', compress: true },
           pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
         };
 
-        window.html2pdf().set(opt).from(element).save();
+        window.html2pdf().set(opt).from(container).save().finally(() => {
+          document.body.removeChild(container);
+        });
       };
 
       return (
